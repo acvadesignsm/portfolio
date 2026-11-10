@@ -817,3 +817,9 @@ a.tile__t:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; 
   .topbar__nav a { white-space: nowrap; font-size: 14px; }
 }
 @media (max-width: 360px) { .topbar__nav a { font-size: 13px; } .topbar__nav { padding: 0 14px; } }
+
+/* мобильная версия: декор компактный, позиция сохраняется */
+@media (max-width: 1023px) {
+  .deco { right: auto !important; bottom: auto !important; width: 84px; height: 84px; }
+  .deco--r4, .cases .deco { width: 64px; height: 64px; }
+}

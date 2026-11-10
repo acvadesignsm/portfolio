@@ -450,7 +450,12 @@ strong { font-weight: 600; }
 /* ---------- узкие экраны ---------- */
 
 @media (max-width: 820px) {
-  .case-deco { opacity: .3; }
+  .case-deco { opacity: .5; z-index: 0; }
+  .column { width: calc(100% - 40px); }
+  .case-deco img { width: 64px !important; height: auto !important; }
+  .case-deco img[style*="calc(50% + -"] { left: -34px !important; }
+  .case-deco img:not([style*="calc(50% + -"]) { left: auto !important; right: -34px; }
+  .case-deco img:nth-child(2n) { display: none; }
   .column { padding: 22px 16px 40px; border-radius: 24px; }
   .year { right: -16px; }
   .title { font-size: 24px; }
@@ -1100,4 +1105,21 @@ strong { font-weight: 600; }
   .shots__item figcaption{overflow-wrap:anywhere}
   /* путь участника: нечётная последняя плашка на всю ширину */
   .steps--5 .step:last-child:nth-child(odd),.steps--4 .step:last-child:nth-child(odd){grid-column:1/-1}
+}
+
+/* план работы по дням: на телефоне — карточки вместо шкалы */
+@media (max-width: 820px) {
+  .timeline { grid-template-columns: 1fr; gap: 10px; margin: 20px 0; }
+  .timeline__step, .timeline__step:last-child { min-height: 0; padding: 16px; border: 0; border-radius: 16px; background: #232323; color: #f3f3eb; display: flex; flex-direction: column; gap: 10px; }
+  .timeline__when { order: 0; position: static; font-size: 11px; line-height: 15px; letter-spacing: .04em; text-transform: uppercase; color: rgba(243,243,235,.6); white-space: normal; }
+  .timeline__pill, .timeline__step:nth-child(n) .timeline__pill { order: 1; position: static; width: auto !important; align-self: flex-start; padding: 5px 14px; font-size: 14px; line-height: 19px; text-align: left; white-space: normal; background: var(--c, #d4ff34); color: #191919; }
+  .timeline__step ul { order: 2; position: static; margin: 0; padding: 0; list-style: none; font-size: 15px; line-height: 20px; display: flex; flex-direction: column; gap: 6px; }
+  .timeline__step li { position: relative; padding-left: 18px; }
+  .timeline__step li::before { content: ''; position: absolute; left: 0; top: 6px; width: 8px; height: 8px; background: #ff5b23; }
+  .timeline__step:nth-child(1) { --c: #d4ff34; }
+  .timeline__step:nth-child(2) { --c: #afe5ed; }
+  .timeline__step:nth-child(3) { --c: #dcb8ff; }
+  .timeline__step:nth-child(4) { --c: #ff5b23; }
+  .timeline__step:nth-child(5) { --c: #ff4269; }
+  .timeline__step:nth-child(4) .timeline__pill, .timeline__step:nth-child(5) .timeline__pill { color: #fff; }
 }
