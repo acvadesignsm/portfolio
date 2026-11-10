@@ -775,12 +775,12 @@ a.tile__t:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; 
   .pill { white-space: nowrap; }
 
   /* карточки: скругления «вложены» друг в друга, как на десктопе */
-  .card { padding: 12px; border-radius: 32px 32px 20px 20px; }
-  .card__media { border-radius: 20px; }
+  .card { padding: 12px; border-radius: 24px 24px 16px 16px; }
+  .card__media { border-radius: 14px; }
 
   /* обо мне: плашки одной высоты в две колонки */
   .facts-tiles { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 20px 0 0; }
-  .tile, .tile--orange { width: auto; padding: 16px 12px; justify-content: center; border-radius: 24px; }
+  .tile, .tile--orange { width: auto; padding: 16px 12px; justify-content: center; border-radius: 16px; }
   .tile:last-child:nth-child(odd) { grid-column: 1 / -1; }
   .tile__t { white-space: nowrap; font-size: 15px; }
   .tile:first-child .tile__t { white-space: normal; }
@@ -800,7 +800,7 @@ a.tile__t:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; 
   .rule { width: auto !important; }
 
   /* связь: компактные плашки */
-  .contact { height: 120px; margin-top: 12px; border-radius: 24px; }
+  .contact { height: 120px; margin-top: 12px; border-radius: 16px; }
   .contact__icon { width: calc(var(--w, 180) * 0.36px); height: calc(var(--h, 180) * 0.36px); }
 }
 
@@ -830,15 +830,18 @@ a.tile__t:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; 
   .deco:has(img[src*="about-decoration-icon-lower-center"]),
   .deco:has(img[src*="contact-decoration-icon-top-left"]),
   .deco:has(img[src*="contact-decoration-icon-top-right"]),
-  .cases .deco:not(.deco--more):is(:nth-of-type(1), :nth-of-type(2)) { display: flex; inset: auto !important; width: 72px !important; height: 72px !important; z-index: 0; }
+  .deco:has(img[src*="hero-decoration-icon-top-center"]),
+  .deco:has(img[src*="hero-decoration-icon-bottom-center"]),
+  .deco:has(img[src*="contact-decoration-icon-bottom-center"]),
+  .deco:has(img[src*="email-decoration-icon"]) { display: flex; inset: auto !important; width: 72px !important; height: 72px !important; z-index: 0; }
 
   /* hero */
   .deco:has(img[src*="hero-decoration-icon-top-right"]) { top: 8px !important; right: -14px !important; width: 68px !important; height: 68px !important; }
   .deco:has(img[src*="hero-decoration-icon-bottom-right"]) { bottom: 22px !important; right: -8px !important; width: 64px !important; height: 64px !important; }
 
-  /* проекты: по бокам заголовка */
-  .cases .deco:not(.deco--more):nth-of-type(1) { left: -34px !important; top: 10px !important; width: 68px !important; height: 68px !important; }
-  .cases .deco:not(.deco--more):nth-of-type(2) { right: -10px !important; top: 24px !important; width: 60px !important; height: 48px !important; }
+  /* hero: ещё два элемента в свободных местах */
+  .deco:has(img[src*="hero-decoration-icon-top-center"]) { top: 6px !important; left: 236px !important; width: 46px !important; height: 46px !important; }
+  .deco:has(img[src*="hero-decoration-icon-bottom-center"]) { bottom: 6px !important; left: 196px !important; width: 52px !important; height: 52px !important; }
 
   /* обо мне */
   .deco:has(img[src*="about-decoration-pair"]) { left: 10px !important; top: 24px !important; width: 60px !important; height: 60px !important; }
@@ -847,9 +850,46 @@ a.tile__t:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; 
   /* связь */
   .deco:has(img[src*="contact-decoration-icon-top-left"]) { left: 10px !important; top: 22px !important; }
   .deco:has(img[src*="contact-decoration-icon-top-right"]) { right: 10px !important; top: 22px !important; }
+  .deco:has(img[src*="contact-decoration-icon-bottom-center"]) { left: 24px !important; bottom: 4px !important; width: 52px !important; height: 52px !important; }
+  .deco:has(img[src*="email-decoration-icon"]) { right: 18px !important; bottom: 0 !important; width: 56px !important; height: 56px !important; }
+  .contacts .frame { padding-bottom: 72px; }
+}
+
+/* проекты: элементы в боковых полях за карточками, как на десктопе они лежат на фоне */
+@media (max-width: 1023px) {
+  .cases .deco { display: flex; inset: auto !important; width: 76px !important; height: 76px !important; z-index: 0; }
+  .cases .deco:nth-of-type(odd) { right: calc(100% - 18px) !important; }
+  .cases .deco:nth-of-type(even) { left: calc(100% - 18px) !important; }
+  .cases .deco:nth-of-type(1) { top: 40px !important; }
+  .cases .deco:nth-of-type(2) { top: 270px !important; }
+  .cases .deco:nth-of-type(3) { top: 500px !important; }
+  .cases .deco:nth-of-type(4) { top: 730px !important; }
+  .cases .deco:nth-of-type(5) { top: 960px !important; }
+  .cases .deco:nth-of-type(6) { top: 1190px !important; }
+  .cases .deco:nth-of-type(7) { top: 1420px !important; }
+  .cases .deco:nth-of-type(8) { top: 1650px !important; }
+  .cases .deco:nth-of-type(9) { top: 1880px !important; }
+  .cases .deco:nth-of-type(10) { top: 2110px !important; }
+  .cases .deco:nth-of-type(11) { top: 2340px !important; }
+  .cases .deco:nth-of-type(12) { top: 2570px !important; }
+  .cases .deco:nth-of-type(13) { top: 2800px !important; }
+  .cases .deco:nth-of-type(14) { top: 3030px !important; }
+  .cases .deco:nth-of-type(15) { top: 3260px !important; }
+  .cases .deco:nth-of-type(16) { top: 3490px !important; }
+  .cases .deco:nth-of-type(17) { top: 3720px !important; }
+  .cases .deco:nth-of-type(18) { top: 3950px !important; }
+  .cases .deco:nth-of-type(19) { top: 4180px !important; }
+  .cases .deco:nth-of-type(20) { top: 4410px !important; }
+  .cases .deco:nth-of-type(21) { top: 4640px !important; }
+  .cases .deco:nth-of-type(22) { top: 4870px !important; }
+  .cases .deco:nth-of-type(23) { top: 5100px !important; }
+  .cases .deco:nth-of-type(24) { top: 5330px !important; }
+  .cases .deco:nth-of-type(25) { top: 5560px !important; }
 }
 
 /* инструменты: ровная сетка 4×3 вместо рваных рядов 5-5-2 */
 @media (max-width: 767px) {
   .tools__row { display: grid; grid-template-columns: repeat(4, 52px); justify-content: center; gap: 18px 20px; }
 }
+
+@media (max-width: 767px) { .tools { border-radius: 16px; } .game__box { border-radius: 20px; } }

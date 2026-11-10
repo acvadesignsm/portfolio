@@ -93,6 +93,34 @@
   const up = document.querySelector('.to-top');
   if (up) up.addEventListener('click', () => window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' }));
 
+  /* ---------- «наверх»: на телефоне появляется после прокрутки ---------- */
+  if (up) {
+    const sync = () => up.classList.toggle('is-shown', window.scrollY > 600);
+    window.addEventListener('scroll', sync, { passive: true });
+    sync();
+  }
+
+  /* ---------- фоновые элементы: на длинной мобильной странице растягиваем по всей высоте ---------- */
+  const decoBox = document.querySelector('.case-deco');
+  if (decoBox) {
+    const imgs = Array.from(decoBox.querySelectorAll('img'));
+    imgs.forEach((i) => { i.dataset.top = parseFloat(i.style.top) || 0; });
+    const mq = window.matchMedia('(max-width: 820px)');
+    let raf = 0;
+    const place = () => {
+      raf = 0;
+      if (!mq.matches) { imgs.forEach((i) => { i.style.top = i.dataset.top + 'px'; }); return; }
+      const H = document.documentElement.scrollHeight;
+      const step = (H - 320) / imgs.length;
+      imgs.forEach((i, k) => { i.style.top = Math.round(k * step + 20) + 'px'; });
+    };
+    const queue = () => { if (!raf) raf = requestAnimationFrame(place); };
+    place();
+    window.addEventListener('load', queue);
+    window.addEventListener('resize', queue);
+    if ('ResizeObserver' in window) new ResizeObserver(queue).observe(document.body);
+  }
+
   /* галерея: листается мышью (зажать и тянуть), пальцем и колёсиком */
   const gal = document.querySelector('.gallery');
   if (gal) {
