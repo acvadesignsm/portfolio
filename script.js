@@ -1,0 +1,298 @@
+(() => {
+  'use strict';
+
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const hasIO = 'IntersectionObserver' in window;
+
+  /* ---------- «показать больше» в блоке «Мой опыт» ---------- */
+  // Высоту анимируем через Web Animations API (без grid-template-rows и без
+  // вложенных анимаций внутри блока) — так в Safari не остаётся артефактов.
+  const DURATION = reduceMotion ? 0 : 450;
+  const EASE = 'cubic-bezier(0.2, 0.7, 0.2, 1)';
+
+  const setExpanded = (el, expand) => {
+    if (!DURATION || typeof el.animate !== 'function') {
+      el.classList.toggle('is-expanded', expand);
+      return;
+    }
+
+    // текущее состояние (на случай, если нажали посреди анимации)
+    const from = el.getBoundingClientRect().height;
+    const opacity = parseFloat(getComputedStyle(el).opacity);
+    if (el._anim) {
+      el._anim.cancel();
+      el._anim = null;
+    }
+
+    el.style.overflow = 'hidden';
+    if (expand) el.classList.add('is-expanded');
+    const to = expand ? el.getBoundingClientRect().height : 0;
+
+    const anim = el.animate(
+      [
+        { height: `${from}px`, opacity },
+        { height: `${to}px`, opacity: expand ? 1 : 0 },
+      ],
+      { duration: DURATION, easing: EASE, fill: 'forwards' }
+    );
+    el._anim = anim;
+
+    anim.onfinish = () => {
+      if (!expand) el.classList.remove('is-expanded');
+      el.style.overflow = '';
+      anim.cancel();
+      if (el._anim === anim) el._anim = null;
+    };
+  };
+
+  document.querySelectorAll('.exp-row').forEach((row) => {
+    const btn = row.querySelector('.exp-toggle');
+    if (!btn) return;
+    const panels = Array.from(row.querySelectorAll('.collapse'));
+
+    btn.addEventListener('click', () => {
+      const open = row.classList.toggle('is-open');
+      btn.setAttribute('aria-expanded', String(open));
+      panels.forEach((panel) => setExpanded(panel, open));
+
+      // при сворачивании длинной строки возвращаем её начало в поле зрения,
+      // чтобы не «провалиться» на следующую запись
+      if (!open && row.getBoundingClientRect().top < 0) {
+        row.scrollIntoView({ block: 'start', behavior: reduceMotion ? 'auto' : 'smooth' });
+      }
+    });
+  });
+
+  /* ---------- фильтр проектов: активен только один тег ---------- */
+  const filters = Array.from(document.querySelectorAll('.filter'));
+  const cards = Array.from(document.querySelectorAll('.card'));
+  const empty = document.querySelector('.cases__empty');
+  const allBtn = filters.find((f) => f.dataset.filter === '');
+
+  const casesSection = document.querySelector('.cases');
+  const moreBtn = document.querySelector('.cases__more');
+  const FIRST = 2;            // сколько карточек видно, пока список свёрнут
+  let expanded = false;
+
+  const applyFilter = (animateFrom = -1) => {
+    const active = filters.find((f) => f.classList.contains('is-active'));
+    const tag = active ? active.dataset.filter : '';
+    let matched = 0;
+
+    cards.forEach((card) => {
+      const tags = (card.dataset.tags || '').split(/\s+/);
+      const ok = !tag || tags.includes(tag);
+      const show = ok && (expanded || matched < FIRST);
+      if (ok) matched += 1;
+      const wasHidden = card.hidden;
+      card.hidden = !show;
+      card.classList.remove('is-entering');
+      if (show && wasHidden && animateFrom >= 0 && !reduceMotion) {
+        card.style.setProperty('--k', String(Math.max(0, matched - 1 - animateFrom)));
+        void card.offsetWidth;
+        card.classList.add('is-entering');
+        card.addEventListener('animationend', () => card.classList.remove('is-entering'), { once: true });
+        card.classList.remove('reveal', 'is-in');
+      }
+    });
+
+    if (empty) empty.hidden = matched !== 0;
+    if (moreBtn) {
+      moreBtn.hidden = matched <= FIRST;
+      moreBtn.textContent = expanded ? 'свернуть ↖' : 'показать больше ↗';
+      moreBtn.setAttribute('aria-expanded', String(expanded));
+    }
+    if (casesSection) {
+      casesSection.classList.toggle('is-expanded', expanded && matched > FIRST);
+      casesSection.classList.toggle('has-row4', matched > 6);
+      fitDecos();
+    }
+  };
+
+  /* декорации, которые не помещаются в высоту секции при текущем фильтре, скрываем */
+  const frame = casesSection && casesSection.querySelector('.frame');
+  /* когда раскрыт весь список, он заметно длиннее макета: продлеваем украшения,
+     повторяя их узор (период 1147 в единицах макета) вниз по секции */
+  if (frame) {
+    const base = [...frame.querySelectorAll('.deco--more:not(.deco--r4)')];
+    const PERIOD = 1147;
+    for (let k = 1; k <= 8; k += 1) {
+      base.forEach((d) => {
+        const m = /top:\s*calc\(var\(--u\)\s*\*\s*(-?[\d.]+)\)/.exec(d.getAttribute('style') || '');
+        if (!m) return;
+        const c = d.cloneNode(true);
+        c.style.top = `calc(var(--u) * ${parseFloat(m[1]) + k * PERIOD})`;
+        c.dataset.clone = '1';
+        c.style.setProperty('--d', `${(k * 0.7) % 3}s`);
+        d.parentNode.insertBefore(c, d.parentNode.querySelector('.deco--r4') || null);
+      });
+    }
+  }
+  const decos = casesSection ? [...casesSection.querySelectorAll('.deco')] : [];
+  const fitDecos = () => {
+    if (!frame) return;
+    decos.forEach((d) => d.classList.remove('deco--off'));
+    const H = frame.offsetHeight;
+    const u = Math.min(1, frame.offsetWidth / 1440);
+    const hasRow4 = casesSection.classList.contains('has-row4');
+    decos.forEach((d) => {
+      if (!d.offsetHeight) return;
+      const bottom = d.offsetTop + d.offsetHeight;
+      /* копии не должны наезжать на нижний ряд украшений */
+      const limit = d.dataset.clone && hasRow4 ? H - 700 * u : H + 2;
+      if (bottom > limit) d.classList.add('deco--off');
+    });
+  };
+  if (frame && 'ResizeObserver' in window) new ResizeObserver(fitDecos).observe(frame);
+  window.addEventListener('load', fitDecos);
+
+  /* переход по ссылке на конкретную карточку (из кейсов): раскрыть список и подъехать к ней */
+  const openCardFromHash = () => {
+    const id = decodeURIComponent(location.hash.slice(1));
+    const card = id && cards.find((c) => c.id === id);
+    if (!card) return;
+    if (allBtn && !allBtn.classList.contains('is-active')) {
+      filters.forEach((f) => f.classList.toggle('is-active', f === allBtn));
+    }
+    expanded = true;
+    applyFilter(-1);
+    card.classList.remove('reveal');
+    card.classList.add('is-in');
+    requestAnimationFrame(() => card.scrollIntoView({ block: 'start', behavior: 'auto' }));
+  };
+  window.addEventListener('load', openCardFromHash);
+  window.addEventListener('hashchange', openCardFromHash);
+
+  if (moreBtn) {
+    moreBtn.addEventListener('click', () => {
+      expanded = !expanded;
+      applyFilter(expanded ? FIRST : -1);
+      if (!expanded && casesSection && casesSection.getBoundingClientRect().top < 0) {
+        casesSection.scrollIntoView({ block: 'start', behavior: reduceMotion ? 'auto' : 'smooth' });
+      }
+    });
+  }
+
+  filters.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const isAll = btn.dataset.filter === '';
+      const turnOn = !btn.classList.contains('is-active') && !isAll;
+
+      // выбор нового тега отключает предыдущий; повторный клик снимает выбор (показываются все кейсы)
+      filters.forEach((f) => {
+        f.classList.remove('is-active');
+        f.setAttribute('aria-pressed', 'false');
+      });
+      // без выбранного тега активна кнопка «все»
+      const on = turnOn ? btn : allBtn;
+      on.classList.add('is-active');
+      on.setAttribute('aria-pressed', 'true');
+
+      expanded = false;
+      applyFilter();
+    });
+  });
+
+  applyFilter();
+
+  // клик в любом месте карточки открывает кейс
+  cards.forEach((card) => {
+    const link = card.querySelector('.card__go');
+    if (!link) return;
+    card.addEventListener('click', (e) => {
+      if (e.target.closest('a')) return;
+      window.location.href = link.href;
+    });
+  });
+
+  /* ---------- почта: при нажатии адрес копируется (и открывается почтовая программа) ---------- */
+  let toastTimer;
+  const showToast = (text) => {
+    const toast = document.querySelector('.toast');
+    if (!toast) return;
+    toast.textContent = text;
+    toast.hidden = false;
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => { toast.hidden = true; }, 2600);
+  };
+  const copyText = async (text) => {
+    try {
+      await navigator.clipboard.writeText(text);
+      return true;
+    } catch (e) {
+      const ta = document.createElement('textarea');
+      ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
+      document.body.append(ta); ta.select();
+      let ok = false;
+      try { ok = document.execCommand('copy'); } catch (err) { /* ничего */ }
+      ta.remove();
+      return ok;
+    }
+  };
+  document.querySelectorAll('[data-copy]').forEach((a) => {
+    a.addEventListener('click', async () => {
+      const ok = await copyText(a.dataset.copy);
+      showToast(ok ? `Почта скопирована: ${a.dataset.copy}` : `Моя почта: ${a.dataset.copy}`);
+    });
+  });
+
+  /* ---------- лёгкая анимация ---------- */
+
+  // порядковый номер плашек в шапке — для каскада при загрузке
+  document.querySelectorAll('.hero__tags .pill').forEach((el, i) => el.style.setProperty('--i', i));
+
+  // у украшений — своя задержка и скорость «плавания», чтобы не двигались синхронно
+  document.querySelectorAll('.band').forEach((band) => {
+    band.querySelectorAll('.deco').forEach((el, i) => {
+      el.style.setProperty('--d', `${(i * 0.09).toFixed(2)}s`);
+      el.style.setProperty('--dur', `${(6 + (i % 4) * 0.8).toFixed(1)}s`);
+    });
+  });
+
+  const bands = Array.from(document.querySelectorAll('.band'));
+
+  if (reduceMotion || !hasIO) {
+    // без анимации просто показываем всё
+    bands.forEach((b) => b.classList.add('is-in'));
+    return;
+  }
+
+  // блоки, которые плавно «выезжают» при прокрутке
+  const targets = Array.from(document.querySelectorAll(
+    '.section-title, .filters, .card, .tile, .about__col, .about__photo, .tools, ' +
+    '.exp-head, .exp-row, .contact'
+  )).filter((el) => !el.closest('.hero'));
+
+  // небольшой каскад для соседних элементов (карточки, плитки, контакты)
+  const groups = new Map();
+  targets.forEach((el) => {
+    const parent = el.parentElement;
+    const n = groups.get(parent) || 0;
+    groups.set(parent, n + 1);
+    el.style.setProperty('--d', `${Math.min(n, 5) * 0.08}s`);
+    el.classList.add('reveal');
+  });
+
+  // после появления убираем служебные классы — чтобы они не мешали ховерам и sticky
+  const settle = (el) => {
+    const delay = (parseFloat(el.style.getPropertyValue('--d')) || 0) * 1000 + 900;
+    window.setTimeout(() => el.classList.remove('reveal', 'is-in'), delay);
+  };
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      const el = entry.target;
+      io.unobserve(el);
+      el.classList.add('is-in');
+      if (!el.classList.contains('band')) settle(el);
+    });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0 });
+
+  bands.forEach((b) => io.observe(b));
+  targets.forEach((el) => io.observe(el));
+
+  // главная видна сразу
+  const hero = document.querySelector('.hero');
+  if (hero) hero.classList.add('is-in');
+})();

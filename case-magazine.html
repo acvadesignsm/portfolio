@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Печатный журнал для&nbsp;секретной комнаты с&nbsp;коллекцией винила&nbsp;— Софья Михайлова</title>
+  <meta name="description" content="Кейс: за два дня разработала печатный журнал об истории пяти редких виниловых пластинок для секретной комнаты ЖК «Золотой».">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="stylesheet" href="case.css?v=20261110d">
+</head>
+<body>
+
+  <nav class="topbar" aria-label="Навигация по кейсу">
+    <a class="topbar__back" href="index.html#projects">← все проекты</a>
+    <span class="topbar__title">ЖК «Золотой» // печатный журнал для&nbsp;секретной комнаты</span>
+    <div class="topbar__menu">
+      <button type="button" class="topbar__toggle" aria-expanded="false" aria-controls="sections-menu">разделы <svg class="topbar__chev" viewBox="0 0 8 5" width="8" height="5" aria-hidden="true"><path d="M.75.75L4 4 7.25.75" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <ul class="topbar__list" id="sections-menu" hidden>
+        <li><a href="#about">01 / О&nbsp;проекте</a></li>
+        <li><a href="#task">02 / Задача и&nbsp;моя роль</a></li>
+        <li><a href="#search">03 / Визуальный поиск</a></li>
+        <li><a href="#structure">04 / Структура издания</a></li>
+        <li><a href="#system">05 / Визуальная система</a></li>
+        <li><a href="#typography" class="sub">&gt;&gt; Типографика</a></li>
+        <li><a href="#palette" class="sub">&gt;&gt; Цветовая палитра</a></li>
+        <li><a href="#collage" class="sub">&gt;&gt; Коллажи</a></li>
+        <li><a href="#quotes" class="sub">&gt;&gt; Цитатные страницы</a></li>
+        <li><a href="#making">06 / Реализация за&nbsp;два дня</a></li>
+        <li><a href="#result">07 / Результат</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- пиксельные украшения по бокам (лежат позади колонки) -->
+  <div class="case-deco" aria-hidden="true">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-large-decoration-1.svg" alt="" width="428" height="434" style="left:calc(50% + -702px);top:-2px;--i:0;--dur:6.0s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-wide-decoration-1.svg" alt="" width="377" height="343" style="left:calc(50% + 320px);top:9px;--i:1;--dur:6.7s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-compact-decoration-1.svg" alt="" width="149" height="136" style="left:calc(50% + 543px);top:383px;--i:2;--dur:7.4s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-small-decoration-1.svg" alt="" width="117" height="121" style="left:calc(50% + -671px);top:405px;--i:3;--dur:8.1s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-layered-decoration-1.svg" alt="" width="295" height="274" style="left:calc(50% + -654px);top:533px;--i:4;--dur:8.8s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-narrow-decoration-1.svg" alt="" width="201" height="201" style="left:calc(50% + 418px);top:605px;--i:5;--dur:6.0s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-horizontal-decoration-1.svg" alt="" width="190" height="159" style="left:calc(50% + 504px);top:842px;--i:6;--dur:6.7s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-compact-decoration-2.svg" alt="" width="149" height="136" style="left:calc(50% + -681px);top:922px;--i:7;--dur:7.4s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-layered-decoration-1.svg" alt="" width="295" height="274" style="left:calc(50% + 361px);top:926px;--i:8;--dur:8.1s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-narrow-decoration-1.svg" alt="" width="201" height="201" style="left:calc(50% + -558px);top:1069px;--i:9;--dur:8.8s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-horizontal-decoration-2.svg" alt="" width="190" height="159" style="left:calc(50% + -649px);top:1305px;--i:10;--dur:6.0s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-small-decoration-1.svg" alt="" width="117" height="121" style="left:calc(50% + 540px);top:1345px;--i:11;--dur:6.7s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-large-decoration-1.svg" alt="" width="408" height="434" style="left:calc(50% + 312px);top:1474px;--i:12;--dur:7.4s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-wide-decoration-1.svg" alt="" width="336" height="333" style="left:calc(50% + -626px);top:1511px;--i:13;--dur:8.1s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-large-decoration-2.svg" alt="" width="428" height="434" style="left:calc(50% + -702px);top:1968px;--i:0;--dur:8.8s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-wide-decoration-2.svg" alt="" width="377" height="343" style="left:calc(50% + 320px);top:1975px;--i:1;--dur:6.0s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-compact-decoration-1.svg" alt="" width="149" height="137" style="left:calc(50% + 543px);top:2349px;--i:2;--dur:6.7s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-small-decoration-2.svg" alt="" width="117" height="121" style="left:calc(50% + -671px);top:2374px;--i:3;--dur:7.4s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-layered-decoration-2.svg" alt="" width="295" height="274" style="left:calc(50% + -653px);top:2503px;--i:4;--dur:8.1s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-narrow-decoration-2.svg" alt="" width="201" height="201" style="left:calc(50% + 418px);top:2571px;--i:5;--dur:8.8s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-horizontal-decoration-3.svg" alt="" width="190" height="159" style="left:calc(50% + 504px);top:2808px;--i:6;--dur:6.0s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-compact-decoration-2.svg" alt="" width="149" height="137" style="left:calc(50% + -681px);top:2892px;--i:7;--dur:6.7s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-layered-decoration-2.svg" alt="" width="295" height="274" style="left:calc(50% + 361px);top:2892px;--i:8;--dur:7.4s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-narrow-decoration-3.svg" alt="" width="201" height="201" style="left:calc(50% + -558px);top:3039px;--i:9;--dur:8.1s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-horizontal-decoration-4.svg" alt="" width="190" height="159" style="left:calc(50% + -649px);top:3275px;--i:10;--dur:8.8s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-small-decoration-2.svg" alt="" width="117" height="121" style="left:calc(50% + 540px);top:3311px;--i:11;--dur:6.0s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-large-decoration-2.svg" alt="" width="408" height="434" style="left:calc(50% + 312px);top:3440px;--i:12;--dur:6.7s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-wide-decoration-2.svg" alt="" width="336" height="333" style="left:calc(50% + -626px);top:3481px;--i:13;--dur:7.4s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-large-decoration-3.svg" alt="" width="428" height="434" style="left:calc(50% + -702px);top:3958px;--i:0;--dur:8.1s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-wide-decoration-3.svg" alt="" width="377" height="343" style="left:calc(50% + 320px);top:3969px;--i:1;--dur:8.8s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-compact-decoration-3.svg" alt="" width="149" height="136" style="left:calc(50% + 543px);top:4343px;--i:2;--dur:6.0s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-small-decoration-3.svg" alt="" width="117" height="121" style="left:calc(50% + -671px);top:4365px;--i:3;--dur:6.7s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-layered-decoration-3.svg" alt="" width="295" height="274" style="left:calc(50% + -654px);top:4493px;--i:4;--dur:7.4s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-narrow-decoration-4.svg" alt="" width="201" height="201" style="left:calc(50% + 418px);top:4565px;--i:5;--dur:8.1s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-horizontal-decoration-5.svg" alt="" width="190" height="159" style="left:calc(50% + 504px);top:4802px;--i:6;--dur:8.8s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-compact-decoration-4.svg" alt="" width="149" height="136" style="left:calc(50% + -681px);top:4882px;--i:7;--dur:6.0s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-layered-decoration-3.svg" alt="" width="295" height="274" style="left:calc(50% + 361px);top:4886px;--i:8;--dur:6.7s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-narrow-decoration-2.svg" alt="" width="201" height="201" style="left:calc(50% + -558px);top:5029px;--i:9;--dur:7.4s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-horizontal-decoration-6.svg" alt="" width="190" height="159" style="left:calc(50% + -649px);top:5265px;--i:10;--dur:8.1s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-small-decoration-3.svg" alt="" width="117" height="121" style="left:calc(50% + 540px);top:5305px;--i:11;--dur:8.8s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-large-decoration-3.svg" alt="" width="408" height="434" style="left:calc(50% + 312px);top:5434px;--i:12;--dur:6.0s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-wide-decoration-3.svg" alt="" width="336" height="333" style="left:calc(50% + -626px);top:5471px;--i:13;--dur:6.7s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-large-decoration-4.svg" alt="" width="428" height="434" style="left:calc(50% + -702px);top:5928px;--i:0;--dur:7.4s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-wide-decoration-4.svg" alt="" width="377" height="343" style="left:calc(50% + 320px);top:5935px;--i:1;--dur:8.1s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-compact-decoration-3.svg" alt="" width="149" height="137" style="left:calc(50% + 543px);top:6309px;--i:2;--dur:8.8s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-small-decoration-4.svg" alt="" width="117" height="121" style="left:calc(50% + -671px);top:6334px;--i:3;--dur:6.0s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-layered-decoration-4.svg" alt="" width="295" height="274" style="left:calc(50% + -653px);top:6463px;--i:4;--dur:6.7s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-narrow-decoration-5.svg" alt="" width="201" height="201" style="left:calc(50% + 418px);top:6531px;--i:5;--dur:7.4s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-horizontal-decoration-7.svg" alt="" width="190" height="159" style="left:calc(50% + 504px);top:6768px;--i:6;--dur:8.1s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-compact-decoration-4.svg" alt="" width="149" height="137" style="left:calc(50% + -681px);top:6852px;--i:7;--dur:8.8s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-layered-decoration-5.svg" alt="" width="295" height="274" style="left:calc(50% + 361px);top:6852px;--i:8;--dur:6.0s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-narrow-decoration-6.svg" alt="" width="201" height="201" style="left:calc(50% + -558px);top:6999px;--i:9;--dur:6.7s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-horizontal-decoration-1.svg" alt="" width="190" height="159" style="left:calc(50% + -649px);top:7235px;--i:10;--dur:7.4s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-small-decoration-5.svg" alt="" width="117" height="121" style="left:calc(50% + 540px);top:7271px;--i:11;--dur:8.1s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-large-decoration-5.svg" alt="" width="408" height="434" style="left:calc(50% + 312px);top:7400px;--i:12;--dur:8.8s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-wide-decoration-5.svg" alt="" width="336" height="333" style="left:calc(50% + -626px);top:7441px;--i:13;--dur:6.0s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-large-decoration-5.svg" alt="" width="428" height="434" style="left:calc(50% + -702px);top:7918px;--i:0;--dur:6.7s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-wide-decoration-5.svg" alt="" width="377" height="343" style="left:calc(50% + 320px);top:7929px;--i:1;--dur:7.4s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-compact-decoration-5.svg" alt="" width="149" height="136" style="left:calc(50% + 543px);top:8303px;--i:2;--dur:8.1s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-small-decoration-5.svg" alt="" width="117" height="121" style="left:calc(50% + -671px);top:8325px;--i:3;--dur:8.8s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-layered-decoration-5.svg" alt="" width="295" height="274" style="left:calc(50% + -654px);top:8453px;--i:4;--dur:6.0s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-narrow-decoration-7.svg" alt="" width="201" height="201" style="left:calc(50% + 418px);top:8525px;--i:5;--dur:6.7s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-horizontal-decoration-2.svg" alt="" width="190" height="159" style="left:calc(50% + 504px);top:8762px;--i:6;--dur:7.4s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-compact-decoration-6.svg" alt="" width="149" height="136" style="left:calc(50% + -681px);top:8842px;--i:7;--dur:8.1s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-layered-decoration-6.svg" alt="" width="295" height="274" style="left:calc(50% + 361px);top:8846px;--i:8;--dur:8.8s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-narrow-decoration-3.svg" alt="" width="201" height="201" style="left:calc(50% + -558px);top:8989px;--i:9;--dur:6.0s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-horizontal-decoration-3.svg" alt="" width="190" height="159" style="left:calc(50% + -649px);top:9225px;--i:10;--dur:6.7s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-small-decoration-6.svg" alt="" width="117" height="121" style="left:calc(50% + 540px);top:9265px;--i:11;--dur:7.4s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-large-decoration-6.svg" alt="" width="408" height="434" style="left:calc(50% + 312px);top:9394px;--i:12;--dur:8.1s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-wide-decoration-6.svg" alt="" width="336" height="333" style="left:calc(50% + -626px);top:9431px;--i:13;--dur:8.8s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-large-decoration-6.svg" alt="" width="428" height="434" style="left:calc(50% + -702px);top:9888px;--i:0;--dur:6.0s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-wide-decoration-6.svg" alt="" width="377" height="343" style="left:calc(50% + 320px);top:9895px;--i:1;--dur:6.7s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-compact-decoration-5.svg" alt="" width="149" height="137" style="left:calc(50% + 543px);top:10269px;--i:2;--dur:7.4s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-small-decoration-6.svg" alt="" width="117" height="121" style="left:calc(50% + -671px);top:10294px;--i:3;--dur:8.1s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-layered-decoration-6.svg" alt="" width="295" height="274" style="left:calc(50% + -653px);top:10423px;--i:4;--dur:8.8s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-narrow-decoration-1.svg" alt="" width="201" height="201" style="left:calc(50% + 418px);top:10491px;--i:5;--dur:6.0s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-horizontal-decoration-4.svg" alt="" width="190" height="159" style="left:calc(50% + 504px);top:10728px;--i:6;--dur:6.7s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-compact-decoration-6.svg" alt="" width="149" height="137" style="left:calc(50% + -681px);top:10812px;--i:7;--dur:7.4s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-layered-decoration-7.svg" alt="" width="295" height="274" style="left:calc(50% + 361px);top:10812px;--i:8;--dur:8.1s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-narrow-decoration-2.svg" alt="" width="201" height="201" style="left:calc(50% + -558px);top:10959px;--i:9;--dur:8.8s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-horizontal-decoration-5.svg" alt="" width="190" height="159" style="left:calc(50% + -649px);top:11195px;--i:10;--dur:6.0s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-small-decoration-7.svg" alt="" width="117" height="121" style="left:calc(50% + 540px);top:11231px;--i:11;--dur:6.7s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-large-decoration-7.svg" alt="" width="408" height="434" style="left:calc(50% + 312px);top:11360px;--i:12;--dur:7.4s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-wide-decoration-7.svg" alt="" width="336" height="333" style="left:calc(50% + -626px);top:11401px;--i:13;--dur:8.1s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-large-decoration-7.svg" alt="" width="428" height="434" style="left:calc(50% + -702px);top:11878px;--i:0;--dur:8.8s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-wide-decoration-7.svg" alt="" width="377" height="343" style="left:calc(50% + 320px);top:11889px;--i:1;--dur:6.0s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-compact-decoration-7.svg" alt="" width="149" height="136" style="left:calc(50% + 543px);top:12263px;--i:2;--dur:6.7s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-small-decoration-7.svg" alt="" width="117" height="121" style="left:calc(50% + -671px);top:12285px;--i:3;--dur:7.4s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-layered-decoration-7.svg" alt="" width="295" height="274" style="left:calc(50% + -654px);top:12413px;--i:4;--dur:8.1s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-narrow-decoration-3.svg" alt="" width="201" height="201" style="left:calc(50% + 418px);top:12485px;--i:5;--dur:8.8s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-horizontal-decoration-6.svg" alt="" width="190" height="159" style="left:calc(50% + 504px);top:12722px;--i:6;--dur:6.0s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-compact-decoration-1.svg" alt="" width="149" height="136" style="left:calc(50% + -681px);top:12802px;--i:7;--dur:6.7s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-layered-decoration-1.svg" alt="" width="295" height="274" style="left:calc(50% + 361px);top:12806px;--i:8;--dur:7.4s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-narrow-decoration-5.svg" alt="" width="201" height="201" style="left:calc(50% + -558px);top:12949px;--i:9;--dur:8.1s">
+  </div>
+
+  <button type="button" class="to-top" aria-label="Наверх">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/case-side-decoration.svg" alt="" width="40" height="109">
+  </button>
+
+  <main class="column" id="top">
+
+    <header class="column__head">
+      <img class="logo" src="assets/projects-section/projects-section-case/case-vinul/zolotoy-logo.svg" alt="ЖК «Золотой»" width="103" height="70">
+      <span class="year">2025</span>
+    </header>
+
+    <h1 class="title">Печатный журнал для&nbsp;секретной комнаты с&nbsp;коллекцией винила</h1>
+    <p class="sub">На&nbsp;старте были тексты, изображения пластинок и&nbsp;логотип ЖК. Готовой визуальной системы для&nbsp;издания не&nbsp;существовало</p>
+
+    <ul class="tags">
+      <li class="tag tag--lime">редакционный дизайн</li>
+      <li class="tag tag--orange">визуальная концепция</li>
+      <li class="tag tag--cyan">печатный дизайн</li>
+      <li class="tag tag--blue">18 страниц</li>
+      <li class="tag tag--lilac">2 дня</li>
+      <li class="tag tag--pink">~20 экземпляров</li>
+    </ul>
+
+    <hr class="rule-line">
+
+    <ul class="tools-used" aria-label="Программы, в которых я работала">
+      <li class="tool-chip tool-chip--pink">InDesign</li>
+      <li class="tool-chip tool-chip--blue">Photoshop</li>
+      <li class="tool-chip tool-chip--orange">Illustrator</li>
+      <li class="tool-chip tool-chip--lilac">ChatGPT</li>
+      <li class="tool-chip tool-chip--cyan">Figma</li>
+    </ul>
+
+    <p class="lead"><strong>За&nbsp;два дня я&nbsp;разработала журнал об&nbsp;истории пяти редких виниловых пластинок</strong> для&nbsp;секретной комнаты ЖК «Золотой». Нужно было не&nbsp;просто сверстать готовые материалы, а&nbsp;придумать для&nbsp;них собственный визуальный язык&nbsp;— с&nbsp;коллажами, выразительной типографикой и&nbsp;атмосферой музыкальной культуры</p>
+
+    <figure class="fig">
+      <img class="fig__hero" src="assets/projects-section/projects-section-case/case-vinul/web-vinul/magazine-hero-preview.webp" width="1408" height="728" alt="Мокап готового журнала «История 5 редчайших виниловых пластинок»: человек читает журнал на диване">
+    </figure>
+
+    <nav class="toc" aria-label="Содержание">
+      <a href="#about">01 / О&nbsp;проекте</a>
+      <a href="#task">02 / Задача и&nbsp;моя роль</a>
+      <a href="#search">03 / Визуальный поиск</a>
+      <a href="#structure">04 / Структура издания</a>
+      <a href="#system">05 / Визуальная система</a>
+      <a class="toc__sub" href="#typography">&gt;&gt; Типографика</a>
+      <a class="toc__sub" href="#palette">&gt;&gt; Цветовая палитра</a>
+      <a class="toc__sub" href="#collage">&gt;&gt; Коллажи</a>
+      <a class="toc__sub" href="#quotes">&gt;&gt; Цитатные страницы</a>
+      <a href="#making">06 / Реализация за&nbsp;два дня</a>
+      <a href="#result">07 / Результат</a>
+    </nav>
+
+    <!-- ===== 01 ===== -->
+    <section class="section" id="about">
+      <h2>01. Немного о&nbsp;проекте</h2>
+      <p>В&nbsp;московском ЖК «Золотой» есть необычное пространство&nbsp;— секретная комната с&nbsp;проигрывателем и&nbsp;коллекцией редких виниловых пластинок</p>
+      <p>Для&nbsp;неё решили создать небольшой печатный журнал с&nbsp;историями пяти пластинок из&nbsp;коллекции</p>
+
+      <p class="callout"><span class="callout__icon callout__icon--pink" aria-hidden="true">⊹</span><strong>Важный момент:</strong> это не&nbsp;рекламная брошюра и&nbsp;не&nbsp;каталог с&nbsp;сухими фактами. Журнал должен был стать частью самого пространства&nbsp;— предметом, который хочется взять в&nbsp;руки, полистать, почитать и&nbsp;через истории музыкантов чуть ближе познакомиться с&nbsp;коллекцией</p>
+
+      <div class="gallery" role="group" aria-label="Фотографии пространства и журнала (прокрутите вбок)" tabindex="0">
+        <img src="assets/projects-section/projects-section-case/case-vinul/web-vinul/overview-gallery-image-1.webp" width="564" height="910" alt="Секретная комната: стеллаж с виниловыми пластинками и колонкой">
+        <img src="assets/projects-section/projects-section-case/case-vinul/web-vinul/overview-gallery-image-2.webp" width="562" height="910" alt="Обложка журнала «История 5 редчайших виниловых пластинок» в руках" loading="lazy">
+        <img src="assets/projects-section/projects-section-case/case-vinul/web-vinul/overview-gallery-image-3.webp" width="562" height="910" alt="Разворот журнала «Red Wave» в руках" loading="lazy">
+        <img src="assets/projects-section/projects-section-case/case-vinul/web-vinul/overview-gallery-image-4.webp" width="562" height="910" alt="Проигрыватель и пластинка Queen «Live at Wembley ’86»" loading="lazy">
+      </div>
+
+      <p class="gap">Содержание сборника подготовил Андрей Купрум, главным редактором проекта выступил Слава Милк. <strong>А&nbsp;мне предстояло придумать, как&nbsp;всё это будет выглядеть</strong></p>
+
+      <h3>О&nbsp;проекте</h3>
+      <ul class="facts">
+        <li><span>Формат:</span> А4</li>
+        <li><span>Объём:</span> 18 страниц</li>
+        <li><span>Тираж:</span> ~20 экземпляров</li>
+        <li><span>Срок:</span> 2 дня</li>
+        <li><span>Моя роль:</span> графический и&nbsp;редакционный дизайнер</li>
+      </ul>
+    </section>
+
+    <!-- ===== 02 ===== -->
+    <section class="section" id="task">
+      <h2>02. С&nbsp;чего всё начиналось</h2>
+      <p>На&nbsp;старте у&nbsp;меня были тексты, изображения пластинок и&nbsp;логотип жилого комплекса. Готовой визуальной концепции или&nbsp;шаблона для&nbsp;журнала не&nbsp;существовало&nbsp;— всё нужно было придумать с&nbsp;нуля</p>
+      <p>При&nbsp;этом на&nbsp;проект отводилось <strong>всего два дня, включая подготовку финального файла к&nbsp;печати</strong></p>
+      <p>Мне нужно было разобраться в&nbsp;содержании, распределить материалы по&nbsp;страницам, разработать оформление и&nbsp;<strong>собрать все 18 страниц в&nbsp;единое издание</strong></p>
+      <p>Но&nbsp;была ещё одна задача, не&nbsp;такая очевидная</p>
+      <p>ЖК «Золотой»&nbsp;— премиальное пространство, и&nbsp;журнал должен был ему соответствовать. При&nbsp;этом мне совершенно не&nbsp;хотелось делать очередной стерильный каталог с&nbsp;аккуратными фотографиями и&nbsp;строгими заголовками</p>
+      <p><span style="white-space:nowrap">Всё-таки</span> речь шла о&nbsp;музыке&nbsp;— с&nbsp;её историей, характером и&nbsp;эмоциями</p>
+
+      <p class="callout"><span class="callout__icon callout__icon--blue" aria-hidden="true">⌁</span>Нужно было найти <strong>баланс между сдержанностью премиального издания и&nbsp;живой эстетикой музыкальной культуры</strong></p>
+
+      <p><strong>За&nbsp;дизайн я&nbsp;отвечала самостоятельно</strong>: от&nbsp;визуального поиска и&nbsp;структуры журнала до&nbsp;обложки, разворотов, коллажей и&nbsp;подготовки к&nbsp;печати. Все ключевые решения согласовывала напрямую со&nbsp;Славой Милком</p>
+
+      <figure class="fig fig--panel">
+        <img src="assets/projects-section/projects-section-case/case-vinul/web-vinul/challenge-supporting-image.webp" width="1408" height="952" alt="Папка «Журнал_исходные материалы»: тексты, изображения пластинок и логотип ЖК" loading="lazy">
+      <p class="fig__cap">Исходные материалы: тексты, изображения пластинок и логотип ЖК</p>
+      </figure>
+    </section>
+
+    <!-- ===== 03 ===== -->
+    <section class="section" id="search">
+      <h2>03. Как&nbsp;я&nbsp;искала визуальный язык</h2>
+      <p>Сначала я&nbsp;определила несколько направлений, в&nbsp;которых мог развиваться дизайн</p>
+      <p class="arrow">&gt;&gt; <strong>Первое&nbsp;— минималистичный премиальный каталог.</strong> Много свободного пространства, аккуратная типографика, сдержанные композиции</p>
+      <p class="arrow">&gt;&gt; <strong>Второе&nbsp;— музейная подача.</strong> Более строгая структура, архивные изображения и&nbsp;акцент на&nbsp;исторической ценности пластинок</p>
+      <p class="arrow">&gt;&gt; <strong>Третье&nbsp;— коллажная эстетика.</strong> Многослойные композиции, крупная типографика, вырезки и&nbsp;графические элементы, вдохновлённые старыми музыкальными журналами и&nbsp;афишами</p>
+
+      <figure class="fig fig--panel">
+        <img src="assets/projects-section/projects-section-case/case-vinul/web-vinul/visual-research-reference-image.webp" width="1408" height="1344" alt="Мудборд: три направления — премиальный каталог, музейный архив и музыкальный журнал (выбранное направление)" loading="lazy">
+      <p class="fig__cap">Три направления: премиальный каталог, музейный архив и музыкальный журнал — выбрано последнее</p>
+      </figure>
+
+      <p>Первое направление хорошо передавало премиальный характер пространства, но&nbsp;выглядело слишком сдержанным для&nbsp;музыкального издания. Второе подчёркивало историческую ценность пластинок, но&nbsp;создавало ощущение музейной экспозиции</p>
+      <p>Мне хотелось, чтобы журнал не&nbsp;просто рассказывал об&nbsp;истории музыки, а&nbsp;передавал её характер и&nbsp;настроение</p>
+      <p><strong>Поэтому я&nbsp;остановилась на&nbsp;коллажной эстетике</strong>, вдохновлённой музыкальными журналами, афишами и&nbsp;архивными материалами, сохранив при&nbsp;этом аккуратность редакционной структуры</p>
+      <p>Так появилась основная концепция: <strong>пять музыкальных историй, объединённых одним коллажным визуальным языком</strong></p>
+    </section>
+
+    <!-- ===== 04 ===== -->
+    <section class="section" id="structure">
+      <h2>04. Как&nbsp;я&nbsp;выстроила структуру журнала</h2>
+      <p>Прежде чем собирать развороты, нужно было понять, как&nbsp;организовать пять разных историй внутри одного журнала</p>
+      <p>Я&nbsp;разделила содержание на&nbsp;смысловые блоки и&nbsp;выстроила общую последовательность:</p>
+      <p><strong>Введение → Пять историй пластинок с&nbsp;чередованием информационных, коллажных и&nbsp;цитатных страниц → Финальный блок с&nbsp;авторами и&nbsp;логотипом ЖК</strong></p>
+
+      <figure class="fig fig--panel">
+        <img src="assets/projects-section/projects-section-case/case-vinul/web-vinul/magazine-structure-screenshot.webp" width="1408" height="1864" alt="Карта журнала из миниатюр страниц: обложка, форзацы, предисловие и пять историй пластинок — Red Wave, Stockfisch Records, Live at Wembley ’86, Brian Eno «Ambient 1», Владимир Высоцкий «Натянутый канат»" loading="lazy">
+      <p class="fig__cap">Карта журнала: обложка, форзацы, предисловие и пять историй пластинок</p>
+      </figure>
+
+      <p>При&nbsp;распределении материалов я&nbsp;ориентировалась не&nbsp;только на&nbsp;объём текста, но&nbsp;и&nbsp;на&nbsp;смысл каждой истории</p>
+      <p>Мне хотелось, чтобы один разворот раскрывал одну законченную мысль, а&nbsp;сам журнал можно было читать <span style="white-space:nowrap">по-разному</span>: последовательно, от&nbsp;начала до&nbsp;конца, или&nbsp;просто открывать на&nbsp;случайной странице</p>
+      <p class="gap">Поэтому вместо одного повторяющегося шаблона я&nbsp;выделила несколько типов страниц:</p>
+      <p class="arrow">&gt;&gt; <strong>Информационные</strong>&nbsp;— спокойные развороты, где главную роль играет текст</p>
+      <p class="arrow">&gt;&gt; <strong>Коллажные</strong>&nbsp;— более насыщенные композиции с&nbsp;фотографиями, пластинками и&nbsp;графикой</p>
+      <p class="arrow">&gt;&gt; <strong>Цитатные</strong>&nbsp;— акцентные страницы с&nbsp;крупной типографикой, которые создают паузы между историями</p>
+
+      <figure class="fig fig--panel">
+        <img src="assets/projects-section/projects-section-case/case-vinul/web-vinul/page-types-preview-grid.webp" width="1408" height="1034" alt="Три типа страниц: информационный, коллажный и цитатный развороты («Пара слов», «Live at Wembley ’86», «Red Wave»)" loading="lazy">
+      <p class="fig__cap">Три типа страниц: информационный, коллажный и цитатный</p>
+      </figure>
+
+      <p>Это стало основой редакционной системы: разные по&nbsp;характеру страницы объединялись общими принципами, но&nbsp;не&nbsp;повторяли друг друга</p>
+    </section>
+
+    <!-- ===== 05 ===== -->
+    <section class="section" id="system">
+      <h2>05. Одна система&nbsp;— пять разных характеров</h2>
+      <p>Одна из&nbsp;главных сложностей заключалась в&nbsp;том, что&nbsp;истории пластинок заметно отличались друг от&nbsp;друга</p>
+      <p>Мне не&nbsp;хотелось оформлять их по&nbsp;одному шаблону, просто меняя фотографии и&nbsp;заголовки. Но&nbsp;и&nbsp;превращать журнал в&nbsp;набор никак не&nbsp;связанных страниц было нельзя</p>
+      <p>Поэтому я&nbsp;разделила визуальную систему на&nbsp;две части</p>
+
+      <div class="system">
+        <div class="system__cols">
+          <div class="system__card">
+            <h3>Постоянная основа</h3>
+            <ol>
+              <li>Типографическая иерархия</li>
+              <li>Цветовая палитра</li>
+              <li>Работа с&nbsp;цитатами</li>
+              <li>Коллажные принципы</li>
+              <li>Смысловая структура</li>
+            </ol>
+          </div>
+          <div class="system__card">
+            <h3>Гибкость внутри системы</h3>
+            <ol>
+              <li>Масштаб заголовков</li>
+              <li>Соотношение цветов</li>
+              <li>Расположение цитат</li>
+              <li>Количество и&nbsp;композиция изображений</li>
+              <li>Смысловая структура</li>
+            </ol>
+          </div>
+        </div>
+        <img src="assets/projects-section/projects-section-case/case-vinul/web-vinul/visual-system-example-image.webp" width="1344" height="694" alt="Разворот журнала со Stockfisch-Records в руках" loading="lazy">
+      </div>
+
+      <p>Получилась система с&nbsp;достаточно <strong>строгой основой, внутри которой можно было свободно экспериментировать с&nbsp;композицией</strong></p>
+
+      <h3 id="typography">Типографика: читаемость и&nbsp;визуальные акценты</h3>
+      <p>Типографика стала одним из&nbsp;главных инструментов оформления журнала</p>
+      <p>Для&nbsp;объёмных материалов я&nbsp;выбрала спокойную журнальную вёрстку, чтобы истории оставались удобными для&nbsp;чтения</p>
+      <p>А&nbsp;в&nbsp;заголовках и&nbsp;цитатах позволила себе больше свободы: использовала крупный шрифт, контраст и&nbsp;нестандартное расположение текста</p>
+      <p>Так типографика не&nbsp;только организует информацию, но&nbsp;и&nbsp;становится частью коллажных композиций, помогая передать характер каждой музыкальной истории</p>
+      <figure class="fig fig--photo">
+        <img src="assets/projects-section/projects-section-case/case-vinul/web-vinul/typography-magazine-mockup.webp" width="1408" height="938" alt="Разворот «Live at Wembley ’86» на чёрном кожаном кресле" loading="lazy">
+      <p class="fig__cap">Разворот «Live at Wembley ’86»</p>
+      </figure>
+
+      <h3 id="palette">Три цвета вместо сложной палитры</h3>
+      <p><strong>Основу журнала составили бордовый, чёрный и&nbsp;белый</strong></p>
+      <p>Я&nbsp;намеренно ограничила палитру, потому что&nbsp;внутри уже было достаточно разного визуального материала: фотографии музыкантов, изображения пластинок, коллажи и&nbsp;большой объём текста</p>
+      <p>Дополнительные цвета только усложнили бы&nbsp;композицию</p>
+      <p><strong>Бордовый стал главным акцентом</strong>&nbsp;— выразительным, но&nbsp;при&nbsp;этом достаточно сдержанным для&nbsp;премиального пространства</p>
+      <p>А&nbsp;чередование светлых и&nbsp;тёмных разворотов помогло управлять визуальным ритмом издания</p>
+      <figure class="fig fig--photo">
+        <img src="assets/projects-section/projects-section-case/case-vinul/web-vinul/palette-spreads-composite.jpg" width="1408" height="984" alt="Светлый бордовый разворот и тёмный чёрно-белый разворот рядом" loading="lazy">
+      <p class="fig__cap">Светлый и тёмный развороты рядом</p>
+      </figure>
+
+      <h3 id="collage">Как&nbsp;разрозненные изображения превратились в&nbsp;коллажи</h3>
+      <p><strong>Коллаж стал основой визуального языка журнала</strong></p>
+      <p>Исходные изображения сильно различались по&nbsp;характеру и&nbsp;качеству. Вместо того чтобы пытаться привести все фотографии к&nbsp;одному стилю обработки, я&nbsp;решила <strong>использовать эту разницу как&nbsp;часть концепции</strong></p>
+      <p>Фотографии артистов, изображения пластинок, рукописные элементы и&nbsp;графические пометки стали материалом для&nbsp;многослойных композиций</p>
+      <p>Они накладываются друг на&nbsp;друга, пересекаются с&nbsp;заголовками и&nbsp;взаимодействуют с&nbsp;типографикой, создавая ощущение вручную собранных музыкальных историй</p>
+      <figure class="fig fig--plain">
+        <img src="assets/projects-section/projects-section-case/case-vinul/web-vinul/collage-process-composite.jpg" width="1408" height="1346" alt="Как фотография артистов превращается в вырезку и ложится на разворот «Red Wave»" loading="lazy">
+      <p class="fig__cap">Как фотография артиста превращается в вырезку и ложится на разворот «Red Wave»</p>
+      </figure>
+
+      <h3 id="quotes">Цитаты, которые помогают задать ритм</h3>
+      <p>Мне не&nbsp;хотелось, чтобы журнал состоял только из&nbsp;плотных текстовых разворотов</p>
+      <p>Поэтому я&nbsp;придумала несколько коротких фраз о&nbsp;музыке и&nbsp;вынесла их на&nbsp;отдельные акцентные страницы, сделав полноценными композиционными элементами</p>
+      <p>Они работают как&nbsp;небольшие паузы между большими историями: помогают переключить внимание, меняют темп просмотра и&nbsp;добавляют изданию эмоциональности</p>
+      <p>Особенно это важно для&nbsp;журнала, который будут не&nbsp;только читать последовательно, но&nbsp;и&nbsp;свободно листать</p>
+      <div class="quotes">
+        <img src="assets/projects-section/projects-section-case/case-vinul/web-vinul/quote-spread-03-image.webp" width="682" height="990" alt="Цитатная страница: «Время не властно над великими альбомами. Они просто ждут новых поколений слушателей»" loading="lazy">
+        <img src="assets/projects-section/projects-section-case/case-vinul/web-vinul/quote-spread-09-image.webp" width="694" height="992" alt="Цитатная страница: «Великие альбомы не уходят с полок — они живут в памяти и сердце»" loading="lazy">
+      </div>
+    </section>
+
+    <!-- ===== 06 ===== -->
+    <section class="section" id="making">
+      <h2>06. Как&nbsp;собрать всё это за&nbsp;два дня?</h2>
+      <p><span style="white-space:nowrap">Из-за</span>&nbsp;короткого срока привычный процесс с&nbsp;длительным поиском концепций и&nbsp;несколькими полноценными вариантами здесь не&nbsp;подходил</p>
+      <p><strong>Мне нужно было быстро определиться с&nbsp;визуальным направлением</strong> и&nbsp;сразу проверить, насколько хорошо оно работает с&nbsp;реальным содержанием</p>
+      <p>После анализа материалов и&nbsp;поиска референсов я&nbsp;выбрала коллажный подход и&nbsp;перешла к&nbsp;первому ключевому развороту</p>
+      <p>Именно на&nbsp;нём начала формироваться будущая система: типографика, работа с&nbsp;цветом, сочетание изображений и&nbsp;общий принцип построения коллажей</p>
+      <p>Затем я&nbsp;перенесла эти правила на&nbsp;остальные страницы, параллельно обрабатывая изображения, распределяя тексты, придумывая акцентные фразы и&nbsp;дорабатывая отдельные элементы</p>
+
+      <ol class="timeline" aria-label="План работы по дням">
+        <li class="timeline__step" style="--n:0">
+          <span class="timeline__pill">анализ, референсы</span>
+          <div class="timeline__when">день 1 / утро</div>
+          <ul><li>исходные материалы</li><li>визуальный поиск</li><li>выбор направления</li></ul>
+        </li>
+        <li class="timeline__step" style="--n:1">
+          <span class="timeline__pill">структура</span>
+          <div class="timeline__when">день 1 / день</div>
+          <ul><li>логика издания</li><li>распределение контента</li><li>типы страниц</li></ul>
+        </li>
+        <li class="timeline__step" style="--n:2">
+          <span class="timeline__pill">первый разворот</span>
+          <div class="timeline__when">день 1 / вечер</div>
+          <ul><li>проверка концепции</li><li>типографика</li><li>коллажный принцип</li></ul>
+        </li>
+        <li class="timeline__step" style="--n:3">
+          <span class="timeline__pill">сборка системы</span>
+          <div class="timeline__when">день 2 / утро</div>
+          <ul><li>остальные развороты</li><li>обработка изображений</li><li>цитатные страницы</li><li>ритм журнала</li></ul>
+        </li>
+        <li class="timeline__step" style="--n:4">
+          <span class="timeline__pill">финализация</span>
+          <div class="timeline__when">день 2 / день</div>
+          <ul><li>подготовка pdf</li><li>финальные правки</li><li>согласование</li><li>печать</li></ul>
+        </li>
+      </ol>
+
+      <p>Макет изначально собирался с&nbsp;учётом дальнейшего производства, поэтому не&nbsp;пришлось отдельно собирать оформление под&nbsp;печатный формат</p>
+      <p>В&nbsp;итоге <strong>согласование прошло практически без&nbsp;изменений</strong>: основная правка касалась названия журнала</p>
+    </section>
+
+    <!-- ===== 07 ===== -->
+    <section class="section" id="result">
+      <h2>07. Что&nbsp;получилось</h2>
+      <p>За&nbsp;два дня я&nbsp;разработала и&nbsp;подготовила к&nbsp;печати <strong><span style="white-space:nowrap">18-страничный</span> журнал</strong> с&nbsp;историями пяти редких виниловых пластинок</p>
+      <p>Было напечатано <strong>около 20 экземпляров</strong>, и&nbsp;издание стало частью секретной комнаты ЖК «Золотой»</p>
+      <p class="gap">Главное в&nbsp;этом проекте для&nbsp;меня&nbsp;— не&nbsp;столько скорость, сколько возможность за&nbsp;очень короткое время придумать и&nbsp;реализовать цельную редакционную систему</p>
+      <p>Вместо набора разрозненных текстов и&nbsp;изображений получилось самостоятельное печатное издание, в&nbsp;котором каждая музыкальная история получила собственный характер</p>
+      <p>Коллажная эстетика позволила объединить разные материалы, а&nbsp;общая типографика, палитра, авторские фразы и&nbsp;структура&nbsp;— сохранить целостность и&nbsp;визуальный ритм всех 18 страниц</p>
+
+      <!-- Видео лежат в assets/video/. Чтобы заменить — положите файл с тем же именем. -->
+      <figure class="fig fig--video">
+        <video class="video video--wide" poster="assets/projects-section/projects-section-case/case-vinul/video-vinul/pdf-scroll-poster.jpg" src="assets/projects-section/projects-section-case/case-vinul/video-vinul/pdf-scroll.mp4" muted loop playsinline preload="metadata" controls aria-label="Видео: как я листаю PDF журнала"></video>
+      </figure>
+
+      <div class="media-row">
+        <figure class="fig fig--ai">
+          <img src="assets/projects-section/projects-section-case/case-vinul/web-vinul/results-ai-generated-image.webp" width="692" height="1122" alt="Два человека в костюмах держат пластинку «Red Wave» (изображение создано с использованием ИИ)">
+          <figcaption>изображение создано с&nbsp;использованием ИИ</figcaption>
+        </figure>
+        <figure class="fig fig--video">
+          <video class="video video--tall" poster="assets/projects-section/projects-section-case/case-vinul/video-vinul/blogger-review-poster.jpg" src="assets/projects-section/projects-section-case/case-vinul/video-vinul/blogger-review.mp4" playsinline preload="metadata" controls aria-label="Видео: блогер с напечатанным журналом"></video>
+        </figure>
+      </div>
+
+      <a class="view-link" href="assets/projects-section/projects-section-case/case-vinul/magazine-print.pdf" target="_blank" rel="noopener">
+        <img class="view-link__icon" src="assets/projects-section/projects-section-case/case-vinul/deco-vinul/magazine-link-decoration.svg" alt="" width="42" height="40">
+        Посмотреть журнал
+      </a>
+    </section>
+
+    <img class="chat-deco" src="assets/projects-section/projects-section-case/case-vinul/deco-vinul/results-decoration.svg" alt="" width="91" height="75">
+  </main>
+
+  <script src="case.js?v=20261106b"></script>
+</body>
+</html>

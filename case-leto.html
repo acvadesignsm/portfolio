@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>STOлица.Лето: оформление слёта — Софья Михайлова</title>
+  <meta name="description" content="Кейс: система оформления палаточного слёта STOлица.Лето — экраны, навигация и печать для 10 смен за 48 дней.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="stylesheet" href="case.css?v=20261110c">
+</head>
+<body>
+
+  <nav class="topbar" aria-label="Навигация по кейсу">
+    <a class="topbar__back" href="index.html#projects">← все проекты</a>
+    <span class="topbar__title">STOлица.Лето // оформление слёта</span>
+    <div class="topbar__menu">
+      <button type="button" class="topbar__toggle" aria-expanded="false" aria-controls="sections-menu">разделы <svg class="topbar__chev" viewBox="0 0 8 5" width="8" height="5" aria-hidden="true"><path d="M.75.75L4 4 7.25.75" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <ul class="topbar__list" id="sections-menu" hidden>
+        <li><a href="#c01">01 / Лагерь без&nbsp;зданий</a></li>
+        <li><a href="#c02">02 / Каждые четыре дня&nbsp;— новая смена</a></li>
+        <li><a href="#c03">03 / Что&nbsp;уже&nbsp;было до&nbsp;меня</a></li>
+        <li><a href="#c04">04 / Цвет стихии стал адресом</a></li>
+        <li><a href="#c05">05 / Смена глазами участника</a></li>
+        <li><a href="#c06">06 / Экраны: всё, что&nbsp;происходит на&nbsp;сцене</a></li>
+        <li><a href="#c07">07 / Площадка: лес&nbsp;вместо коридоров</a></li>
+        <li><a href="#c08">08 / Печать, которая уходила с&nbsp;командой</a></li>
+        <li><a href="#c09">09 / Визуальный стиль</a></li>
+        <li><a href="#c10">10 / Как&nbsp;была устроена работа</a></li>
+        <li><a href="#c11">11 / Что&nbsp;получилось</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- пиксельные украшения по бокам (лежат позади колонки) -->
+  <div class="case-deco" aria-hidden="true">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-large-decoration-1.svg" alt="" width="428" height="434" style="left:calc(50% + -702px);top:-2px;--i:0;--dur:6.0s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-wide-decoration-1.svg" alt="" width="377" height="343" style="left:calc(50% + 320px);top:9px;--i:1;--dur:6.7s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-compact-decoration-1.svg" alt="" width="149" height="136" style="left:calc(50% + 543px);top:383px;--i:2;--dur:7.4s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-small-decoration-1.svg" alt="" width="117" height="121" style="left:calc(50% + -671px);top:405px;--i:3;--dur:8.1s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-layered-decoration-1.svg" alt="" width="295" height="274" style="left:calc(50% + -654px);top:533px;--i:4;--dur:8.8s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-narrow-decoration-1.svg" alt="" width="201" height="201" style="left:calc(50% + 418px);top:605px;--i:5;--dur:6.0s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-horizontal-decoration-1.svg" alt="" width="190" height="159" style="left:calc(50% + 504px);top:842px;--i:6;--dur:6.7s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-compact-decoration-2.svg" alt="" width="149" height="136" style="left:calc(50% + -681px);top:922px;--i:7;--dur:7.4s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-layered-decoration-1.svg" alt="" width="295" height="274" style="left:calc(50% + 361px);top:926px;--i:8;--dur:8.1s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-narrow-decoration-1.svg" alt="" width="201" height="201" style="left:calc(50% + -558px);top:1069px;--i:9;--dur:8.8s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-horizontal-decoration-2.svg" alt="" width="190" height="159" style="left:calc(50% + -649px);top:1305px;--i:10;--dur:6.0s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-small-decoration-1.svg" alt="" width="117" height="121" style="left:calc(50% + 540px);top:1345px;--i:11;--dur:6.7s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-large-decoration-1.svg" alt="" width="408" height="434" style="left:calc(50% + 312px);top:1474px;--i:12;--dur:7.4s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-wide-decoration-1.svg" alt="" width="336" height="333" style="left:calc(50% + -626px);top:1511px;--i:13;--dur:8.1s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-large-decoration-2.svg" alt="" width="428" height="434" style="left:calc(50% + -702px);top:1968px;--i:0;--dur:8.8s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-wide-decoration-2.svg" alt="" width="377" height="343" style="left:calc(50% + 320px);top:1975px;--i:1;--dur:6.0s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-compact-decoration-1.svg" alt="" width="149" height="137" style="left:calc(50% + 543px);top:2349px;--i:2;--dur:6.7s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-small-decoration-2.svg" alt="" width="117" height="121" style="left:calc(50% + -671px);top:2374px;--i:3;--dur:7.4s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-layered-decoration-2.svg" alt="" width="295" height="274" style="left:calc(50% + -653px);top:2503px;--i:4;--dur:8.1s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-narrow-decoration-2.svg" alt="" width="201" height="201" style="left:calc(50% + 418px);top:2571px;--i:5;--dur:8.8s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-horizontal-decoration-3.svg" alt="" width="190" height="159" style="left:calc(50% + 504px);top:2808px;--i:6;--dur:6.0s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-compact-decoration-2.svg" alt="" width="149" height="137" style="left:calc(50% + -681px);top:2892px;--i:7;--dur:6.7s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-layered-decoration-2.svg" alt="" width="295" height="274" style="left:calc(50% + 361px);top:2892px;--i:8;--dur:7.4s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-narrow-decoration-3.svg" alt="" width="201" height="201" style="left:calc(50% + -558px);top:3039px;--i:9;--dur:8.1s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-horizontal-decoration-4.svg" alt="" width="190" height="159" style="left:calc(50% + -649px);top:3275px;--i:10;--dur:8.8s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-small-decoration-2.svg" alt="" width="117" height="121" style="left:calc(50% + 540px);top:3311px;--i:11;--dur:6.0s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-large-decoration-2.svg" alt="" width="408" height="434" style="left:calc(50% + 312px);top:3440px;--i:12;--dur:6.7s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-wide-decoration-2.svg" alt="" width="336" height="333" style="left:calc(50% + -626px);top:3481px;--i:13;--dur:7.4s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-large-decoration-3.svg" alt="" width="428" height="434" style="left:calc(50% + -702px);top:3958px;--i:0;--dur:8.1s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-wide-decoration-3.svg" alt="" width="377" height="343" style="left:calc(50% + 320px);top:3969px;--i:1;--dur:8.8s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-compact-decoration-3.svg" alt="" width="149" height="136" style="left:calc(50% + 543px);top:4343px;--i:2;--dur:6.0s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-small-decoration-3.svg" alt="" width="117" height="121" style="left:calc(50% + -671px);top:4365px;--i:3;--dur:6.7s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-layered-decoration-3.svg" alt="" width="295" height="274" style="left:calc(50% + -654px);top:4493px;--i:4;--dur:7.4s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-narrow-decoration-4.svg" alt="" width="201" height="201" style="left:calc(50% + 418px);top:4565px;--i:5;--dur:8.1s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-horizontal-decoration-5.svg" alt="" width="190" height="159" style="left:calc(50% + 504px);top:4802px;--i:6;--dur:8.8s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-compact-decoration-4.svg" alt="" width="149" height="136" style="left:calc(50% + -681px);top:4882px;--i:7;--dur:6.0s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-layered-decoration-3.svg" alt="" width="295" height="274" style="left:calc(50% + 361px);top:4886px;--i:8;--dur:6.7s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-narrow-decoration-2.svg" alt="" width="201" height="201" style="left:calc(50% + -558px);top:5029px;--i:9;--dur:7.4s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-horizontal-decoration-6.svg" alt="" width="190" height="159" style="left:calc(50% + -649px);top:5265px;--i:10;--dur:8.1s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-small-decoration-3.svg" alt="" width="117" height="121" style="left:calc(50% + 540px);top:5305px;--i:11;--dur:8.8s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-large-decoration-3.svg" alt="" width="408" height="434" style="left:calc(50% + 312px);top:5434px;--i:12;--dur:6.0s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-wide-decoration-3.svg" alt="" width="336" height="333" style="left:calc(50% + -626px);top:5471px;--i:13;--dur:6.7s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-large-decoration-4.svg" alt="" width="428" height="434" style="left:calc(50% + -702px);top:5928px;--i:0;--dur:7.4s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-wide-decoration-4.svg" alt="" width="377" height="343" style="left:calc(50% + 320px);top:5935px;--i:1;--dur:8.1s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-compact-decoration-3.svg" alt="" width="149" height="137" style="left:calc(50% + 543px);top:6309px;--i:2;--dur:8.8s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-small-decoration-4.svg" alt="" width="117" height="121" style="left:calc(50% + -671px);top:6334px;--i:3;--dur:6.0s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-layered-decoration-4.svg" alt="" width="295" height="274" style="left:calc(50% + -653px);top:6463px;--i:4;--dur:6.7s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-narrow-decoration-5.svg" alt="" width="201" height="201" style="left:calc(50% + 418px);top:6531px;--i:5;--dur:7.4s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-horizontal-decoration-7.svg" alt="" width="190" height="159" style="left:calc(50% + 504px);top:6768px;--i:6;--dur:8.1s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-compact-decoration-4.svg" alt="" width="149" height="137" style="left:calc(50% + -681px);top:6852px;--i:7;--dur:8.8s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-layered-decoration-5.svg" alt="" width="295" height="274" style="left:calc(50% + 361px);top:6852px;--i:8;--dur:6.0s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-narrow-decoration-6.svg" alt="" width="201" height="201" style="left:calc(50% + -558px);top:6999px;--i:9;--dur:6.7s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-horizontal-decoration-1.svg" alt="" width="190" height="159" style="left:calc(50% + -649px);top:7235px;--i:10;--dur:7.4s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-small-decoration-5.svg" alt="" width="117" height="121" style="left:calc(50% + 540px);top:7271px;--i:11;--dur:8.1s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-large-decoration-5.svg" alt="" width="408" height="434" style="left:calc(50% + 312px);top:7400px;--i:12;--dur:8.8s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-wide-decoration-5.svg" alt="" width="336" height="333" style="left:calc(50% + -626px);top:7441px;--i:13;--dur:6.0s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-large-decoration-5.svg" alt="" width="428" height="434" style="left:calc(50% + -702px);top:7918px;--i:0;--dur:6.7s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-wide-decoration-5.svg" alt="" width="377" height="343" style="left:calc(50% + 320px);top:7929px;--i:1;--dur:7.4s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-compact-decoration-5.svg" alt="" width="149" height="136" style="left:calc(50% + 543px);top:8303px;--i:2;--dur:8.1s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-small-decoration-5.svg" alt="" width="117" height="121" style="left:calc(50% + -671px);top:8325px;--i:3;--dur:8.8s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-layered-decoration-5.svg" alt="" width="295" height="274" style="left:calc(50% + -654px);top:8453px;--i:4;--dur:6.0s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-narrow-decoration-7.svg" alt="" width="201" height="201" style="left:calc(50% + 418px);top:8525px;--i:5;--dur:6.7s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-horizontal-decoration-2.svg" alt="" width="190" height="159" style="left:calc(50% + 504px);top:8762px;--i:6;--dur:7.4s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-compact-decoration-6.svg" alt="" width="149" height="136" style="left:calc(50% + -681px);top:8842px;--i:7;--dur:8.1s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-layered-decoration-6.svg" alt="" width="295" height="274" style="left:calc(50% + 361px);top:8846px;--i:8;--dur:8.8s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-narrow-decoration-3.svg" alt="" width="201" height="201" style="left:calc(50% + -558px);top:8989px;--i:9;--dur:6.0s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-horizontal-decoration-3.svg" alt="" width="190" height="159" style="left:calc(50% + -649px);top:9225px;--i:10;--dur:6.7s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-small-decoration-6.svg" alt="" width="117" height="121" style="left:calc(50% + 540px);top:9265px;--i:11;--dur:7.4s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-large-decoration-6.svg" alt="" width="408" height="434" style="left:calc(50% + 312px);top:9394px;--i:12;--dur:8.1s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-wide-decoration-6.svg" alt="" width="336" height="333" style="left:calc(50% + -626px);top:9431px;--i:13;--dur:8.8s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-large-decoration-6.svg" alt="" width="428" height="434" style="left:calc(50% + -702px);top:9888px;--i:0;--dur:6.0s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-wide-decoration-6.svg" alt="" width="377" height="343" style="left:calc(50% + 320px);top:9895px;--i:1;--dur:6.7s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-compact-decoration-5.svg" alt="" width="149" height="137" style="left:calc(50% + 543px);top:10269px;--i:2;--dur:7.4s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-small-decoration-6.svg" alt="" width="117" height="121" style="left:calc(50% + -671px);top:10294px;--i:3;--dur:8.1s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-layered-decoration-6.svg" alt="" width="295" height="274" style="left:calc(50% + -653px);top:10423px;--i:4;--dur:8.8s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-narrow-decoration-1.svg" alt="" width="201" height="201" style="left:calc(50% + 418px);top:10491px;--i:5;--dur:6.0s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-horizontal-decoration-4.svg" alt="" width="190" height="159" style="left:calc(50% + 504px);top:10728px;--i:6;--dur:6.7s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-compact-decoration-6.svg" alt="" width="149" height="137" style="left:calc(50% + -681px);top:10812px;--i:7;--dur:7.4s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-layered-decoration-7.svg" alt="" width="295" height="274" style="left:calc(50% + 361px);top:10812px;--i:8;--dur:8.1s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-narrow-decoration-2.svg" alt="" width="201" height="201" style="left:calc(50% + -558px);top:10959px;--i:9;--dur:8.8s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-horizontal-decoration-5.svg" alt="" width="190" height="159" style="left:calc(50% + -649px);top:11195px;--i:10;--dur:6.0s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-small-decoration-7.svg" alt="" width="117" height="121" style="left:calc(50% + 540px);top:11231px;--i:11;--dur:6.7s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-large-decoration-7.svg" alt="" width="408" height="434" style="left:calc(50% + 312px);top:11360px;--i:12;--dur:7.4s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-wide-decoration-7.svg" alt="" width="336" height="333" style="left:calc(50% + -626px);top:11401px;--i:13;--dur:8.1s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-large-decoration-7.svg" alt="" width="428" height="434" style="left:calc(50% + -702px);top:11878px;--i:0;--dur:8.8s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-wide-decoration-7.svg" alt="" width="377" height="343" style="left:calc(50% + 320px);top:11889px;--i:1;--dur:6.0s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-compact-decoration-7.svg" alt="" width="149" height="136" style="left:calc(50% + 543px);top:12263px;--i:2;--dur:6.7s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-small-decoration-7.svg" alt="" width="117" height="121" style="left:calc(50% + -671px);top:12285px;--i:3;--dur:7.4s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-layered-decoration-7.svg" alt="" width="295" height="274" style="left:calc(50% + -654px);top:12413px;--i:4;--dur:8.1s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-narrow-decoration-3.svg" alt="" width="201" height="201" style="left:calc(50% + 418px);top:12485px;--i:5;--dur:8.8s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-horizontal-decoration-6.svg" alt="" width="190" height="159" style="left:calc(50% + 504px);top:12722px;--i:6;--dur:6.0s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-compact-decoration-1.svg" alt="" width="149" height="136" style="left:calc(50% + -681px);top:12802px;--i:7;--dur:6.7s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-layered-decoration-1.svg" alt="" width="295" height="274" style="left:calc(50% + 361px);top:12806px;--i:8;--dur:7.4s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-narrow-decoration-5.svg" alt="" width="201" height="201" style="left:calc(50% + -558px);top:12949px;--i:9;--dur:8.1s">
+  </div>
+
+  <button type="button" class="to-top" aria-label="Наверх">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/case-side-decoration.svg" alt="" width="40" height="109">
+  </button>
+
+<main class="column" id="top">
+
+    <header class="column__head">
+      <div class="logos">
+        <img src="assets/projects-section/projects-section-case/case-socials/logo-stolitsa.svg" alt="STOлица" width="95" height="38">
+      </div>
+      <span class="year">2024</span>
+    </header>
+
+    <h1 class="title">Палаточный слёт «STOлица.Лето»</h1>
+    <p class="sub">Экраны, навигация и&nbsp;печать для&nbsp;лагеря, в&nbsp;котором нет&nbsp;ни&nbsp;одного&nbsp;здания</p>
+
+    <ul class="tags">
+      <li class="tag tag--lime">ивент-дизайн</li>
+      <li class="tag tag--orange">экранная графика</li>
+      <li class="tag tag--cyan">навигация</li>
+      <li class="tag tag--blue">печать</li>
+      <li class="tag tag--lilac">10&nbsp;смен</li>
+      <li class="tag tag--pink">48&nbsp;дней</li>
+    </ul>
+
+    <hr class="rule-line">
+
+    <ul class="tools-used" aria-label="Программы, в которых я работала">
+      <li class="tool-chip tool-chip--pink">Figma</li>
+      <li class="tool-chip tool-chip--orange">Illustrator</li>
+      <li class="tool-chip tool-chip--blue">Photoshop</li>
+    </ul>
+
+    <p class="lead">Летом 2024&nbsp;года я&nbsp;работала в&nbsp;медиакоманде палаточного слёта «STOлица.Лето» и&nbsp;всё&nbsp;лето была на&nbsp;площадке</p>
+    <p>Слёт проходил в&nbsp;лесу: здесь не&nbsp;было коридоров, табличек на&nbsp;дверях и&nbsp;экранов в&nbsp;холле. Всё, что&nbsp;участнику нужно знать&nbsp;— куда идти, что&nbsp;сегодня в&nbsp;программе, как&nbsp;дела у&nbsp;команды,&nbsp;— должно было появиться на&nbsp;площадке вместе с&nbsp;оформлением</p>
+    <p>Я&nbsp;делала экраны для&nbsp;сцены, навигацию, печать для&nbsp;команд и&nbsp;часть анонса&nbsp;— и&nbsp;собирала всё&nbsp;это&nbsp;в&nbsp;<strong>шаблоны, которые к&nbsp;каждой новой смене обновлялись данными, а&nbsp;не&nbsp;новым&nbsp;дизайном</strong></p>
+
+    <figure class="fig fig--photo">
+      <img src="assets/projects-section/projects-section-case/case-leto/img/cover.webp" width="1519" height="969" alt="Палаточный лагерь слёта «STOлица.Лето» сверху">
+    </figure>
+
+    <ul class="facts">
+      <li><span>Направления:</span> ивент-дизайн, экранная графика, навигация,&nbsp;печать</li>
+      <li><span>Масштаб:</span> 10&nbsp;тематических смен за&nbsp;48&nbsp;дней, 2&nbsp;800&nbsp;участников за&nbsp;первые 7&nbsp;смен, 12&nbsp;команд на&nbsp;каждой&nbsp;смене</li>
+    </ul>
+
+    <nav class="toc" aria-label="Содержание">
+      <a href="#c01">01 / Лагерь без&nbsp;зданий</a>
+      <a href="#c02">02 / Каждые четыре дня&nbsp;— новая смена</a>
+      <a href="#c03">03 / Что&nbsp;уже&nbsp;было до&nbsp;меня</a>
+      <a href="#c04">04 / Цвет стихии стал адресом</a>
+      <a href="#c05">05 / Смена глазами участника</a>
+      <a href="#c06">06 / Экраны: всё, что&nbsp;происходит на&nbsp;сцене</a>
+      <a href="#c07">07 / Площадка: лес&nbsp;вместо коридоров</a>
+      <a href="#c08">08 / Печать, которая уходила с&nbsp;командой</a>
+      <a href="#c09">09 / Визуальный стиль</a>
+      <a href="#c10">10 / Как&nbsp;была устроена работа</a>
+      <a href="#c11">11 / Что&nbsp;получилось</a>
+    </nav>
+
+    <section class="section" id="c01">
+      <h2>01. Лагерь, в&nbsp;котором нет&nbsp;ни&nbsp;одного здания</h2>
+      <p>«STOлица.Лето»&nbsp;— молодёжный палаточный слёт для&nbsp;аудитории 18–35&nbsp;лет</p>
+      <p>С&nbsp;29&nbsp;июня по&nbsp;16&nbsp;августа 2024&nbsp;года в&nbsp;лесной местности под&nbsp;Москвой прошло <strong>10&nbsp;тематических смен по&nbsp;четыре дня</strong>&nbsp;— от&nbsp;«Объединяй» для&nbsp;лидеров молодёжных сообществ до&nbsp;«Совершенствуйся» для&nbsp;молодых&nbsp;специалистов</p>
+      <p>На&nbsp;каждую смену приезжало <strong>около 400&nbsp;человек</strong>. Их&nbsp;делили на&nbsp;12&nbsp;команд с&nbsp;вожатыми, а&nbsp;команды&nbsp;— на&nbsp;четыре стихии: огонь, вода, воздух и&nbsp;земля</p>
+      <p>Площадка была временным городком: палатки участников и&nbsp;организаторов, тематические лагеря, образовательные шатры, главная сцена, столовая, штабы и&nbsp;<span style="white-space:nowrap">арт-объекты</span></p>
+      <p>Я&nbsp;состояла в&nbsp;медиакоманде слёта вместе с&nbsp;фотографами, видеографами, редакторами и&nbsp;вторым дизайнером. Задачи ставил руководитель&nbsp;медиаотдела</p>
+<div class="shots"><p class="shots__title">Где&nbsp;на&nbsp;слёте работало оформление</p><div class="mapwrap"><figure class="mapwrap__map"><img src="assets/projects-section/projects-section-case/case-leto/img/map-only.webp" width="1550" height="1578" alt="Карта лагеря слёта с пятью отмеченными точками" loading="lazy"></figure><ol class="legend"><li><b>1</b><span><strong>КПП&nbsp;и&nbsp;парковка</strong>таблички на&nbsp;автобусах в&nbsp;цвете стихии</span></li><li><b>2</b><span><strong>Лагеря команд</strong>12&nbsp;лагерей сгруппированы по&nbsp;стихиям, у&nbsp;каждой своя иконка</span></li><li><b>3</b><span><strong>Дорожки и&nbsp;точки</strong>указатели с&nbsp;названиями мест Москвы&nbsp;— как&nbsp;на&nbsp;карте</span></li><li><b>4</b><span><strong>Образовательные шатры</strong>«Счастье», «Любовь», «Добро», «Дружба»</span></li><li><b>5</b><span><strong>Сцена «Большой театр»</strong>заставки команд, зачёт, пультовая и&nbsp;задник</span></li></ol></div><p class="shots__note">Карта лагеря из&nbsp;итогового отчёта 2024. Номера&nbsp;— мои&nbsp;носители в&nbsp;тех&nbsp;точках, где&nbsp;участник с&nbsp;ними&nbsp;встречался</p></div>
+    </section>
+
+    <section class="section" id="c02">
+      <h2>02. Каждые четыре дня&nbsp;— новая смена</h2>
+      <p><strong>Главной сложностью был&nbsp;темп</strong></p>
+      <p><strong>Каждые четыре дня&nbsp;приезжала новая смена</strong>: другая тема, 12&nbsp;новых команд со&nbsp;своими названиями и&nbsp;девизами, новая&nbsp;программа</p>
+      <p>Часть информации вообще появлялась только во&nbsp;время смены: баллы, победители, срочные объявления. Показать их&nbsp;на&nbsp;сцене нужно было в&nbsp;тот&nbsp;же&nbsp;вечер</p>
+      <p>А&nbsp;параллельно приходили задачи, которые никто заранее не&nbsp;планировал: срочные заставки, меню для&nbsp;бара. Плюс задачи организации, не&nbsp;связанные со&nbsp;слётом,&nbsp;— их&nbsp;тоже&nbsp;нужно было выполнять&nbsp;одновременно</p>
+      <p>Если бы&nbsp;мы&nbsp;каждый раз&nbsp;рисовали оформление заново, <strong>мы&nbsp;бы&nbsp;просто не&nbsp;успевали за&nbsp;сменами</strong>. Поэтому мы&nbsp;делали шаблоны&nbsp;— и&nbsp;потом меняли их&nbsp;под&nbsp;каждую&nbsp;смену</p>
+      <p>Получалось, что&nbsp;в&nbsp;оформлении нужно было&nbsp;разделить:</p>
+      <p class="callout"><span class="callout__icon callout__icon--blue" aria-hidden="true">⌁</span>что&nbsp;не&nbsp;меняется всё&nbsp;лето&nbsp;→ что&nbsp;меняется раз&nbsp;в&nbsp;смену&nbsp;→ что&nbsp;своё у&nbsp;каждой&nbsp;команды</p>
+<div class="shots"><p class="shots__title">Ритм сезона · 48&nbsp;дней, 10&nbsp;смен по&nbsp;4&nbsp;дня</p><div class="shifts" aria-label="10 смен, с 29 июня по 16 августа"><div class="shift"><b>1</b><span>Объединяй</span></div><div class="shift"><b>2</b><span>Помни</span></div><div class="shift"><b>3</b><span>Узнавай</span></div><div class="shift"><b>4</b><span>Достигай</span></div><div class="shift"><b>5</b><span>Управляй</span></div><div class="shift"><b>6</b><span>Развивайся</span></div><div class="shift"><b>7</b><span>Создавай</span></div><div class="shift"><b>8</b><span>Помогай</span></div><div class="shift"><b>9</b><span>Благодари</span></div><div class="shift"><b>10</b><span>Совершенствуйся</span></div></div><div class="layers"><div class="layer layer--a"><div class="layer__h"><b>Всё&nbsp;лето</b><span>делается один раз</span></div><p>указатели и&nbsp;таблички · оформление шатров · пультовая и&nbsp;задник сцены · номера&nbsp;автобусов</p></div><div class="layer layer--b"><div class="layer__h"><b>К&nbsp;каждой смене</b><span>шаблон + новые данные</span></div><p>заставки 12&nbsp;команд · маршрутные листы · расписания на&nbsp;4&nbsp;дня</p></div><div class="layer layer--c"><div class="layer__h"><b>В&nbsp;моменте</b><span>по&nbsp;ходу смены</span></div><p>личный зачёт · экраны победителей · дополнительные заставки и&nbsp;меню под&nbsp;то, что&nbsp;появлялось в&nbsp;программе</p></div></div><p class="shots__note">Часть работы появлялась только во&nbsp;время смены. Успевать получалось за&nbsp;счёт того, что&nbsp;всё&nbsp;«на&nbsp;всё&nbsp;лето» и&nbsp;«к&nbsp;каждой смене» уже&nbsp;было собрано в&nbsp;шаблоны</p></div>
+    </section>
+
+    <section class="section" id="c03">
+      <h2>03. Что&nbsp;уже&nbsp;было до&nbsp;меня</h2>
+      <p>Я&nbsp;пришла не&nbsp;в&nbsp;пустой проект</p>
+      <p>У&nbsp;слёта уже&nbsp;были логотип, фирменные цвета и&nbsp;графические рисованные линии. Сами линии мы&nbsp;со&nbsp;вторым дизайнером делали <span style="white-space:nowrap">по-своему</span>, но&nbsp;основа была&nbsp;задана</p>
+      <p>Механика смены тоже&nbsp;была придумана до&nbsp;меня:</p>
+      <ul class="facts">
+        <li>деление команд на&nbsp;стихии</li>
+        <li>личный зачёт по&nbsp;шармам, которые участники собирали за&nbsp;задания</li>
+      </ul>
+      <p>Гайдлайны проекта и&nbsp;смен тоже&nbsp;делала не&nbsp;я</p>
+      <p>Моя&nbsp;задача была в&nbsp;другом&nbsp;— <strong>превратить всё&nbsp;это&nbsp;в&nbsp;носители, которые работают на&nbsp;площадке и&nbsp;на&nbsp;сцене каждый&nbsp;день</strong></p>
+      <p>Сделано мной:</p>
+      <ul class="facts">
+        <li><strong>экраны:</strong> заставки команд, колбы, экраны победителей, личный зачёт по&nbsp;шармам</li>
+        <li><strong>печать для&nbsp;команд:</strong> маршрутные листы, расписания по&nbsp;дням, правила шармов, бейджи инструкторов и&nbsp;организаторов</li>
+        <li><strong>площадка:</strong> навигационные и&nbsp;предупреждающие таблички, номера автобусов, оформление и&nbsp;наклейки на&nbsp;шатры, пультовая и&nbsp;задник сцены, пазл-карта&nbsp;лагеря</li>
+        <li><strong>анонс:</strong> мокап фуры-сцены и&nbsp;лист концепции открытия&nbsp;регистрации</li>
+      </ul>
+    </section>
+
+    <section class="section" id="c04">
+      <h2>04. Цвет стихии стал адресом</h2>
+      <p>Стихии и&nbsp;их&nbsp;цвета придумала не&nbsp;я. Но&nbsp;именно на&nbsp;них&nbsp;я&nbsp;собрала логику всех&nbsp;носителей</p>
+      <p>Участник может не&nbsp;помнить номер смены и&nbsp;тем&nbsp;более название чужой команды&nbsp;— но&nbsp;<strong>свою стихию он&nbsp;знает&nbsp;всегда</strong></p>
+      <p>Поэтому <strong>цвет и&nbsp;иконка стихии повторялись на&nbsp;всём</strong>, с&nbsp;чем&nbsp;встречалась&nbsp;команда:</p>
+      <div class="shots"><p class="shots__title">Четыре стихии: цвет, иконка и&nbsp;команды</p><div class="elems"><div class="elem" style="--c:#01B2E0"><img src="assets/projects-section/projects-section-case/case-leto/img/st-water.svg" alt="" loading="lazy"><b>Вода</b><span>голубой #01B2E0</span><em>команды 1, 2, 3</em></div><div class="elem" style="--c:#FD7D32"><img src="assets/projects-section/projects-section-case/case-leto/img/st-fire.svg" alt="" loading="lazy"><b>Огонь</b><span>оранжевый #FD7D32</span><em>команды 4, 5, 6</em></div><div class="elem" style="--c:#701487"><img src="assets/projects-section/projects-section-case/case-leto/img/st-air.svg" alt="" loading="lazy"><b>Воздух</b><span>фиолетовый #701487</span><em>команды 7, 8, 9</em></div><div class="elem elem--dark" style="--c:#ABC704"><img src="assets/projects-section/projects-section-case/case-leto/img/st-earth.svg" alt="" loading="lazy"><b>Земля</b><span>салатовый #ABC704</span><em>команды 10, 11, 12</em></div></div></div>
+      <p>Из&nbsp;этого сложилась логика шаблонов:</p>
+      <ul class="facts">
+        <li>всё&nbsp;лето не&nbsp;меняются логотип, линии и&nbsp;сетка&nbsp;носителя</li>
+        <li>раз&nbsp;в&nbsp;смену меняются тема и&nbsp;её&nbsp;иконка в&nbsp;логотипе</li>
+        <li>у&nbsp;каждой команды свои цвет стихии, номер, название и&nbsp;девиз</li>
+      </ul>
+<div class="shots"><p class="shots__title">Как&nbsp;устроена заставка команды</p><div class="shots__row shots__row--single"><figure class="shots__item shots__item--solo" style="--ar:2.0"><img src="assets/projects-section/projects-section-case/case-leto/img/t4-s.webp" width="640" height="320" alt="Заставка команды 4 стихии огня" loading="lazy"></figure></div><div class="levels"><div class="level level--a"><b>Слёт</b><span>общее для&nbsp;всего лета</span><ul><li>плашка и&nbsp;шрифт&nbsp;— одна сетка для&nbsp;всех заставок</li><li>персонаж&nbsp;— общий для&nbsp;всех команд</li></ul></div><div class="level level--b"><b>Стихия</b><span>общее для&nbsp;3&nbsp;команд</span><ul><li>цвет фона&nbsp;— оранжевый = огонь</li><li>иконка на&nbsp;футболке&nbsp;— персонаж «надевает»&nbsp;стихию</li><li>пламя по&nbsp;краям&nbsp;— элемент огня</li></ul></div><div class="level level--c"><b>Команда</b><span>своё у&nbsp;каждой</span><ul><li>номер&nbsp;— крупно, читается с&nbsp;последних рядов</li><li>название</li><li>девиз&nbsp;— до&nbsp;трёх строк без&nbsp;перестройки макета</li></ul></div></div></div>
+    </section>
+
+    <section class="section" id="c05">
+      <h2>05. Смена глазами участника</h2>
+      <p>Если пройти по&nbsp;смене глазами участника, мои&nbsp;носители встречаются ему&nbsp;почти на&nbsp;каждом&nbsp;шаге</p>
+      <p>От&nbsp;автобуса до&nbsp;сцены команда видит свой цвет</p>
+<div class="shots"><p class="shots__title">Путь участника по&nbsp;смене</p><div class="steps"><div class="step"><div class="step__h"><b>1</b><strong>Заезд</strong></div><p class="step__q">«В&nbsp;какой автобус садиться?»</p><div class="step__img"><img src="assets/projects-section/projects-section-case/case-leto/img/bus1.webp" width="560" height="396" alt="Табличка на автобус" loading="lazy"></div><p class="step__cap">табличка на&nbsp;автобус в&nbsp;цвете стихии</p></div><div class="step"><div class="step__h"><b>2</b><strong>Ориентирование</strong></div><p class="step__q">«Куда идти?»</p><div class="step__img"><img src="assets/projects-section/projects-section-case/case-leto/img/nav-signs.webp" width="720" height="1065" alt="Указатели с расстоянием" loading="lazy"></div><p class="step__cap">указатели с&nbsp;расстоянием</p></div><div class="step"><div class="step__h"><b>3</b><strong>Маршрут</strong></div><p class="step__q">«Куда сегодня идёт наша команда?»</p><div class="step__img"><img src="assets/projects-section/projects-section-case/case-leto/img/pr-r4.webp" width="595" height="842" alt="Маршрутный лист команды 4" loading="lazy"></div><p class="step__cap">маршрутный лист команды 4</p></div><div class="step"><div class="step__h"><b>4</b><strong>День смены</strong></div><p class="step__q">«Что&nbsp;сегодня в&nbsp;программе?»</p><div class="step__img"><img src="assets/projects-section/projects-section-case/case-leto/img/pr-p1.webp" width="595" height="842" alt="Расписание на день" loading="lazy"></div><p class="step__cap">расписание на&nbsp;день</p></div><div class="step"><div class="step__h"><b>5</b><strong>Игра</strong></div><p class="step__q">«Как&nbsp;получить шарм?»</p><div class="step__img"><img src="assets/projects-section/projects-section-case/case-leto/img/pr-charm.webp" width="595" height="842" alt="Правила шармов" loading="lazy"></div><p class="step__cap">правила шармов</p></div><div class="step"><div class="step__h"><b>6</b><strong>Вечер на&nbsp;сцене</strong></div><p class="step__q">«Это&nbsp;мы!»</p><div class="step__img"><img src="assets/projects-section/projects-section-case/case-leto/img/t4-s.webp" width="640" height="320" alt="Заставка команды на LED-экране" loading="lazy"></div><p class="step__cap">заставка команды на&nbsp;<span style="white-space:nowrap">LED-экране</span></p></div><div class="step step--wide"><div class="step__h"><b>7</b><strong>Итоги</strong></div><p class="step__q">«Кто&nbsp;набрал больше всех?»</p><div class="step__img"><img src="assets/projects-section/projects-section-case/case-leto/img/lzA-m.webp" width="1000" height="500" alt="Личный зачёт по шармам" loading="lazy"></div><p class="step__cap">личный зачёт по&nbsp;шармам</p></div></div><p class="shots__note">На&nbsp;примере команды стихии огня. Через&nbsp;весь путь идёт цвет стихии: команда узнаёт своё на&nbsp;автобусе, на&nbsp;бумаге и&nbsp;на&nbsp;экране, не&nbsp;читая&nbsp;текста</p></div>
+    </section>
+
+    <section class="section" id="c06">
+      <h2>06. Экраны: всё, что&nbsp;происходит на&nbsp;сцене</h2>
+      <p>Сцена&nbsp;— центр смены: открытие, выход команд, результаты,&nbsp;закрытие</p>
+      <h3>Заставка команды</h3>
+      <p><strong>Самый крупный элемент&nbsp;— номер команды</strong>, затем название и&nbsp;девиз. Фон&nbsp;в&nbsp;цвете стихии, по&nbsp;краям её&nbsp;элементы</p>
+      <p><strong>Номер читается даже с&nbsp;последних рядов</strong>, а&nbsp;по&nbsp;названию и&nbsp;девизу команда узнаёт&nbsp;себя</p>
+      <figure class="fig fig--photo">
+        <img src="assets/projects-section/projects-section-case/case-leto/img/stage-team.webp" width="837" height="498" alt="Команда на сцене на фоне своей заставки" loading="lazy">
+        <p class="fig__cap">Команда 5&nbsp;на&nbsp;фоне своей заставки</p>
+      </figure>
+<div class="shots"><p class="shots__title">Заставка в&nbsp;четырёх стихиях: меняются цвет и&nbsp;элементы, каркас&nbsp;остаётся</p><div class="shots__grid shots__grid--2"><figure class="shots__item" ><img src="assets/projects-section/projects-section-case/case-leto/img/t1-s.webp" width="640" height="320" alt="Заставка команды 1" loading="lazy"><figcaption>вода · команда 1</figcaption></figure><figure class="shots__item" ><img src="assets/projects-section/projects-section-case/case-leto/img/t4-s.webp" width="640" height="320" alt="Заставка команды 4" loading="lazy"><figcaption>огонь · команда 4</figcaption></figure><figure class="shots__item" ><img src="assets/projects-section/projects-section-case/case-leto/img/t7-s.webp" width="640" height="320" alt="Заставка команды 7" loading="lazy"><figcaption>воздух · команда 7</figcaption></figure><figure class="shots__item" ><img src="assets/projects-section/projects-section-case/case-leto/img/t10-s.webp" width="640" height="320" alt="Заставка команды 10" loading="lazy"><figcaption>земля · команда 10</figcaption></figure></div></div>
+      <h3>Колбы</h3>
+      <p>Колбы были анимацией: в&nbsp;ней&nbsp;поднимался цветной уровень, который равнялся количеству шариков, высыпанных в&nbsp;настоящие&nbsp;колбы</p>
+      <p>Макет «Командный зачёт» я&nbsp;нарисовала в&nbsp;Illustrator: цвет колбы по&nbsp;стихии команды и&nbsp;текстура песка. Слои подготовила под&nbsp;анимацию&nbsp;— колбы, цвет, цифры и&nbsp;иконки стихий лежат отдельно</p>
+      <figure class="fig fig--photo">
+        <img src="assets/projects-section/projects-section-case/case-leto/img/team-score.webp" width="1600" height="800" alt="Экран «Командный зачёт»: двенадцать колб в цветах четырёх стихий" loading="lazy">
+        <p class="fig__cap">«Командный зачёт»: по&nbsp;колбе на&nbsp;команду, цвет&nbsp;— по&nbsp;стихии</p>
+      </figure>
+      <h3>Личный зачёт</h3>
+      <p>Один шаблон под&nbsp;разные данные: одно имя, несколько имён или&nbsp;сводка вроде «78&nbsp;человек получили 1/3&nbsp;шармов»</p>
+      <h3>Победители</h3>
+      <p>Экраны за&nbsp;1, 2&nbsp;и&nbsp;3&nbsp;место&nbsp;— с&nbsp;именем и&nbsp;номером команды в&nbsp;цвете её&nbsp;стихии</p>
+      <p>Заставки команд можно было подготовить к&nbsp;началу смены. Всё&nbsp;остальное собиралось по&nbsp;ходу&nbsp;— параллельно со&nbsp;срочными&nbsp;задачами</p>
+      <div class="shots"><p class="shots__title">Победители смены</p><div class="shots__row"><figure class="shots__item" style="--ar:2"><img src="assets/projects-section/projects-section-case/case-leto/img/pl1-s.webp" alt="1 место" loading="lazy"></figure><figure class="shots__item" style="--ar:2"><img src="assets/projects-section/projects-section-case/case-leto/img/pl2-s.webp" alt="2 место" loading="lazy"></figure><figure class="shots__item" style="--ar:2"><img src="assets/projects-section/projects-section-case/case-leto/img/pl3-s.webp" alt="3 место" loading="lazy"></figure></div><p class="shots__title">Личный зачёт по&nbsp;шармам</p><div class="shots__row"><figure class="shots__item" style="--ar:2"><img src="assets/projects-section/projects-section-case/case-leto/img/lzA-s.webp" alt="Личный зачёт" loading="lazy"><figcaption>сводка: сколько человек собрали шармы</figcaption></figure><figure class="shots__item" style="--ar:2"><img src="assets/projects-section/projects-section-case/case-leto/img/lzB-s.webp" alt="Личный зачёт" loading="lazy"><figcaption>три&nbsp;имени в&nbsp;одном шаблоне</figcaption></figure><figure class="shots__item" style="--ar:2"><img src="assets/projects-section/projects-section-case/case-leto/img/lzC-s.webp" alt="Личный зачёт" loading="lazy"><figcaption>одно имя</figcaption></figure></div></div>
+      <figure class="fig fig--photo">
+        <img src="assets/projects-section/projects-section-case/case-leto/img/stage-screen.webp" width="1629" height="960" alt="Сцена с экраном на слёте" loading="lazy">
+        <p class="fig__cap">Сцена с&nbsp;экраном</p>
+      </figure>
+    </section>
+
+    <section class="section" id="c07">
+      <h2>07. Площадка: лес&nbsp;вместо коридоров</h2>
+      <p>На&nbsp;площадке оформление делало сразу две&nbsp;вещи: создавало атмосферу и&nbsp;помогало найти&nbsp;дорогу</p>
+      <ul class="facts">
+        <li><strong>указатели и&nbsp;таблички:</strong> таблички у&nbsp;точек лагеря назывались в&nbsp;честь мест Москвы&nbsp;— «Сандуны», «СК&nbsp;Лужники», «Музей „Гараж“». Те&nbsp;же&nbsp;названия были на&nbsp;карте слёта, поэтому карта и&nbsp;навигация говорили на&nbsp;одном&nbsp;языке</li>
+        <li><strong>предупреждения:</strong> «Не&nbsp;залезать на&nbsp;крышу <span style="white-space:nowrap">арт-объекта</span>», «Идёт съёмка», «Печать фотографий до&nbsp;13:00»</li>
+        <li><strong>автобусы:</strong> крупный номер на&nbsp;фоне цвета стихии и&nbsp;её&nbsp;иконки&nbsp;— свой автобус видно&nbsp;издалека</li>
+        <li><strong>шатры и&nbsp;сцена:</strong> наклейки и&nbsp;оформление шатров, пультовая, задник&nbsp;сцены</li>
+      </ul>
+      <p>Файлы я&nbsp;готовила к&nbsp;печати и&nbsp;передавала подрядчикам через&nbsp;посредника</p>
+<div class="shots"><p class="shots__title">Номера автобусов в&nbsp;цветах стихий</p><div class="shots__row"><figure class="shots__item" style="--ar:1.414"><img src="assets/projects-section/projects-section-case/case-leto/img/bus1.webp" width="560" height="396" alt="Номер автобуса 1" loading="lazy"></figure><figure class="shots__item" style="--ar:1.414"><img src="assets/projects-section/projects-section-case/case-leto/img/bus2.webp" width="560" height="396" alt="Номер автобуса 4" loading="lazy"></figure><figure class="shots__item" style="--ar:1.414"><img src="assets/projects-section/projects-section-case/case-leto/img/bus3.webp" width="560" height="396" alt="Номер автобуса 7" loading="lazy"></figure><figure class="shots__item" style="--ar:1.414"><img src="assets/projects-section/projects-section-case/case-leto/img/bus4.webp" width="560" height="396" alt="Номер автобуса 10" loading="lazy"></figure></div></div><div class="shots"><p class="shots__title">Указатели и&nbsp;таблички</p><div class="shots__row"><figure class="shots__item" style="--ar:0.676"><img src="assets/projects-section/projects-section-case/case-leto/img/nav-signs.webp" width="720" height="1065" alt="Указатели с расстоянием до слёта" loading="lazy"><figcaption>указатели с&nbsp;расстоянием</figcaption></figure><figure class="shots__item" style="--ar:0.752"><img src="assets/projects-section/projects-section-case/case-leto/img/nav-stands.webp" width="801" height="1065" alt="Стойки с названиями мест Москвы" loading="lazy"><figcaption>стойки с&nbsp;названиями мест Москвы</figcaption></figure></div><div class="shots__row"><figure class="shots__item" style="--ar:1.414"><img src="assets/projects-section/projects-section-case/case-leto/img/tab1.webp" width="560" height="396" alt="Табличка «Не залезать на крышу арт-объекта»" loading="lazy"></figure><figure class="shots__item" style="--ar:1.414"><img src="assets/projects-section/projects-section-case/case-leto/img/tab2.webp" width="560" height="396" alt="Табличка «Печать фотографий до 13:00»" loading="lazy"></figure><figure class="shots__item" style="--ar:1.414"><img src="assets/projects-section/projects-section-case/case-leto/img/tab3.webp" width="560" height="396" alt="Табличка «Идёт съёмка»" loading="lazy"></figure></div></div><div class="shots"><p class="shots__title">Шатры и&nbsp;сцена</p><div class="shots__row shots__row--single"><figure class="shots__item shots__item--solo" style="--ar:1.777"><img src="assets/projects-section/projects-section-case/case-leto/img/tent.webp" width="1400" height="788" alt="Образовательный шатёр с наклейками" loading="lazy"><figcaption>образовательный шатёр</figcaption></figure></div><div class="shots__row"><figure class="shots__item" style="--ar:1.869"><img src="assets/projects-section/projects-section-case/case-leto/img/pult1.webp" width="800" height="428" alt="Пультовая" loading="lazy"><figcaption>пультовая</figcaption></figure><figure class="shots__item" style="--ar:1.616"><img src="assets/projects-section/projects-section-case/case-leto/img/pult2.webp" width="800" height="495" alt="Пультовая" loading="lazy"><figcaption>пультовая</figcaption></figure><figure class="shots__item" style="--ar:1.0"><img src="assets/projects-section/projects-section-case/case-leto/img/nakl.webp" width="560" height="560" alt="Наклейка на шатёр" loading="lazy"><figcaption>наклейка на&nbsp;шатёр</figcaption></figure></div></div>
+      <figure class="fig fig--photo">
+        <img src="assets/projects-section/projects-section-case/case-leto/img/tent-out.webp" width="1030" height="343" alt="Шатёр снаружи" loading="lazy">
+        <div class="fig__grid">
+          <img src="assets/projects-section/projects-section-case/case-leto/img/tent-in-1.webp" width="802" height="620" alt="Шатёр внутри" loading="lazy" style="flex:1.293 1 0">
+          <img src="assets/projects-section/projects-section-case/case-leto/img/tent-in-2.webp" width="1094" height="620" alt="Шатёр внутри, другой ракурс" loading="lazy" style="flex:1.765 1 0">
+        </div>
+        <img src="assets/projects-section/projects-section-case/case-leto/img/camp-entry.webp" width="1153" height="562" alt="Вход в лагерь команды" loading="lazy">
+        <p class="fig__cap">Шатры и&nbsp;вход в&nbsp;лагерь команды</p>
+      </figure>
+    </section>
+
+    <section class="section" id="c08">
+      <h2>08. Печать, которая уходила с&nbsp;командой</h2>
+      <ul class="facts">
+        <li><strong>маршрутные листы:</strong> свой лист у&nbsp;каждой из&nbsp;12&nbsp;команд&nbsp;— цвет стихии, номер команды и&nbsp;станции в&nbsp;своём порядке. Лист был&nbsp;у&nbsp;команды с&nbsp;вожатым</li>
+        <li><strong>расписания:</strong> отдельный лист на&nbsp;каждый день смены</li>
+        <li><strong>правила шармов:</strong> механика игры была придумана до&nbsp;нас. Я&nbsp;собрала её&nbsp;в&nbsp;один понятный лист: за&nbsp;что&nbsp;можно получить шарм&nbsp;— от&nbsp;победы в&nbsp;водной битве до&nbsp;письма&nbsp;«счастье»</li>
+      </ul>
+<div class="shots"><p class="shots__title">Маршрутные листы: по&nbsp;одному на&nbsp;стихию</p><div class="shots__row"><figure class="shots__item" style="--ar:0.707"><img src="assets/projects-section/projects-section-case/case-leto/img/pr-r1.webp" width="595" height="842" alt="Маршрутный лист команды 1" loading="lazy"><figcaption>вода · команда 1</figcaption></figure><figure class="shots__item" style="--ar:0.707"><img src="assets/projects-section/projects-section-case/case-leto/img/pr-r4.webp" width="595" height="842" alt="Маршрутный лист команды 4" loading="lazy"><figcaption>огонь · команда 4</figcaption></figure><figure class="shots__item" style="--ar:0.707"><img src="assets/projects-section/projects-section-case/case-leto/img/pr-r7.webp" width="595" height="842" alt="Маршрутный лист команды 7" loading="lazy"><figcaption>воздух · команда 7</figcaption></figure><figure class="shots__item" style="--ar:0.707"><img src="assets/projects-section/projects-section-case/case-leto/img/pr-r10.webp" width="595" height="842" alt="Маршрутный лист команды 10" loading="lazy"><figcaption>земля · команда 11</figcaption></figure></div></div><div class="shots"><p class="shots__title">Расписание и&nbsp;правила шармов</p><div class="shots__row"><figure class="shots__item" style="--ar:0.707"><img src="assets/projects-section/projects-section-case/case-leto/img/pr-p1.webp" width="595" height="842" alt="Расписание на день" loading="lazy"><figcaption>расписание на&nbsp;день</figcaption></figure><figure class="shots__item" style="--ar:0.707"><img src="assets/projects-section/projects-section-case/case-leto/img/pr-p3.webp" width="595" height="842" alt="Расписание на день" loading="lazy"><figcaption>расписание на&nbsp;день</figcaption></figure><figure class="shots__item" style="--ar:0.707"><img src="assets/projects-section/projects-section-case/case-leto/img/pr-charm.webp" width="595" height="842" alt="Правила шармов" loading="lazy"><figcaption>правила шармов</figcaption></figure></div></div>
+      <figure class="fig fig--duo">
+        <div class="duo">
+          <img src="assets/projects-section/projects-section-case/case-leto/img/elements-people.webp" width="852" height="662" alt="Участники в цветах своих стихий" loading="lazy">
+          <img src="assets/projects-section/projects-section-case/case-leto/img/team-flags.webp" width="834" height="498" alt="Команда с флагами" loading="lazy">
+        </div>
+        <p class="fig__cap">Участники в&nbsp;цветах стихий и&nbsp;команда с&nbsp;флагами</p>
+      </figure>
+    </section>
+
+    <section class="section" id="c09">
+      <h2>09. Визуальный стиль</h2>
+      <p>Стиль слёта держался на&nbsp;трёх вещах</p>
+      <ul class="facts">
+        <li><strong>палитра:</strong> оранжевый #FD7D32, голубой #01B2E0, салатовый #ABC704, фиолетовый #701487&nbsp;и&nbsp;белый. Каждый цвет закреплён за&nbsp;стихией&nbsp;— поэтому он&nbsp;работает как&nbsp;адрес</li>
+        <li><strong>линии:</strong> свободные рисованные линии связывали все&nbsp;носители&nbsp;— от&nbsp;маршрутного листа до&nbsp;пультовой</li>
+        <li><strong>иконки стихий:</strong> пламя, волны, росток, спираль&nbsp;— простые силуэты, которые читаются и&nbsp;на&nbsp;маленьком бейдже, и&nbsp;на&nbsp;большом&nbsp;экране</li>
+        <li><strong>шрифт:</strong> Unbounded&nbsp;— корпоративный шрифт «STOлицы»</li>
+      </ul>
+      <div class="shots"><p class="shots__title">Палитра слёта</p><div class="swatches swatches--5"><div class="swatch"><span class="swatch__chip" style="background:#FD7D32"></span><span class="swatch__name">оранжевый</span><span class="swatch__hex">#FD7D32</span></div><div class="swatch"><span class="swatch__chip" style="background:#01B2E0"></span><span class="swatch__name">голубой</span><span class="swatch__hex">#01B2E0</span></div><div class="swatch"><span class="swatch__chip" style="background:#ABC704"></span><span class="swatch__name">салатовый</span><span class="swatch__hex">#ABC704</span></div><div class="swatch"><span class="swatch__chip" style="background:#701487"></span><span class="swatch__name">фиолетовый</span><span class="swatch__hex">#701487</span></div><div class="swatch"><span class="swatch__chip swatch__chip--line" style="background:#FFFFFF"></span><span class="swatch__name">белый</span><span class="swatch__hex">#FFFFFF</span></div></div></div>
+      <div class="shots shots--light"><p class="shots__title">Логотип слёта</p><div class="icons icons--logo"><img src="assets/projects-section/projects-section-case/case-leto/img/logo-2024.svg" alt="Логотип STOлица.Лето" loading="lazy"></div></div><div class="shots"><p class="shots__title">Иконки стихий</p><div class="icons icons--big"><img src="assets/projects-section/projects-section-case/case-leto/img/st-fire.svg" alt="Огонь" loading="lazy"><img src="assets/projects-section/projects-section-case/case-leto/img/st-water.svg" alt="Вода" loading="lazy"><img src="assets/projects-section/projects-section-case/case-leto/img/st-earth.svg" alt="Земля" loading="lazy"><img src="assets/projects-section/projects-section-case/case-leto/img/st-air.svg" alt="Воздух" loading="lazy"></div></div><div class="shots"><p class="shots__title">Рисованные линии и знаки</p><div class="icons icons--lines"><img src="assets/projects-section/projects-section-case/case-leto/img/ln-orange.svg" alt="Оранжевая линия" loading="lazy"><img src="assets/projects-section/projects-section-case/case-leto/img/ln-green.svg" alt="Салатовая линия" loading="lazy"><img src="assets/projects-section/projects-section-case/case-leto/img/ln-blue.svg" alt="Голубая линия" loading="lazy"><img src="assets/projects-section/projects-section-case/case-leto/img/ln-purple.svg" alt="Фиолетовая линия" loading="lazy"></div><div class="icons icons--lines icons--marks"><img src="assets/projects-section/projects-section-case/case-leto/img/smile.svg" alt="Рисованный смайлик" loading="lazy"><img src="assets/projects-section/projects-section-case/case-leto/img/daisy.svg" alt="Рисованная ромашка" loading="lazy"><img src="assets/projects-section/projects-section-case/case-leto/img/happiness.svg" alt="Надпись «счастья»" loading="lazy"></div></div>
+    </section>
+
+    <section class="section" id="c10">
+      <h2>10. Как&nbsp;была устроена работа</h2>
+      <p>Я&nbsp;работала не&nbsp;одна, а&nbsp;внутри большой&nbsp;медиакоманды:</p>
+      <ul class="facts">
+        <li>задачи ставил руководитель медиаотдела</li>
+        <li>дизайн мы&nbsp;делали вдвоём со&nbsp;вторым дизайнером&nbsp;— скопом делали шаблоны и&nbsp;потом меняли их&nbsp;к&nbsp;каждой&nbsp;смене</li>
+        <li>данные смен&nbsp;— команды, девизы, программу, результаты&nbsp;— получали от&nbsp;организаторов</li>
+        <li>с&nbsp;подрядчиками по&nbsp;печати общалась через&nbsp;посредника</li>
+      </ul>
+      <p>Отдельная история&nbsp;— анонс открытия регистрации в&nbsp;городе</p>
+      <p>Сам&nbsp;<span style="white-space:nowrap">арт-объект</span> «Счастье рядом» делала не&nbsp;я: я&nbsp;поставила задачу коллеге. А&nbsp;мокап фуры-сцены и&nbsp;лист концепции для&nbsp;руководства собирала&nbsp;сама</p>
+      <div class="shots"><p class="shots__title">Лист концепции открытия регистрации для&nbsp;руководства</p><div class="shots__row shots__row--single"><figure class="shots__item shots__item--solo" style="--ar:1.387"><img src="assets/projects-section/projects-section-case/case-leto/img/registration.webp" width="1287" height="928" alt="Лист концепции открытия регистрации на слёт" loading="lazy"></figure></div></div>
+    </section>
+
+    <section class="section" id="c11">
+      <h2>11. Что&nbsp;получилось</h2>
+      <ul class="facts">
+        <li>10&nbsp;смен за&nbsp;48&nbsp;дней</li>
+        <li>2&nbsp;800&nbsp;участников за&nbsp;первые 7&nbsp;смен</li>
+        <li>12&nbsp;команд на&nbsp;каждой смене</li>
+      </ul>
+      <p><strong>Все&nbsp;10&nbsp;смен прошли на&nbsp;одних шаблонах</strong>. <strong>К&nbsp;новой смене мы&nbsp;обновляли данные, а&nbsp;не&nbsp;дизайн</strong>&nbsp;— и&nbsp;поэтому успевали за&nbsp;тем, что&nbsp;происходило на&nbsp;смене в&nbsp;моменте</p>
+      <p>Метрик по&nbsp;оформлению никто не&nbsp;собирал, поэтому я&nbsp;не&nbsp;буду их&nbsp;придумывать</p>
+      <p>Но&nbsp;в&nbsp;2025&nbsp;году экранную графику слёта снова доверили мне&nbsp;— об&nbsp;этом <a class="more-link" href="case-screens2025.html">отдельный кейс</a></p>
+
+      <h3>Вместо итога</h3>
+      <p>Этот проект для&nbsp;меня в&nbsp;первую очередь не&nbsp;про&nbsp;красивые заставки, а&nbsp;про&nbsp;<strong>оформление, которое работает как&nbsp;инфраструктура</strong></p>
+      <p>В&nbsp;лагере без&nbsp;зданий именно носители говорили человеку, куда идти, что&nbsp;сейчас происходит и&nbsp;где&nbsp;его&nbsp;команда</p>
+      <p>А&nbsp;шаблоны позволили делать это&nbsp;10&nbsp;смен подряд&nbsp;— не&nbsp;рисуя слёт каждый раз&nbsp;заново</p>
+      <p class="gap"><a class="more-link" href="index.html">← Все&nbsp;проекты</a></p>
+    </section>
+
+  </main>
+
+  <script src="case.js?v=20261109a"></script>
+</body>
+</html>

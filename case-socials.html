@@ -1,0 +1,979 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Визуал соцсетей для&nbsp;трёх проектов — Софья Михайлова</title>
+  <meta name="description" content="Кейс: визуал соцсетей для «Городских медиа», STOлица и ВНИИИМТ — система рубрик, шаблоны и правила, по которым контент собирается быстро.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="stylesheet" href="case.css?v=20261110c">
+</head>
+<body>
+
+  <nav class="topbar" aria-label="Навигация по кейсу">
+    <a class="topbar__back" href="index.html#projects">← все проекты</a>
+    <span class="topbar__title">Визуал соцсетей // три проекта</span>
+    <div class="topbar__menu">
+      <button type="button" class="topbar__toggle" aria-expanded="false" aria-controls="sections-menu">разделы <svg class="topbar__chev" viewBox="0 0 8 5" width="8" height="5" aria-hidden="true"><path d="M.75.75L4 4 7.25.75" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <ul class="topbar__list" id="sections-menu" hidden>
+        <li><a href="#p1" class="sub">Часть 1 · Городские медиа</a></li>
+        <li><a href="#c01">01 / Немного о&nbsp;проекте</a></li>
+        <li><a href="#c02">02 / С&nbsp;чего всё&nbsp;начиналось</a></li>
+        <li><a href="#c03">03 / Как&nbsp;я&nbsp;искала визуальный язык</a></li>
+        <li><a href="#c04">04 / Система, которая работает для&nbsp;любого города</a></li>
+        <li><a href="#c05">05 / Как&nbsp;изменилась работа команды</a></li>
+        <li><a href="#c06">06 / Что&nbsp;получилось</a></li>
+        <li><a href="#p2" class="sub">Часть 2 · STOлица</a></li>
+        <li><a href="#c07">07 / Немного о&nbsp;проекте</a></li>
+        <li><a href="#c08">08 / С&nbsp;чего всё&nbsp;начиналось</a></li>
+        <li><a href="#c09">09 / Как&nbsp;я&nbsp;искала подачу</a></li>
+        <li><a href="#c10">10 / Что&nbsp;я&nbsp;сделала</a></li>
+        <li><a href="#c11">11 / Как&nbsp;была устроена работа</a></li>
+        <li><a href="#c12">12 / Что&nbsp;получилось</a></li>
+        <li><a href="#p3" class="sub">Часть 3 · ВНИИИМТ</a></li>
+        <li><a href="#c13">13 / Немного о&nbsp;проекте</a></li>
+        <li><a href="#c14">14 / С&nbsp;чего всё&nbsp;начиналось</a></li>
+        <li><a href="#c15">15 / Как&nbsp;я&nbsp;собрала стиль</a></li>
+        <li><a href="#c16">16 / Как&nbsp;была устроена работа</a></li>
+        <li><a href="#c17">17 / Что&nbsp;получилось</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- пиксельные украшения по бокам (лежат позади колонки) -->
+  <div class="case-deco" aria-hidden="true">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-large-decoration-1.svg" alt="" width="428" height="434" style="left:calc(50% + -702px);top:-2px;--i:0;--dur:6.0s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-wide-decoration-1.svg" alt="" width="377" height="343" style="left:calc(50% + 320px);top:9px;--i:1;--dur:6.7s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-compact-decoration-1.svg" alt="" width="149" height="136" style="left:calc(50% + 543px);top:383px;--i:2;--dur:7.4s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-small-decoration-1.svg" alt="" width="117" height="121" style="left:calc(50% + -671px);top:405px;--i:3;--dur:8.1s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-layered-decoration-1.svg" alt="" width="295" height="274" style="left:calc(50% + -654px);top:533px;--i:4;--dur:8.8s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-narrow-decoration-1.svg" alt="" width="201" height="201" style="left:calc(50% + 418px);top:605px;--i:5;--dur:6.0s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-horizontal-decoration-1.svg" alt="" width="190" height="159" style="left:calc(50% + 504px);top:842px;--i:6;--dur:6.7s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-compact-decoration-2.svg" alt="" width="149" height="136" style="left:calc(50% + -681px);top:922px;--i:7;--dur:7.4s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-layered-decoration-1.svg" alt="" width="295" height="274" style="left:calc(50% + 361px);top:926px;--i:8;--dur:8.1s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-narrow-decoration-1.svg" alt="" width="201" height="201" style="left:calc(50% + -558px);top:1069px;--i:9;--dur:8.8s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-horizontal-decoration-2.svg" alt="" width="190" height="159" style="left:calc(50% + -649px);top:1305px;--i:10;--dur:6.0s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-small-decoration-1.svg" alt="" width="117" height="121" style="left:calc(50% + 540px);top:1345px;--i:11;--dur:6.7s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-large-decoration-1.svg" alt="" width="408" height="434" style="left:calc(50% + 312px);top:1474px;--i:12;--dur:7.4s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-wide-decoration-1.svg" alt="" width="336" height="333" style="left:calc(50% + -626px);top:1511px;--i:13;--dur:8.1s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-large-decoration-2.svg" alt="" width="428" height="434" style="left:calc(50% + -702px);top:1968px;--i:0;--dur:8.8s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-wide-decoration-2.svg" alt="" width="377" height="343" style="left:calc(50% + 320px);top:1975px;--i:1;--dur:6.0s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-compact-decoration-1.svg" alt="" width="149" height="137" style="left:calc(50% + 543px);top:2349px;--i:2;--dur:6.7s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-small-decoration-2.svg" alt="" width="117" height="121" style="left:calc(50% + -671px);top:2374px;--i:3;--dur:7.4s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-layered-decoration-2.svg" alt="" width="295" height="274" style="left:calc(50% + -653px);top:2503px;--i:4;--dur:8.1s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-narrow-decoration-2.svg" alt="" width="201" height="201" style="left:calc(50% + 418px);top:2571px;--i:5;--dur:8.8s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-horizontal-decoration-3.svg" alt="" width="190" height="159" style="left:calc(50% + 504px);top:2808px;--i:6;--dur:6.0s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-compact-decoration-2.svg" alt="" width="149" height="137" style="left:calc(50% + -681px);top:2892px;--i:7;--dur:6.7s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-layered-decoration-2.svg" alt="" width="295" height="274" style="left:calc(50% + 361px);top:2892px;--i:8;--dur:7.4s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-narrow-decoration-3.svg" alt="" width="201" height="201" style="left:calc(50% + -558px);top:3039px;--i:9;--dur:8.1s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-horizontal-decoration-4.svg" alt="" width="190" height="159" style="left:calc(50% + -649px);top:3275px;--i:10;--dur:8.8s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-small-decoration-2.svg" alt="" width="117" height="121" style="left:calc(50% + 540px);top:3311px;--i:11;--dur:6.0s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-large-decoration-2.svg" alt="" width="408" height="434" style="left:calc(50% + 312px);top:3440px;--i:12;--dur:6.7s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-wide-decoration-2.svg" alt="" width="336" height="333" style="left:calc(50% + -626px);top:3481px;--i:13;--dur:7.4s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-large-decoration-3.svg" alt="" width="428" height="434" style="left:calc(50% + -702px);top:3958px;--i:0;--dur:8.1s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-wide-decoration-3.svg" alt="" width="377" height="343" style="left:calc(50% + 320px);top:3969px;--i:1;--dur:8.8s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-compact-decoration-3.svg" alt="" width="149" height="136" style="left:calc(50% + 543px);top:4343px;--i:2;--dur:6.0s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-small-decoration-3.svg" alt="" width="117" height="121" style="left:calc(50% + -671px);top:4365px;--i:3;--dur:6.7s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-layered-decoration-3.svg" alt="" width="295" height="274" style="left:calc(50% + -654px);top:4493px;--i:4;--dur:7.4s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-narrow-decoration-4.svg" alt="" width="201" height="201" style="left:calc(50% + 418px);top:4565px;--i:5;--dur:8.1s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-horizontal-decoration-5.svg" alt="" width="190" height="159" style="left:calc(50% + 504px);top:4802px;--i:6;--dur:8.8s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-compact-decoration-4.svg" alt="" width="149" height="136" style="left:calc(50% + -681px);top:4882px;--i:7;--dur:6.0s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-layered-decoration-3.svg" alt="" width="295" height="274" style="left:calc(50% + 361px);top:4886px;--i:8;--dur:6.7s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-narrow-decoration-2.svg" alt="" width="201" height="201" style="left:calc(50% + -558px);top:5029px;--i:9;--dur:7.4s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-horizontal-decoration-6.svg" alt="" width="190" height="159" style="left:calc(50% + -649px);top:5265px;--i:10;--dur:8.1s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-small-decoration-3.svg" alt="" width="117" height="121" style="left:calc(50% + 540px);top:5305px;--i:11;--dur:8.8s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-large-decoration-3.svg" alt="" width="408" height="434" style="left:calc(50% + 312px);top:5434px;--i:12;--dur:6.0s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-wide-decoration-3.svg" alt="" width="336" height="333" style="left:calc(50% + -626px);top:5471px;--i:13;--dur:6.7s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-large-decoration-4.svg" alt="" width="428" height="434" style="left:calc(50% + -702px);top:5928px;--i:0;--dur:7.4s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-wide-decoration-4.svg" alt="" width="377" height="343" style="left:calc(50% + 320px);top:5935px;--i:1;--dur:8.1s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-compact-decoration-3.svg" alt="" width="149" height="137" style="left:calc(50% + 543px);top:6309px;--i:2;--dur:8.8s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-small-decoration-4.svg" alt="" width="117" height="121" style="left:calc(50% + -671px);top:6334px;--i:3;--dur:6.0s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-layered-decoration-4.svg" alt="" width="295" height="274" style="left:calc(50% + -653px);top:6463px;--i:4;--dur:6.7s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-narrow-decoration-5.svg" alt="" width="201" height="201" style="left:calc(50% + 418px);top:6531px;--i:5;--dur:7.4s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-horizontal-decoration-7.svg" alt="" width="190" height="159" style="left:calc(50% + 504px);top:6768px;--i:6;--dur:8.1s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-compact-decoration-4.svg" alt="" width="149" height="137" style="left:calc(50% + -681px);top:6852px;--i:7;--dur:8.8s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-layered-decoration-5.svg" alt="" width="295" height="274" style="left:calc(50% + 361px);top:6852px;--i:8;--dur:6.0s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-narrow-decoration-6.svg" alt="" width="201" height="201" style="left:calc(50% + -558px);top:6999px;--i:9;--dur:6.7s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-horizontal-decoration-1.svg" alt="" width="190" height="159" style="left:calc(50% + -649px);top:7235px;--i:10;--dur:7.4s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-small-decoration-5.svg" alt="" width="117" height="121" style="left:calc(50% + 540px);top:7271px;--i:11;--dur:8.1s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-large-decoration-5.svg" alt="" width="408" height="434" style="left:calc(50% + 312px);top:7400px;--i:12;--dur:8.8s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-wide-decoration-5.svg" alt="" width="336" height="333" style="left:calc(50% + -626px);top:7441px;--i:13;--dur:6.0s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-large-decoration-5.svg" alt="" width="428" height="434" style="left:calc(50% + -702px);top:7918px;--i:0;--dur:6.7s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-wide-decoration-5.svg" alt="" width="377" height="343" style="left:calc(50% + 320px);top:7929px;--i:1;--dur:7.4s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-compact-decoration-5.svg" alt="" width="149" height="136" style="left:calc(50% + 543px);top:8303px;--i:2;--dur:8.1s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-small-decoration-5.svg" alt="" width="117" height="121" style="left:calc(50% + -671px);top:8325px;--i:3;--dur:8.8s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-layered-decoration-5.svg" alt="" width="295" height="274" style="left:calc(50% + -654px);top:8453px;--i:4;--dur:6.0s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-narrow-decoration-7.svg" alt="" width="201" height="201" style="left:calc(50% + 418px);top:8525px;--i:5;--dur:6.7s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-horizontal-decoration-2.svg" alt="" width="190" height="159" style="left:calc(50% + 504px);top:8762px;--i:6;--dur:7.4s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-compact-decoration-6.svg" alt="" width="149" height="136" style="left:calc(50% + -681px);top:8842px;--i:7;--dur:8.1s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-layered-decoration-6.svg" alt="" width="295" height="274" style="left:calc(50% + 361px);top:8846px;--i:8;--dur:8.8s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-narrow-decoration-3.svg" alt="" width="201" height="201" style="left:calc(50% + -558px);top:8989px;--i:9;--dur:6.0s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-horizontal-decoration-3.svg" alt="" width="190" height="159" style="left:calc(50% + -649px);top:9225px;--i:10;--dur:6.7s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-small-decoration-6.svg" alt="" width="117" height="121" style="left:calc(50% + 540px);top:9265px;--i:11;--dur:7.4s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-large-decoration-6.svg" alt="" width="408" height="434" style="left:calc(50% + 312px);top:9394px;--i:12;--dur:8.1s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-wide-decoration-6.svg" alt="" width="336" height="333" style="left:calc(50% + -626px);top:9431px;--i:13;--dur:8.8s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-large-decoration-6.svg" alt="" width="428" height="434" style="left:calc(50% + -702px);top:9888px;--i:0;--dur:6.0s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-wide-decoration-6.svg" alt="" width="377" height="343" style="left:calc(50% + 320px);top:9895px;--i:1;--dur:6.7s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-compact-decoration-5.svg" alt="" width="149" height="137" style="left:calc(50% + 543px);top:10269px;--i:2;--dur:7.4s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-small-decoration-6.svg" alt="" width="117" height="121" style="left:calc(50% + -671px);top:10294px;--i:3;--dur:8.1s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-layered-decoration-6.svg" alt="" width="295" height="274" style="left:calc(50% + -653px);top:10423px;--i:4;--dur:8.8s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-narrow-decoration-1.svg" alt="" width="201" height="201" style="left:calc(50% + 418px);top:10491px;--i:5;--dur:6.0s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-horizontal-decoration-4.svg" alt="" width="190" height="159" style="left:calc(50% + 504px);top:10728px;--i:6;--dur:6.7s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-compact-decoration-6.svg" alt="" width="149" height="137" style="left:calc(50% + -681px);top:10812px;--i:7;--dur:7.4s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-layered-decoration-7.svg" alt="" width="295" height="274" style="left:calc(50% + 361px);top:10812px;--i:8;--dur:8.1s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-narrow-decoration-2.svg" alt="" width="201" height="201" style="left:calc(50% + -558px);top:10959px;--i:9;--dur:8.8s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-horizontal-decoration-5.svg" alt="" width="190" height="159" style="left:calc(50% + -649px);top:11195px;--i:10;--dur:6.0s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-small-decoration-7.svg" alt="" width="117" height="121" style="left:calc(50% + 540px);top:11231px;--i:11;--dur:6.7s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-large-decoration-7.svg" alt="" width="408" height="434" style="left:calc(50% + 312px);top:11360px;--i:12;--dur:7.4s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-wide-decoration-7.svg" alt="" width="336" height="333" style="left:calc(50% + -626px);top:11401px;--i:13;--dur:8.1s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-large-decoration-7.svg" alt="" width="428" height="434" style="left:calc(50% + -702px);top:11878px;--i:0;--dur:8.8s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-wide-decoration-7.svg" alt="" width="377" height="343" style="left:calc(50% + 320px);top:11889px;--i:1;--dur:6.0s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-compact-decoration-7.svg" alt="" width="149" height="136" style="left:calc(50% + 543px);top:12263px;--i:2;--dur:6.7s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-small-decoration-7.svg" alt="" width="117" height="121" style="left:calc(50% + -671px);top:12285px;--i:3;--dur:7.4s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-layered-decoration-7.svg" alt="" width="295" height="274" style="left:calc(50% + -654px);top:12413px;--i:4;--dur:8.1s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-narrow-decoration-3.svg" alt="" width="201" height="201" style="left:calc(50% + 418px);top:12485px;--i:5;--dur:8.8s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-horizontal-decoration-6.svg" alt="" width="190" height="159" style="left:calc(50% + 504px);top:12722px;--i:6;--dur:6.0s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-compact-decoration-1.svg" alt="" width="149" height="136" style="left:calc(50% + -681px);top:12802px;--i:7;--dur:6.7s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/right-layered-decoration-1.svg" alt="" width="295" height="274" style="left:calc(50% + 361px);top:12806px;--i:8;--dur:7.4s">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/left-narrow-decoration-5.svg" alt="" width="201" height="201" style="left:calc(50% + -558px);top:12949px;--i:9;--dur:8.1s">
+  </div>
+
+  <button type="button" class="to-top" aria-label="Наверх">
+    <img src="assets/projects-section/projects-section-case/case-vinul/deco-bg-vinul/case-side-decoration.svg" alt="" width="40" height="109">
+  </button>
+
+<main class="column" id="top">
+
+    <header class="column__head">
+      <div class="logos">
+        <img src="assets/projects-section/projects-section-case/case-socials/logo-gorodskie-media.svg" alt="Городские медиа" width="38" height="38">
+        <i class="logos__sep"></i>
+        <img src="assets/projects-section/projects-section-case/case-socials/logo-stolitsa.svg" alt="STOлица" width="95" height="38">
+        <i class="logos__sep"></i>
+        <img src="assets/projects-section/projects-section-case/case-socials/logo-vniiimt.svg" alt="ВНИИИМТ" width="87" height="38">
+      </div>
+      <span class="year">2024–2026</span>
+    </header>
+
+    <h1 class="title">Визуал соцсетей для&nbsp;трёх проектов</h1>
+    <p class="sub">Сеть городских <span style="white-space:nowrap">Telegram-каналов</span>, молодёжное сообщество Москвы и&nbsp;научный институт Росздравнадзора: <strong>три&nbsp;разные аудитории и&nbsp;одна задача&nbsp;— превратить разрозненные посты в&nbsp;узнаваемый стиль, по&nbsp;которому контент собирается&nbsp;быстро</strong></p>
+
+    <ul class="tags">
+      <li class="tag tag--lime">контент-дизайн</li>
+      <li class="tag tag--orange">визуальная система</li>
+      <li class="tag tag--cyan">шаблоны</li>
+      <li class="tag tag--blue">3&nbsp;проекта</li>
+      <li class="tag tag--lilac"><span style="white-space:nowrap">smm-дизайн</span></li>
+      <li class="tag tag--pink">11+ каналов</li>
+    </ul>
+
+    <hr class="rule-line">
+
+    <ul class="tools-used" aria-label="Программы, в которых я работала">
+      <li class="tool-chip tool-chip--pink">Figma</li>
+      <li class="tool-chip tool-chip--blue">Photoshop</li>
+      <li class="tool-chip tool-chip--orange">Illustrator</li>
+      <li class="tool-chip tool-chip--lilac"><span style="white-space:nowrap">ИИ-инструменты</span></li>
+    </ul>
+
+    <p class="lead">В&nbsp;каждом проекте я&nbsp;отвечала за&nbsp;визуал соцсетей: от&nbsp;отдельных постов до&nbsp;шаблонов и&nbsp;правил, по&nbsp;которым их&nbsp;собирают в&nbsp;едином стиле. В&nbsp;двух из&nbsp;трёх&nbsp;— <strong>ещё&nbsp;и&nbsp;направляла второго&nbsp;дизайнера</strong></p>
+
+    <figure class="fig fig--photo">
+      <img src="assets/projects-section/projects-section-case/case-socials/img/cover-socials.webp" width="2112" height="1092" alt="Посты из трёх проектов: Городские медиа, STOлица и ВНИИИМТ">
+    </figure>
+
+    <nav class="toc" aria-label="Содержание">
+      <button type="button" class="toc__part toc__part--btn" aria-expanded="true" aria-controls="toc-p1">Часть 1. Городские медиа<svg viewBox="0 0 8 5" width="9" height="6" aria-hidden="true"><path d="M.75.75L4 4.25 7.25.75" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <div class="toc__group" id="toc-p1">
+      <a href="#c01">01 / Немного о&nbsp;проекте</a>
+      <a href="#c02">02 / С&nbsp;чего всё&nbsp;начиналось</a>
+      <a href="#c03">03 / Как&nbsp;я&nbsp;искала визуальный язык</a>
+      <a href="#c04">04 / Система, которая работает для&nbsp;любого города</a>
+      <a href="#c05">05 / Как&nbsp;изменилась работа команды</a>
+      <a href="#c06">06 / Что&nbsp;получилось</a>
+      </div>
+      <button type="button" class="toc__part toc__part--btn" aria-expanded="false" aria-controls="toc-p2">Часть 2. STOлица<svg viewBox="0 0 8 5" width="9" height="6" aria-hidden="true"><path d="M.75.75L4 4.25 7.25.75" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <div class="toc__group" id="toc-p2">
+      <a href="#c07">07 / Немного о&nbsp;проекте</a>
+      <a href="#c08">08 / С&nbsp;чего всё&nbsp;начиналось</a>
+      <a href="#c09">09 / Как&nbsp;я&nbsp;искала подачу</a>
+      <a href="#c10">10 / Что&nbsp;я&nbsp;сделала</a>
+      <a href="#c11">11 / Как&nbsp;была устроена работа</a>
+      <a href="#c12">12 / Что&nbsp;получилось</a>
+      </div>
+      <button type="button" class="toc__part toc__part--btn" aria-expanded="false" aria-controls="toc-p3">Часть 3. ВНИИИМТ<svg viewBox="0 0 8 5" width="9" height="6" aria-hidden="true"><path d="M.75.75L4 4.25 7.25.75" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <div class="toc__group" id="toc-p3">
+      <a href="#c13">13 / Немного о&nbsp;проекте</a>
+      <a href="#c14">14 / С&nbsp;чего всё&nbsp;начиналось</a>
+      <a href="#c15">15 / Как&nbsp;я&nbsp;собрала стиль</a>
+      <a href="#c16">16 / Как&nbsp;была устроена работа</a>
+      <a href="#c17">17 / Что&nbsp;получилось</a>
+      </div>
+    </nav>
+
+    <!-- =================== ЧАСТЬ 1 =================== -->
+    <div class="part part--lime" id="p1" role="button" tabindex="0" aria-expanded="true" aria-controls="p1-body">
+      <div class="part__text"><span class="part__num">Часть 1</span><h2 class="part__name">Городские медиа</h2><p class="part__sub">Сеть городских каналов</p></div>
+      <div class="part__end">
+      <span class="part__toggle" aria-hidden="true"><span class="part__toggle-text">свернуть</span><svg viewBox="0 0 8 5" width="10" height="6"><path d="M.75.75L4 4.25 7.25.75" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </div>
+    </div>
+    <div class="part-body" id="p1-body">
+
+    <section class="section" id="c01">
+      <h2>01. Немного о&nbsp;проекте</h2>
+      <p>«Городские медиа» развивали сеть городских <span style="white-space:nowrap">Telegram-каналов</span>. Изначально в&nbsp;неё&nbsp;входили десять городов: Москва, Петербург, Казань, Самара, Нижний Новгород, Екатеринбург и&nbsp;другие</p>
+      <p>Я&nbsp;пришла в&nbsp;компанию в&nbsp;самом начале её&nbsp;пути, когда сеть запускалась сразу во&nbsp;всех этих городах. Региональные каналы работали два&nbsp;месяца, с&nbsp;19&nbsp;июля по&nbsp;19&nbsp;сентября 2025&nbsp;года, Петербург&nbsp;— до&nbsp;21&nbsp;октября. Затем компания сосредоточилась на&nbsp;трёх московских каналах с&nbsp;разной&nbsp;аудиторией:</p>
+      <ul class="facts">
+        <li><strong>Москва Инсайд</strong>&nbsp;— куда сходить и&nbsp;что&nbsp;посмотреть</li>
+        <li><strong>Москва Лайф</strong>&nbsp;— мода, светская жизнь, городские истории</li>
+        <li><strong>Москва <span style="white-space:nowrap">Нон-стоп</span></strong>&nbsp;— сухие новости</li>
+      </ul>
+
+      <p class="callout"><span class="callout__icon callout__icon--pink" aria-hidden="true">⊹</span><strong>Важный момент:</strong> посты выходили с&nbsp;утра до&nbsp;позднего вечера. В&nbsp;контент-плане одного канала было <strong>до&nbsp;20&nbsp;публикаций в&nbsp;день</strong>: новости, подборки мест, планы на&nbsp;неделю, выходные в&nbsp;городе, лайфхаки, рейтинги, интерактивы. Дизайн нужен был&nbsp;не&nbsp;каждому посту, но&nbsp;рубрики с&nbsp;оформлением выходили&nbsp;ежедневно</p>
+
+      <h3>О&nbsp;проекте</h3>
+      <ul class="facts">
+        <li><span>Формат:</span> <span style="white-space:nowrap">Telegram-каналы</span></li>
+        <li><span>Масштаб:</span> 10&nbsp;городов&nbsp;→ 3&nbsp;активных канала</li>
+        <li><span>Аудитория:</span> <strong>450&nbsp;000+ подписчиков</strong> в&nbsp;период моей работы</li>
+        <li><span>Моя&nbsp;роль:</span> дизайнер, неформально&nbsp;— ведущий дизайнер&nbsp;направления</li>
+      </ul>
+    </section>
+
+    <section class="section" id="c02">
+      <h2>02. С&nbsp;чего всё&nbsp;начиналось</h2>
+      <p>На&nbsp;старте у&nbsp;сети были логотип и&nbsp;основные цвета городов. <strong>Больше никакой визуальной основы не&nbsp;было</strong></p>
+      <p><strong>Рубричные посты собирались вручную и&nbsp;каждый раз&nbsp;<span style="white-space:nowrap">по-разному</span></strong>: разные композиции, шрифты и&nbsp;способы подачи информации даже внутри одного&nbsp;канала</p>
+
+      <div class="rubrics" data-rubrics>
+        <div class="rubrics__bar">
+          <div class="rubrics__tabs" role="tablist" aria-label="Рубрики"><button type="button" role="tab" class="rubrics__tab" id="rt-weekend" aria-controls="rp-weekend" aria-selected="true">Выходные в&nbsp;городе</button><button type="button" role="tab" class="rubrics__tab" id="rt-where2" aria-controls="rp-where2" aria-selected="false">Куда сходить?</button><button type="button" role="tab" class="rubrics__tab" id="rt-mood" aria-controls="rp-mood" aria-selected="false">Под&nbsp;настроение</button><button type="button" role="tab" class="rubrics__tab" id="rt-films" aria-controls="rp-films" aria-selected="false">Фильмы</button><button type="button" role="tab" class="rubrics__tab" id="rt-top" aria-controls="rp-top" aria-selected="false">Топ</button><button type="button" role="tab" class="rubrics__tab" id="rt-leisure" aria-controls="rp-leisure" aria-selected="false">Досуг с&nbsp;прокачкой</button><button type="button" role="tab" class="rubrics__tab" id="rt-season" aria-controls="rp-season" aria-selected="false">Сезонная</button><button type="button" role="tab" class="rubrics__tab" id="rt-bars" aria-controls="rp-bars" aria-selected="false">Где</button></div>
+        </div>
+        <div class="rubrics__stage">
+          <div class="rubrics__track" role="tabpanel" id="rp-weekend" aria-labelledby="rt-weekend" tabindex="0" data-n="6">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/old-weekend-1.webp" width="949" height="1280" alt="Выходные в городе: пост 1" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/old-weekend-2.webp" width="949" height="1280" alt="Выходные в городе: пост 2" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/old-weekend-3.webp" width="949" height="1280" alt="Выходные в городе: пост 3" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/old-weekend-4.webp" width="949" height="1280" alt="Выходные в городе: пост 4" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/old-weekend-5.webp" width="949" height="1280" alt="Выходные в городе: пост 5" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/old-weekend-6.webp" width="949" height="1280" alt="Выходные в городе: пост 6" draggable="false" loading="lazy">
+          </div>
+          <div class="rubrics__track rubrics__track--sq" role="tabpanel" id="rp-where2" aria-labelledby="rt-where2" tabindex="0" hidden data-n="6">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/old-where2-1.webp" width="1024" height="1024" alt="Куда сходить?: пост 1" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/old-where2-2.webp" width="1024" height="1024" alt="Куда сходить?: пост 2" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/old-where2-3.webp" width="1024" height="1024" alt="Куда сходить?: пост 3" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/old-where2-4.webp" width="1024" height="1024" alt="Куда сходить?: пост 4" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/old-where2-5.webp" width="1024" height="1024" alt="Куда сходить?: пост 5" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/old-where2-6.webp" width="1024" height="1024" alt="Куда сходить?: пост 6" draggable="false" loading="lazy">
+          </div>
+          <div class="rubrics__track" role="tabpanel" id="rp-mood" aria-labelledby="rt-mood" tabindex="0" hidden data-n="6">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/old-mood-1.webp" width="991" height="1280" alt="Под настроение: пост 1" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/old-mood-2.webp" width="991" height="1280" alt="Под настроение: пост 2" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/old-mood-3.webp" width="991" height="1280" alt="Под настроение: пост 3" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/old-mood-4.webp" width="991" height="1280" alt="Под настроение: пост 4" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/old-mood-5.webp" width="991" height="1280" alt="Под настроение: пост 5" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/old-mood-6.webp" width="991" height="1280" alt="Под настроение: пост 6" draggable="false" loading="lazy">
+          </div>
+          <div class="rubrics__track" role="tabpanel" id="rp-films" aria-labelledby="rt-films" tabindex="0" hidden data-n="6">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/old-films-1.webp" width="1024" height="1263" alt="Фильмы: пост 1" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/old-films-2.webp" width="1024" height="1263" alt="Фильмы: пост 2" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/old-films-3.webp" width="1024" height="1263" alt="Фильмы: пост 3" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/old-films-4.webp" width="1024" height="1263" alt="Фильмы: пост 4" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/old-films-5.webp" width="1024" height="1263" alt="Фильмы: пост 5" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/old-films-6.webp" width="1024" height="1263" alt="Фильмы: пост 6" draggable="false" loading="lazy">
+          </div>
+          <div class="rubrics__track" role="tabpanel" id="rp-top" aria-labelledby="rt-top" tabindex="0" hidden data-n="5">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/old-top-1.webp" width="1024" height="1280" alt="Топ: пост 1" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/old-top-2.webp" width="1024" height="1280" alt="Топ: пост 2" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/old-top-3.webp" width="1024" height="1280" alt="Топ: пост 3" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/old-top-4.webp" width="1024" height="1280" alt="Топ: пост 4" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/old-top-5.webp" width="1024" height="1280" alt="Топ: пост 5" draggable="false" loading="lazy">
+          </div>
+          <div class="rubrics__track" role="tabpanel" id="rp-leisure" aria-labelledby="rt-leisure" tabindex="0" hidden data-n="5">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/old-leisure-1.webp" width="991" height="1280" alt="Досуг с прокачкой: пост 1" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/old-leisure-2.webp" width="991" height="1280" alt="Досуг с прокачкой: пост 2" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/old-leisure-3.webp" width="991" height="1280" alt="Досуг с прокачкой: пост 3" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/old-leisure-4.webp" width="991" height="1280" alt="Досуг с прокачкой: пост 4" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/old-leisure-5.webp" width="991" height="1280" alt="Досуг с прокачкой: пост 5" draggable="false" loading="lazy">
+          </div>
+          <div class="rubrics__track" role="tabpanel" id="rp-season" aria-labelledby="rt-season" tabindex="0" hidden data-n="6">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/old-season-1.webp" width="1024" height="1280" alt="Сезонная: пост 1" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/old-season-2.webp" width="1024" height="1280" alt="Сезонная: пост 2" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/old-season-3.webp" width="1024" height="1280" alt="Сезонная: пост 3" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/old-season-4.webp" width="1024" height="1280" alt="Сезонная: пост 4" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/old-season-5.webp" width="1024" height="1280" alt="Сезонная: пост 5" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/old-season-6.webp" width="1024" height="1280" alt="Сезонная: пост 6" draggable="false" loading="lazy">
+          </div>
+          <div class="rubrics__track" role="tabpanel" id="rp-bars" aria-labelledby="rt-bars" tabindex="0" hidden data-n="6">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/old-bars-1.webp" width="1024" height="1280" alt="Где: пост 1, слайд 1" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/old-bars-2.webp" width="1024" height="1280" alt="Где: пост 1, слайд 2" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/old-bars-3.webp" width="1024" height="1280" alt="Где: пост 1, слайд 3" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/old-bars-4.webp" width="1024" height="1280" alt="Где: пост 1, слайд 4" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/old-bars-5.webp" width="1024" height="1280" alt="Где: пост 1, слайд 5" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/old-bars-6.webp" width="1024" height="1280" alt="Где: пост 1, слайд 6" draggable="false" loading="lazy">
+          </div>
+        </div>
+      </div>
+      <p class="fig__cap">Так&nbsp;рубрики выглядели на&nbsp;старте</p>
+
+      <h3>Было и&nbsp;стало</h3>
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead><tr><th scope="col">Было</th><th scope="col">Стало</th></tr></thead>
+          <tbody>
+            <tr><td>Рубрики не&nbsp;отличались друг от&nbsp;друга, а&nbsp;внутри рубрики оформление плавало от&nbsp;поста к&nbsp;посту</td><td>Рубрики отличаются друг от&nbsp;друга по&nbsp;визуалу, но&nbsp;строятся на&nbsp;одних правилах: у&nbsp;каждой свой приём на&nbsp;обложке, а&nbsp;сетка, шрифты и&nbsp;расположение элементов&nbsp;общие.</td></tr>
+            <tr><td>Кадры не&nbsp;были рассчитаны на&nbsp;Telegram: в&nbsp;альбоме они&nbsp;обрезались</td><td>Перед публикацией я&nbsp;проверяла, как&nbsp;пост выглядит в&nbsp;ленте, и&nbsp;составила правила раскладки. Например, для&nbsp;трёх карточек текста от&nbsp;редакторов.</td></tr>
+            <tr><td>Шрифты менялись, а&nbsp;текст терялся на&nbsp;фото</td><td>Один набор шрифтов: Commissioner Black и&nbsp;Montserrat Medium. Название, описание и&nbsp;адрес всегда на&nbsp;одних&nbsp;местах</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="callout"><span class="callout__icon callout__icon--blue" aria-hidden="true">⌁</span>Проблема была не&nbsp;только в&nbsp;том, как&nbsp;посты выглядели. При&nbsp;таком объёме публикаций <strong>ручная сборка отнимала много времени, а&nbsp;сеть невозможно было масштабировать</strong>: новый город означал новые макеты с&nbsp;нуля</p>
+      <p>Правила рубрик (о&nbsp;чём&nbsp;писать и&nbsp;как) определял главный редактор. <strong>Визуальную часть я&nbsp;придумывала и&nbsp;согласовывала&nbsp;сама</strong></p>
+    </section>
+
+    <section class="section" id="c03">
+      <h2>03. Как&nbsp;я&nbsp;искала визуальный язык</h2>
+      <p>Главной задачей было <strong>найти подачу, которая выделит посты в&nbsp;ленте</strong></p>
+      <p>В&nbsp;городских каналах рубричный дизайн соревнуется не&nbsp;с&nbsp;другими каналами, а&nbsp;с&nbsp;фотографиями котиков, собак и&nbsp;уличных происшествий. Такие посты смотрят и&nbsp;пересылают охотнее всего. Значит, дизайн должен был&nbsp;цеплять так&nbsp;же&nbsp;быстро и&nbsp;при&nbsp;этом сразу сообщать, что&nbsp;внутри полезная&nbsp;подборка</p>
+      <p class="gap">Я&nbsp;опиралась на&nbsp;три&nbsp;принципа:</p>
+      <p class="arrow">&gt;&gt; <strong>Фото&nbsp;— главный герой.</strong> Сначала человек видит место или&nbsp;событие, а&nbsp;потом читает текст. Поэтому фотографии стали крупными, а&nbsp;текстовые блоки&nbsp;компактными</p>
+      <p class="arrow">&gt;&gt; <strong>Узнаваемость с&nbsp;первого взгляда.</strong> Рубрики отличаются друг от&nbsp;друга по&nbsp;визуалу, и&nbsp;по&nbsp;приёму на&nbsp;обложке подписчик понимает формат, ещё&nbsp;не&nbsp;прочитав заголовок. При&nbsp;этом все&nbsp;они&nbsp;строятся на&nbsp;одних&nbsp;правилах</p>
+      <p class="arrow">&gt;&gt; <strong>Цвет и&nbsp;буква города как&nbsp;подпись.</strong> У&nbsp;каждого города свой цвет и&nbsp;своя форма&nbsp;— первая буква названия. По&nbsp;ним&nbsp;сразу видно, из&nbsp;какого города&nbsp;пост</p>
+    </section>
+
+    <section class="section" id="c04">
+      <h2>04. Система, которая работает для&nbsp;любого&nbsp;города</h2>
+      <p>Вместо отдельных макетов я&nbsp;<strong>собрала систему из&nbsp;трёх&nbsp;уровней</strong>:</p>
+      <p class="arrow">&gt;&gt; <strong>Сетки и&nbsp;форматы</strong>&nbsp;— единые размеры и&nbsp;раскладки для&nbsp;каруселей, обложек рубрик и&nbsp;одиночных&nbsp;постов</p>
+      <p class="arrow">&gt;&gt; <strong>Библиотека компонентов</strong>&nbsp;— плашки, заголовки, подписи с&nbsp;адресом и&nbsp;датой, рамки для&nbsp;фото, графические&nbsp;элементы</p>
+      <p class="arrow">&gt;&gt; <strong>Визуальные правила рубрик</strong>&nbsp;— шаблоны под&nbsp;разное количество картинок в&nbsp;посте, чтобы ничего не&nbsp;обрезалось в&nbsp;ленте и&nbsp;всё&nbsp;выглядело&nbsp;хорошо</p>
+      <p class="gap">Отдельно я&nbsp;расширила палитру. Одного цвета на&nbsp;город оказалось мало для&nbsp;многослойных композиций, поэтому я&nbsp;добавила каждому городу дополнительный светлый оттенок. Ещё&nbsp;ввела общие цвета сети для&nbsp;публикаций, не&nbsp;привязанных к&nbsp;городу, и&nbsp;их&nbsp;сезонные версии, чтобы визуал менялся вместе с&nbsp;городом, не&nbsp;теряя&nbsp;узнаваемости</p>
+      <p>Сначала к&nbsp;цвету и&nbsp;букве города добавлялся эффект шума с&nbsp;наложением overlay: он&nbsp;давал мягкий градиент и&nbsp;текстуру. Потом от&nbsp;него отказались ради простоты и&nbsp;чистоты, но&nbsp;буква на&nbsp;фоне осталась в&nbsp;некоторых&nbsp;рубриках</p>
+
+      <div class="palette" data-palette>
+        <p class="palette__label">Основа</p>
+        <div class="palette__row"><button type="button" class="palette__sw" data-hex="#282828" aria-label="Графитовый: #282828, нажмите, чтобы скопировать"><i style="background:#282828"></i><span>Графитовый</span><code>#282828</code></button><button type="button" class="palette__sw" data-hex="#FFFFFF" aria-label="Белый: #FFFFFF, нажмите, чтобы скопировать"><i style="background:#FFFFFF"></i><span>Белый</span><code>#FFFFFF</code></button><button type="button" class="palette__sw" data-hex="#7D7D7D" aria-label="Серый для адреса: #7D7D7D, нажмите, чтобы скопировать"><i style="background:#7D7D7D"></i><span>Серый для&nbsp;адреса</span><code>#7D7D7D</code></button><button type="button" class="palette__sw" data-hex="#ADADAD" aria-label="Серый для календаря: #ADADAD, нажмите, чтобы скопировать"><i style="background:#ADADAD"></i><span>Серый для&nbsp;календаря</span><code>#ADADAD</code></button><button type="button" class="palette__sw" data-hex="#DBDBDB" aria-label="Серый «необычное»: #DBDBDB, нажмите, чтобы скопировать"><i style="background:#DBDBDB"></i><span>Серый «необычное»</span><code>#DBDBDB</code></button></div>
+        <p class="palette__label">Города: основной и&nbsp;дополнительный оттенок</p>
+        <div class="palette__cities"><div class="palette__city"><div class="palette__duo"><button type="button" class="palette__dot" data-hex="#C62425" style="background:#C62425" aria-label="Москва: #C62425"></button><button type="button" class="palette__dot palette__dot--sm" data-hex="#EFC0C0" style="background:#EFC0C0" aria-label="Москва доп: #EFC0C0"></button></div><span class="palette__name">Москва</span><code>#C62425</code><code class="palette__sub">#EFC0C0</code></div><div class="palette__city"><div class="palette__duo"><button type="button" class="palette__dot" data-hex="#6B9EBD" style="background:#6B9EBD" aria-label="Питер: #6B9EBD"></button><button type="button" class="palette__dot palette__dot--sm" data-hex="#A6C5D7" style="background:#A6C5D7" aria-label="Питер доп: #A6C5D7"></button></div><span class="palette__name">Питер</span><code>#6B9EBD</code><code class="palette__sub">#A6C5D7</code></div><div class="palette__city"><div class="palette__duo"><button type="button" class="palette__dot" data-hex="#20FC8E" style="background:#20FC8E" aria-label="Казань: #20FC8E"></button><button type="button" class="palette__dot palette__dot--sm" data-hex="#BCFEDD" style="background:#BCFEDD" aria-label="Казань доп: #BCFEDD"></button></div><span class="palette__name">Казань</span><code>#20FC8E</code><code class="palette__sub">#BCFEDD</code></div><div class="palette__city"><div class="palette__duo"><button type="button" class="palette__dot" data-hex="#2443FD" style="background:#2443FD" aria-label="Самара: #2443FD"></button><button type="button" class="palette__dot palette__dot--sm" data-hex="#D1D8FF" style="background:#D1D8FF" aria-label="Самара доп: #D1D8FF"></button></div><span class="palette__name">Самара</span><code>#2443FD</code><code class="palette__sub">#D1D8FF</code></div><div class="palette__city"><div class="palette__duo"><button type="button" class="palette__dot" data-hex="#D6FC59" style="background:#D6FC59" aria-label="Нижний Новгород: #D6FC59"></button><button type="button" class="palette__dot palette__dot--sm" data-hex="#EBFEAE" style="background:#EBFEAE" aria-label="Нижний Новгород доп: #EBFEAE"></button></div><span class="palette__name">Нижний Новгород</span><code>#D6FC59</code><code class="palette__sub">#EBFEAE</code></div><div class="palette__city"><div class="palette__duo"><button type="button" class="palette__dot" data-hex="#FFED03" style="background:#FFED03" aria-label="Ростов: #FFED03"></button><button type="button" class="palette__dot palette__dot--sm" data-hex="#FFF9AC" style="background:#FFF9AC" aria-label="Ростов доп: #FFF9AC"></button></div><span class="palette__name">Ростов</span><code>#FFED03</code><code class="palette__sub">#FFF9AC</code></div><div class="palette__city"><div class="palette__duo"><button type="button" class="palette__dot" data-hex="#FD7C04" style="background:#FD7C04" aria-label="Краснодар: #FD7C04"></button><button type="button" class="palette__dot palette__dot--sm" data-hex="#FFDEC0" style="background:#FFDEC0" aria-label="Краснодар доп: #FFDEC0"></button></div><span class="palette__name">Краснодар</span><code>#FD7C04</code><code class="palette__sub">#FFDEC0</code></div><div class="palette__city"><div class="palette__duo"><button type="button" class="palette__dot" data-hex="#A016FF" style="background:#A016FF" aria-label="Екатеринбург: #A016FF"></button><button type="button" class="palette__dot palette__dot--sm" data-hex="#F2DEFF" style="background:#F2DEFF" aria-label="Екатеринбург доп: #F2DEFF"></button></div><span class="palette__name">Екатеринбург</span><code>#A016FF</code><code class="palette__sub">#F2DEFF</code></div><div class="palette__city"><div class="palette__duo"><button type="button" class="palette__dot" data-hex="#00E5F2" style="background:#00E5F2" aria-label="Новосибирск: #00E5F2"></button><button type="button" class="palette__dot palette__dot--sm" data-hex="#BDF9FC" style="background:#BDF9FC" aria-label="Новосибирск доп: #BDF9FC"></button></div><span class="palette__name">Новосибирск</span><code>#00E5F2</code><code class="palette__sub">#BDF9FC</code></div><div class="palette__city"><div class="palette__duo"><button type="button" class="palette__dot" data-hex="#FE0883" style="background:#FE0883" aria-label="Красноярск: #FE0883"></button><button type="button" class="palette__dot palette__dot--sm" data-hex="#FFC1E0" style="background:#FFC1E0" aria-label="Красноярск доп: #FFC1E0"></button></div><span class="palette__name">Красноярск</span><code>#FE0883</code><code class="palette__sub">#FFC1E0</code></div></div>
+        <p class="palette__label">Общие цвета сети</p>
+        <div class="palette__row"><button type="button" class="palette__sw" data-hex="#6286E4" aria-label="Общий цвет: #6286E4, нажмите, чтобы скопировать"><i style="background:#6286E4"></i><span>Общий цвет</span><code>#6286E4</code></button><button type="button" class="palette__sw" data-hex="#BCCDF8" aria-label="Общий цвет 2: #BCCDF8, нажмите, чтобы скопировать"><i style="background:#BCCDF8"></i><span>Общий цвет 2</span><code>#BCCDF8</code></button><button type="button" class="palette__sw" data-hex="#F0872E" aria-label="Осень: #F0872E, нажмите, чтобы скопировать"><i style="background:#F0872E"></i><span>Осень</span><code>#F0872E</code></button><button type="button" class="palette__sw" data-hex="#FFC390" aria-label="Осень 2: #FFC390, нажмите, чтобы скопировать"><i style="background:#FFC390"></i><span>Осень 2</span><code>#FFC390</code></button></div>
+        <span class="palette__toast" role="status" aria-live="polite"></span>
+      </div>
+      <p class="fig__cap">Палитра сети. Нажмите на&nbsp;цвет, чтобы скопировать&nbsp;код</p>
+
+      <div class="system">
+        <div class="system__cols">
+          <div class="system__card">
+            <h3>Постоянная основа</h3>
+            <ol>
+              <li>Сетка и&nbsp;форматы</li>
+              <li>Цвет и&nbsp;буква города</li>
+              <li>Типографическая иерархия</li>
+            </ol>
+          </div>
+          <div class="system__card">
+            <h3>Гибкость внутри системы</h3>
+            <ol>
+              <li>Фотографии</li>
+              <li>Приёмы рубрик</li>
+              <li>Наполнение подборки</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+      <p>Чтобы запустить рубрику в&nbsp;новом городе, <strong>достаточно было поменять цвет и&nbsp;наполнение</strong>: логика, сетка и&nbsp;компоненты оставались&nbsp;прежними</p>
+
+      <figure class="fig fig--photo fig--r16">
+        <img src="assets/projects-section/projects-section-case/case-socials/img/rubric-vygoda-piter.webp" width="1600" height="1333" alt="Рубрика «Выгода» для Петербурга: обложка и карточки с буквой города на фоне" loading="lazy">
+        <figcaption class="fig__cap">Рубрика «Выгода» для&nbsp;Петербурга: цвет и&nbsp;буква города на&nbsp;фоне</figcaption>
+      </figure>
+
+      <h3 id="practice">Как&nbsp;это&nbsp;выглядит на&nbsp;практике</h3>
+      <p>Заголовки набраны Commissioner Black капсом с&nbsp;разрядкой 7%, описания&nbsp;— Montserrat Medium. Плотный жирный шрифт читается даже на&nbsp;маленьком превью в&nbsp;ленте, а&nbsp;спокойный гротеск не&nbsp;спорит с&nbsp;ним&nbsp;в&nbsp;тексте</p>
+      <p>Рубрики легко отличить по&nbsp;визуалу: у&nbsp;каждой свой приём на&nbsp;обложке. Но&nbsp;основаны они&nbsp;на&nbsp;одних правилах, и&nbsp;внутренние слайды собраны по&nbsp;одной логике: фото, название, короткое описание и&nbsp;адрес всегда на&nbsp;одних и&nbsp;тех&nbsp;же&nbsp;местах. Например, в&nbsp;«Планах на&nbsp;неделю» сверху стоит календарь с&nbsp;выделенным днём, и&nbsp;подписчик видит «когда» раньше, чем&nbsp;читает «что». Единственное исключение&nbsp;— «Под&nbsp;настроение»: в&nbsp;этой рубрике каждый раз&nbsp;делали <span style="white-space:nowrap">что-то</span>&nbsp;новое и&nbsp;оставляли место для&nbsp;фантазии, например серию «Если бы&nbsp;Питер был&nbsp;ароматом»</p>
+
+      <div class="rubrics" data-rubrics>
+        <div class="rubrics__bar">
+          <div class="rubrics__tabs" role="tablist" aria-label="Рубрики сейчас"><button type="button" role="tab" class="rubrics__tab" id="nt-vy" aria-controls="np-vy" aria-selected="true">Выгода</button><button type="button" role="tab" class="rubrics__tab" id="nt-we" aria-controls="np-we" aria-selected="false">Выходные в&nbsp;городе</button><button type="button" role="tab" class="rubrics__tab" id="nt-gd" aria-controls="np-gd" aria-selected="false">Где</button><button type="button" role="tab" class="rubrics__tab" id="nt-dp" aria-controls="np-dp" aria-selected="false">Досуг с&nbsp;прокачкой</button><button type="button" role="tab" class="rubrics__tab" id="nt-vs" aria-controls="np-vs" aria-selected="false">Москва vs Питер</button><button type="button" role="tab" class="rubrics__tab" id="nt-lh" aria-controls="np-lh" aria-selected="false">Лайфхаки</button><button type="button" role="tab" class="rubrics__tab" id="nt-pn" aria-controls="np-pn" aria-selected="false">Планы на&nbsp;неделю</button><button type="button" role="tab" class="rubrics__tab" id="nt-se" aria-controls="np-se" aria-selected="false">Сезонная</button><button type="button" role="tab" class="rubrics__tab" id="nt-tp" aria-controls="np-tp" aria-selected="false">Топ</button><button type="button" role="tab" class="rubrics__tab" id="nt-fl" aria-controls="np-fl" aria-selected="false">Фильмы</button><button type="button" role="tab" class="rubrics__tab" id="nt-ar" aria-controls="np-ar" aria-selected="false">Под&nbsp;настроение</button></div>
+        </div>
+        <div class="rubrics__stage">
+          <div class="rubrics__track rubrics__track--tall" role="tabpanel" id="np-vy" aria-labelledby="nt-vy" tabindex="0" data-n="4">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/now-vy-1.webp" width="510" height="1100" alt="Выгода: слайд 1" draggable="false" loading="lazy">
+            <div class="tall__col">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/now-vy-2.webp" width="880" height="1100" alt="Выгода: слайд 2" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/now-vy-3.webp" width="880" height="1100" alt="Выгода: слайд 3" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/now-vy-4.webp" width="880" height="1100" alt="Выгода: слайд 4" draggable="false" loading="lazy">
+            </div>
+          </div>
+          <div class="rubrics__track" role="tabpanel" id="np-we" aria-labelledby="nt-we" tabindex="0" hidden data-n="6">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/now-we-1.webp" width="880" height="1100" alt="Выходные в городе: слайд 1" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/now-we-2.webp" width="880" height="1100" alt="Выходные в городе: слайд 2" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/now-we-3.webp" width="880" height="1100" alt="Выходные в городе: слайд 3" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/now-we-4.webp" width="880" height="1100" alt="Выходные в городе: слайд 4" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/now-we-5.webp" width="880" height="1100" alt="Выходные в городе: слайд 5" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/now-we-6.webp" width="880" height="1100" alt="Выходные в городе: слайд 6" draggable="false" loading="lazy">
+          </div>
+          <div class="rubrics__track" role="tabpanel" id="np-gd" aria-labelledby="nt-gd" tabindex="0" hidden data-n="6">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/now-gd-1.webp" width="880" height="1100" alt="Где: слайд 1" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/now-gd-2.webp" width="880" height="1100" alt="Где: слайд 2" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/now-gd-3.webp" width="880" height="1100" alt="Где: слайд 3" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/now-gd-4.webp" width="880" height="1100" alt="Где: слайд 4" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/now-gd-5.webp" width="880" height="1100" alt="Где: слайд 5" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/now-gd-6.webp" width="880" height="1100" alt="Где: слайд 6" draggable="false" loading="lazy">
+          </div>
+          <div class="rubrics__track rubrics__track--tall" role="tabpanel" id="np-dp" aria-labelledby="nt-dp" tabindex="0" hidden data-n="4">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/now-dp-1.webp" width="510" height="1100" alt="Досуг с прокачкой: слайд 1" draggable="false" loading="lazy">
+            <div class="tall__col">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/now-dp-2.webp" width="880" height="1100" alt="Досуг с прокачкой: слайд 2" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/now-dp-3.webp" width="880" height="1100" alt="Досуг с прокачкой: слайд 3" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/now-dp-4.webp" width="880" height="1100" alt="Досуг с прокачкой: слайд 4" draggable="false" loading="lazy">
+            </div>
+          </div>
+          <div class="rubrics__track rubrics__track--tall" role="tabpanel" id="np-vs" aria-labelledby="nt-vs" tabindex="0" hidden data-n="4">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/now-vs-1.webp" width="510" height="1100" alt="Москва vs Питер: слайд 1" draggable="false" loading="lazy">
+            <div class="tall__col">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/now-vs-2.webp" width="880" height="1100" alt="Москва vs Питер: слайд 2" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/now-vs-3.webp" width="880" height="1100" alt="Москва vs Питер: слайд 3" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/now-vs-4.webp" width="880" height="1100" alt="Москва vs Питер: слайд 4" draggable="false" loading="lazy">
+            </div>
+          </div>
+          <div class="rubrics__track" role="tabpanel" id="np-lh" aria-labelledby="nt-lh" tabindex="0" hidden data-n="6">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/now-lh-1.webp" width="880" height="1100" alt="Лайфхаки: слайд 1" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/now-lh-2.webp" width="880" height="1100" alt="Лайфхаки: слайд 2" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/now-lh-3.webp" width="880" height="1100" alt="Лайфхаки: слайд 3" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/now-lh-4.webp" width="880" height="1100" alt="Лайфхаки: слайд 4" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/now-lh-5.webp" width="880" height="1100" alt="Лайфхаки: слайд 5" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/now-lh-6.webp" width="880" height="1100" alt="Лайфхаки: слайд 6" draggable="false" loading="lazy">
+          </div>
+          <div class="rubrics__track" role="tabpanel" id="np-pn" aria-labelledby="nt-pn" tabindex="0" hidden data-n="6">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/now-pn-1.webp" width="880" height="1100" alt="Планы на неделю: слайд 1" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/now-pn-2.webp" width="880" height="1100" alt="Планы на неделю: слайд 2" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/now-pn-3.webp" width="880" height="1100" alt="Планы на неделю: слайд 3" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/now-pn-4.webp" width="880" height="1100" alt="Планы на неделю: слайд 4" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/now-pn-5.webp" width="880" height="1100" alt="Планы на неделю: слайд 5" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/now-pn-6.webp" width="880" height="1100" alt="Планы на неделю: слайд 6" draggable="false" loading="lazy">
+          </div>
+          <div class="rubrics__track rubrics__track--tall" role="tabpanel" id="np-se" aria-labelledby="nt-se" tabindex="0" hidden data-n="4">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/now-se-1.webp" width="510" height="1100" alt="Сезонная: слайд 1" draggable="false" loading="lazy">
+            <div class="tall__col">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/now-se-2.webp" width="880" height="1100" alt="Сезонная: слайд 2" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/now-se-3.webp" width="880" height="1100" alt="Сезонная: слайд 3" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/now-se-4.webp" width="880" height="1100" alt="Сезонная: слайд 4" draggable="false" loading="lazy">
+            </div>
+          </div>
+          <div class="rubrics__track" role="tabpanel" id="np-tp" aria-labelledby="nt-tp" tabindex="0" hidden data-n="6">
+            <video src="assets/projects-section/projects-section-case/case-socials/img/top-cover.mp4" poster="assets/projects-section/projects-section-case/case-socials/img/top-cover-poster.webp" width="720" height="900" muted loop autoplay playsinline preload="metadata" aria-label="Топ: обложка поста с анимацией"></video>
+            <img src="assets/projects-section/projects-section-case/case-socials/img/now-tp-2.webp" width="880" height="1100" alt="Топ: слайд 2" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/now-tp-3.webp" width="880" height="1100" alt="Топ: слайд 3" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/now-tp-4.webp" width="880" height="1100" alt="Топ: слайд 4" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/now-tp-5.webp" width="880" height="1100" alt="Топ: слайд 5" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/now-tp-6.webp" width="880" height="1100" alt="Топ: слайд 6" draggable="false" loading="lazy">
+          </div>
+          <div class="rubrics__track" role="tabpanel" id="np-fl" aria-labelledby="nt-fl" tabindex="0" hidden data-n="6">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/now-fl-1.webp" width="880" height="1100" alt="Фильмы: слайд 1" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/now-fl-2.webp" width="880" height="1100" alt="Фильмы: слайд 2" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/now-fl-3.webp" width="880" height="1100" alt="Фильмы: слайд 3" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/now-fl-4.webp" width="880" height="1100" alt="Фильмы: слайд 4" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/now-fl-5.webp" width="880" height="1100" alt="Фильмы: слайд 5" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/now-fl-6.webp" width="880" height="1100" alt="Фильмы: слайд 6" draggable="false" loading="lazy">
+          </div>
+          <div class="rubrics__track" role="tabpanel" id="np-ar" aria-labelledby="nt-ar" tabindex="0" hidden data-n="9">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/now-ar-1.webp" width="1100" height="1100" alt="Под настроение: слайд 1" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/now-ar-2.webp" width="1100" height="1100" alt="Под настроение: слайд 2" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/now-ar-3.webp" width="1100" height="1100" alt="Под настроение: слайд 3" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/now-ar-4.webp" width="1100" height="1100" alt="Под настроение: слайд 4" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/now-ar-5.webp" width="1100" height="1100" alt="Под настроение: слайд 5" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/now-ar-6.webp" width="1100" height="1100" alt="Под настроение: слайд 6" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/now-ar-7.webp" width="1100" height="1100" alt="Под настроение: слайд 7" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/now-ar-8.webp" width="1100" height="1100" alt="Под настроение: слайд 8" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/now-ar-9.webp" width="1100" height="1100" alt="Под настроение: слайд 9" draggable="false" loading="lazy">
+          </div>
+        </div>
+      </div>
+      <p class="fig__cap">Так&nbsp;рубрики выглядят сейчас</p>
+
+      <h3>Шаблоны рубрик</h3>
+      <p>Для&nbsp;каждой рубрики есть готовый шаблон. У&nbsp;некоторых несколько вариантов: под&nbsp;разное количество картинок в&nbsp;посте или&nbsp;под&nbsp;цвет другого города. Так&nbsp;выглядит всё&nbsp;полотно&nbsp;шаблонов</p>
+      <div class="rubrics rubrics--board">
+        <img src="assets/projects-section/projects-section-case/case-socials/img/templates-board.webp" width="2400" height="2068" alt="Все шаблоны рубрик на одном полотне: Планы на неделю, Где, Выгодно, Досуг с прокачкой, Музыка, Необычное, Сезонная, Выходные, Фильмы, Топ, Москва vs Питер" draggable="false" loading="lazy">
+      </div>
+      <p class="fig__cap">Все&nbsp;шаблоны рубрик на&nbsp;одном полотне</p>
+
+      <h3>Как&nbsp;мы&nbsp;поздравляли город с&nbsp;Днём города</h3>
+      <p>На&nbsp;День города я&nbsp;придумала <strong>поздравлять не&nbsp;обычной открыткой, а&nbsp;комиксом</strong>. На&nbsp;обложке четыре сцены о&nbsp;том, как&nbsp;проходит праздник, а&nbsp;дальше идут карточки с&nbsp;событиями выходных: у&nbsp;каждой своя иллюстрация в&nbsp;том&nbsp;же&nbsp;стиле. Пример&nbsp;—&nbsp;Самара</p>
+      <div class="rubrics rubrics--static">
+        <div class="rubrics__track" data-n="6">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/samara-comic.webp" width="1080" height="1350" alt="Самара: комикс «С днём города!»" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/samara-painted.webp" width="1080" height="1350" alt="Самара: «Живописный город»" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/samara-reading.webp" width="1080" height="1350" alt="Самара: «Читающая Самара»" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/samara-orchestra.webp" width="1080" height="1350" alt="Самара: «На сопках Манчжурии»" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/samara-tours.webp" width="1080" height="1350" alt="Самара: «Экскурсии по городу»" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/samara-concert.webp" width="1080" height="1350" alt="Самара: «Самара, ты в сердце моём навсегда!»" draggable="false" loading="lazy">
+        </div>
+      </div>
+      <p class="fig__cap">Самара: поздравление с&nbsp;Днём города и&nbsp;события&nbsp;выходных</p>
+
+      <h3>Что&nbsp;было дальше: московские каналы</h3>
+      <p>Дальше компания сменила направление, и&nbsp;региональные каналы закрыли. Сначала остались только Петербург и&nbsp;Москва, потом сеть сосредоточилась на&nbsp;трёх московских каналах: Инсайд, Лайф и&nbsp;<span style="white-space:nowrap">Нон-стоп</span>. Аудитория у&nbsp;них&nbsp;разная, поэтому система работала уже&nbsp;не&nbsp;на&nbsp;города, а&nbsp;на&nbsp;характер&nbsp;канала</p>
+      <p>При&nbsp;общих правилах каналы сохраняли свой характер. Москва Инсайд&nbsp;— про&nbsp;то, куда сходить, поэтому его&nbsp;подача спокойная и&nbsp;информативная: крупное фото, адрес, цена или&nbsp;дата, короткое описание. Москва Лайф&nbsp;— про&nbsp;моду и&nbsp;светскую жизнь, и&nbsp;здесь я&nbsp;позволила себе больше игры: яркий розовый, иллюстрации и&nbsp;тематические приёмы вроде карточек-игральных карт в&nbsp;«Маршруте&nbsp;Алисы»</p>
+
+      <div class="rubrics rubrics--static">
+        <div class="rubrics__track" data-n="6">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/msk-insight-1.webp" width="880" height="1100" alt="Москва Инсайд: «Банный тур», обложка" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/msk-insight-2.webp" width="880" height="1100" alt="Москва Инсайд: Варшавские бани" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/msk-insight-3.webp" width="880" height="1100" alt="Москва Инсайд: Воронцовские бани" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/msk-insight-4.webp" width="880" height="1100" alt="Москва Инсайд: Измайловские бани" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/msk-insight-5.webp" width="880" height="1100" alt="Москва Инсайд: Сандуны" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/msk-insight-6.webp" width="880" height="1100" alt="Москва Инсайд: Жар-птица" draggable="false" loading="lazy">
+        </div>
+      </div>
+      <p class="fig__cap">Москва Инсайд: рубрика «Банный тур»</p>
+
+      <div class="rubrics rubrics--static">
+        <div class="rubrics__track" data-n="6">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/msk-life-0.webp" width="880" height="1100" alt="Москва Лайф: «Маршрут Алисы», обложка" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/msk-life-1.webp" width="880" height="1100" alt="Москва Лайф: Grande" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/msk-life-2.webp" width="880" height="1100" alt="Москва Лайф: Музей магии" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/msk-life-3.webp" width="880" height="1100" alt="Москва Лайф: «Слёзы берёзы»" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/msk-life-4.webp" width="880" height="1100" alt="Москва Лайф: «Наука МАИ»" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/msk-life-5.webp" width="880" height="1100" alt="Москва Лайф: «Грот»" draggable="false" loading="lazy">
+        </div>
+      </div>
+      <p class="fig__cap">Москва Лайф: «Маршрут Алисы»</p>
+
+      <h3 id="tg-layout">Раскладка под&nbsp;Telegram</h3>
+      <p>Telegram показывает несколько картинок в&nbsp;посте альбомом и&nbsp;обрезает их&nbsp;по&nbsp;краям. Поэтому <strong>перед публикацией я&nbsp;смотрела, как&nbsp;пост выглядит в&nbsp;ленте</strong>, и&nbsp;по&nbsp;этим проверкам составила правила&nbsp;раскладки</p>
+
+      <p class="gap">Примерно с&nbsp;ноября по&nbsp;февраль сеть также вела Instagram*, TikTok и&nbsp;YouTube. Для&nbsp;них&nbsp;я&nbsp;разработала свой дизайн карточек, а&nbsp;ещё&nbsp;снимала и&nbsp;монтировала короткие видео. Для&nbsp;Москвы Инсайд это&nbsp;были карусели 3:4: обложка, карточки подборки и&nbsp;финальный слайд со&nbsp;ссылкой на&nbsp;<span style="white-space:nowrap">Telegram-канал</span>, в&nbsp;TikTok&nbsp;— на&nbsp;сам&nbsp;канал, в&nbsp;Instagram*&nbsp;— через&nbsp;ссылку в&nbsp;профиле</p>
+
+      <div class="rubrics" data-rubrics>
+        <div class="rubrics__bar">
+          <div class="rubrics__tabs" role="tablist" aria-label="Карусели для Instagram и TikTok"><button type="button" role="tab" class="rubrics__tab" id="ct-ib" aria-controls="cp-ib" aria-selected="true">Инсайд: где&nbsp;поработать</button><button type="button" role="tab" class="rubrics__tab" id="ct-ic" aria-controls="cp-ic" aria-selected="false">Инсайд: кофе с&nbsp;солью</button><button type="button" role="tab" class="rubrics__tab" id="ct-ls" aria-controls="cp-ls" aria-selected="false">Лайф: смешарики</button><button type="button" role="tab" class="rubrics__tab" id="ct-lt" aria-controls="cp-lt" aria-selected="false">Лайф: типажи Кибби</button></div>
+        </div>
+        <div class="rubrics__stage">
+          <div class="rubrics__track rubrics__track--c4" role="tabpanel" id="cp-ib" aria-labelledby="ct-ib" tabindex="0" data-n="12">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/ig-nb-1.webp" width="810" height="1080" alt="Инсайд: где поработать: слайд 1" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/ig-nb-2.webp" width="810" height="1080" alt="Инсайд: где поработать: слайд 2" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/ig-nb-3.webp" width="810" height="1080" alt="Инсайд: где поработать: слайд 3" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/ig-nb-4.webp" width="810" height="1080" alt="Инсайд: где поработать: слайд 4" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/ig-nb-5.webp" width="810" height="1080" alt="Инсайд: где поработать: слайд 5" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/ig-nb-6.webp" width="810" height="1080" alt="Инсайд: где поработать: слайд 6" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/ig-nb-7.webp" width="810" height="1080" alt="Инсайд: где поработать: слайд 7" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/ig-nb-8.webp" width="810" height="1080" alt="Инсайд: где поработать: слайд 8" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/ig-nb-9.webp" width="810" height="1080" alt="Инсайд: где поработать: слайд 9" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/ig-nb-10.webp" width="810" height="1080" alt="Инсайд: где поработать: слайд 10" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/ig-nb-11.webp" width="810" height="1080" alt="Инсайд: где поработать: слайд 11" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/ig-nb-12.webp" width="810" height="1080" alt="Инсайд: где поработать: слайд 12" draggable="false" loading="lazy">
+          </div>
+          <div class="rubrics__track rubrics__track--c5" role="tabpanel" id="cp-ic" aria-labelledby="ct-ic" tabindex="0" hidden data-n="10">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/ig-cf-1.webp" width="810" height="1080" alt="Инсайд: кофе с солью: слайд 1" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/ig-cf-2.webp" width="810" height="1080" alt="Инсайд: кофе с солью: слайд 2" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/ig-cf-3.webp" width="810" height="1080" alt="Инсайд: кофе с солью: слайд 3" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/ig-cf-4.webp" width="810" height="1080" alt="Инсайд: кофе с солью: слайд 4" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/ig-cf-5.webp" width="810" height="1080" alt="Инсайд: кофе с солью: слайд 5" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/ig-cf-6.webp" width="810" height="1080" alt="Инсайд: кофе с солью: слайд 6" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/ig-cf-7.webp" width="810" height="1080" alt="Инсайд: кофе с солью: слайд 7" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/ig-cf-8.webp" width="810" height="1080" alt="Инсайд: кофе с солью: слайд 8" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/ig-cf-9.webp" width="810" height="1080" alt="Инсайд: кофе с солью: слайд 9" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/ig-cf-10.webp" width="810" height="1080" alt="Инсайд: кофе с солью: слайд 10" draggable="false" loading="lazy">
+          </div>
+          <div class="rubrics__track rubrics__track--c4" role="tabpanel" id="cp-ls" aria-labelledby="ct-ls" tabindex="0" hidden data-n="12">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/ig-l-sm-1.webp" width="810" height="1080" alt="Лайф: смешарики: слайд 1" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/ig-l-sm-2.webp" width="810" height="1080" alt="Лайф: смешарики: слайд 2" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/ig-l-sm-3.webp" width="810" height="1080" alt="Лайф: смешарики: слайд 3" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/ig-l-sm-4.webp" width="810" height="1080" alt="Лайф: смешарики: слайд 4" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/ig-l-sm-5.webp" width="810" height="1080" alt="Лайф: смешарики: слайд 5" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/ig-l-sm-6.webp" width="810" height="1080" alt="Лайф: смешарики: слайд 6" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/ig-l-sm-7.webp" width="810" height="1080" alt="Лайф: смешарики: слайд 7" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/ig-l-sm-8.webp" width="810" height="1080" alt="Лайф: смешарики: слайд 8" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/ig-l-sm-9.webp" width="810" height="1080" alt="Лайф: смешарики: слайд 9" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/ig-l-sm-10.webp" width="810" height="1080" alt="Лайф: смешарики: слайд 10" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/ig-l-sm-11.webp" width="810" height="1080" alt="Лайф: смешарики: слайд 11" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/ig-l-sm-12.webp" width="810" height="1080" alt="Лайф: смешарики: слайд 12" draggable="false" loading="lazy">
+          </div>
+          <div class="rubrics__track rubrics__track--fx" role="tabpanel" id="cp-lt" aria-labelledby="ct-lt" tabindex="0" hidden data-n="11" style="--cols:4">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/ig-l-tp-1.webp" width="810" height="1080" alt="Лайф: типажи Кибби: слайд 1" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/ig-l-tp-2.webp" width="810" height="1080" alt="Лайф: типажи Кибби: слайд 2" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/ig-l-tp-3.webp" width="810" height="1080" alt="Лайф: типажи Кибби: слайд 3" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/ig-l-tp-4.webp" width="810" height="1080" alt="Лайф: типажи Кибби: слайд 4" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/ig-l-tp-5.webp" width="810" height="1080" alt="Лайф: типажи Кибби: слайд 5" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/ig-l-tp-6.webp" width="810" height="1080" alt="Лайф: типажи Кибби: слайд 6" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/ig-l-tp-7.webp" width="810" height="1080" alt="Лайф: типажи Кибби: слайд 7" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/ig-l-tp-8.webp" width="810" height="1080" alt="Лайф: типажи Кибби: слайд 8" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/ig-l-tp-9.webp" width="810" height="1080" alt="Лайф: типажи Кибби: слайд 9" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/ig-l-tp-10.webp" width="810" height="1080" alt="Лайф: типажи Кибби: слайд 10" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/ig-l-tp-11.webp" width="810" height="1080" alt="Лайф: типажи Кибби: слайд 11" draggable="false" loading="lazy">
+          </div>
+        </div>
+      </div>
+      <p class="fig__cap">Карусели Москвы Инсайд и&nbsp;Лайф для&nbsp;Instagram* и&nbsp;TikTok целиком: обложка, карточки и&nbsp;два&nbsp;финальных слайда со&nbsp;ссылкой на&nbsp;Telegram</p>
+
+      <div class="rubrics rubrics--video">
+        <div class="vgrid">
+          <video controls playsinline preload="none" poster="assets/projects-section/projects-section-case/case-socials/video/vid-1-poster.webp" src="assets/projects-section/projects-section-case/case-socials/video/vid-1.mp4" aria-label="Видео 1"></video>
+          <video controls playsinline preload="none" poster="assets/projects-section/projects-section-case/case-socials/video/vid-8-poster.webp" src="assets/projects-section/projects-section-case/case-socials/video/vid-8.mp4" aria-label="Видео 2"></video>
+          <video controls playsinline preload="none" poster="assets/projects-section/projects-section-case/case-socials/video/vid-2-poster.webp" src="assets/projects-section/projects-section-case/case-socials/video/vid-2.mp4" aria-label="Видео 3"></video>
+          <video controls playsinline preload="none" poster="assets/projects-section/projects-section-case/case-socials/video/vid-6-poster.webp" src="assets/projects-section/projects-section-case/case-socials/video/vid-6.mp4" aria-label="Видео 4"></video>
+        </div>
+      </div>
+      <p class="fig__cap">Короткие вертикальные видео Москвы Инсайд и&nbsp;Лайф. Нажмите, чтобы&nbsp;включить</p>
+      <p class="note">*Instagram принадлежит компании Meta, деятельность которой признана экстремистской и&nbsp;запрещена на&nbsp;территории&nbsp;РФ</p>
+
+      <p class="gap">Для&nbsp;Инсайда и&nbsp;Лайфа я&nbsp;также разработала маскотов, зайку Соню и&nbsp;фенека Федю. Запустить их&nbsp;в&nbsp;каналах не&nbsp;успели: компания сменила направление. Но&nbsp;Федя позже стал лицом NATIVE&nbsp;LAB</p>
+      <figure class="fig fig--photo fig--mascots">
+        <img src="assets/projects-section/projects-section-case/case-socials/img/mascots.webp" alt="Маскоты Москвы Инсайд и Лайф: зайка Соня и фенек Федя" loading="lazy">
+      </figure>
+      <p class="gap"><a class="more-link" href="case-mascots.html">→ Подробнее о&nbsp;маскотах в&nbsp;отдельном кейсе</a></p>
+    </section>
+
+    <section class="section" id="c05">
+      <h2>05. Как&nbsp;изменилась работа команды</h2>
+      <p>В&nbsp;команде было два&nbsp;дизайнера. Все&nbsp;новые визуальные решения я&nbsp;разрабатывала сама, а&nbsp;затем добавляла их&nbsp;в&nbsp;общую&nbsp;библиотеку</p>
+      <p><strong>Неформально я&nbsp;взяла на&nbsp;себя роль ведущего дизайнера</strong>: помогала коллеге разобраться в&nbsp;шаблонах, объясняла принципы и&nbsp;проверяла макеты. Благодаря этому мы&nbsp;оба&nbsp;собирали посты по&nbsp;одним&nbsp;правилам</p>
+      <p>До&nbsp;системы рубричный пост собирался с&nbsp;нуля: от&nbsp;поиска идеи подачи до&nbsp;вёрстки слайдов уходило <strong>около 40&nbsp;минут</strong>. С&nbsp;готовыми шаблонами та&nbsp;же&nbsp;карусель «Планы на&nbsp;неделю» <strong>собирается примерно за&nbsp;10&nbsp;минут</strong>: композиция, компоненты и&nbsp;правила уже&nbsp;заданы, остаётся подставить фото&nbsp;и&nbsp;текст</p>
+    </section>
+
+    <section class="section" id="c06">
+      <h2>06. Что&nbsp;получилось</h2>
+      <ul class="facts">
+        <li>правила оформления, рассчитанные на&nbsp;10&nbsp;городов: регионы работали два&nbsp;месяца, Петербург&nbsp;— три, Москва&nbsp;— до&nbsp;перехода компании на&nbsp;нативную&nbsp;рекламу</li>
+        <li>расширенная палитра: дополнительные оттенки для&nbsp;каждого города, общие и&nbsp;сезонные&nbsp;цвета</li>
+        <li>шаблоны рубрик и&nbsp;сотни макетов постов; рубричный пост собирается <strong>примерно за&nbsp;10&nbsp;минут вместо&nbsp;40</strong></li>
+        <li>рубрики стали узнаваемыми, и&nbsp;<strong>реакций на&nbsp;оформленные посты стало&nbsp;больше</strong></li>
+      </ul>
+      <p class="gap">Главное для&nbsp;меня в&nbsp;этом проекте&nbsp;— вместо набора макетов получились правила и&nbsp;компоненты, по&nbsp;которым второй дизайнер собирал посты для&nbsp;любого города без&nbsp;моего&nbsp;участия</p>
+      <p>Если бы&nbsp;проект продолжался, я&nbsp;бы&nbsp;проверила, какие рубрики подписчики чаще сохраняют и&nbsp;пересылают, и&nbsp;развивала бы&nbsp;систему в&nbsp;сторону этих&nbsp;форматов</p>
+    </section>
+
+    </div>
+    <!-- =================== ЧАСТЬ 2 =================== -->
+    <div class="part part--cyan" id="p2" role="button" tabindex="0" aria-expanded="false" aria-controls="p2-body">
+      <div class="part__text"><span class="part__num">Часть 2</span><h2 class="part__name">STOлица</h2><p class="part__sub">Стиль, который узнают</p></div>
+      <div class="part__end">
+      <span class="part__toggle" aria-hidden="true"><span class="part__toggle-text">свернуть</span><svg viewBox="0 0 8 5" width="10" height="6"><path d="M.75.75L4 4.25 7.25.75" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </div>
+    </div>
+    <div class="part-body" id="p2-body">
+
+    <section class="section" id="c07">
+      <h2>07. Немного о&nbsp;проекте</h2>
+      <p>STOлица&nbsp;— молодёжное сообщество Москвы, которое проводило лекции, акции, флешмобы, тренинги и&nbsp;летний лагерь. Сейчас оно&nbsp;объединено с&nbsp;проектом «Молодёжь Москвы». За&nbsp;время существования сообщество провело более 2&nbsp;000&nbsp;мероприятий, и&nbsp;почти каждому нужны анонс, отчёт и&nbsp;посты в&nbsp;соцсетях</p>
+      <p>У&nbsp;сообщества были две&nbsp;площадки с&nbsp;разными&nbsp;ролями:</p>
+      <ul class="facts">
+        <li><strong>ВКонтакте</strong> (20&nbsp;000+ подписчиков)&nbsp;— анонсы, фотоотчёты,&nbsp;видео</li>
+        <li><strong><span style="white-space:nowrap">Telegram-канал</span></strong>&nbsp;— более неформальное общение, авторские рубрики, короткие&nbsp;форматы</li>
+      </ul>
+      <p class="gap">Аудитория&nbsp;— молодёжь 18–35&nbsp;лет: студенты, молодые специалисты, волонтёры и&nbsp;участники городских&nbsp;проектов</p>
+
+      <h3>О&nbsp;проекте</h3>
+      <ul class="facts">
+        <li><span>Период:</span> июнь 2024&nbsp;— апрель 2025</li>
+        <li><span>Площадки:</span> ВКонтакте, Telegram</li>
+        <li><span>Аудитория:</span> <strong>20&nbsp;000+ подписчиков во&nbsp;ВКонтакте</strong></li>
+        <li><span>Моя&nbsp;роль:</span> дизайнер соцсетей, специалист отдела медиасопровождения</li>
+      </ul>
+    </section>
+
+    <section class="section" id="c08">
+      <h2>08. С&nbsp;чего всё&nbsp;начиналось</h2>
+      <p>У&nbsp;проекта уже&nbsp;были логотип, фирменные цвета и&nbsp;основной шрифт Unbounded. Но&nbsp;<strong>правил их&nbsp;применения не&nbsp;было</strong>: кроме Unbounded, в&nbsp;разных анонсах использовались Montserrat, Lemon/Milk и&nbsp;<span style="white-space:nowrap">Kom-Post</span>, а&nbsp;логотип ставили в&nbsp;разных цветовых вариантах без&nbsp;общих правил. <span style="white-space:nowrap">Из-за</span>&nbsp;этого визуал соцсетей выглядел стихийно. Разнообразие в&nbsp;постах как&nbsp;раз&nbsp;было плюсом: их&nbsp;связывали общие приёмы, фактурные белые штрихи, крапинки и&nbsp;мягкие плашки для&nbsp;заголовков. Не&nbsp;хватало опоры на&nbsp;правила для&nbsp;текста и&nbsp;логотипа: текст то&nbsp;стоял на&nbsp;чистом поле, то&nbsp;лежал на&nbsp;размытой подложке, где&nbsp;плохо читался, а&nbsp;логотип оказывался то&nbsp;справа сверху, то&nbsp;слева&nbsp;снизу</p>
+      <p>К&nbsp;тому же&nbsp;этот язык заметно устарел: рисованные мазки, тяжёлые размытые плашки и&nbsp;смесь шрифтов смотрелись уже&nbsp;не&nbsp;современно. Команда и&nbsp;сама это&nbsp;чувствовала и&nbsp;ждала обновления: нужен был&nbsp;свежий, собранный образ, в&nbsp;котором сообщество узнают с&nbsp;первого&nbsp;взгляда</p>
+      <p>Контент-план при&nbsp;этом собирался по&nbsp;неделям и&nbsp;часто менялся на&nbsp;ходу: идеи постов появлялись прямо на&nbsp;планёрках. Поэтому жёсткие шаблоны под&nbsp;фиксированные рубрики здесь бы&nbsp;не&nbsp;сработали</p>
+      <p class="callout"><span class="callout__icon callout__icon--blue" aria-hidden="true">⌁</span><strong>Нужна была система, которая держит стиль, но&nbsp;позволяет быстро собрать пост под&nbsp;любую новую&nbsp;идею</strong></p>
+
+      <div class="rubrics rubrics--static">
+        <div class="rubrics__stage">
+          <div class="rubrics__track rubrics__track--c4" data-n="16">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/tg-parks-1.webp" width="800" height="800" alt="Парки Москвы: слайд 1" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/tg-parks-2.webp" width="800" height="800" alt="Парки Москвы: слайд 2" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/tg-parks-3.webp" width="800" height="800" alt="Парки Москвы: слайд 3" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/tg-parks-4.webp" width="800" height="800" alt="Парки Москвы: слайд 4" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/tg-parks-5.webp" width="800" height="800" alt="Парки Москвы: слайд 5" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/tg-slang-1.webp" width="800" height="800" alt="Сленг на древнерусском: слайд 1" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/tg-slang-2.webp" width="800" height="800" alt="Сленг на древнерусском: слайд 2" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/tg-slang-3.webp" width="800" height="800" alt="Сленг на древнерусском: слайд 3" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/tg-slang-4.webp" width="800" height="800" alt="Сленг на древнерусском: слайд 4" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/tg-slang-5.webp" width="800" height="800" alt="Сленг на древнерусском: слайд 5" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/tg-slang-6.webp" width="800" height="800" alt="Сленг на древнерусском: слайд 6" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/tg-playlist.webp" width="800" height="800" alt="Весенний плейлист" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/tg-fest-1.webp" width="800" height="640" alt="Лето в Москве: слайд 1" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/tg-fest-2.webp" width="800" height="640" alt="Лето в Москве: слайд 2" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/tg-fest-3.webp" width="800" height="640" alt="Лето в Москве: слайд 3" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/tg-media.webp" width="800" height="640" alt="Анонс форума «МедиаДвиж»" draggable="false" loading="lazy">
+          </div>
+        </div>
+      </div>
+      <p class="fig__cap">Посты STOлицы в&nbsp;Telegram до&nbsp;моей работы: подборка парков, сленг на&nbsp;древнерусском, анонс форума «МедиаДвиж», весенний плейлист и&nbsp;анонс фестиваля «Лето в&nbsp;Москве»</p>
+    </section>
+
+    <section class="section" id="c09">
+      <h2>09. Как&nbsp;я&nbsp;искала подачу</h2>
+      <p>Прежде чем&nbsp;переделывать оформление, <strong>я&nbsp;опросила аудиторию</strong> и&nbsp;посмотрела, какой контент молодёжь смотрит охотнее. Три&nbsp;находки легли в&nbsp;основу&nbsp;решений:</p>
+      <p class="arrow">&gt;&gt; <strong>80%+</strong> выбирают карточки с&nbsp;короткой структурированной информацией&nbsp;→ главным форматом стала карточка, а&nbsp;не&nbsp;постер с&nbsp;длинным&nbsp;текстом</p>
+      <p class="arrow">&gt;&gt; <strong>67%</strong> любят сторис&nbsp;→ сторис получили свои шаблоны и&nbsp;обложки</p>
+      <p class="arrow">&gt;&gt; Лучше всего воспринимались <strong>светлые контрастные композиции со&nbsp;свободным пространством</strong>, а&nbsp;перегруженная графика отталкивала&nbsp;→ чистый фон&nbsp;и&nbsp;чёткая иерархия&nbsp;заголовков</p>
+      <p class="gap">Ещё&nbsp;один вывод: у&nbsp;площадок разные задачи. Во&nbsp;ВКонтакте работают более насыщенные карточки и&nbsp;инфографика, а&nbsp;в&nbsp;Telegram&nbsp;— компактные визуалы с&nbsp;минимумом текста и&nbsp;эмоциональные форматы. Поэтому я&nbsp;делала одну систему с&nbsp;двумя режимами, а&nbsp;не&nbsp;копировала одни и&nbsp;те&nbsp;же&nbsp;посты в&nbsp;обе&nbsp;площадки</p>
+    </section>
+
+    <section class="section" id="c10">
+      <h2>10. Что&nbsp;я&nbsp;сделала</h2>
+      <p>На&nbsp;основе фирстиля я&nbsp;разработала отдельный дизайн для&nbsp;соцсетей</p>
+
+      <h3>ВКонтакте</h3>
+      <ul class="facts">
+        <li>аватар, который читается даже в&nbsp;маленьком&nbsp;размере</li>
+        <li>шапка со&nbsp;слоганом, маскотом и&nbsp;городской графикой в&nbsp;версиях для&nbsp;десктопа и&nbsp;телефона, статичной и&nbsp;динамической</li>
+        <li>шаблоны анонсов, фотоотчётов, цитат и&nbsp;репостов на&nbsp;одной&nbsp;сетке</li>
+        <li>обложки актуальных сторис для&nbsp;навигации по&nbsp;сообществу</li>
+      </ul>
+
+      <h3>Telegram</h3>
+      <ul class="facts">
+        <li>круглый аватар на&nbsp;основе логотипа</li>
+        <li>компактные карточки к&nbsp;постам с&nbsp;короткими эмоциональными&nbsp;заголовками</li>
+        <li>рубрики с&nbsp;хэштегами для&nbsp;навигации по&nbsp;архиву: #сходим?, #наши_герои,&nbsp;#лето_в_москве</li>
+        <li>подборки эмодзи и, позже, стикерпак с&nbsp;МосКотом</li>
+      </ul>
+
+      <h3>Общая основа для&nbsp;обеих площадок</h3>
+      <ul class="facts">
+        <li>палитра из&nbsp;фирменных цветов (салатовый, голубой, фиолетовый, оранжевый, белый, графитовый) в&nbsp;вариантах для&nbsp;светлого и&nbsp;тёмного&nbsp;фона</li>
+        <li>модульная сетка: одинаковые отступы, место логотипа и&nbsp;графических акцентов в&nbsp;любом&nbsp;формате</li>
+        <li>набор графических элементов: иконки, паттерны, стикеры,&nbsp;маскот</li>
+      </ul>
+      <p class="gap">Новая идея из&nbsp;контент-плана собиралась из&nbsp;готовых элементов на&nbsp;сетке, а&nbsp;не&nbsp;рисовалась с&nbsp;нуля</p>
+
+      <h3>Как&nbsp;менялся стиль</h3>
+      <p><strong>Стиль не&nbsp;был&nbsp;застывшим, и&nbsp;это&nbsp;было осознанно</strong>. Посты выходили каждый день, поэтому я&nbsp;проверяла решения на&nbsp;живых публикациях: смотрела, что&nbsp;лучше читается в&nbsp;ленте, что&nbsp;быстрее собирается и&nbsp;что&nbsp;лучше работает, и&nbsp;оставляла то, что&nbsp;себя показало. <span style="white-space:nowrap">Из-за</span>&nbsp;этого оформление менялось от&nbsp;периода к&nbsp;периоду, пока не&nbsp;нашёлся более сильный&nbsp;вариант</p>
+
+      <div class="rubrics rubrics--static">
+        <div class="rubrics__stage">
+          <div class="rubrics__track rubrics__track--flow">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/st-8215.webp" width="800" height="800" style="--ar:1.0000" alt="Пост STOлицы в Telegram" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/st-7947.webp" width="800" height="800" style="--ar:1.0000" alt="Пост STOлицы в Telegram" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/st-8702.webp" width="800" height="800" style="--ar:1.0000" alt="Пост STOлицы в Telegram" draggable="false" loading="lazy">
+          </div>
+        </div>
+      </div>
+      <p class="fig__cap">Лето 2024: тетрадная клетка с&nbsp;человечками и&nbsp;иллюстрации с&nbsp;персонажем</p>
+
+      <p>Со&nbsp;временем из&nbsp;рисованных и&nbsp;фактурных решений стиль двигался к&nbsp;более чистым: белые карточки в&nbsp;цветной рамке, плашка с&nbsp;хэштегом рубрики, крупный заголовок и&nbsp;логотип на&nbsp;одном и&nbsp;том&nbsp;же&nbsp;месте. Так&nbsp;лента читалась легче, а&nbsp;посты в&nbsp;ней&nbsp;узнавались&nbsp;сразу</p>
+
+      <div class="rubrics rubrics--static">
+        <div class="rubrics__stage">
+          <div class="rubrics__track rubrics__track--flow">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/st-9031.webp" width="800" height="450" style="--ar:1.7778" alt="Пост STOлицы в Telegram" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/st-9391.webp" width="800" height="800" style="--ar:1.0000" alt="Пост STOлицы в Telegram" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/st-9523.webp" width="800" height="800" style="--ar:1.0000" alt="Пост STOлицы в Telegram" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/st-9618.webp" width="800" height="800" style="--ar:1.0000" alt="Пост STOлицы в Telegram" draggable="false" loading="lazy">
+          </div>
+        </div>
+      </div>
+      <p class="fig__cap">Осень 2024: Смешарики, фирменные поля и&nbsp;рубрики с&nbsp;хэштегом</p>
+
+      <p>К&nbsp;Новому году оформление становилось праздничным: общая рамка с&nbsp;гирляндой, снежинки, МосКот. Посты передавали настроение, но&nbsp;оставались узнаваемыми. А&nbsp;под&nbsp;отдельные события стиль мог&nbsp;меняться почти полностью и&nbsp;подстраиваться под&nbsp;образ мероприятия: у&nbsp;«Зимы в&nbsp;Москве» или&nbsp;у&nbsp;<span style="white-space:nowrap">80-летия</span> Победы был&nbsp;свой&nbsp;язык</p>
+
+      <div class="rubrics rubrics--static">
+        <div class="rubrics__stage">
+          <div class="rubrics__track rubrics__track--flow">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/st-9969.webp" width="800" height="450" style="--ar:1.7778" alt="Пост STOлицы в Telegram" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/st-10059.webp" width="800" height="800" style="--ar:1.0000" alt="Пост STOлицы в Telegram" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/st-10334.webp" width="800" height="800" style="--ar:1.0000" alt="Пост STOлицы в Telegram" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/st-10057.webp" width="800" height="450" style="--ar:1.7778" alt="Пост STOлицы в Telegram" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/st-11034.webp" width="800" height="400" style="--ar:2.0000" alt="Пост STOлицы в Telegram" draggable="false" loading="lazy">
+          </div>
+        </div>
+      </div>
+      <p class="fig__cap">Новый год&nbsp;и&nbsp;события: праздничная рамка, МосКот и&nbsp;стили под&nbsp;«Зима в&nbsp;Москве» и&nbsp;<span style="white-space:nowrap">80-летие</span>&nbsp;Победы</p>
+
+      <h3>Куда двигался стиль</h3>
+      <p>Эти&nbsp;два&nbsp;макета я&nbsp;сделала как&nbsp;основу следующей версии: чистая сетка, крупный контрастный шрифт, плашки с&nbsp;хэштегами, цветные поля и&nbsp;МосКот как&nbsp;живой акцент. Реализовать её&nbsp;целиком я&nbsp;не&nbsp;успела: к&nbsp;этому времени я&nbsp;ушла из&nbsp;проекта</p>
+
+      <figure class="fig fig--photo fig--plain">
+        <img src="assets/projects-section/projects-section-case/case-socials/img/st-next-1.webp" width="764" height="782" alt="Шапка сообщества STOлицы во ВКонтакте и обложки актуальных: Кто мы, Наши рубрики, Мы в СМИ" loading="lazy">
+        <figcaption class="fig__cap">ВКонтакте: шапка сообщества и&nbsp;обложки актуальных «Кто&nbsp;мы», «Наши рубрики», «Мы&nbsp;в&nbsp;СМИ»</figcaption>
+      </figure>
+
+      <figure class="fig fig--duo">
+        <div class="duo">
+          <img src="assets/projects-section/projects-section-case/case-socials/img/st-next-2a.webp" width="474" height="473" alt="Карточка STOлицы для Telegram: как незабываемо провести Масленицу" loading="lazy">
+          <img src="assets/projects-section/projects-section-case/case-socials/img/st-next-2b.webp" width="474" height="473" alt="Карточка STOлицы для Telegram: выставка-пристройство 30 котиков" loading="lazy">
+        </div>
+        <figcaption class="fig__cap">Telegram: карточки с&nbsp;плашками хэштегов, иллюстрациями, фото и&nbsp;МосКотом</figcaption>
+      </figure>
+    </section>
+
+    <section class="section" id="c11">
+      <h2>11. Как&nbsp;была устроена работа</h2>
+      <p>В&nbsp;команде соцсетей были редакторы и&nbsp;монтажёры, а&nbsp;за&nbsp;дизайн отвечала я&nbsp;одна. В&nbsp;проекте был&nbsp;ещё&nbsp;один дизайнер, но&nbsp;соцсетями она&nbsp;не&nbsp;занималась. Редизайны я&nbsp;придумывала сама и&nbsp;согласовывала с&nbsp;ней&nbsp;и&nbsp;руководством, а&nbsp;сезонные оформления, например новогоднее, мы&nbsp;делали&nbsp;вместе</p>
+      <p>Позже стиль дополнил маскот МосКот: он&nbsp;появился в&nbsp;шапке сообщества и&nbsp;в&nbsp;стикерпаке для&nbsp;Telegram</p>
+      <p><a class="more-link" href="case-moskot.html">→ Подробнее о&nbsp;МосКоте в&nbsp;отдельном кейсе</a></p>
+    </section>
+
+    <section class="section" id="c12">
+      <h2>12. Что&nbsp;получилось</h2>
+      <p>Этот проект я&nbsp;разбирала в&nbsp;магистерской работе и&nbsp;проверила решения на&nbsp;аудитории: <strong>120&nbsp;респондентов, по&nbsp;30&nbsp;на&nbsp;каждое&nbsp;направление</strong></p>
+
+      <div class="table-wrap">
+        <table class="data-table data-table--wide">
+          <thead><tr><th scope="col">Показатель</th><th scope="col">Результат</th></tr></thead>
+          <tbody>
+            <tr><td>Связывают оформление ВКонтакте с&nbsp;брендом</td><td>60% уверенно и&nbsp;ещё&nbsp;30% «скорее да»</td></tr>
+            <tr><td>Нравятся карточки и&nbsp;стиль постов</td><td>70%</td></tr>
+            <tr><td>Подача в&nbsp;Telegram яркая и&nbsp;стильная</td><td>66%</td></tr>
+            <tr><td>Текст в&nbsp;Telegram читается комфортно</td><td>67%</td></tr>
+            <tr><td>Хотят видеть МосКота чаще</td><td>90%</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="gap">Опрос показал и&nbsp;слабые места: 7% посчитали карточки перегруженными. Если бы&nbsp;я&nbsp;продолжала работу, то&nbsp;добавила бы&nbsp;постоянные визуальные рубрикаторы и&nbsp;чаще использовала маскота в&nbsp;регулярных&nbsp;постах</p>
+    </section>
+
+    </div>
+    <!-- =================== ЧАСТЬ 3 =================== -->
+    <div class="part part--lilac" id="p3" role="button" tabindex="0" aria-expanded="false" aria-controls="p3-body">
+      <div class="part__text"><span class="part__num">Часть 3</span><h2 class="part__name">ВНИИИМТ</h2><p class="part__sub">Сложный контент, узнаваемая подача</p></div>
+      <div class="part__end">
+      <span class="part__toggle" aria-hidden="true"><span class="part__toggle-text">свернуть</span><svg viewBox="0 0 8 5" width="10" height="6"><path d="M.75.75L4 4.25 7.25.75" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </div>
+    </div>
+    <div class="part-body" id="p3-body">
+
+    <section class="section" id="c13">
+      <h2>13. Немного о&nbsp;проекте</h2>
+      <p>ВНИИИМТ&nbsp;— научный институт Росздравнадзора, который занимается испытаниями и&nbsp;регистрацией медицинских изделий. Я&nbsp;работала с&nbsp;четырьмя направлениями коммуникации: презентациями, <span style="white-space:nowrap">Telegram-каналом</span>, сайтом и&nbsp;материалами для&nbsp;мероприятий. В&nbsp;этой части&nbsp;— про&nbsp;Telegram</p>
+      <p>Аудитория канала&nbsp;— производители медизделий, эксперты и&nbsp;госструктуры. Контент сложный и&nbsp;плотный: разборы постановлений, программы повышения квалификации, новости лабораторий и&nbsp;отчёты с&nbsp;международных&nbsp;выставок</p>
+
+      <h3>О&nbsp;проекте</h3>
+      <ul class="facts">
+        <li><span>Период:</span> 15&nbsp;апреля&nbsp;— 5&nbsp;мая&nbsp;2025</li>
+        <li><span>Площадка:</span> <span style="white-space:nowrap">Telegram-канал</span> института</li>
+        <li><span>Команда:</span> я&nbsp;и&nbsp;второй дизайнер</li>
+        <li><span>Моя&nbsp;роль:</span> дизайнер, автор стиля и&nbsp;шаблонов, координатор&nbsp;дизайнера</li>
+      </ul>
+    </section>
+
+    <section class="section" id="c14">
+      <h2>14. С&nbsp;чего всё&nbsp;начиналось</h2>
+      <p>На&nbsp;старте у&nbsp;канала <strong>не&nbsp;было ни&nbsp;системы, ни&nbsp;узнаваемого стиля</strong>. Каждый пост оформлялся <span style="white-space:nowrap">по-своему</span>: разные фоны и&nbsp;градиенты, случайные <span style="white-space:nowrap">3D-иконки</span>, каждый раз&nbsp;новая&nbsp;композиция</p>
+      <p class="callout"><span class="callout__icon callout__icon--blue" aria-hidden="true">⌁</span>Для&nbsp;аудитории это&nbsp;была не&nbsp;только эстетическая проблема. В&nbsp;постах с&nbsp;длинными цитатами из&nbsp;постановлений главное&nbsp;— <strong>сроки и&nbsp;требования</strong>&nbsp;— терялось среди декора, а&nbsp;разные типы публикаций выглядели одинаково&nbsp;случайно</p>
+
+      <div class="rubrics" data-rubrics>
+        <div class="rubrics__bar">
+          <div class="rubrics__tabs" role="tablist" aria-label="Посты канала до моей работы"><button type="button" role="tab" class="rubrics__tab" id="vbt0" aria-controls="vbp0" aria-selected="true">ВНИИИМТ готов к&nbsp;приёму документов</button><button type="button" role="tab" class="rubrics__tab" id="vbt1" aria-controls="vbp1" aria-selected="false">Электробезопасность</button><button type="button" role="tab" class="rubrics__tab" id="vbt2" aria-controls="vbp2" aria-selected="false">CMEF 2025</button></div>
+        </div>
+        <div class="rubrics__stage">
+          <div class="rubrics__track rubrics__track--uni" role="tabpanel" id="vbp0" aria-labelledby="vbt0" tabindex="0" data-n="5" style="--tile:4 / 5">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/vn-1090-1.webp" width="642" height="800" style="--ar:0.8025" alt="«ВНИИИМТ готов к приёму документов»: слайд 1" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/vn-1090-2.webp" width="610" height="762" style="--ar:0.8005" alt="«ВНИИИМТ готов к приёму документов»: слайд 2" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/vn-1090-3.webp" width="640" height="800" style="--ar:0.8000" alt="«ВНИИИМТ готов к приёму документов»: слайд 3" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/vn-1090-4.webp" width="608" height="766" style="--ar:0.7937" alt="«ВНИИИМТ готов к приёму документов»: слайд 4" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/vn-1090-5.webp" width="640" height="800" style="--ar:0.8000" alt="«ВНИИИМТ готов к приёму документов»: слайд 5" draggable="false" loading="lazy">
+          </div>
+          <div class="rubrics__track rubrics__track--uni" role="tabpanel" id="vbp1" aria-labelledby="vbt1" tabindex="0" hidden data-n="5" style="--tile:4 / 5">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/vn-1101-1.webp" width="640" height="800" style="--ar:0.8000" alt="«Электробезопасность медицинских изделий»: слайд 1" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/vn-1101-2.webp" width="640" height="800" style="--ar:0.8000" alt="«Электробезопасность медицинских изделий»: слайд 2" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/vn-1101-3.webp" width="640" height="800" style="--ar:0.8000" alt="«Электробезопасность медицинских изделий»: слайд 3" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/vn-1101-4.webp" width="640" height="800" style="--ar:0.8000" alt="«Электробезопасность медицинских изделий»: слайд 4" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/vn-1101-5.webp" width="640" height="800" style="--ar:0.8000" alt="«Электробезопасность медицинских изделий»: слайд 5" draggable="false" loading="lazy">
+          </div>
+          <div class="rubrics__track rubrics__track--uni" role="tabpanel" id="vbp2" aria-labelledby="vbt2" tabindex="0" hidden data-n="6" style="--tile:4 / 5">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/vn-1116-1.webp" width="640" height="800" style="--ar:0.8000" alt="CMEF 2025: слайд 1" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/vn-1116-2.webp" width="640" height="800" style="--ar:0.8000" alt="CMEF 2025: слайд 2" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/vn-1116-3.webp" width="640" height="800" style="--ar:0.8000" alt="CMEF 2025: слайд 3" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/vn-1116-4.webp" width="640" height="800" style="--ar:0.8000" alt="CMEF 2025: слайд 4" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/vn-1116-5.webp" width="640" height="800" style="--ar:0.8000" alt="CMEF 2025: слайд 5" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/vn-1116-6.webp" width="640" height="800" style="--ar:0.8000" alt="CMEF 2025: слайд 6" draggable="false" loading="lazy">
+          </div>
+        </div>
+      </div>
+      <p class="fig__cap">Посты канала до&nbsp;моей работы. Выберите пост: показаны все&nbsp;его&nbsp;слайды</p>
+    </section>
+
+    <section class="section" id="c15">
+      <h2>15. Как&nbsp;я&nbsp;собрала стиль</h2>
+      <p>У&nbsp;института были логотип и&nbsp;фирменный синий. На&nbsp;их&nbsp;основе я&nbsp;собрала единый стиль канала и&nbsp;шаблоны&nbsp;постов</p>
+      <p class="arrow">&gt;&gt; <strong>Один каркас для&nbsp;всех слайдов.</strong> Белая карточка в&nbsp;синей рамке, логотип в&nbsp;вырезе верхнего угла, хэштег рубрики слева. Лента сразу стала цельной, а&nbsp;пост института легко отличить от&nbsp;репостов и&nbsp;чужих&nbsp;картинок</p>
+      <p class="arrow">&gt;&gt; <strong>Рубрики как&nbsp;навигация.</strong> Я&nbsp;разделила контент на&nbsp;тематические потоки, и&nbsp;у&nbsp;каждого появился свой хэштег.&nbsp;Например:</p>
+
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead><tr><th scope="col">Рубрика</th><th scope="col">О&nbsp;чём</th></tr></thead>
+          <tbody>
+            <tr><td>#ВНИИИМТговорит</td><td>разборы нормативных актов и&nbsp;требований</td></tr>
+            <tr><td>#ИспытанияВНИИИМТ</td><td>работа лабораторий и&nbsp;методики</td></tr>
+            <tr><td>#МероприятияВНИИИМТ</td><td>выставки, конференции, поездки</td></tr>
+            <tr><td>#праздники_ВНИИИМТ</td><td>профессиональные даты</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="arrow gap">&gt;&gt; <strong>Сложное&nbsp;— по&nbsp;одной мысли на&nbsp;слайд.</strong> Длинные темы я&nbsp;превращала в&nbsp;карусели. Обложка с&nbsp;крупным заголовком и&nbsp;объёмной иллюстрацией объясняет тему за&nbsp;секунду, дальше каждый слайд раскрывает один пункт. Сроки, термины и&nbsp;требования выделены фирменным синим, поэтому даже текст постановления можно просмотреть и&nbsp;сразу найти&nbsp;главное</p>
+      <p>Так&nbsp;вышли, например, «Пострегистрационный клинический мониторинг», «Программное обеспечение с&nbsp;ИИ» и&nbsp;«Бланк регистрационного&nbsp;удостоверения»</p>
+
+      <div class="rubrics" data-rubrics>
+        <div class="rubrics__bar">
+          <div class="rubrics__tabs" role="tablist" aria-label="Карусели после"><button type="button" role="tab" class="rubrics__tab" id="vat0" aria-controls="vap0" aria-selected="true">Клинический мониторинг</button><button type="button" role="tab" class="rubrics__tab" id="vat1" aria-controls="vap1" aria-selected="false">Программное обеспечение с&nbsp;ИИ</button><button type="button" role="tab" class="rubrics__tab" id="vat2" aria-controls="vap2" aria-selected="false">Бланк удостоверения</button></div>
+        </div>
+        <div class="rubrics__stage">
+          <div class="rubrics__track rubrics__track--uni" role="tabpanel" id="vap0" aria-labelledby="vat0" tabindex="0" data-n="7" style="--tile:1 / 1">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/vn-1165-1.webp" width="800" height="800" style="--ar:1.0000" alt="Пострегистрационный клинический мониторинг: слайд 1" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/vn-1165-2.webp" width="800" height="800" style="--ar:1.0000" alt="Пострегистрационный клинический мониторинг: слайд 2" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/vn-1165-3.webp" width="800" height="800" style="--ar:1.0000" alt="Пострегистрационный клинический мониторинг: слайд 3" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/vn-1165-4.webp" width="800" height="800" style="--ar:1.0000" alt="Пострегистрационный клинический мониторинг: слайд 4" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/vn-1165-5.webp" width="800" height="800" style="--ar:1.0000" alt="Пострегистрационный клинический мониторинг: слайд 5" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/vn-1165-6.webp" width="800" height="800" style="--ar:1.0000" alt="Пострегистрационный клинический мониторинг: слайд 6" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/vn-1165-7.webp" width="800" height="800" style="--ar:1.0000" alt="Пострегистрационный клинический мониторинг: слайд 7" draggable="false" loading="lazy">
+          </div>
+          <div class="rubrics__track rubrics__track--tall" role="tabpanel" id="vap1" aria-labelledby="vat1" tabindex="0" hidden data-n="4">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/vn-1175-1.webp" width="374" height="800" style="--ar:0.4675" alt="Программное обеспечение с ИИ: слайд 1" draggable="false" loading="lazy">
+            <div class="tall__col">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/vn-1175-2.webp" width="800" height="800" style="--ar:1.0000" alt="Программное обеспечение с ИИ: слайд 2" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/vn-1175-3.webp" width="800" height="800" style="--ar:1.0000" alt="Программное обеспечение с ИИ: слайд 3" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/vn-1175-4.webp" width="800" height="800" style="--ar:1.0000" alt="Программное обеспечение с ИИ: слайд 4" draggable="false" loading="lazy">
+            </div>
+          </div>
+          <div class="rubrics__track rubrics__track--tall" role="tabpanel" id="vap2" aria-labelledby="vat2" tabindex="0" hidden data-n="4">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/vn-1161-1.webp" width="374" height="800" style="--ar:0.4675" alt="Бланк регистрационного удостоверения: слайд 1" draggable="false" loading="lazy">
+            <div class="tall__col">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/vn-1161-2.webp" width="800" height="800" style="--ar:1.0000" alt="Бланк регистрационного удостоверения: слайд 2" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/vn-1161-3.webp" width="800" height="800" style="--ar:1.0000" alt="Бланк регистрационного удостоверения: слайд 3" draggable="false" loading="lazy">
+            <img src="assets/projects-section/projects-section-case/case-socials/img/vn-1161-4.webp" width="800" height="800" style="--ar:1.0000" alt="Бланк регистрационного удостоверения: слайд 4" draggable="false" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="fig__cap">Карусели после: выберите тему, показаны все&nbsp;слайды</p>
+    </section>
+
+    <section class="section" id="c16">
+      <h2>16. Как&nbsp;была устроена работа</h2>
+      <p>Вместе со&nbsp;мной над&nbsp;каналом работала ещё&nbsp;одна дизайнер. Я&nbsp;ставила ей&nbsp;задачи, давала обратную связь по&nbsp;макетам и&nbsp;согласовывала посты перед&nbsp;публикацией</p>
+      <p><strong>Перед уходом я&nbsp;передала ей&nbsp;все&nbsp;шаблоны, чтобы стиль не&nbsp;зависел от&nbsp;меня</strong></p>
+    </section>
+
+    <section class="section" id="c17">
+      <h2>17. Что&nbsp;получилось</h2>
+      <ul class="facts">
+        <li>единый стиль <span style="white-space:nowrap">Telegram-канала</span> на&nbsp;основе фирстиля&nbsp;института</li>
+        <li>рубрики с&nbsp;хэштегами, по&nbsp;которым подписчик сразу понимает тип&nbsp;поста</li>
+        <li>шаблоны каруселей, которые превращают нормативный текст в&nbsp;понятный&nbsp;пост</li>
+        <li><strong>шаблонами пользуются до&nbsp;сих&nbsp;пор</strong>, хотя я&nbsp;проработала в&nbsp;институте всего около&nbsp;месяца</li>
+      </ul>
+      <p class="gap">Для&nbsp;меня главное здесь&nbsp;— последний пункт: система пережила мой&nbsp;уход и&nbsp;продолжает работать без&nbsp;меня</p>
+      <p><a class="more-link" href="case-vniiimt.html">→ Подробнее о&nbsp;презентациях ВНИИИМТ в&nbsp;отдельном кейсе</a></p>
+    </section>
+
+    </div>
+  </main>
+
+  <script src="case.js?v=20261106b"></script>
+</body>
+</html>
