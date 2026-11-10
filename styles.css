@@ -921,7 +921,7 @@ a.tile__t:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; 
 
   /* проекты: карточки лежат поверх элементов, между карточками — свободные «стикеры» */
   .cases .card { position: relative; z-index: 1; }
-  .cases .cards { gap: 68px; }
+  .cases .cards { gap: 36px; }
   .deco--gap { z-index: 0; pointer-events: none; transition-delay: 0s !important; }
   .deco--gap img { width: 100%; height: 100%; }
 
@@ -930,15 +930,15 @@ a.tile__t:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; 
   .about .about__stage .about__photo { position: relative; display: block; left: auto; top: auto; bottom: auto; margin: 0 auto; max-width: none; width: 104%; margin-left: -2%; height: auto; transform: none; z-index: 2; }
   .stage__ring { display: none; position: absolute; left: 50%; top: 54%; width: 82%; aspect-ratio: 1; transform: translate(-50%, -50%); border-radius: 50%; background: rgba(255, 255, 255, .38); border: 2px dashed rgba(26, 26, 26, .22); z-index: 0; }
   .stage__deco { display: block; position: absolute; z-index: 1; height: auto; }
-  .stage__deco--a { left: -2%; top: 4%; width: 78px; }
-  .stage__deco--b { right: -1%; top: 2%; width: 70px; }
-  .stage__deco--c { left: 2%; top: 44%; width: 60px; }
-  .stage__deco--d { right: 0; top: 50%; width: 66px; }
-  .stage__deco--e { left: 6%; bottom: 4%; width: 64px; }
-  .stage__deco--f { right: 5%; bottom: 3%; width: 58px; }
+  .stage__deco--a { left: -3%; top: 6%; width: 118px; }
+  .stage__deco--b { right: -2%; top: 3%; width: 112px; }
+  .stage__deco--c { display: none !important; }
+  .stage__deco--d { right: -2%; top: 54%; width: 104px; }
+  .stage__deco--e { left: -1%; bottom: 6%; width: 110px; }
+  .stage__deco--f { display: none !important; }
 
   /* связь: три в ряд, как на десктопе */
-  .contacts .frame { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; padding-bottom: 84px; }
+  .contacts .frame { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; padding-bottom: 92px; }
   .contacts .section-title { grid-column: 1 / -1; margin-bottom: 12px; }
   .contact { height: auto; aspect-ratio: 1; margin: 0; border-radius: 18px; }
   .contact__icon { width: 46%; height: auto; }
@@ -950,13 +950,23 @@ a.tile__t:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; 
 /* ===== мобильная доводка 4: нет горизонтальной прокрутки, плашки до правого края ===== */
 .band { overflow-x: clip; }
 @media (max-width: 1023px) {
-  .hero__tags .pill, .filters .pill, .card__tags .chip { flex: 1 1 auto; text-align: center; justify-content: center; }
-  .card__tags, .hero__tags, .filters { justify-content: center; }
 }
 
 /* «обо мне»: боковые элементы только справа, чтобы не лезли на текст слева */
 @media (max-width: 1023px) {
-  .about .deco--m { right: auto !important; left: calc(100% - 26px) !important; }
   .deco:has(img[src*="email-decoration-icon"]) { bottom: 6px !important; }
   .deco:has(img[src*="contact-decoration-icon-bottom-center"]) { bottom: 10px !important; left: 28px !important; }
+}
+
+@media (max-width: 1023px) {
+  .deco:has(img[src*="contact-decoration-icon-top-left"]) { top: 4px !important; left: 14px !important; width: 60px !important; height: 60px !important; }
+  .deco:has(img[src*="contact-decoration-icon-top-right"]) { top: 8px !important; right: 12px !important; width: 62px !important; height: 62px !important; }
+  .deco:has(img[src*="contact-decoration-icon-bottom-center"]) { bottom: 4px !important; left: 24px !important; width: 48px !important; height: 48px !important; }
+  .deco:has(img[src*="email-decoration-icon"]) { bottom: 2px !important; right: 16px !important; width: 50px !important; height: 50px !important; }
+  .deco--ct { display: flex; inset: auto !important; z-index: 0; }
+  .deco--ct1 { left: 112px !important; top: 16px !important; width: 34px !important; height: 34px !important; }
+  .deco--ct2 { left: 206px !important; bottom: 6px !important; width: 46px !important; height: 46px !important; }
+  /* «мой опыт»: период работы в одну строку */
+  .exp-row__period .pbr { display: none; }
+  .exp-row__period { font-size: 17px; }
 }

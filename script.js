@@ -133,7 +133,7 @@
   /* ---------- мобильные «стикеры» между карточками кейсов ---------- */
   if (frame) {
     const IMGS = ['05-blue', '06-orange', '14-lime', '02-pink', '10-lilac', '11-cyan', '17-orange', '20-lilac'];
-    const SIZES = [84, 96, 72, 90, 78, 100];
+    const SIZES = [64, 72, 60, 70, 62, 74];
     const XS = [0.12, 0.7, 0.38, 0.82, 0.2, 0.55];
     const gaps = [];
     for (let i = 0; i < 60; i += 1) {
@@ -145,24 +145,37 @@
       gaps.push(d);
     }
     const mq = window.matchMedia('(max-width: 1023px)');
+    const origs = Array.from(frame.querySelectorAll('.deco:not(.deco--gap)')).filter((d) => !d.dataset.clone).slice(0, 25);
+    origs.forEach((d) => { d.dataset.orig = d.getAttribute('style') || ''; });
     const place = () => {
       const vis = cards.filter((c) => !c.hidden);
       const fr = frame.getBoundingClientRect();
+      /* стикеры в промежутках между карточками: по одному, наполовину прячутся за карточками */
       gaps.forEach((d, i) => {
-        const g = i >> 1, second = i & 1;
+        const g = i >> 1;
         const a = vis[g], b = vis[g + 1];
-        if (!mq.matches || !a || !b) { d.style.setProperty('display', 'none', 'important'); return; }
+        if (i & 1 || !mq.matches || !a || !b) { d.style.setProperty('display', 'none', 'important'); return; }
         const ra = a.getBoundingClientRect(), rb = b.getBoundingClientRect();
-        const size = Math.round(SIZES[(g + second * 3) % SIZES.length] * (second ? 0.8 : 1));
+        const size = SIZES[g % SIZES.length];
         const mid = (ra.bottom + rb.top) / 2 - fr.top;
-        const f = (XS[g % XS.length] + second * 0.5) % 1;
-        const x = 14 + (fr.width - 28 - size) * f;
+        const x = 14 + (fr.width - 28 - size) * XS[g % XS.length];
         d.style.setProperty('display', 'flex', 'important');
         d.style.setProperty('inset', 'auto', 'important');
         d.style.setProperty('left', x + 'px', 'important');
         d.style.setProperty('top', (mid - size / 2) + 'px', 'important');
         d.style.setProperty('width', size + 'px', 'important');
         d.style.setProperty('height', size + 'px', 'important');
+      });
+      /* боковые элементы: по одному у каждой видимой карточки, стороны чередуются */
+      origs.forEach((d, k) => {
+        if (!mq.matches) { d.setAttribute('style', d.dataset.orig); return; }
+        const c = vis[k];
+        if (!c) { d.style.cssText = d.dataset.orig + ';display:none !important'; return; }
+        const rc = c.getBoundingClientRect();
+        const size = 84;
+        const top = rc.top - fr.top + rc.height * 0.4 - size / 2;
+        const side = k % 2 ? 'left:calc(100% - 30px)' : 'right:calc(100% - 30px)';
+        d.style.cssText = d.dataset.orig + ';display:flex !important;inset:auto !important;' + side + ' !important;top:' + top + 'px !important;width:' + size + 'px !important;height:' + size + 'px !important';
       });
     };
     window.__placeGaps = place;
@@ -377,17 +390,31 @@
   if (hero) hero.classList.add('is-in');
 })();
 
-/* плашки в строке: от длинных к коротким, чтобы правый край был ровным (только на телефоне) */
+
+/* «обо мне»: маленькие элементы в свободных местах справа от строк образования */
 (function () {
+  const frame = document.querySelector('.about .frame');
+  if (!frame) return;
   const mq = window.matchMedia('(max-width: 1023px)');
-  const lists = Array.from(document.querySelectorAll('.card__tags, .hero__tags'));
-  const sort = () => lists.forEach((ul) => {
-    const items = Array.from(ul.children);
-    if (!mq.matches) { items.forEach((li) => { li.style.order = ''; }); return; }
-    items.map((li, i) => ({ li, i, n: li.textContent.trim().length }))
-      .sort((a, b) => b.n - a.n || a.i - b.i)
-      .forEach((o, k) => { o.li.style.order = k; });
-  });
-  sort();
-  if (mq.addEventListener) mq.addEventListener('change', sort);
+  const decos = Array.from(frame.querySelectorAll('.deco--m'));
+  decos.forEach((d) => { d.dataset.orig = d.getAttribute('style') || ''; });
+  const RIGHT = [58, 16, 70, 40, 92, 20];
+  const SIZE = [44, 52, 48, 44, 50, 46];
+  const place = () => {
+    const entries = Array.from(frame.querySelectorAll('.about__col--left .entry'));
+    const pink = frame.querySelector('.about__h--pink');
+    const anchors = [entries[0], pink, entries[2], entries[3], entries[4], entries[5]];
+    const fr = frame.getBoundingClientRect();
+    decos.forEach((d, k) => {
+      const a = anchors[k];
+      if (!mq.matches || !a) { d.setAttribute('style', d.dataset.orig); return; }
+      const r = a.getBoundingClientRect();
+      const top = r.top - fr.top + r.height / 2 - SIZE[k] / 2;
+      d.style.cssText = d.dataset.orig + ';display:flex !important;inset:auto !important;left:auto !important;right:' + RIGHT[k] + 'px !important;top:' + top + 'px !important;width:' + SIZE[k] + 'px !important;height:' + SIZE[k] + 'px !important';
+    });
+  };
+  place();
+  window.addEventListener('load', place);
+  window.addEventListener('resize', place);
+  if ('ResizeObserver' in window) new ResizeObserver(place).observe(frame);
 })();
