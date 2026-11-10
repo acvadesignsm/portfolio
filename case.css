@@ -1122,3 +1122,9 @@ strong { font-weight: 600; }
   .timeline__step:nth-child(5) { --c: #ff4269; }
   .timeline__step:nth-child(4) .timeline__pill, .timeline__step:nth-child(5) .timeline__pill { color: #fff; }
 }
+
+/* шаги «пути участника»: высота по картинке, без пустых полей */
+@media (max-width: 640px) {
+  .step__img, .step--wide .step__img { height: auto; }
+  .step__img img { max-height: 340px; }
+}
