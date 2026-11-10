@@ -133,10 +133,10 @@
   /* ---------- мобильные «стикеры» между карточками кейсов ---------- */
   if (frame) {
     const IMGS = ['05-blue', '06-orange', '14-lime', '02-pink', '10-lilac', '11-cyan', '17-orange', '20-lilac'];
-    const SIZES = [54, 62, 48, 58, 52, 64];
+    const SIZES = [84, 96, 72, 90, 78, 100];
     const XS = [0.12, 0.7, 0.38, 0.82, 0.2, 0.55];
     const gaps = [];
-    for (let i = 0; i < 30; i += 1) {
+    for (let i = 0; i < 60; i += 1) {
       const d = document.createElement('span');
       d.className = 'deco deco--gap';
       d.setAttribute('aria-hidden', 'true');
@@ -149,12 +149,14 @@
       const vis = cards.filter((c) => !c.hidden);
       const fr = frame.getBoundingClientRect();
       gaps.forEach((d, i) => {
-        const a = vis[i], b = vis[i + 1];
+        const g = i >> 1, second = i & 1;
+        const a = vis[g], b = vis[g + 1];
         if (!mq.matches || !a || !b) { d.style.setProperty('display', 'none', 'important'); return; }
         const ra = a.getBoundingClientRect(), rb = b.getBoundingClientRect();
-        const size = SIZES[i % SIZES.length];
+        const size = Math.round(SIZES[(g + second * 3) % SIZES.length] * (second ? 0.8 : 1));
         const mid = (ra.bottom + rb.top) / 2 - fr.top;
-        const x = 20 + (fr.width - 40 - size) * XS[i % XS.length];
+        const f = (XS[g % XS.length] + second * 0.5) % 1;
+        const x = 14 + (fr.width - 28 - size) * f;
         d.style.setProperty('display', 'flex', 'important');
         d.style.setProperty('inset', 'auto', 'important');
         d.style.setProperty('left', x + 'px', 'important');
@@ -373,4 +375,19 @@
   // главная видна сразу
   const hero = document.querySelector('.hero');
   if (hero) hero.classList.add('is-in');
+})();
+
+/* плашки в строке: от длинных к коротким, чтобы правый край был ровным (только на телефоне) */
+(function () {
+  const mq = window.matchMedia('(max-width: 1023px)');
+  const lists = Array.from(document.querySelectorAll('.card__tags, .hero__tags'));
+  const sort = () => lists.forEach((ul) => {
+    const items = Array.from(ul.children);
+    if (!mq.matches) { items.forEach((li) => { li.style.order = ''; }); return; }
+    items.map((li, i) => ({ li, i, n: li.textContent.trim().length }))
+      .sort((a, b) => b.n - a.n || a.i - b.i)
+      .forEach((o, k) => { o.li.style.order = k; });
+  });
+  sort();
+  if (mq.addEventListener) mq.addEventListener('change', sort);
 })();

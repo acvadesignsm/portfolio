@@ -841,7 +841,7 @@ a.tile__t:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; 
 
   /* hero: ещё два элемента в свободных местах */
   .deco:has(img[src*="hero-decoration-icon-top-center"]) { top: 6px !important; left: 236px !important; width: 46px !important; height: 46px !important; }
-  .deco:has(img[src*="hero-decoration-icon-bottom-center"]) { bottom: 6px !important; left: 196px !important; width: 52px !important; height: 52px !important; }
+  .deco:has(img[src*="hero-decoration-icon-bottom-center"]) { bottom: 8px !important; left: 244px !important; width: 46px !important; height: 52px !important; }
 
   /* обо мне */
   .deco:has(img[src*="about-decoration-pair"]) { left: 10px !important; top: 24px !important; width: 60px !important; height: 60px !important; }
@@ -894,7 +894,7 @@ a.tile__t:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; 
   /* hero: ещё два */
   .deco:has(img[src*="hero-decoration-icon-upper-right"]), .deco:has(img[src*="hero-decoration-icon-bottom-left"]) { display: flex; inset: auto !important; z-index: 0; }
   .deco:has(img[src*="hero-decoration-icon-upper-right"]) { right: -10px !important; top: 164px !important; width: 72px !important; height: 72px !important; }
-  .deco:has(img[src*="hero-decoration-icon-bottom-left"]) { left: 186px !important; top: 372px !important; width: 56px !important; height: 56px !important; }
+  .deco:has(img[src*="hero-decoration-icon-bottom-left"]) { left: 176px !important; top: 90% !important; width: 46px !important; height: 46px !important; }
 }
 }
 
@@ -916,33 +916,47 @@ a.tile__t:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; 
   /* hero: розовая звёздочка в пустом месте справа от «&», лаймовая справа от плашек */
   .deco:has(img[src*="hero-decoration-icon-upper-right"]) { top: 21% !important; right: 30px !important; width: 62px !important; height: 62px !important; }
   .deco--hero { display: flex; inset: auto !important; z-index: 0; }
-  .deco--h1 { right: 46px !important; top: 69% !important; width: 46px !important; height: 46px !important; }
+  .deco--h1 { right: 36px !important; top: 41% !important; width: 46px !important; height: 46px !important; }
   .deco--h2 { display: none; }
 
   /* проекты: карточки лежат поверх элементов, между карточками — свободные «стикеры» */
   .cases .card { position: relative; z-index: 1; }
-  .cases .cards { gap: 40px; }
+  .cases .cards { gap: 68px; }
   .deco--gap { z-index: 0; pointer-events: none; transition-delay: 0s !important; }
   .deco--gap img { width: 100%; height: 100%; }
 
   /* обо мне: фото на цветной «сцене» с элементами вокруг */
-  .about__stage { display: block; order: 2; position: relative; margin: 28px 0 0; padding-top: 28px; border-radius: 24px; background: var(--lilac); overflow: hidden; isolation: isolate; }
+  .about__stage { display: block; order: 2; position: relative; margin: 20px 0 0; padding-top: 24px; background: none; overflow: visible; isolation: isolate; }
   .about .about__stage .about__photo { position: relative; display: block; left: auto; top: auto; bottom: auto; margin: 0 auto; max-width: none; width: 104%; margin-left: -2%; height: auto; transform: none; z-index: 2; }
-  .stage__ring { display: block; position: absolute; left: 50%; top: 54%; width: 82%; aspect-ratio: 1; transform: translate(-50%, -50%); border-radius: 50%; background: rgba(255, 255, 255, .38); border: 2px dashed rgba(26, 26, 26, .22); z-index: 0; }
+  .stage__ring { display: none; position: absolute; left: 50%; top: 54%; width: 82%; aspect-ratio: 1; transform: translate(-50%, -50%); border-radius: 50%; background: rgba(255, 255, 255, .38); border: 2px dashed rgba(26, 26, 26, .22); z-index: 0; }
   .stage__deco { display: block; position: absolute; z-index: 1; height: auto; }
-  .stage__deco--a { left: 5%; top: 6%; width: 58px; }
-  .stage__deco--b { right: 6%; top: 8%; width: 52px; }
-  .stage__deco--c { left: 4%; top: 46%; width: 46px; }
-  .stage__deco--d { right: 2%; top: 64%; width: 50px; }
-  .stage__deco--e { left: 10%; bottom: 5%; width: 50px; }
-  .stage__deco--f { right: 3%; bottom: 3%; width: 44px; }
+  .stage__deco--a { left: -2%; top: 4%; width: 78px; }
+  .stage__deco--b { right: -1%; top: 2%; width: 70px; }
+  .stage__deco--c { left: 2%; top: 44%; width: 60px; }
+  .stage__deco--d { right: 0; top: 50%; width: 66px; }
+  .stage__deco--e { left: 6%; bottom: 4%; width: 64px; }
+  .stage__deco--f { right: 5%; bottom: 3%; width: 58px; }
 
   /* связь: три в ряд, как на десктопе */
-  .contacts .frame { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; padding-bottom: 110px; }
+  .contacts .frame { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; padding-bottom: 84px; }
   .contacts .section-title { grid-column: 1 / -1; margin-bottom: 12px; }
   .contact { height: auto; aspect-ratio: 1; margin: 0; border-radius: 18px; }
   .contact__icon { width: 46%; height: auto; }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   .about__stage { max-width: 520px; margin-left: auto; margin-right: auto; width: 100%; }
+}
+
+/* ===== мобильная доводка 4: нет горизонтальной прокрутки, плашки до правого края ===== */
+.band { overflow-x: clip; }
+@media (max-width: 1023px) {
+  .hero__tags .pill, .filters .pill, .card__tags .chip { flex: 1 1 auto; text-align: center; justify-content: center; }
+  .card__tags, .hero__tags, .filters { justify-content: center; }
+}
+
+/* «обо мне»: боковые элементы только справа, чтобы не лезли на текст слева */
+@media (max-width: 1023px) {
+  .about .deco--m { right: auto !important; left: calc(100% - 26px) !important; }
+  .deco:has(img[src*="email-decoration-icon"]) { bottom: 6px !important; }
+  .deco:has(img[src*="contact-decoration-icon-bottom-center"]) { bottom: 10px !important; left: 28px !important; }
 }
