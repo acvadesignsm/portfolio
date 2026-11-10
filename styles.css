@@ -809,3 +809,11 @@ a.tile__t:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; 
   .cards { grid-template-columns: 1fr 1fr; gap: 16px; }
   .about__photo { max-width: 360px; }
 }
+
+/* мобильная шапка: пункты равномерно по всей ширине в одну строку */
+@media (max-width: 1023px) {
+  .topbar { padding: 10px 0; }
+  .topbar__nav { flex-wrap: nowrap; justify-content: space-between; gap: 0; padding: 0 20px; }
+  .topbar__nav a { white-space: nowrap; font-size: 14px; }
+}
+@media (max-width: 360px) { .topbar__nav a { font-size: 13px; } .topbar__nav { padding: 0 14px; } }
