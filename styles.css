@@ -584,7 +584,7 @@ b { font-weight: 600; }
   .topbar { height: auto; padding: 12px 0; }
   .topbar__nav { padding: 0 20px; flex-wrap: wrap; gap: 8px 16px; justify-content: flex-start; }
 
-  .deco { opacity: .35 !important; z-index: 0; }
+  .deco { z-index: 0; }
   .frame > :not(.deco) { position: relative; inset: auto; z-index: 1; }
   .frame { max-width: none; }
   .section-title { font-size: 36px; padding-top: 32px; }
