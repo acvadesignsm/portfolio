@@ -970,3 +970,30 @@ a.tile__t:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; 
   .exp-row__period .pbr { display: none; }
   .exp-row__period { font-size: 17px; }
 }
+
+
+/* плавающая «свернуть» на полупрозрачной плашке (пока листаешь раскрытые кейсы) */
+.cases__float {
+  position: fixed;
+  left: 50%;
+  bottom: calc(24px + env(safe-area-inset-bottom, 0px));
+  z-index: 90;
+  translate: -50% 12px;
+  opacity: 0;
+  pointer-events: none;
+  padding: 12px 22px;
+  border: 1px solid rgba(243, 243, 235, 0.28);
+  border-radius: 100px;
+  background: rgba(26, 26, 26, 0.62);
+  -webkit-backdrop-filter: blur(14px) saturate(1.2);
+  backdrop-filter: blur(14px) saturate(1.2);
+  color: var(--bg);
+  font: inherit;
+  font-size: 16px;
+  cursor: pointer;
+  transition: opacity 0.25s, translate 0.25s, color 0.2s;
+}
+.cases__float[hidden] { display: none; }
+.cases__float.is-on { opacity: 1; translate: -50% 0; pointer-events: auto; }
+.cases__float:hover { color: var(--cyan); }
+@media (prefers-reduced-motion: reduce) { .cases__float { transition: none; } }

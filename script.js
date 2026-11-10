@@ -231,6 +231,34 @@
     });
   }
 
+  /* «свернуть» на полупрозрачной плашке: плавает внизу, пока листаешь раскрытый список кейсов */
+  if (moreBtn && casesSection) {
+    const floatBtn = document.createElement('button');
+    floatBtn.type = 'button';
+    floatBtn.className = 'cases__float';
+    floatBtn.textContent = 'свернуть ↖';
+    floatBtn.hidden = true;
+    floatBtn.addEventListener('click', () => moreBtn.click());
+    document.body.appendChild(floatBtn);
+    let raf = 0;
+    const syncFloat = () => {
+      raf = 0;
+      const vh = window.innerHeight;
+      const r = casesSection.getBoundingClientRect();
+      const b = moreBtn.getBoundingClientRect();
+      const btnVisible = !moreBtn.hidden && b.bottom > 0 && b.top < vh;
+      const show = expanded && !moreBtn.hidden && r.top < vh * 0.35 && r.bottom > vh * 0.65 && !btnVisible;
+      floatBtn.classList.toggle('is-on', show);
+      if (show) floatBtn.hidden = false;
+    };
+    const queue = () => { if (!raf) raf = requestAnimationFrame(syncFloat); };
+    floatBtn.addEventListener('transitionend', () => { if (!floatBtn.classList.contains('is-on')) floatBtn.hidden = true; });
+    window.addEventListener('scroll', queue, { passive: true });
+    window.addEventListener('resize', queue);
+    moreBtn.addEventListener('click', () => setTimeout(syncFloat, 0));
+    syncFloat();
+  }
+
   filters.forEach((btn) => {
     btn.addEventListener('click', () => {
       const isAll = btn.dataset.filter === '';
