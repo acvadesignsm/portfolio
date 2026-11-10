@@ -445,4 +445,32 @@
   window.addEventListener('load', place);
   window.addEventListener('resize', place);
   if ('ResizeObserver' in window) new ResizeObserver(place).observe(frame);
+
+  /* ---------- шапка показывает, где мы: подсвечиваем пункт текущего раздела ---------- */
+  const navLinks = Array.from(document.querySelectorAll('.topbar__nav a[href^="#"]'));
+  const spy = navLinks
+    .map((a) => ({ a, sec: document.getElementById(a.getAttribute('href').slice(1)) }))
+    .filter((x) => x.sec);
+  if (spy.length) {
+    let spyRaf = 0;
+    const setActive = () => {
+      spyRaf = 0;
+      const bar = document.querySelector('.topbar');
+      const probe = (bar ? bar.offsetHeight : 0) + window.innerHeight * 0.3;
+      const atEnd = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4;
+      let cur = spy[0];
+      spy.forEach((x) => { if (x.sec.getBoundingClientRect().top <= probe) cur = x; });
+      if (atEnd) cur = spy[spy.length - 1];
+      spy.forEach((x) => {
+        const on = x === cur;
+        x.a.classList.toggle('is-current', on);
+        if (on) x.a.setAttribute('aria-current', 'true'); else x.a.removeAttribute('aria-current');
+      });
+    };
+    const queueSpy = () => { if (!spyRaf) spyRaf = requestAnimationFrame(setActive); };
+    window.addEventListener('scroll', queueSpy, { passive: true });
+    window.addEventListener('resize', queueSpy);
+    window.addEventListener('load', setActive);
+    setActive();
+  }
 })();

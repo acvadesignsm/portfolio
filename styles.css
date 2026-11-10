@@ -997,3 +997,21 @@ a.tile__t:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; 
 .cases__float.is-on { opacity: 1; translate: -50% 0; pointer-events: auto; }
 .cases__float:hover { color: var(--cyan); }
 @media (prefers-reduced-motion: reduce) { .cases__float { transition: none; } }
+
+
+/* пункт шапки текущего раздела */
+.topbar__nav a { position: relative; }
+.topbar__nav a::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; bottom: -4px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--orange);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.3s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.topbar__nav a.is-current { color: var(--ink); }
+.topbar__nav a.is-current::after { transform: scaleX(1); }
+@media (prefers-reduced-motion: reduce) { .topbar__nav a::after { transition: none; } }
