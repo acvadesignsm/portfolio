@@ -106,6 +106,7 @@
       casesSection.classList.toggle('is-expanded', expanded && matched > FIRST);
       casesSection.classList.toggle('has-row4', matched > 6);
       fitDecos();
+      if (window.__placeGaps) window.__placeGaps();
     }
   };
 
@@ -128,7 +129,48 @@
       });
     }
   }
-  const decos = casesSection ? [...casesSection.querySelectorAll('.deco')] : [];
+
+  /* ---------- мобильные «стикеры» между карточками кейсов ---------- */
+  if (frame) {
+    const IMGS = ['05-blue', '06-orange', '14-lime', '02-pink', '10-lilac', '11-cyan', '17-orange', '20-lilac'];
+    const SIZES = [54, 62, 48, 58, 52, 64];
+    const XS = [0.12, 0.7, 0.38, 0.82, 0.2, 0.55];
+    const gaps = [];
+    for (let i = 0; i < 30; i += 1) {
+      const d = document.createElement('span');
+      d.className = 'deco deco--gap';
+      d.setAttribute('aria-hidden', 'true');
+      d.innerHTML = '<img alt="" src="assets/projects-section/projects-section-deco/expanded/cases-decoration-' + IMGS[i % IMGS.length] + '.svg">';
+      frame.appendChild(d);
+      gaps.push(d);
+    }
+    const mq = window.matchMedia('(max-width: 1023px)');
+    const place = () => {
+      const vis = cards.filter((c) => !c.hidden);
+      const fr = frame.getBoundingClientRect();
+      gaps.forEach((d, i) => {
+        const a = vis[i], b = vis[i + 1];
+        if (!mq.matches || !a || !b) { d.style.setProperty('display', 'none', 'important'); return; }
+        const ra = a.getBoundingClientRect(), rb = b.getBoundingClientRect();
+        const size = SIZES[i % SIZES.length];
+        const mid = (ra.bottom + rb.top) / 2 - fr.top;
+        const x = 20 + (fr.width - 40 - size) * XS[i % XS.length];
+        d.style.setProperty('display', 'flex', 'important');
+        d.style.setProperty('inset', 'auto', 'important');
+        d.style.setProperty('left', x + 'px', 'important');
+        d.style.setProperty('top', (mid - size / 2) + 'px', 'important');
+        d.style.setProperty('width', size + 'px', 'important');
+        d.style.setProperty('height', size + 'px', 'important');
+      });
+    };
+    window.__placeGaps = place;
+    if ('ResizeObserver' in window) new ResizeObserver(place).observe(frame);
+    window.addEventListener('resize', place);
+    window.addEventListener('load', place);
+    place();
+  }
+
+  const decos = casesSection ? [...casesSection.querySelectorAll('.deco:not(.deco--gap)')] : [];
   const fitDecos = () => {
     if (!frame) return;
     decos.forEach((d) => d.classList.remove('deco--off'));
@@ -147,6 +189,7 @@
   window.addEventListener('load', fitDecos);
 
   /* переход по ссылке на конкретную карточку (из кейсов): раскрыть список и подъехать к ней */
+  let restored = false;
   const openCardFromHash = () => {
     const id = decodeURIComponent(location.hash.slice(1));
     const card = id && cards.find((c) => c.id === id);
@@ -160,7 +203,7 @@
     card.classList.add('is-in');
     requestAnimationFrame(() => card.scrollIntoView({ block: 'start', behavior: 'auto' }));
   };
-  window.addEventListener('load', openCardFromHash);
+  window.addEventListener('load', () => { if (!restored) openCardFromHash(); });
   window.addEventListener('hashchange', openCardFromHash);
 
   if (moreBtn) {
@@ -194,6 +237,41 @@
   });
 
   applyFilter();
+
+  /* ---------- возврат «назад» на то же место: запоминаем прокрутку, фильтр и «показать больше» ---------- */
+  const STATE_KEY = 'pf-index-state';
+  const saveState = () => {
+    try {
+      const active = filters.find((f) => f.classList.contains('is-active'));
+      sessionStorage.setItem(STATE_KEY, JSON.stringify({
+        y: Math.round(window.scrollY), exp: expanded, f: active ? active.dataset.filter : '',
+      }));
+    } catch (e) { /* хранилище недоступно */ }
+  };
+  window.addEventListener('pagehide', saveState);
+  document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden') saveState(); });
+  document.addEventListener('click', (e) => { if (e.target.closest('a[href]') || e.target.closest('.card')) saveState(); }, true);
+
+  try {
+    const nav = (performance.getEntriesByType('navigation')[0] || {}).type;
+    let fromSite = false;
+    try { const r = new URL(document.referrer); fromSite = r.origin === location.origin && !/(^|\/)(index\.html)?$/.test(r.pathname); } catch (e) { /* нет referrer */ }
+    const raw = sessionStorage.getItem(STATE_KEY);
+    if (raw && (nav === 'back_forward' || fromSite)) {
+      const st = JSON.parse(raw);
+      if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+      const want = filters.find((f) => f.dataset.filter === st.f) || allBtn;
+      filters.forEach((f) => { f.classList.toggle('is-active', f === want); f.setAttribute('aria-pressed', String(f === want)); });
+      expanded = !!st.exp;
+      applyFilter(-1);
+      document.querySelectorAll('.reveal').forEach((el) => el.classList.add('is-in'));
+      const go = () => window.scrollTo(0, st.y);
+      go();
+      requestAnimationFrame(go);
+      window.addEventListener('load', () => { go(); setTimeout(go, 250); setTimeout(go, 700); });
+      restored = true;
+    }
+  } catch (e) { /* ничего страшного */ }
 
   // клик в любом месте карточки открывает кейс
   cards.forEach((card) => {

@@ -109,10 +109,21 @@
     let raf = 0;
     const place = () => {
       raf = 0;
-      if (!mq.matches) { imgs.forEach((i) => { i.style.top = i.dataset.top + 'px'; }); return; }
+      if (!mq.matches) { imgs.forEach((i) => { i.style.top = i.dataset.top + 'px'; i.style.display = ''; delete i.dataset.side; }); return; }
       const H = document.documentElement.scrollHeight;
-      const step = (H - 320) / imgs.length;
-      imgs.forEach((i, k) => { i.style.top = Math.round(k * step + 20) + 'px'; });
+      /* столько элементов, сколько помещается без наездов: ~1 на 200px высоты, чередуя стороны */
+      const n = Math.max(4, Math.min(imgs.length, Math.floor((H - 160) / 200)));
+      const pick = new Set();
+      for (let q = 0; q < n; q += 1) pick.add(Math.floor((q * imgs.length) / n));
+      const step = (H - 260) / n;
+      let q = 0;
+      imgs.forEach((i, k) => {
+        if (!pick.has(k)) { i.style.display = 'none'; return; }
+        i.style.display = '';
+        i.style.top = Math.round(q * step + 20) + 'px';
+        i.dataset.side = q % 2 ? 'r' : 'l';
+        q += 1;
+      });
     };
     const queue = () => { if (!raf) raf = requestAnimationFrame(place); };
     place();
@@ -329,4 +340,60 @@
   fill();
   if ('ResizeObserver' in window) new ResizeObserver(fill).observe(document.body);
   window.addEventListener('load', fill);
+})();
+
+/* «← все проекты»: если пришли с главной, возвращаемся туда же, где были */
+(function () {
+  try {
+    var r = new URL(document.referrer);
+    var fromIndex = r.origin === location.origin && /(^|\/)(index\.html)?$/.test(r.pathname) && history.length > 1;
+    if (!fromIndex) return;
+    document.querySelectorAll('a.topbar__back, a.more-link[href^="index.html"]').forEach(function (a) {
+      a.addEventListener('click', function (e) {
+        if (e.metaKey || e.ctrlKey || e.shiftKey || e.button) return;
+        e.preventDefault();
+        history.back();
+      });
+    });
+  } catch (err) { /* без referrer — обычная ссылка */ }
+})();
+
+
+/* плашки в строке: от длинных к коротким, чтобы правый край получался ровным (только на телефоне) */
+(function () {
+  var mq = window.matchMedia('(max-width: 820px)');
+  var lists = Array.prototype.slice.call(document.querySelectorAll('.tags, .tools-used, .rubrics__tabs'));
+  function sort() {
+    lists.forEach(function (ul) {
+      var items = Array.prototype.slice.call(ul.children);
+      if (!mq.matches) { items.forEach(function (li) { li.style.order = ''; }); return; }
+      items.map(function (li, i) { return { li: li, i: i, n: li.textContent.trim().length }; })
+        .sort(function (a, b) { return b.n - a.n || a.i - b.i; })
+        .forEach(function (o, k) { o.li.style.order = k; });
+    });
+  }
+  sort();
+  if (mq.addEventListener) mq.addEventListener('change', sort);
+})();
+
+
+/* таблицы: подписи колонок для одноколоночного вида на телефоне */
+(function () {
+  document.querySelectorAll('.data-table').forEach(function (t) {
+    var heads = Array.prototype.map.call(t.querySelectorAll('thead th'), function (th) { return th.textContent.trim(); });
+    var first = t.querySelector('tbody td');
+    var hash = first && /^#/.test(first.textContent.trim());
+    if (hash) { t.classList.add('data-table--tags'); return; }
+    t.querySelectorAll('tbody tr').forEach(function (tr) {
+      Array.prototype.forEach.call(tr.children, function (td, i) { if (heads[i]) td.setAttribute('data-label', heads[i]); });
+    });
+  });
+})();
+
+/* широкие картинки в рядах помечаем, чтобы на телефоне растянуть их на всю ширину */
+(function () {
+  document.querySelectorAll('.shots__item[style*="--ar"]').forEach(function (it) {
+    var m = /--ar:\s*([\d.]+)/.exec(it.getAttribute('style'));
+    if (m && parseFloat(m[1]) >= 1.4) it.setAttribute('data-wide', '');
+  });
 })();

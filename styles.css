@@ -641,6 +641,8 @@ b { font-weight: 600; }
 }
 
 
+.deco--m { display: none; }
+
 /* карточка с кейсом целиком кликабельна (клик обрабатывает script.js) */
 .card:has(.card__go) { cursor: pointer; }
 
@@ -775,8 +777,6 @@ a.tile__t:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; 
   .pill { white-space: nowrap; }
 
   /* карточки: скругления «вложены» друг в друга, как на десктопе */
-  .card { padding: 12px; border-radius: 24px 24px 16px 16px; }
-  .card__media { border-radius: 14px; }
 
   /* обо мне: плашки одной высоты в две колонки */
   .facts-tiles { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 20px 0 0; }
@@ -857,34 +857,45 @@ a.tile__t:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; 
 
 /* проекты: элементы в боковых полях за карточками, как на десктопе они лежат на фоне */
 @media (max-width: 1023px) {
-  .cases .deco { display: flex; inset: auto !important; width: 76px !important; height: 76px !important; z-index: 0; }
-  .cases .deco:nth-of-type(odd) { right: calc(100% - 18px) !important; }
-  .cases .deco:nth-of-type(even) { left: calc(100% - 18px) !important; }
-  .cases .deco:nth-of-type(1) { top: 40px !important; }
-  .cases .deco:nth-of-type(2) { top: 270px !important; }
-  .cases .deco:nth-of-type(3) { top: 500px !important; }
-  .cases .deco:nth-of-type(4) { top: 730px !important; }
-  .cases .deco:nth-of-type(5) { top: 960px !important; }
-  .cases .deco:nth-of-type(6) { top: 1190px !important; }
-  .cases .deco:nth-of-type(7) { top: 1420px !important; }
-  .cases .deco:nth-of-type(8) { top: 1650px !important; }
-  .cases .deco:nth-of-type(9) { top: 1880px !important; }
-  .cases .deco:nth-of-type(10) { top: 2110px !important; }
-  .cases .deco:nth-of-type(11) { top: 2340px !important; }
-  .cases .deco:nth-of-type(12) { top: 2570px !important; }
-  .cases .deco:nth-of-type(13) { top: 2800px !important; }
-  .cases .deco:nth-of-type(14) { top: 3030px !important; }
-  .cases .deco:nth-of-type(15) { top: 3260px !important; }
-  .cases .deco:nth-of-type(16) { top: 3490px !important; }
-  .cases .deco:nth-of-type(17) { top: 3720px !important; }
-  .cases .deco:nth-of-type(18) { top: 3950px !important; }
-  .cases .deco:nth-of-type(19) { top: 4180px !important; }
-  .cases .deco:nth-of-type(20) { top: 4410px !important; }
-  .cases .deco:nth-of-type(21) { top: 4640px !important; }
-  .cases .deco:nth-of-type(22) { top: 4870px !important; }
-  .cases .deco:nth-of-type(23) { top: 5100px !important; }
-  .cases .deco:nth-of-type(24) { top: 5330px !important; }
-  .cases .deco:nth-of-type(25) { top: 5560px !important; }
+  .cases .deco:not(.deco--off) { display: flex !important; inset: auto !important; width: 84px !important; height: 84px !important; z-index: 0; }
+  .cases .deco:nth-of-type(odd) { right: calc(100% - 30px) !important; }
+  .cases .deco:nth-of-type(even) { left: calc(100% - 30px) !important; }
+  .cases .deco:nth-of-type(1) { top: 1.0% !important; }
+  .cases .deco:nth-of-type(2) { top: 4.9% !important; }
+  .cases .deco:nth-of-type(3) { top: 8.8% !important; }
+  .cases .deco:nth-of-type(4) { top: 12.7% !important; }
+  .cases .deco:nth-of-type(5) { top: 16.6% !important; }
+  .cases .deco:nth-of-type(6) { top: 20.5% !important; }
+  .cases .deco:nth-of-type(7) { top: 24.4% !important; }
+  .cases .deco:nth-of-type(8) { top: 28.3% !important; }
+  .cases .deco:nth-of-type(9) { top: 32.2% !important; }
+  .cases .deco:nth-of-type(10) { top: 36.1% !important; }
+  .cases .deco:nth-of-type(11) { top: 40.0% !important; }
+  .cases .deco:nth-of-type(12) { top: 43.9% !important; }
+  .cases .deco:nth-of-type(13) { top: 47.8% !important; }
+  .cases .deco:nth-of-type(14) { top: 51.7% !important; }
+  .cases .deco:nth-of-type(15) { top: 55.6% !important; }
+  .cases .deco:nth-of-type(16) { top: 59.5% !important; }
+  .cases .deco:nth-of-type(17) { top: 63.4% !important; }
+  .cases .deco:nth-of-type(18) { top: 67.3% !important; }
+  .cases .deco:nth-of-type(19) { top: 71.2% !important; }
+  .cases .deco:nth-of-type(20) { top: 75.1% !important; }
+  .cases .deco:nth-of-type(21) { top: 79.0% !important; }
+  .cases .deco:nth-of-type(22) { top: 82.9% !important; }
+  .cases .deco:nth-of-type(23) { top: 86.8% !important; }
+  .cases .deco:nth-of-type(24) { top: 90.7% !important; }
+  .cases .deco:nth-of-type(25) { top: 94.6% !important; }
+
+  /* добавочные элементы в «обо мне» и «опыте» */
+  .deco--m { display: flex; inset: auto !important; width: calc(var(--z) * 1px) !important; height: calc(var(--z) * 1px) !important; top: calc(var(--p) * 1%) !important; z-index: 0; }
+  .deco--l { right: calc(100% - 20px) !important; }
+  .deco--r { left: calc(100% - 20px) !important; }
+
+  /* hero: ещё два */
+  .deco:has(img[src*="hero-decoration-icon-upper-right"]), .deco:has(img[src*="hero-decoration-icon-bottom-left"]) { display: flex; inset: auto !important; z-index: 0; }
+  .deco:has(img[src*="hero-decoration-icon-upper-right"]) { right: -10px !important; top: 164px !important; width: 72px !important; height: 72px !important; }
+  .deco:has(img[src*="hero-decoration-icon-bottom-left"]) { left: 186px !important; top: 372px !important; width: 56px !important; height: 56px !important; }
+}
 }
 
 /* инструменты: ровная сетка 4×3 вместо рваных рядов 5-5-2 */
@@ -893,3 +904,45 @@ a.tile__t:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; 
 }
 
 @media (max-width: 767px) { .tools { border-radius: 16px; } .game__box { border-radius: 20px; } }
+
+
+/* ==========================================================================
+   Мобильная доводка 3: hero, фото «обо мне», контакты, декор между кейсами
+   ========================================================================== */
+.about__stage { display: contents; }
+.stage__ring, .stage__deco, .deco--hero, .deco--gap { display: none; }
+
+@media (max-width: 1023px) {
+  /* hero: розовая звёздочка в пустом месте справа от «&», лаймовая справа от плашек */
+  .deco:has(img[src*="hero-decoration-icon-upper-right"]) { top: 21% !important; right: 30px !important; width: 62px !important; height: 62px !important; }
+  .deco--hero { display: flex; inset: auto !important; z-index: 0; }
+  .deco--h1 { right: 46px !important; top: 69% !important; width: 46px !important; height: 46px !important; }
+  .deco--h2 { display: none; }
+
+  /* проекты: карточки лежат поверх элементов, между карточками — свободные «стикеры» */
+  .cases .card { position: relative; z-index: 1; }
+  .cases .cards { gap: 40px; }
+  .deco--gap { z-index: 0; pointer-events: none; transition-delay: 0s !important; }
+  .deco--gap img { width: 100%; height: 100%; }
+
+  /* обо мне: фото на цветной «сцене» с элементами вокруг */
+  .about__stage { display: block; order: 2; position: relative; margin: 28px 0 0; padding-top: 28px; border-radius: 24px; background: var(--lilac); overflow: hidden; isolation: isolate; }
+  .about .about__stage .about__photo { position: relative; display: block; left: auto; top: auto; bottom: auto; margin: 0 auto; max-width: none; width: 104%; margin-left: -2%; height: auto; transform: none; z-index: 2; }
+  .stage__ring { display: block; position: absolute; left: 50%; top: 54%; width: 82%; aspect-ratio: 1; transform: translate(-50%, -50%); border-radius: 50%; background: rgba(255, 255, 255, .38); border: 2px dashed rgba(26, 26, 26, .22); z-index: 0; }
+  .stage__deco { display: block; position: absolute; z-index: 1; height: auto; }
+  .stage__deco--a { left: 5%; top: 6%; width: 58px; }
+  .stage__deco--b { right: 6%; top: 8%; width: 52px; }
+  .stage__deco--c { left: 4%; top: 46%; width: 46px; }
+  .stage__deco--d { right: 2%; top: 64%; width: 50px; }
+  .stage__deco--e { left: 10%; bottom: 5%; width: 50px; }
+  .stage__deco--f { right: 3%; bottom: 3%; width: 44px; }
+
+  /* связь: три в ряд, как на десктопе */
+  .contacts .frame { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; padding-bottom: 110px; }
+  .contacts .section-title { grid-column: 1 / -1; margin-bottom: 12px; }
+  .contact { height: auto; aspect-ratio: 1; margin: 0; border-radius: 18px; }
+  .contact__icon { width: 46%; height: auto; }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .about__stage { max-width: 520px; margin-left: auto; margin-right: auto; width: 100%; }
+}

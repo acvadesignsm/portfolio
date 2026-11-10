@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <script>document.documentElement.classList.add('js');</script>
-  <link rel="stylesheet" href="case.css?v=20261110y">
+  <link rel="stylesheet" href="case.css?v=20261110z2">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="favicon.ico" sizes="48x48">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -377,9 +377,9 @@
       function tick() { clearTimeout(timer); if (!playing || !visible) return; timer = setTimeout(function () { sync(); tabs[(cur + 1) % tabs.length].click(); }, T); restartBar(); }
       sync();
       tabs.forEach(function (t) { t.addEventListener('click', function () { setTimeout(function () { sync(); tick(); }, 0); }); });
-      btn.addEventListener('click', function () { playing = !playing; btn.dataset.playing = playing; btn.setAttribute('aria-label', playing ? 'Остановить показ' : 'Включить показ'); btn.firstChild.textContent = playing ? '❚❚' : '▶'; if (playing) tick(); else { clearTimeout(timer); restartBar(); } });
+      btn.addEventListener('click', function () { playing = !playing; if (playing) visible = true; btn.dataset.playing = playing; btn.setAttribute('aria-label', playing ? 'Остановить показ' : 'Включить показ'); btn.firstChild.textContent = playing ? '❚❚' : '▶'; if (playing) tick(); else { clearTimeout(timer); restartBar(); } });
       if (reduce) { btn.dataset.playing = 'false'; btn.firstChild.textContent = '▶'; btn.setAttribute('aria-label', 'Включить показ'); }
-      if ('IntersectionObserver' in window) new IntersectionObserver(function (e) { visible = e[0].isIntersecting; if (visible) tick(); else { clearTimeout(timer); restartBar(); } }, { threshold: 0.5 }).observe(root);
+      if ('IntersectionObserver' in window) new IntersectionObserver(function (e) { visible = e[0].isIntersecting; if (visible) tick(); else { clearTimeout(timer); restartBar(); } }, { threshold: 0.01 }).observe(root);
     });
     document.querySelectorAll('[data-walk]').forEach(function (root) {
   var tabs = root.querySelectorAll('.walk__tab'), body = root.querySelector('.walk__body');
@@ -418,6 +418,6 @@ document.querySelectorAll('.shots--tabs').forEach(function (root) {
       show(0);
     });
   </script>
-  <script src="case.js?v=20261109a"></script>
+  <script src="case.js?v=20261110z2"></script>
 </body>
 </html>
