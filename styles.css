@@ -578,13 +578,14 @@ b { font-weight: 600; }
    Мобильная раскладка (< 768px). Здесь обычные px, без масштабирования.
    ========================================================================== */
 
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   :root { --u: 1px; }
 
   .topbar { height: auto; padding: 12px 0; }
   .topbar__nav { padding: 0 20px; flex-wrap: wrap; gap: 8px 16px; justify-content: flex-start; }
 
-  .deco { display: none; }
+  .deco { opacity: .35 !important; z-index: 0; }
+  .frame > :not(.deco) { position: relative; inset: auto; z-index: 1; }
   .frame { max-width: none; }
   .section-title { font-size: 36px; padding-top: 32px; }
 
@@ -765,3 +766,46 @@ a.tile__t:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; 
 .cases:not(.has-row4) .deco--r4 { display: none; }
 .cases .deco--off { display: none; }
 .card[id] { scroll-margin-top: calc(var(--u) * 48); }
+
+/* ==========================================================================
+   Мобильная доводка главной
+   ========================================================================== */
+@media (max-width: 1023px) {
+  .hero__tags { justify-content: flex-start; }
+  .pill { white-space: nowrap; }
+
+  /* карточки: скругления «вложены» друг в друга, как на десктопе */
+  .card { padding: 12px; border-radius: 32px 32px 20px 20px; }
+  .card__media { border-radius: 20px; }
+
+  /* обо мне: плашки одной высоты в две колонки */
+  .facts-tiles { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 20px 0 0; }
+  .tile, .tile--orange { width: auto; padding: 16px 12px; justify-content: center; border-radius: 24px; }
+  .tile:last-child:nth-child(odd) { grid-column: 1 / -1; }
+  .tile__t { white-space: nowrap; font-size: 15px; }
+  .tile:first-child .tile__t { white-space: normal; }
+
+  /* порядок блока: заголовок → плашки → фото → образование → о себе → факты */
+  .about .frame { display: flex; flex-direction: column; }
+  .about .facts-tiles { order: 1; }
+  .about .about__photo { order: 2; margin: 28px auto 0; max-width: 300px; }
+  .about .about__col--left { order: 3; }
+  .about .about__col--right { order: 4; }
+  .about .about__col--right2 { order: 5; margin-top: 16px; }
+  .about .about__col--right3 { order: 6; }
+  .about .tools { order: 7; }
+  .about__col--right2 .about__h { display: none; }
+  .about__col { margin-top: 36px; }
+  .about__h--gap { margin-top: 32px; }
+  .rule { width: auto !important; }
+
+  /* связь: компактные плашки */
+  .contact { height: 120px; margin-top: 12px; border-radius: 24px; }
+  .contact__icon { width: calc(var(--w, 180) * 0.36px); height: calc(var(--h, 180) * 0.36px); }
+}
+
+/* планшет: карточки проектов в две колонки */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .cards { grid-template-columns: 1fr 1fr; gap: 16px; }
+  .about__photo { max-width: 360px; }
+}

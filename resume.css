@@ -42,3 +42,10 @@
 
 /* списки образования и курсов: тот же отступ от подзаголовка, что и у остальных блоков */
 .h3-sm + .facts { margin-top: 12px; }
+
+/* мобильная шапка: плашка PDF не наезжает на имя */
+@media (max-width: 820px) {
+  .column__head { height: auto; margin-bottom: 14px; }
+  .column__head .logos { display: none; }
+  .year--link { position: static; display: inline-block; border-radius: 100px; padding: 8px 18px; }
+}
