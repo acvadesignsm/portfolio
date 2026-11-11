@@ -999,22 +999,10 @@ a.tile__t:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; 
 @media (prefers-reduced-motion: reduce) { .cases__float { transition: none; } }
 
 
-/* пункт шапки текущего раздела */
-.topbar__nav a { position: relative; }
-.topbar__nav a::after {
-  content: '';
-  position: absolute;
-  left: 0; right: 0; bottom: -4px;
-  height: 2px;
-  border-radius: 2px;
-  background: var(--orange);
-  transform: scaleX(0);
-  transform-origin: left center;
-  transition: transform 0.3s cubic-bezier(0.2, 0.7, 0.2, 1);
-}
+/* пункт шапки текущего раздела: выделяется цветом, при наведении — синий */
 .topbar__nav a.is-current { color: var(--ink); }
-.topbar__nav a.is-current::after { transform: scaleX(1); }
-@media (prefers-reduced-motion: reduce) { .topbar__nav a::after { transition: none; } }
+.topbar__nav a:hover,
+.topbar__nav a.is-current:hover { color: var(--blue); }
 
 /* шапка: на главном экране — как была, дальше превращается в плавающую плашку (как в кейсах) */
 .topbar { transition: background-color 0.3s, -webkit-backdrop-filter 0.3s, backdrop-filter 0.3s; }
@@ -1044,8 +1032,9 @@ a.tile__t:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; 
   backdrop-filter: blur(10px);
 }
 .topbar.is-pill .topbar__nav a { color: rgba(243, 243, 235, 0.55); }
+.topbar.is-pill .topbar__nav a.is-current { color: #fff; }
 .topbar.is-pill .topbar__nav a:hover,
-.topbar.is-pill .topbar__nav a.is-current { color: var(--bg); }
+.topbar.is-pill .topbar__nav a.is-current:hover { color: var(--blue-on-dark, #6b6bff); }
 @media (max-width: 1023px) {
   .topbar { height: 37px; padding: 0; }
   .topbar__nav { height: 100%; }
@@ -1053,3 +1042,30 @@ a.tile__t:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; 
 }
 @media (max-width: 360px) { .topbar.is-pill .topbar__nav { padding: 0 12px; } }
 @media (prefers-reduced-motion: reduce) { .topbar, .topbar__nav { transition: none; } }
+
+
+/* ---------- мобильная главная: теги — бегущая строка ---------- */
+.hero__tags .is-clone { display: none; }
+@media (max-width: 1023px) {
+  .hero__marquee { margin: 0 -20px; overflow: hidden; }
+  .hero__tags {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    width: max-content;
+    gap: 8px;
+    padding-right: 8px;
+    animation: tags-run 26s linear infinite;
+  }
+  .hero__tags .is-clone { display: inline-flex; }
+  .hero__tags .pill { flex: none; }
+  .hero__marquee:active .hero__tags { animation-play-state: paused; }
+}
+@keyframes tags-run { to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) {
+  .hero__tags { animation: none; }
+  @media (max-width: 1023px) {
+    .hero__marquee { margin: 0; overflow: visible; }
+    .hero__tags { width: auto; flex-wrap: wrap; padding-right: 0; }
+    .hero__tags .is-clone { display: none; }
+  }
+}

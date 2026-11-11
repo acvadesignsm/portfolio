@@ -362,6 +362,17 @@
   // порядковый номер плашек в шапке — для каскада при загрузке
   document.querySelectorAll('.hero__tags .pill').forEach((el, i) => el.style.setProperty('--i', i));
 
+  // бегущая строка тегов на мобильной главной: вторая копия плашек для бесшовной петли (на десктопе скрыта)
+  const heroTags = document.querySelector('.hero__tags');
+  if (heroTags) {
+    [...heroTags.children].forEach((li) => {
+      const c = li.cloneNode(true);
+      c.classList.add('is-clone');
+      c.setAttribute('aria-hidden', 'true');
+      heroTags.appendChild(c);
+    });
+  }
+
   // у украшений — своя задержка и скорость «плавания», чтобы не двигались синхронно
   document.querySelectorAll('.band').forEach((band) => {
     band.querySelectorAll('.deco').forEach((el, i) => {
