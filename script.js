@@ -805,3 +805,122 @@
   window.addEventListener('resize', queue);
   apply();
 })();
+
+/* ===== ровный правый край: подбор переносов по всему абзацу (телефон и планшет) ===== */
+(function () {
+  var SEL = '.card__desc';
+  var mq = window.matchMedia('(max-width: 1023px)');
+  var WORD = /[^ \t\n\r]+/g;
+  var BLOCK = 'img,svg,video,button,input,iframe,ul,ol,table,p,div,figure,h1,h2,h3,h4';
+  function eligible(el) {
+    if (el.querySelector(BLOCK)) return false;
+    var d = getComputedStyle(el).display;
+    return d === 'block' || d === 'list-item';
+  }
+  function clear(el) {
+    var brs = el.querySelectorAll('br.jb');
+    if (!brs.length) return false;
+    Array.prototype.forEach.call(brs, function (b) { b.parentNode.removeChild(b); });
+    el.normalize();
+    return true;
+  }
+  function measure(el) {
+    var cs = getComputedStyle(el);
+    var W = el.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight) - 0.5;
+    var words = [], r = document.createRange(), tw = document.createTreeWalker(el, NodeFilter.SHOW_TEXT), n, m;
+    while ((n = tw.nextNode())) {
+      if (n.parentNode.closest && n.parentNode.closest('.callout__icon')) continue;
+      var t = n.nodeValue; WORD.lastIndex = 0;
+      while ((m = WORD.exec(t))) {
+        r.setStart(n, m.index); r.setEnd(n, m.index + m[0].length);
+        var b = r.getBoundingClientRect();
+        words.push({ n: n, s: m.index, l: b.left, r: b.right, t: b.top, glue: m.index === 0 && words.length > 0 && !/[ \t\n\r]$/.test(words[words.length - 1].n.nodeValue) });
+      }
+    }
+    return { W: W, words: words };
+  }
+  function breaksFor(seg, W) {
+    var n = seg.length;
+    function width(i, j) { return seg[j - 1].r - seg[i].l; }
+    var lines = [], i = 0, j;
+    while (i < n) { j = i + 1; while (j < n && width(i, j + 1) <= W) j++; lines.push([i, j]); i = j; }
+    var L = lines.length;
+    if (L < 2) return [];
+    var INF = 1e18;
+    function cost(a, b, last) {
+      var w = width(a, b);
+      if (b - a > 1 && w > W) return INF;
+      if (!last) return (W - w) * (W - w);
+      var m = 0.45 * W - w;
+      return m > 0 ? m * m : 0;
+    }
+    var dp = [], prv = [], k;
+    function can(i) { return i === 0 || !seg[i].glue; }
+    for (k = 0; k <= L; k++) { dp.push(new Array(n + 1).fill(INF)); prv.push(new Array(n + 1).fill(-1)); }
+    dp[0][0] = 0;
+    for (k = 1; k <= L; k++) {
+      for (var e = k; e <= n; e++) {
+        for (var s = k - 1; s < e; s++) {
+          if (dp[k - 1][s] >= INF || !can(s)) continue;
+          var c = cost(s, e, k === L && e === n);
+          if (k === L && e !== n) continue;
+          if (c >= INF) continue;
+          if (dp[k - 1][s] + c < dp[k][e]) { dp[k][e] = dp[k - 1][s] + c; prv[k][e] = s; }
+        }
+      }
+    }
+    if (dp[L][n] >= INF) return [];
+    var starts = [], e2 = n;
+    for (k = L; k >= 1; k--) { var s2 = prv[k][e2]; if (k > 1) starts.push(s2); e2 = s2; }
+    return starts;   // индексы слов, перед которыми ставим перенос (по убыванию)
+  }
+  function apply(seg, starts) {
+    starts.forEach(function (idx) {
+      var w = seg[idx], br = document.createElement('br');
+      br.className = 'jb';
+      if (w.s > 0) { var rest = w.n.splitText(w.s - 1); rest.parentNode.insertBefore(br, rest); }
+      else w.n.parentNode.insertBefore(br, w.n);
+    });
+  }
+  function run(list) {
+    list = list.filter(function (el) { return el.isConnected; });
+    var items = [];
+    list.forEach(function (el) { clear(el); });
+    if (!mq.matches) return;
+    list = list.filter(function (el) { return el.offsetWidth > 0 && eligible(el); });
+    list.forEach(function (el) { el.__ws = el.style.whiteSpace; el.style.whiteSpace = 'nowrap'; });
+    list.forEach(function (el) { items.push({ el: el, d: measure(el) }); });
+    list.forEach(function (el) { el.style.whiteSpace = el.__ws; });
+    items.forEach(function (it) {
+      var words = it.d.words, seg = [], all = [];
+      function flush() { if (seg.length > 1) all.push(seg); seg = []; }
+      words.forEach(function (w) {
+        if (seg.length && Math.abs(w.t - seg[seg.length - 1].t) > 3) flush();
+        seg.push(w);
+      });
+      flush();
+      var ops = [];
+      all.forEach(function (sg) { ops.push([sg, breaksFor(sg, it.d.W)]); });
+      for (var q = ops.length - 1; q >= 0; q--) apply(ops[q][0], ops[q][1]);
+    });
+  }
+  var pend = new Set(), raf = 0;
+  function queue(el) { pend.add(el); if (!raf) raf = requestAnimationFrame(function () { raf = 0; var l = Array.from(pend); pend.clear(); run(l); }); }
+  function start() {
+    var els = Array.prototype.slice.call(document.querySelectorAll(SEL));
+    if (window.ResizeObserver) {
+      var ro = new ResizeObserver(function (es) {
+        es.forEach(function (e) {
+          var w = Math.round(e.contentRect.width);
+          if (e.target.__jw === w) return;
+          e.target.__jw = w; queue(e.target);
+        });
+      });
+      els.forEach(function (el) { ro.observe(el); });
+    } else { run(els); window.addEventListener('resize', function () { run(els); }); }
+    var onmq = function () { run(els); };
+    if (mq.addEventListener) mq.addEventListener('change', onmq);
+  }
+  var go = function () { start(); };
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(go); else window.addEventListener('load', go);
+})();
