@@ -131,52 +131,80 @@
     }
   }
 
-  /* ---------- мобильные «стикеры» между карточками кейсов ---------- */
+  /* ---------- мобильные украшения вокруг карточек кейсов: «рассыпаны» случайно по краям ---------- */
   if (frame) {
     const IMGS = ['05-blue', '06-orange', '14-lime', '02-pink', '10-lilac', '11-cyan', '17-orange', '20-lilac'];
-    const SIZES = [64, 72, 60, 70, 62, 74];
-    const XS = [0.12, 0.7, 0.38, 0.82, 0.2, 0.55];
-    const gaps = [];
-    for (let i = 0; i < 60; i += 1) {
+    const pool = [];
+    for (let i = 0; i < 80; i += 1) {
       const d = document.createElement('span');
       d.className = 'deco deco--gap';
       d.setAttribute('aria-hidden', 'true');
       d.innerHTML = '<img alt="" src="assets/projects-section/projects-section-deco/expanded/cases-decoration-' + IMGS[i % IMGS.length] + '.svg">';
       frame.appendChild(d);
-      gaps.push(d);
+      pool.push(d);
     }
     const mq = window.matchMedia('(max-width: 1023px)');
-    const origs = Array.from(frame.querySelectorAll('.deco:not(.deco--gap)')).filter((d) => !d.dataset.clone).slice(0, 25);
-    origs.forEach((d) => { d.dataset.orig = d.getAttribute('style') || ''; });
+    const desk = Array.from(frame.querySelectorAll('.deco:not(.deco--gap)'));
+    desk.forEach((d) => { if (!d.dataset.clone) d.dataset.orig = d.getAttribute('style') || ''; });
+    // «случайность» воспроизводима: у каждой карточки свой набор, и он не прыгает при перерисовке
+    const prng = (seed) => () => {
+      seed = (seed + 0x6D2B79F5) | 0;
+      let t = Math.imul(seed ^ (seed >>> 15), 1 | seed);
+      t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+      return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+    };
+    // положение элемента внутри frame без учёта transform (карточки анимируются при появлении)
+    const relBox = (el) => {
+      let x = 0, y = 0, e = el;
+      while (e && e !== frame) { x += e.offsetLeft; y += e.offsetTop; e = e.offsetParent; }
+      return { left: x, top: y, width: el.offsetWidth, height: el.offsetHeight };
+    };
     const place = () => {
-      const vis = cards.filter((c) => !c.hidden);
-      const fr = frame.getBoundingClientRect();
-      /* стикеры в промежутках между карточками: по одному, наполовину прячутся за карточками */
-      gaps.forEach((d, i) => {
-        const g = i >> 1;
-        const a = vis[g], b = vis[g + 1];
-        if (i & 1 || !mq.matches || !a || !b) { d.style.setProperty('display', 'none', 'important'); return; }
-        const ra = a.getBoundingClientRect(), rb = b.getBoundingClientRect();
-        const size = SIZES[g % SIZES.length];
-        const mid = (ra.bottom + rb.top) / 2 - fr.top;
-        const x = 14 + (fr.width - 28 - size) * XS[g % XS.length];
-        d.style.setProperty('display', 'flex', 'important');
-        d.style.setProperty('inset', 'auto', 'important');
-        d.style.setProperty('left', x + 'px', 'important');
-        d.style.setProperty('top', (mid - size / 2) + 'px', 'important');
-        d.style.setProperty('width', size + 'px', 'important');
-        d.style.setProperty('height', size + 'px', 'important');
+      const mobile = mq.matches;
+      // десктопные украшения: на телефоне прячем (иначе они копятся по бокам), на десктопе возвращаем как было
+      desk.forEach((d) => {
+        if (mobile) d.style.setProperty('display', 'none', 'important');
+        else if (d.dataset.orig !== undefined) d.setAttribute('style', d.dataset.orig);
+        else d.style.removeProperty('display');
       });
-      /* боковые элементы: по одному у каждой видимой карточки, стороны чередуются */
-      origs.forEach((d, k) => {
-        if (!mq.matches) { d.setAttribute('style', d.dataset.orig); return; }
-        const c = vis[k];
-        if (!c) { d.style.cssText = d.dataset.orig + ';display:none !important'; return; }
-        const rc = c.getBoundingClientRect();
-        const size = 84;
-        const top = rc.top - fr.top + rc.height * 0.4 - size / 2;
-        const side = k % 2 ? 'left:calc(100% - 30px)' : 'right:calc(100% - 30px)';
-        d.style.cssText = d.dataset.orig + ';display:flex !important;inset:auto !important;' + side + ' !important;top:' + top + 'px !important;width:' + size + 'px !important;height:' + size + 'px !important';
+      pool.forEach((d) => d.style.setProperty('display', 'none', 'important'));
+      if (!mobile) return;
+      const vis = cards.filter((c) => !c.hidden);
+      const W = frame.clientWidth;
+      const boxes = { l: [], r: [] };
+      let used = 0;
+      vis.forEach((c, i) => {
+        const rng = prng(i * 7919 + 101);
+        const box = relBox(c);
+        const n = rng() < 0.35 ? 3 : 2;
+        const sides = i % 2 ? ['l', 'r'] : ['r', 'l'];
+        if (n === 3) sides.push(rng() < 0.5 ? 'l' : 'r');
+        sides.forEach((side) => {
+          if (used >= pool.length) return;
+          // часть элементов «сидит» на углу карточки поверх неё (на стыке карточек), остальные прячутся за ней
+          const front = rng() < 0.3;
+          const size = front ? Math.round(52 + rng() * 22) : Math.round(58 + rng() * 42);
+          const show = front ? Math.round(size * 0.62) : Math.round(22 + rng() * 16);
+          const lo = box.top - size * 0.4, hi = box.top + box.height - size * 0.6;
+          let y = lo + rng() * (hi - lo), ok = false;
+          for (let t = 0; t < 8 && !ok; t += 1) {
+            y = front ? (rng() < 0.5 ? box.top : box.top + box.height) - size * 0.5 : lo + rng() * (hi - lo);
+            ok = boxes[side].every((b) => y > b[1] + 8 || y + size < b[0] - 8);
+          }
+          if (!ok) return;
+          boxes[side].push([y, y + size]);
+          const x = side === 'l' ? box.left - show : box.left + box.width + show - size;
+          const d = pool[used];
+          used += 1;
+          d.style.setProperty('display', 'flex', 'important');
+          d.style.setProperty('inset', 'auto', 'important');
+          d.style.setProperty('left', Math.min(x, W - 8) + 'px', 'important');
+          d.style.setProperty('top', y + 'px', 'important');
+          d.style.setProperty('width', size + 'px', 'important');
+          d.style.setProperty('height', size + 'px', 'important');
+          d.style.setProperty('z-index', front ? '2' : '0', 'important');
+          d.firstElementChild.style.setProperty('--r', Math.round(rng() * 70 - 35) + 'deg');
+        });
       });
     };
     window.__placeGaps = place;

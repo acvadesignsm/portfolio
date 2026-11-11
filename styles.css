@@ -1252,3 +1252,9 @@ a.tile__t:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; 
   .js .topbar__nav { pointer-events: none; }
   .js .topbar__menu { pointer-events: auto; }
 }
+
+
+/* ---------- мобильные кейсы: карточки ближе друг к другу ---------- */
+@media (max-width: 1023px) {
+  .cases .cards { gap: 8px; }
+}
