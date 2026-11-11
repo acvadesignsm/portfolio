@@ -1450,30 +1450,24 @@ a.tile__t:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; 
 }
 
 /* «Обо мне» (мобильные): за фото — синяя звезда с сиренью и розовый крест; украшения лежат НАД линиями;
-   контакты — спокойный список вместо цветных карточек */
+   контакты — карточки по референсу; факты — спокойный список без плашек */
 @media (max-width: 1023px) {
   .about .deco--m { z-index: 4 !important; pointer-events: none; }
   .about .stage__deco--f { display: none !important; }
-  .about .facts-tiles { gap: 0; }
-  .about .facts-tiles .tile, .about .facts-tiles .tile--orange {
-    background: transparent; color: var(--ink); border-radius: 0; box-shadow: none;
-    align-items: flex-start; justify-content: center; text-align: left; gap: 2px;
-    padding: 8px 0; border-bottom: 1px solid rgba(25, 25, 25, 0.2);
+  .about .squares { gap: 12px; }
+  .about .squares li:nth-child(n) {
+    background: none; color: var(--ink); rotate: none; border-radius: 0;
+    margin: 0; padding: 0 0 0 22px; font-size: 15px; line-height: 1.35; cursor: default;
   }
-  .about .facts-tiles .tile:last-child { border-bottom: 0; }
-  .about .tile__h { display: inline-flex; align-items: center; gap: .45em; text-transform: uppercase; letter-spacing: .06em; font-size: 11px; color: rgba(25, 25, 25, .6); }
-  .about .tile__h::before { content: ''; width: .62em; height: .62em; border-radius: 50%; background: var(--c); flex: none; }
-  .about .tile__t, .about .tile:first-child .tile__t { color: var(--ink); font-size: 14px; }
+  .about .squares li::before {
+    content: ''; position: absolute; left: 0; top: .32em; display: block;
+    width: 10px; height: 10px; margin: 0; opacity: 1; background: var(--cb, var(--orange));
+  }
+  .about .squares li:active { scale: 1; }
 }
 @media (max-width: 600px) {
-  .about .facts-tiles { margin-top: 3vw; }
-  .about .facts-tiles .tile, .about .facts-tiles .tile--orange { min-height: 19vw; padding: 2vw 0; }
-  .about .tile__h { font-size: 2.9vw; }
-  .about .tile__t, .about .tile:first-child .tile__t { font-size: 3.7vw; }
-  .about .about__stage { margin-top: 3vw; }
-  .about .about__stage .about__photo { right: -18vw; top: -1vw; height: 100vw; }
   .about .stage__deco--b { right: -9vw; top: -15vw; width: 46vw; }
-  .about .stage__deco--a { left: -6vw; top: auto; bottom: -20vw; width: 44vw; }
+  .about .stage__deco--a { left: -7vw; top: auto; bottom: -22vw; width: 40vw; }
 }
 
 /* «Связь» (телефоны): композиция как на десктопе — рука у заголовка и угла первой карточки,
