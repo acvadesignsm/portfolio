@@ -1475,3 +1475,26 @@ a.tile__t:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; 
   .about .stage__deco--b { right: -9vw; top: -15vw; width: 46vw; }
   .about .stage__deco--a { left: -6vw; top: auto; bottom: -20vw; width: 44vw; }
 }
+
+/* «Связь» (телефоны): композиция как на десктопе — рука у заголовка и угла первой карточки,
+   конверт на углу третьей, звёздочка на нижнем крае; украшения лежат над карточками */
+@media (max-width: 600px) {
+  .contacts .frame { padding-bottom: 112px; }
+  .deco--ct { display: none !important; }
+  .deco:has(img[src*="contact-heading-decoration"]) {
+    display: flex; inset: auto !important; left: 11vw !important; top: 6.5vw !important;
+    width: 20vw !important; height: 18.5vw !important; z-index: 3; pointer-events: none;
+  }
+  .deco:has(img[src*="email-decoration-icon"]) {
+    inset: auto !important; right: 3vw !important; bottom: 88px !important;
+    width: 13vw !important; height: 13vw !important; z-index: 3; pointer-events: none;
+  }
+  .deco:has(img[src*="contact-decoration-icon-bottom-center"]) {
+    inset: auto !important; left: 36vw !important; bottom: 70px !important;
+    width: 12vw !important; height: 12vw !important; z-index: 3; pointer-events: none;
+  }
+}
+@media (max-width: 600px) {
+  .deco:has(img[src*="contact-heading-decoration"]) { left: 14.5vw !important; }
+  .deco:has(img[src*="contact-decoration-icon-top-left"]) { left: 3vw !important; top: 3vw !important; width: 11vw !important; height: 11vw !important; }
+}
