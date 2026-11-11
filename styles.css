@@ -1550,3 +1550,18 @@ a.tile__t:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; 
   /* фото чуть левее: бедро слегка касается карточки «почта» */
   .about .about__stage .about__photo { right: -18.2vw; }
 }
+
+/* телефоны и планшеты: названия кейсов переносятся по ширине экрана, а не по «вшитым» переносам;
+   предлоги и союзы держатся со следующим словом (неразрывные пробелы в разметке) */
+@media (max-width: 1023px) {
+  .card__title .d-br { display: none; }
+  .card__title { text-wrap: balance; hyphens: manual; }
+  .card__desc { text-wrap: pretty; }
+}
+
+/* телефоны и планшеты: статус «в процессе» — над названием, чтобы название занимало всю ширину карточки */
+@media (max-width: 1023px) {
+  .card__head:has(.badge) { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .card__head:has(.badge) .badge { order: -1; align-self: flex-start; }
+  .card__head:has(.badge) .card__title { max-width: none; }
+}
