@@ -350,6 +350,11 @@
       return ok;
     }
   };
+  // то же самое доступно мобильному меню (оно собирается в другом блоке)
+  window.pfCopyMail = async (addr) => {
+    const ok = await copyText(addr);
+    showToast(ok ? `Почта скопирована: ${addr}` : `Моя почта: ${addr}`);
+  };
   document.querySelectorAll('[data-copy]').forEach((a) => {
     a.addEventListener('click', async () => {
       const ok = await copyText(a.dataset.copy);
@@ -371,6 +376,11 @@
       c.setAttribute('aria-hidden', 'true');
       heroTags.appendChild(c);
     });
+    // запускаем бег, только когда шрифт загружен и ширина дорожки уже не изменится — иначе строка «прыгает»
+    let started = false;
+    const run = () => { if (!started) { started = true; heroTags.classList.add('is-run'); } };
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(run); else run();
+    setTimeout(run, 2500);
   }
 
   // у украшений — своя задержка и скорость «плавания», чтобы не двигались синхронно
@@ -485,5 +495,59 @@
     window.addEventListener('resize', queueSpy);
     window.addEventListener('load', setActive);
     setActive();
+  }
+
+  /* ---------- мобильное меню: «меню ⋮» открывает экран со списком разделов ---------- */
+  const menuBtn = document.querySelector('.topbar__menu');
+  if (menuBtn && navLinks.length) {
+    const allLinks = Array.from(document.querySelectorAll('.topbar__nav a'));
+    const menu = document.createElement('div');
+    menu.className = 'mmenu';
+    menu.id = 'mmenu';
+    menu.setAttribute('role', 'dialog');
+    menu.setAttribute('aria-modal', 'true');
+    menu.setAttribute('aria-label', 'Меню');
+    menu.innerHTML = '<div class="mmenu__bar"><button type="button" class="mmenu__close"><span>закрыть</span><i class="x" aria-hidden="true"></i></button></div><ul class="mmenu__list"></ul>';
+    const list = menu.querySelector('.mmenu__list');
+    allLinks.forEach((a, i) => {
+      const li = document.createElement('li');
+      li.style.setProperty('--k', i);
+      const c = a.cloneNode(true);
+      c.removeAttribute('aria-current');
+      c.classList.remove('is-current');
+      li.appendChild(c);
+      list.appendChild(li);
+    });
+    // связь: тг, вк и почта (почта копируется при нажатии, как в «связи» ниже)
+    const soc = document.createElement('div');
+    soc.className = 'mmenu__soc';
+    soc.innerHTML =
+      '<a href="https://t.me/acva_acva" target="_blank" rel="noopener" aria-label="Telegram"><img src="assets/contact-section/telegram-contact-logo.svg" alt=""></a>' +
+      '<a href="https://vk.ru/acva.acva" target="_blank" rel="noopener" aria-label="ВКонтакте"><img src="assets/contact-section/vk-contact-logo.svg" alt=""></a>' +
+      '<a href="mailto:mikh.so@mail.ru" data-copy="mikh.so@mail.ru" aria-label="Почта: mikh.so@mail.ru (адрес скопируется при нажатии)"><img src="assets/contact-section/email-contact-icon.svg" alt=""></a>';
+    soc.querySelector('[data-copy]').addEventListener('click', (e) => {
+      if (window.pfCopyMail) window.pfCopyMail(e.currentTarget.dataset.copy);
+    });
+    menu.appendChild(soc);
+    document.body.appendChild(menu);
+    const closeBtn = menu.querySelector('.mmenu__close');
+    const root = document.documentElement;
+    const setOpen = (open) => {
+      if (open) {
+        // подсветка текущего раздела — как в шапке
+        allLinks.forEach((a, i) => list.children[i].firstChild.classList.toggle('is-current', a.classList.contains('is-current')));
+      }
+      menu.classList.toggle('is-open', open);
+      root.classList.toggle('menu-open', open);
+      menuBtn.setAttribute('aria-expanded', String(open));
+      (open ? closeBtn : menuBtn).focus({ preventScroll: true });
+    };
+    menuBtn.addEventListener('click', () => setOpen(true));
+    closeBtn.addEventListener('click', () => setOpen(false));
+    list.addEventListener('click', (e) => {
+      if (e.target.closest('a')) { menu.classList.remove('is-open'); root.classList.remove('menu-open'); menuBtn.setAttribute('aria-expanded', 'false'); }
+    });
+    window.addEventListener('keydown', (e) => { if (e.key === 'Escape' && menu.classList.contains('is-open')) setOpen(false); });
+    window.addEventListener('resize', () => { if (window.innerWidth > 600 && menu.classList.contains('is-open')) setOpen(false); });
   }
 })();

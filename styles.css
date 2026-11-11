@@ -1054,15 +1054,16 @@ a.tile__t:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; 
     width: max-content;
     gap: 8px;
     padding-right: 8px;
-    animation: tags-run 26s linear infinite;
+    will-change: transform;
   }
+  .hero__tags.is-run { animation: tags-run 26s linear infinite; }
+  .hero__tags .pill:hover { translate: none; }
   .hero__tags .is-clone { display: inline-flex; }
   .hero__tags .pill { flex: none; }
-  .hero__marquee:active .hero__tags { animation-play-state: paused; }
 }
-@keyframes tags-run { to { transform: translateX(-50%); } }
+@keyframes tags-run { from { transform: translate3d(0, 0, 0); } to { transform: translate3d(-50%, 0, 0); } }
 @media (prefers-reduced-motion: reduce) {
-  .hero__tags { animation: none; }
+  .hero__tags, .hero__tags.is-run { animation: none; }
   @media (max-width: 1023px) {
     .hero__marquee { margin: 0; overflow: visible; }
     .hero__tags { width: auto; flex-wrap: wrap; padding-right: 0; }
@@ -1094,3 +1095,89 @@ a.tile__t:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; 
 @media (min-width: 441px) and (max-width: 1023px) {
   .hero .deco--h1, .hero .deco--h2 { display: none !important; }
 }
+
+
+/* ---------- мобильное меню: «меню ⋮» → экран со списком разделов (телефоны) ---------- */
+.topbar__menu, .mmenu { display: none; }
+@media (max-width: 600px) {
+  .js .topbar__nav { justify-content: center; }
+  .js .topbar__nav a { display: none; }
+  .js .topbar__menu { display: flex; }
+
+  .topbar__menu, .mmenu__close {
+    align-items: center;
+    gap: 7px;
+    padding: 10px 16px;
+    border: 0;
+    background: none;
+    font: inherit;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: lowercase;
+    color: #929292;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: color 0.2s;
+  }
+  .topbar__menu:active, .mmenu__close:active { color: var(--blue); }
+  .dots {
+    width: 3px; height: 3px; margin: 0 3px;
+    border-radius: 50%;
+    background: currentColor;
+    box-shadow: 0 -6px 0 currentColor, 0 6px 0 currentColor;
+  }
+  .x { position: relative; width: 11px; height: 11px; }
+  .x::before, .x::after { content: ''; position: absolute; left: 0; right: 0; top: 50%; height: 1.5px; margin-top: -0.75px; border-radius: 2px; background: currentColor; transform: rotate(45deg); }
+  .x::after { transform: rotate(-45deg); }
+
+  /* плашка после главного экрана: компактная, по центру */
+  .js .topbar.is-pill .topbar__nav { width: 124px; padding: 0; justify-content: center; }
+  .topbar.is-pill .topbar__menu { color: rgba(243, 243, 235, 0.9); padding: 0 12px; height: 100%; }
+  .topbar.is-pill .topbar__menu:active { color: var(--blue-on-dark, #6b6bff); }
+
+  .mmenu {
+    position: fixed; inset: 0; z-index: 300;
+    display: flex; flex-direction: column;
+    background: var(--bg);
+    overflow-y: auto; overscroll-behavior: contain;
+    opacity: 0; visibility: hidden;
+    transition: opacity 0.25s ease, visibility 0s 0.25s;
+  }
+  .mmenu.is-open { opacity: 1; visibility: visible; transition: opacity 0.25s ease; }
+  .mmenu__bar { flex: none; height: 37px; display: flex; justify-content: center; align-items: center; margin-top: env(safe-area-inset-top, 0px); }
+  .mmenu__close { display: flex; }
+  .mmenu__list { list-style: none; margin: 0; padding: 40px 20px calc(40px + env(safe-area-inset-bottom, 0px)); }
+  .mmenu__list li + li a { border-top: 1px dashed #c9c9c0; }
+  .mmenu__list a {
+    display: block;
+    padding: 26px 0;
+    font-size: clamp(34px, 10.4vw, 48px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+    text-transform: lowercase;
+    color: #929292;
+    transition: color 0.2s;
+  }
+  .mmenu__list a.is-current { color: var(--ink); }
+  .mmenu__list a:active { color: var(--blue); }
+  .mmenu__list sup { font-size: 0.4em; line-height: 0; vertical-align: super; }
+  .mmenu.is-open .mmenu__list li { animation: mm-in 0.5s calc(0.06s + var(--k, 0) * 0.05s) cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+  html.menu-open { overflow: hidden; }
+  html.menu-open .toast { z-index: 400; }
+
+  .mmenu__soc { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: auto; padding: 0 20px calc(32px + env(safe-area-inset-bottom, 0px)); }
+  .mmenu__soc a {
+    display: flex; align-items: center; justify-content: center;
+    aspect-ratio: 1;
+    border: 1px dashed #b9b9b0;
+    border-radius: 16px;
+    transition: border-color 0.2s, background-color 0.2s, scale 0.2s;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .mmenu__soc a:active { border-color: var(--blue); background: rgba(58, 57, 255, 0.06); scale: 0.97; }
+  .mmenu__soc img { width: 44%; height: 44%; object-fit: contain; }
+  .mmenu.is-open .mmenu__soc { animation: mm-in 0.5s 0.32s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+}
+@keyframes mm-in { from { opacity: 0; transform: translateY(14px); } }
+@media (prefers-reduced-motion: reduce) { .mmenu, .mmenu.is-open { transition: none; } .mmenu.is-open .mmenu__list li, .mmenu.is-open .mmenu__soc { animation: none; } }
