@@ -1259,9 +1259,6 @@ a.tile__t:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; 
 }
 
 /* телефон: у страницы нет общего фона — каждый раздел красится сам, поэтому Safari не закрашивает панель сверху */
-@media (max-width: 600px) {
-  .edge-tint { position: fixed; top: 0; left: 0; right: 0; height: 2px; z-index: 1; pointer-events: none; }
-}
 
 /* телефон: плашка «меню» без backdrop-filter — иначе iOS 26 включает системную подложку под верхней панелью после скролла */
 @media (max-width: 600px) {
