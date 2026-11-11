@@ -1260,7 +1260,7 @@ a.tile__t:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; 
 
 /* телефон: у страницы нет общего фона — каждый раздел красится сам, поэтому Safari не закрашивает панель сверху */
 @media (max-width: 600px) {
-  html, body { background: transparent; }
+  .edge-tint { position: fixed; top: 0; left: 0; right: 0; height: 2px; z-index: 1; pointer-events: none; }
 }
 
 /* телефон: плашка «меню» без backdrop-filter — иначе iOS 26 включает системную подложку под верхней панелью после скролла */
@@ -1272,4 +1272,27 @@ a.tile__t:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; 
 /* телефон: плашка «меню» чуть ниже верхнего края (в Google/Chrome она прилипала к самому верху) */
 @media (max-width: 600px) {
   .topbar.is-pill .topbar__nav { margin-top: 8px; }
+}
+
+/* телефон, после главного экрана: «меню» — круглая кнопка с точками справа снизу (достаёт большой палец) */
+@media (max-width: 600px) {
+  .js .topbar.is-pill .topbar__nav {
+    width: 0; height: 0; margin: 0; padding: 0; border-color: transparent; background: none; overflow: visible;
+  }
+  .js .topbar.is-pill .topbar__menu {
+    position: fixed; z-index: 120;
+    right: 16px; bottom: calc(24px + env(safe-area-inset-bottom, 0px));
+    width: 52px; height: 52px; padding: 0; gap: 0;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid rgba(243, 243, 235, 0.28);
+    background: rgba(26, 26, 26, 0.94);
+    color: var(--bg);
+    pointer-events: auto;
+  }
+  .js .topbar.is-pill .topbar__menu span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .js .topbar.is-pill .topbar__menu .dots { margin: 0; }
+  /* «фильтр» уходит влево, чтобы не лезть под кнопку меню; «свернуть» встаёт над ним */
+  .cases__dock { left: 16px; translate: 0 12px; flex-direction: column-reverse; align-items: flex-start; }
+  .cases__dock.is-on { translate: 0 0; }
 }
