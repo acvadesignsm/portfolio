@@ -461,6 +461,8 @@
       let cur = spy[0];
       spy.forEach((x) => { if (x.sec.getBoundingClientRect().top <= probe) cur = x; });
       if (atEnd) cur = spy[spy.length - 1];
+      const heroEl = document.getElementById('top');
+      if (bar && heroEl) bar.classList.toggle('is-pill', heroEl.getBoundingClientRect().bottom <= bar.offsetHeight);
       spy.forEach((x) => {
         const on = x === cur;
         x.a.classList.toggle('is-current', on);
