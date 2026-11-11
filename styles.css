@@ -1556,7 +1556,7 @@ a.tile__t:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; 
 @media (max-width: 1023px) {
   .card__title .d-br { display: none; }
   /* текст идёт во всю ширину картинки: строки добираются до края, без «выравнивания» по балансу */
-  .card__title { text-wrap: wrap; hyphens: manual; max-width: none; }
+  .card__title { text-wrap: balance; hyphens: manual; max-width: none; }
   .card__desc { text-wrap: wrap; max-width: none; }
 }
 
@@ -1566,3 +1566,5 @@ a.tile__t:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; 
   .card__head:has(.badge) .badge { order: -1; align-self: flex-start; }
   .card__head:has(.badge) .card__title { max-width: none; }
 }
+
+.nw { white-space: nowrap; }
