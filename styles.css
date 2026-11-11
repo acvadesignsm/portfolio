@@ -1413,3 +1413,29 @@ a.tile__t:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; 
   .experience .frame { padding-bottom: 0; }
   .contacts .frame { padding-bottom: 80px; }
 }
+
+/* ===== «Обо мне» по референсу: пропорции от ширины экрана (телефоны) ===== */
+@media (max-width: 600px) {
+  .about .frame { grid-template-columns: 40.7vw 1fr; padding-left: 8.6vw; padding-right: 8.6vw; padding-bottom: 28px; }
+  .about .facts-tiles { gap: 3.1vw; margin-top: 4.6vw; }
+  .about .facts-tiles .tile, .about .facts-tiles .tile--orange { min-height: 20vw; padding: 2vw 1.5vw; border-radius: 5vw; }
+  .about .tile__h { font-size: 6.1vw; }
+  .about .tile__t, .about .tile:first-child .tile__t { font-size: 3.25vw; }
+  .about .about__stage { margin: 4.6vw -8.6vw 0 0; min-height: 0; }
+  .about .about__stage .about__photo { right: -21vw; top: -1vw; width: auto; height: 117vw; max-width: none; }
+  .about .stage__deco--b { right: -3vw; top: -7vw; width: 38vw; }
+  .about .stage__deco--f { right: 4vw; top: 8vw; width: 24vw; }
+  .about .stage__deco--a { left: -8vw; top: auto; bottom: -24vw; width: 44vw; }
+  .about .about__col--left { margin-top: 34vw; }
+  /* «повышение квалификации» — по правому краю, как в референсе */
+  .about .about__h--gap, .about .about__h--gap ~ .entry { text-align: right; }
+}
+@media (max-width: 600px) {
+  /* украшения позиционируются от краёв блока, а не от ячейки сетки */
+  .about .frame > .deco { grid-column: auto; grid-row: auto; }
+  .about .about__col--right:not(.about__col--right2):not(.about__col--right3) { margin-top: 84px; }
+}
+@media (max-width: 600px) {
+  .about .stage__deco--b { right: -5vw; top: -8vw; width: 42vw; }
+  .about .stage__deco--f { right: 2vw; top: 8vw; width: 26vw; }
+}
