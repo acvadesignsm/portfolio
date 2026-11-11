@@ -1492,3 +1492,21 @@ a.tile__t:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; 
   .deco:has(img[src*="contact-heading-decoration"]) { left: 14.5vw !important; }
   .deco:has(img[src*="contact-decoration-icon-top-left"]) { left: 3vw !important; top: 3vw !important; width: 11vw !important; height: 11vw !important; }
 }
+
+/* телефоны: «Обо мне» — те же боковые поля 20px, что у остальных блоков; меньше воздуха под фото;
+   «Связь» — украшения по референсу и короткий низ */
+@media (max-width: 600px) {
+  .about .frame { padding-left: 20px; padding-right: 20px; grid-template-columns: calc(49.3vw - 20px) 1fr; }
+  .about .about__stage { margin-right: -20px; }
+  .about .about__col--left { margin-top: 11vw; }
+
+  .contacts .frame { padding-bottom: 48px; }
+  .deco:has(img[src*="contact-heading-decoration"]) { left: 21vw !important; top: 8vw !important; width: 22vw !important; height: 20.5vw !important; }
+  .deco:has(img[src*="contact-decoration-icon-top-left"]) { left: 3.5vw !important; top: 3vw !important; width: 11vw !important; height: 11vw !important; }
+  .deco:has(img[src*="contact-decoration-icon-bottom-center"]) { left: 28.5vw !important; bottom: 14px !important; width: 12vw !important; height: 12vw !important; }
+  .deco:has(img[src*="email-decoration-icon"]) { right: 2vw !important; bottom: 26px !important; width: 13vw !important; height: 13vw !important; }
+}
+@media (max-width: 600px) {
+  .about .about__col--left { margin-top: 16vw; }
+  .about .stage__deco--a { left: -1vw; bottom: -19vw; width: 39vw; }
+}
