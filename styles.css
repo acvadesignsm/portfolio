@@ -1246,9 +1246,9 @@ a.tile__t:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; 
 }
 @media (prefers-reduced-motion: reduce) { .cases__dock, .fsheet, .fsheet__dim { transition: none; } }
 
-
-/* ---------- iPhone: страница заходит под верхнюю панель Safari (viewport-fit=cover) ---------- */
-@media (max-width: 1023px) {
-  html { scroll-padding-top: calc(37px + env(safe-area-inset-top, 0px)); }
-  .topbar { height: calc(37px + env(safe-area-inset-top, 0px)); padding-top: env(safe-area-inset-top, 0px); }
+/* ---------- iPhone: у шапки нет собственного фона, чтобы Safari не «закрашивал» панель сверху и страница просвечивала под ней ---------- */
+@media (max-width: 600px) {
+  .js .topbar { background: none; -webkit-backdrop-filter: none; backdrop-filter: none; pointer-events: none; }
+  .js .topbar__nav { pointer-events: none; }
+  .js .topbar__menu { pointer-events: auto; }
 }

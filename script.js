@@ -567,7 +567,11 @@
       spy.forEach((x) => { if (x.sec.getBoundingClientRect().top <= probe) cur = x; });
       if (atEnd) cur = spy[spy.length - 1];
       const heroEl = document.getElementById('top');
-      if (bar && heroEl) bar.classList.toggle('is-pill', heroEl.getBoundingClientRect().bottom <= bar.offsetHeight);
+      if (bar && heroEl) {
+        // на телефоне шапка без фона: тёмная плашка «меню» появляется, как только страница сдвинулась
+        const phone = window.innerWidth <= 600 && !!document.querySelector('.topbar__menu');
+        bar.classList.toggle('is-pill', phone ? window.scrollY > 8 : heroEl.getBoundingClientRect().bottom <= bar.offsetHeight);
+      }
       // цвет под верхней кромкой экрана: iOS Safari красит «лоб» браузера цветом фона страницы (body) —
       // пусть он совпадает с разделом, который сейчас под ним
       const secs = document.querySelectorAll('main > .band');
