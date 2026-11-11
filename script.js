@@ -556,6 +556,8 @@
     .filter((x) => x.sec);
   if (spy.length) {
     let spyRaf = 0;
+    let edgeColor = '';
+    const themeMeta = document.querySelector('meta[name="theme-color"]');
     const setActive = () => {
       spyRaf = 0;
       const bar = document.querySelector('.topbar');
@@ -566,6 +568,22 @@
       if (atEnd) cur = spy[spy.length - 1];
       const heroEl = document.getElementById('top');
       if (bar && heroEl) bar.classList.toggle('is-pill', heroEl.getBoundingClientRect().bottom <= bar.offsetHeight);
+      // цвет под верхней кромкой экрана: iOS Safari красит «лоб» браузера цветом фона страницы (body) —
+      // пусть он совпадает с разделом, который сейчас под ним
+      const secs = document.querySelectorAll('main > .band');
+      for (const sec of secs) {
+        const r = sec.getBoundingClientRect();
+        if (r.top <= 2 && r.bottom > 2) {
+          const bg = getComputedStyle(sec).backgroundColor;
+          if (bg && bg !== edgeColor && bg !== 'rgba(0, 0, 0, 0)') {
+            edgeColor = bg;
+            document.documentElement.style.backgroundColor = bg;
+            document.body.style.backgroundColor = bg;
+            if (themeMeta) themeMeta.setAttribute('content', bg);
+          }
+          break;
+        }
+      }
       spy.forEach((x) => {
         const on = x === cur;
         x.a.classList.toggle('is-current', on);
