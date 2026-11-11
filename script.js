@@ -571,19 +571,36 @@
   const mq = window.matchMedia('(max-width: 1023px)');
   const decos = Array.from(frame.querySelectorAll('.deco--m'));
   decos.forEach((d) => { d.dataset.orig = d.getAttribute('style') || ''; });
-  const RIGHT = [58, 16, 70, 40, 92, 20];
-  const SIZE = [44, 52, 48, 44, 50, 46];
+  // по референсу: сердце и звёздочка справа у «образования», остальное слева от выровненного вправо блока «повышение квалификации», внизу полоска-стрелки
+  const CFG = [
+    { a: 'e0', side: 'r', off: 70, size: 56 },
+    { a: 'e1', side: 'r', off: 46, size: 46 },
+    { a: 'pink', side: 'l', off: 44, size: 54, dy: -4 },
+    { a: 'e3', side: 'l', off: 40, size: 58 },
+    { a: 'e4', side: 'l', off: 64, size: 44 },
+    { a: 'strip' },
+  ];
   const place = () => {
     const entries = Array.from(frame.querySelectorAll('.about__col--left .entry'));
     const pink = frame.querySelector('.about__h--pink');
-    const anchors = [entries[0], pink, entries[2], entries[3], entries[4], entries[5]];
+    const anchors = { e0: entries[0], e1: entries[1], e3: entries[3], e4: entries[4], pink, strip: entries[entries.length - 1] };
     const fr = frame.getBoundingClientRect();
+    const phone = window.innerWidth <= 600;
     decos.forEach((d, k) => {
-      const a = anchors[k];
-      if (!mq.matches || !a) { d.setAttribute('style', d.dataset.orig); return; }
+      const c = CFG[k];
+      const a = anchors[c.a];
+      if (!mq.matches || !a || (c.a === 'strip' && !phone)) { d.setAttribute('style', d.dataset.orig); return; }
       const r = a.getBoundingClientRect();
-      const top = r.top - fr.top + r.height / 2 - SIZE[k] / 2;
-      d.style.cssText = d.dataset.orig + ';display:flex !important;inset:auto !important;left:auto !important;right:' + RIGHT[k] + 'px !important;top:' + top + 'px !important;width:' + SIZE[k] + 'px !important;height:' + SIZE[k] + 'px !important';
+      if (c.a === 'strip') {
+        const pad = parseFloat(getComputedStyle(frame).paddingLeft) || 20;
+        const w = fr.width - pad * 2;
+        d.style.cssText = d.dataset.orig + ';display:flex !important;inset:auto !important;left:' + pad + 'px !important;top:' + (r.bottom - fr.top + 22) + 'px !important;width:' + w + 'px !important;height:' + (w * 69 / 624) + 'px !important';
+        return;
+      }
+      const top = r.top - fr.top + r.height / 2 - c.size / 2 + (c.dy || 0);
+      const side = phone ? c.side : 'r';
+      const off = phone ? c.off : [58, 16, 70, 40, 92, 20][k];
+      d.style.cssText = d.dataset.orig + ';display:flex !important;inset:auto !important;' + (side === 'l' ? 'right:auto !important;left:' : 'left:auto !important;right:') + off + 'px !important;top:' + top + 'px !important;width:' + c.size + 'px !important;height:' + c.size + 'px !important';
     });
   };
   place();

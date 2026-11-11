@@ -1439,3 +1439,12 @@ a.tile__t:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; 
   .about .stage__deco--b { right: -5vw; top: -8vw; width: 42vw; }
   .about .stage__deco--f { right: 2vw; top: 8vw; width: 26vw; }
 }
+
+/* мобильные: карточки кейсов при появлении только проявляются — без сдвига, чтобы отступ между ними всегда был 12px */
+@media (max-width: 1023px) {
+  .js .cases .card.reveal { translate: none; transition: opacity 0.6s ease var(--d, 0s); }
+  /* меньше воздуха между разделами */
+  .section-title { padding-top: 14px; }
+  .cases .frame { padding-bottom: 8px; }
+  .about .frame { padding-bottom: 16px; }
+}
