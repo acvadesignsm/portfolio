@@ -1015,3 +1015,34 @@ a.tile__t:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; 
 .topbar__nav a.is-current { color: var(--ink); }
 .topbar__nav a.is-current::after { transform: scaleX(1); }
 @media (prefers-reduced-motion: reduce) { .topbar__nav a::after { transition: none; } }
+
+/* шапка-плашка, как в кейсах: плавающая тёмная полупрозрачная пилюля */
+.topbar {
+  background: none;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  pointer-events: none;
+  padding: calc(var(--u) * 4) 0 0;
+  height: calc(var(--u) * 40);
+}
+.topbar__nav {
+  pointer-events: auto;
+  width: min(calc(var(--u) * 752), calc(100% - 24px));
+  max-width: none;
+  height: calc(var(--u) * 32);
+  margin: 0 auto;
+  padding: 0 calc(var(--u) * 24);
+  border-radius: 100px;
+  background: rgba(34, 34, 34, 0.88);
+  border: 1px solid rgba(243, 243, 235, 0.16);
+  box-sizing: border-box;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+.topbar__nav a { color: rgba(243, 243, 235, 0.55); }
+.topbar__nav a:hover, .topbar__nav a.is-current { color: var(--bg); }
+@media (max-width: 1023px) {
+  .topbar { height: 52px; padding: 8px 0 0; }
+  .topbar__nav { height: 36px; width: calc(100% - 16px); padding: 0 16px; flex-wrap: nowrap; justify-content: space-between; gap: 0; }
+}
+@media (max-width: 360px) { .topbar__nav { padding: 0 12px; } }
