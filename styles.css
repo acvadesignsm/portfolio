@@ -1557,7 +1557,7 @@ a.tile__t:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; 
   .card__title .d-br { display: none; }
   /* текст идёт во всю ширину картинки: строки добираются до края, без «выравнивания» по балансу */
   .card__title { text-wrap: balance; hyphens: manual; max-width: none; }
-  .card__desc { text-wrap: wrap; max-width: none; }
+  .card__desc { text-wrap: wrap; max-width: none; letter-spacing: -0.025em; }  /* чуть плотнее, чтобы «100+ публикаций» и подобные связки помещались в строку */
 }
 
 /* телефоны и планшеты: статус «в процессе» — над названием, чтобы название занимало всю ширину карточки */
