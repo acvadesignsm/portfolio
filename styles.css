@@ -1255,7 +1255,7 @@ a.tile__t:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; 
 
 /* ---------- мобильные кейсы: карточки ближе друг к другу ---------- */
 @media (max-width: 1023px) {
-  .cases .cards { gap: 8px; }
+  .cases .cards { gap: 12px; }
 }
 
 /* телефон: у страницы нет общего фона — каждый раздел красится сам, поэтому Safari не закрашивает панель сверху */
@@ -1404,4 +1404,12 @@ a.tile__t:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; 
   /* в референсе заголовок «обо мне» чистый — без звёздочек по бокам */
   .about .deco:has(img[src*="about-decoration-icon-lower-center"]),
   .about .deco:has(img[src*="about-decoration-pair"]) { display: none !important; }
+}
+
+/* мобильные: чуть меньше воздуха между разделами (сверху у заголовка и снизу у блока) */
+@media (max-width: 1023px) {
+  .section-title { padding-top: 24px; }
+  .cases .frame, .about .frame { padding-bottom: 28px; }
+  .experience .frame { padding-bottom: 0; }
+  .contacts .frame { padding-bottom: 80px; }
 }
