@@ -1569,4 +1569,3 @@ a.tile__t:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; 
 
 .nw { white-space: nowrap; }
 
-@media (max-width: 1023px) { .card__desc--tight { font-size: 15.7px; letter-spacing: -0.04em; word-spacing: -0.04em; } }
