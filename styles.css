@@ -1268,3 +1268,8 @@ a.tile__t:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; 
   .topbar, .topbar.is-pill { -webkit-backdrop-filter: none !important; backdrop-filter: none !important; transition: none; }
   .topbar.is-pill .topbar__nav { -webkit-backdrop-filter: none !important; backdrop-filter: none !important; background: rgba(34, 34, 34, 0.94); }
 }
+
+/* телефон: плашка «меню» чуть ниже верхнего края (в Google/Chrome она прилипала к самому верху) */
+@media (max-width: 600px) {
+  .topbar.is-pill .topbar__nav { margin-top: 8px; }
+}
