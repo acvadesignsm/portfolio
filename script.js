@@ -598,14 +598,6 @@
     let spyRaf = 0;
     let edgeColor = '';
     const themeMeta = document.querySelector('meta[name="theme-color"]');
-    // fixed-полоска у верхнего края: iOS 26 берёт цвет верхней панели из неё и обновляет при скролле
-    let edgeEl = document.querySelector('.edge-tint');
-    if (!edgeEl) {
-      edgeEl = document.createElement('div');
-      edgeEl.className = 'edge-tint';
-      edgeEl.setAttribute('aria-hidden', 'true');
-      document.body.prepend(edgeEl);
-    }
     const setActive = () => {
       spyRaf = 0;
       const bar = document.querySelector('.topbar');
@@ -629,10 +621,6 @@
           const bg = getComputedStyle(sec).backgroundColor;
           if (bg && bg !== edgeColor && bg !== 'rgba(0, 0, 0, 0)') {
             edgeColor = bg;
-            document.documentElement.style.backgroundColor = bg;
-            document.body.style.backgroundColor = bg;
-            if (themeMeta) themeMeta.setAttribute('content', bg);
-            if (edgeEl) edgeEl.style.backgroundColor = bg;
           }
           break;
         }
