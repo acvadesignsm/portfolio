@@ -1069,3 +1069,28 @@ a.tile__t:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; 
     .hero__tags .is-clone { display: none; }
   }
 }
+
+
+/* ---------- мобильная главная: как в макете (телефоны, до 520px) ---------- */
+@media (max-width: 440px) {
+  /* заголовок в три строки: «Графический / & диджитал- / дизайнер» */
+  .hero__title .d-br { display: none; }
+  .hero__title .amp::before { content: "\A"; white-space: pre; }
+  .hero__title .amp::after { content: "\00a0"; }
+  .hero__title { margin-top: 9px; }
+  .hero__quote { text-align: right; }
+  .hero .frame { padding-top: 26px; padding-bottom: 24px; }
+
+  /* украшения — по макету; всё, что привязано к заголовку, считается от его размера (он растёт с шириной экрана) */
+  .hero .deco--h1, .hero .deco--h2 { display: none !important; }
+  .hero .deco:has(img[src*="hero-decoration-icon-top-right"])    { top: 15px !important; right: 8px !important; left: auto !important; bottom: auto !important; width: 18.2vw !important; height: 18.7vw !important; }
+  .hero .deco:has(img[src*="hero-decoration-icon-top-center"])   { top: 20px !important; left: 233px !important; right: auto !important; bottom: auto !important; width: 49px !important; height: 44px !important; }
+  .hero .deco:has(img[src*="hero-decoration-icon-upper-right"])  { top: calc(93px + 23.3vw) !important; left: calc(32px + 59vw) !important; right: auto !important; bottom: auto !important; width: 15.9vw !important; height: 16.7vw !important; }
+  .hero .deco:has(img[src*="hero-decoration-icon-bottom-right"]) { top: calc(95px + 22vw) !important; left: calc(40px + 76.9vw) !important; right: auto !important; bottom: auto !important; width: 15.9vw !important; height: 4.6vw !important; }
+  .hero .deco:has(img[src*="hero-decoration-icon-bottom-left"])  { --ow: clamp(56px, calc(92px + (100vw - 390px) * 1.1), 104px); bottom: 7px !important; left: -4px !important; right: auto !important; top: auto !important; width: var(--ow) !important; height: calc(var(--ow) * 1.043) !important; }
+  .hero .deco:has(img[src*="hero-decoration-icon-bottom-left"]) img { --w: 76%; --h: 78%; --r: 26deg; }
+  .hero .deco:has(img[src*="hero-decoration-icon-bottom-center"]){ bottom: -4px !important; left: 116px !important; right: auto !important; top: auto !important; width: 43px !important; height: 51px !important; }
+}
+@media (min-width: 441px) and (max-width: 1023px) {
+  .hero .deco--h1, .hero .deco--h2 { display: none !important; }
+}
