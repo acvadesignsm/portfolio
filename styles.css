@@ -1257,3 +1257,7 @@ a.tile__t:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; 
 @media (max-width: 1023px) {
   .cases .cards { gap: 8px; }
 }
+
+/* полоска у верхнего края: iOS 26 берёт цвет верхней панели из fixed-элемента и обновляет его при скролле */
+.edge-tint { position: fixed; top: 0; left: 0; right: 0; height: 2px; z-index: 1; pointer-events: none; }
+@media (min-width: 601px) { .edge-tint { display: none; } }

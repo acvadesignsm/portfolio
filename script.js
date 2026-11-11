@@ -135,7 +135,7 @@
   if (frame) {
     const IMGS = ['05-blue', '06-orange', '14-lime', '02-pink', '10-lilac', '11-cyan', '17-orange', '20-lilac'];
     const pool = [];
-    for (let i = 0; i < 80; i += 1) {
+    for (let i = 0; i < 120; i += 1) {
       const d = document.createElement('span');
       d.className = 'deco deco--gap';
       d.setAttribute('aria-hidden', 'true');
@@ -176,24 +176,36 @@
       vis.forEach((c, i) => {
         const rng = prng(i * 7919 + 101);
         const box = relBox(c);
-        const n = rng() < 0.35 ? 3 : 2;
+        const n = rng() < 0.4 ? 4 : 3;
         const sides = i % 2 ? ['l', 'r'] : ['r', 'l'];
-        if (n === 3) sides.push(rng() < 0.5 ? 'l' : 'r');
+        while (sides.length < n) sides.push(rng() < 0.5 ? 'l' : 'r');
         sides.forEach((side) => {
           if (used >= pool.length) return;
-          // часть элементов «сидит» на углу карточки поверх неё (на стыке карточек), остальные прячутся за ней
-          const front = rng() < 0.3;
-          const size = front ? Math.round(52 + rng() * 22) : Math.round(58 + rng() * 42);
-          const show = front ? Math.round(size * 0.62) : Math.round(22 + rng() * 16);
-          const lo = box.top - size * 0.4, hi = box.top + box.height - size * 0.6;
-          let y = lo + rng() * (hi - lo), ok = false;
-          for (let t = 0; t < 8 && !ok; t += 1) {
-            y = front ? (rng() < 0.5 ? box.top : box.top + box.height) - size * 0.5 : lo + rng() * (hi - lo);
-            ok = boxes[side].every((b) => y > b[1] + 8 || y + size < b[0] - 8);
+          // половина элементов «сидит» на углу карточки поверх неё (угол скруглён — пусто), остальные выглядывают из-за края
+          const front = rng() < 0.5;
+          let size, x, y, ok = false;
+          if (front) {
+            size = Math.round(56 + rng() * 30);
+            const first = rng() < 0.5;
+            for (let t = 0; t < 2 && !ok; t += 1) {
+              const top = (t === 0) === first;
+              const cx = side === 'l' ? box.left + 4 : box.left + box.width - 4;
+              const cy = top ? box.top + 2 : box.top + box.height - 2;
+              x = cx - size / 2; y = cy - size / 2;
+              ok = boxes[side].every((b) => y > b[1] + 6 || y + size < b[0] - 6);
+            }
+          } else {
+            size = Math.round(66 + rng() * 38);
+            const show = Math.max(14, Math.min(Math.round(24 + rng() * 14), box.left));
+            const lo = box.top + box.height * 0.12, hi = box.top + box.height * 0.88 - size;
+            for (let t = 0; t < 8 && !ok; t += 1) {
+              y = lo + rng() * Math.max(1, hi - lo);
+              ok = boxes[side].every((b) => y > b[1] + 8 || y + size < b[0] - 8);
+            }
+            x = side === 'l' ? box.left - show : box.left + box.width + show - size;
           }
           if (!ok) return;
           boxes[side].push([y, y + size]);
-          const x = side === 'l' ? box.left - show : box.left + box.width + show - size;
           const d = pool[used];
           used += 1;
           d.style.setProperty('display', 'flex', 'important');
@@ -349,7 +361,7 @@
       raf = 0;
       const vh = window.innerHeight;
       const r = casesSection.getBoundingClientRect();
-      const inView = r.top < vh * 0.45 && r.bottom > vh * 0.7;
+      const inView = r.top < vh * 0.45 && r.bottom > vh * 0.98;
       const fr = filters[0].parentElement.getBoundingClientRect();
       const rowVisible = !mqMobile.matches && fr.bottom > 70 && fr.top < vh - 70;
       const on = (inView && !rowVisible) || sheetOpen;
@@ -586,6 +598,15 @@
     let spyRaf = 0;
     let edgeColor = '';
     const themeMeta = document.querySelector('meta[name="theme-color"]');
+    // iOS 26 красит верхнюю панель по fixed-элементу у верхнего края и следит за его цветом при скролле
+    let edgeEl = document.querySelector('.edge-tint');
+    if (!edgeEl) {
+      edgeEl = document.createElement('div');
+      edgeEl.className = 'edge-tint';
+      edgeEl.setAttribute('aria-hidden', 'true');
+      edgeEl.style.backgroundColor = getComputedStyle(document.body).backgroundColor;
+      document.body.prepend(edgeEl);
+    }
     const setActive = () => {
       spyRaf = 0;
       const bar = document.querySelector('.topbar');
@@ -612,6 +633,7 @@
             document.documentElement.style.backgroundColor = bg;
             document.body.style.backgroundColor = bg;
             if (themeMeta) themeMeta.setAttribute('content', bg);
+            if (edgeEl) edgeEl.style.backgroundColor = bg;
           }
           break;
         }
