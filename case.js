@@ -103,24 +103,23 @@
   /* ---------- фоновые элементы: на длинной мобильной странице растягиваем по всей высоте ---------- */
   const decoBox = document.querySelector('.case-deco');
   if (decoBox) {
-    const imgs = Array.from(decoBox.querySelectorAll('img'));
-    imgs.forEach((i) => { i.dataset.top = parseFloat(i.style.top) || 0; });
     const mq = window.matchMedia('(max-width: 820px)');
     let raf = 0;
+    let slots = 0;
+    /* каждому элементу один раз достаётся постоянное место: высота страницы (вкладки, раскрытие частей) его уже не двигает */
     const place = () => {
       raf = 0;
+      const imgs = Array.from(decoBox.querySelectorAll('img'));
+      imgs.forEach((i) => { if (i.dataset.top === undefined) i.dataset.top = parseFloat(i.style.top) || 0; });
       if (!mq.matches) { imgs.forEach((i) => { i.style.top = i.dataset.top + 'px'; i.style.display = ''; delete i.dataset.side; }); return; }
-      const H = document.documentElement.scrollHeight;
-      /* столько элементов, сколько помещается без наездов: ~1 на 200px высоты, чередуя стороны */
-      const n = Math.max(4, Math.min(imgs.length, Math.floor((H - 160) / 200)));
-      const pick = new Set();
-      for (let q = 0; q < n; q += 1) pick.add(Math.floor((q * imgs.length) / n));
-      const step = (H - 260) / n;
+      imgs.forEach((i) => {
+        if (i.dataset.slot === undefined) { i.dataset.slot = String(slots); slots += 1; }
+      });
       let q = 0;
-      imgs.forEach((i, k) => {
-        if (!pick.has(k)) { i.style.display = 'none'; return; }
+      imgs.sort((x, y) => x.dataset.slot - y.dataset.slot).forEach((i) => {
+        if (Number(i.dataset.slot) % 3 === 2) { i.style.display = 'none'; return; }
         i.style.display = '';
-        i.style.top = Math.round(q * step + 20) + 'px';
+        i.style.top = (q * 200 + 20) + 'px';
         i.dataset.side = q % 2 ? 'r' : 'l';
         q += 1;
       });
@@ -129,7 +128,7 @@
     place();
     window.addEventListener('load', queue);
     window.addEventListener('resize', queue);
-    if ('ResizeObserver' in window) new ResizeObserver(queue).observe(document.body);
+    if ('MutationObserver' in window) new MutationObserver(queue).observe(decoBox, { childList: true });
   }
 
   /* галерея: листается мышью (зажать и тянуть), пальцем и колёсиком */
@@ -318,7 +317,8 @@
   if (!box) return;
   const PERIOD = 1970;
   const imgs = [...box.querySelectorAll('img')];
-  const idx = (i) => Math.floor((parseFloat(i.style.top) + 40) / PERIOD);
+  const topOf = (i) => parseFloat(i.dataset.top !== undefined ? i.dataset.top : i.style.top);
+  const idx = (i) => Math.floor((topOf(i) + 40) / PERIOD);
   const base = imgs.filter((i) => idx(i) === 0);
   if (!base.length) return;
   const count = {};
@@ -328,7 +328,10 @@
   const make = (k) => {
     base.forEach((d) => {
       const c = d.cloneNode(true);
-      c.style.top = `${parseFloat(d.style.top) + k * PERIOD}px`;
+      const t = topOf(d) + k * PERIOD;
+      delete c.dataset.slot; delete c.dataset.side;
+      c.dataset.top = t;
+      c.style.top = `${t}px`;
       box.appendChild(c);
     });
     present.add(k);
@@ -362,7 +365,7 @@
 /* плашки в строке: от длинных к коротким, чтобы правый край получался ровным (только на телефоне) */
 (function () {
   var mq = window.matchMedia('(max-width: 820px)');
-  var lists = Array.prototype.slice.call(document.querySelectorAll('.tags, .tools-used, .rubrics__tabs'));
+  var lists = Array.prototype.slice.call(document.querySelectorAll('.tags, .tools-used'));
   function sort() {
     lists.forEach(function (ul) {
       var items = Array.prototype.slice.call(ul.children);

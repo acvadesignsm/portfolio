@@ -1555,8 +1555,9 @@ a.tile__t:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; 
    предлоги и союзы держатся со следующим словом (неразрывные пробелы в разметке) */
 @media (max-width: 1023px) {
   .card__title .d-br { display: none; }
-  .card__title { text-wrap: balance; hyphens: manual; }
-  .card__desc { text-wrap: pretty; }
+  /* текст идёт во всю ширину картинки: строки добираются до края, без «выравнивания» по балансу */
+  .card__title { text-wrap: wrap; hyphens: manual; max-width: none; }
+  .card__desc { text-wrap: wrap; max-width: none; }
 }
 
 /* телефоны и планшеты: статус «в процессе» — над названием, чтобы название занимало всю ширину карточки */
