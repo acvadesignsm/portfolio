@@ -1262,3 +1262,9 @@ a.tile__t:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; 
 @media (max-width: 600px) {
   html, body { background: transparent; }
 }
+
+/* телефон: плашка «меню» без backdrop-filter — иначе iOS 26 включает системную подложку под верхней панелью после скролла */
+@media (max-width: 600px) {
+  .topbar, .topbar.is-pill { -webkit-backdrop-filter: none !important; backdrop-filter: none !important; transition: none; }
+  .topbar.is-pill .topbar__nav { -webkit-backdrop-filter: none !important; backdrop-filter: none !important; background: rgba(34, 34, 34, 0.94); }
+}
