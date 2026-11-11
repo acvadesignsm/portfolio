@@ -1147,10 +1147,9 @@ a.tile__t:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; 
   .mmenu__bar { flex: none; height: 37px; display: flex; justify-content: center; align-items: center; margin-top: env(safe-area-inset-top, 0px); }
   .mmenu__close { display: flex; }
   .mmenu__list { list-style: none; margin: 0; padding: 40px 20px calc(40px + env(safe-area-inset-bottom, 0px)); }
-  .mmenu__list li + li a { border-top: 1px dashed #c9c9c0; }
   .mmenu__list a {
     display: block;
-    padding: 26px 0;
+    padding: 20px 0;
     font-size: clamp(34px, 10.4vw, 48px);
     font-weight: 700;
     letter-spacing: -0.02em;
@@ -1170,12 +1169,12 @@ a.tile__t:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; 
   .mmenu__soc a {
     display: flex; align-items: center; justify-content: center;
     aspect-ratio: 1;
-    border: 1px dashed #b9b9b0;
     border-radius: 16px;
-    transition: border-color 0.2s, background-color 0.2s, scale 0.2s;
+    background: rgba(25, 25, 25, 0.06);
+    transition: background-color 0.2s, scale 0.2s;
     -webkit-tap-highlight-color: transparent;
   }
-  .mmenu__soc a:active { border-color: var(--blue); background: rgba(58, 57, 255, 0.06); scale: 0.97; }
+  .mmenu__soc a:active { background: rgba(58, 57, 255, 0.12); scale: 0.97; }
   .mmenu__soc img { width: 44%; height: 44%; object-fit: contain; }
   .mmenu.is-open .mmenu__soc { animation: mm-in 0.5s 0.32s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
 }
