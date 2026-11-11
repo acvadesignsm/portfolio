@@ -1535,3 +1535,18 @@ a.tile__t:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; 
   /* сиреневая звёздочка уступает место кнопке справа от заголовка */
   .deco:has(img[src*="contact-decoration-icon-top-right"]) { right: auto !important; left: 69vw !important; top: 5vw !important; width: 10vw !important; height: 10vw !important; }
 }
+
+/* «Обо мне» (мобильные): фото поверх карточек контактов */
+@media (max-width: 1023px) {
+  .about .about__stage { z-index: 5; }
+}
+@media (max-width: 1023px) {
+  /* порядок слоёв: украшения за фото (1) < карточки контактов (3) < фото (6) */
+  .about .about__stage { z-index: auto; isolation: auto; }
+  .about .about__stage .about__photo { z-index: 6; }
+  .about .stage__deco--a, .about .stage__deco--b { z-index: 1; }
+}
+@media (max-width: 600px) {
+  /* фото чуть левее: бедро слегка касается карточки «почта» */
+  .about .about__stage .about__photo { right: -18.2vw; }
+}
