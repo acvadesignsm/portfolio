@@ -459,7 +459,7 @@
     function cost(a, b, last) {
       var w = width(a, b);
       if (b - a > 1 && w > W) return INF;
-      if (!last) return (W - w) * (W - w);
+      if (!last) { var c0 = (W - w) * (W - w); return (b < n && width(a, b + 1) <= W) ? c0 + 0.05 * W * W : c0; }
       var m = 0.45 * W - w;
       return m > 0 ? m * m : 0;
     }
@@ -532,4 +532,20 @@
   }
   var go = function () { start(); };
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(go); else window.addEventListener('load', go);
+})();
+
+
+/* «слева длинная, справа три»: пропорции колонок по реальным пропорциям картинок */
+(function () {
+  function ar(img) { var w = +img.getAttribute('width'), h = +img.getAttribute('height'); return w && h ? w / h : 0; }
+  document.querySelectorAll('.rubrics__track--tall').forEach(function (t) {
+    var first = t.querySelector(':scope > img');
+    var rest = t.querySelectorAll('.tall__col img');
+    if (!first || !rest.length) return;
+    var a1 = ar(first), a2 = 0;
+    Array.prototype.forEach.call(rest, function (i) { a2 += ar(i); });
+    a2 /= rest.length;
+    if (!a1 || !a2) return;
+    t.style.setProperty('--tcols', (rest.length * a1 / a2).toFixed(3) + 'fr 1fr');
+  });
 })();
