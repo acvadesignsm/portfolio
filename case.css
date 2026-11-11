@@ -1166,10 +1166,11 @@ strong { font-weight: 600; }
   .rubrics__tabs { justify-content: center; }
   .rubrics__tab { flex: 1 1 auto; text-align: center; }
 
-  /* карточки «слева большая, справа три»: правые уменьшаются до высоты левой */
-  .rubrics__track--tall { align-items: stretch; }
-  .rubrics__track--tall .tall__col { height: 0; min-height: 100%; display: grid; grid-template-rows: repeat(3, minmax(0, 1fr)); gap: 6px; justify-items: center; }
-  .rubrics__track--tall .tall__col img { width: auto; max-width: 100%; height: 100%; min-height: 0; object-fit: contain; }
+  /* карточки «слева большая, справа три»: та же пропорция, что на десктопе */
+  .rubrics__track--tall { align-items: flex-start; }
+  .rubrics__track--tall > img { flex: 1.74 1 0; min-width: 0; width: 100%; height: auto; }
+  .rubrics__track--tall .tall__col { flex: 1 1 0; min-width: 0; height: auto; min-height: 0; display: flex; flex-direction: column; gap: 6px; }
+  .rubrics__track--tall .tall__col img { width: 100%; max-width: none; height: auto; min-height: 0; object-fit: fill; }
 }
 
 /* таблицы на телефоне: одна колонка, строки разделены полосками */
@@ -1293,4 +1294,35 @@ strong { font-weight: 600; }
   .to-top::before { width: 2px; height: 17px; top: 17px; margin-left: -1px; }
   .to-top::after { width: 11px; height: 11px; top: 17px; margin-left: -5.5px; background: none; border-radius: 0; border-top: 2px solid var(--bg); border-left: 2px solid var(--bg); transform: translateY(1px) rotate(45deg); transform-origin: 50% 50%; }
   .to-top:active { transform: scale(.94); }
+}
+
+
+/* ===== кейс «соцсети», доводка 5 ===== */
+/* палитра: тёмный блок, как остальные */
+.palette { background: #232323; color: #f3f3eb; }
+.section .palette .palette__label, .palette .palette__label { color: rgba(243,243,235,.6); }
+.palette__sw { border-color: rgba(243,243,235,.22); color: #f3f3eb; }
+.palette__sw:hover { border-color: #f3f3eb; }
+.palette__sw i, .palette__dot { box-shadow: inset 0 0 0 1px rgba(255,255,255,.2); }
+.palette__sw code, .palette__city code { color: rgba(243,243,235,.62); }
+.palette__toast { color: var(--lime); }
+
+/* галерея без табов: без лишнего отступа сверху */
+.rubrics--static .rubrics__stage { margin-top: 0; }
+
+/* «было / стало» и «показатель / результат» на телефоне */
+@media (max-width: 640px) {
+  .data-table td[data-label]::before { display: block; width: max-content; }
+  .data-table--ba tr, .data-table--kpi tr { padding: 0; border: 0 !important; margin-top: 10px; }
+  .data-table--ba tr:first-child, .data-table--kpi tr:first-child { margin-top: 0; }
+  .data-table--ba td, .data-table--kpi td { padding: 12px 14px !important; border-radius: 12px; }
+  .data-table--ba td:first-child { background: #e6e6dc; color: rgba(25,25,25,.72); border-bottom-left-radius: 4px; border-bottom-right-radius: 4px; }
+  .data-table--ba td:first-child::before { background: #cfcfc3; }
+  .data-table--ba td + td { margin-top: 3px; background: #232323; color: #f3f3eb; border-top-left-radius: 4px; border-top-right-radius: 4px; }
+  .data-table--ba td[data-label]:nth-child(2)::before { background: var(--lime); color: #191919; }
+  .data-table--kpi tr { background: #232323; border-radius: 14px; padding: 14px 16px; color: #f3f3eb; }
+  .data-table--kpi td, .data-table--kpi td + td { padding: 0 !important; background: transparent; margin-top: 0; }
+  .data-table--kpi td[data-label]::before, .data-table--kpi td[data-label]:nth-child(2)::before { background: none; padding: 0; margin-bottom: 4px; color: rgba(243,243,235,.55); }
+  .data-table--kpi td + td { margin-top: 12px; color: var(--lime); font-size: 26px; line-height: 30px; font-weight: 600; letter-spacing: -.01em; }
+  .data-table--kpi td[data-label]:nth-child(2)::before { font-weight: 400; font-size: 11px; line-height: 15px; letter-spacing: .04em; }
 }
