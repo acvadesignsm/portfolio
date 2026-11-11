@@ -702,7 +702,11 @@
       menuBtn.setAttribute('aria-expanded', String(open));
       (open ? closeBtn : menuBtn).focus({ preventScroll: true });
     };
-    menuBtn.addEventListener('click', () => setOpen(true));
+    menuBtn.addEventListener('click', () => {
+      // в блоке «связь» кнопка превращается в стрелку «наверх»
+      if (menuBtn.classList.contains('is-up')) { window.scrollTo({ top: 0, behavior: 'smooth' }); return; }
+      setOpen(true);
+    });
     closeBtn.addEventListener('click', () => setOpen(false));
     list.addEventListener('click', (e) => {
       if (e.target.closest('a')) { menu.classList.remove('is-open'); root.classList.remove('menu-open'); menuBtn.setAttribute('aria-expanded', 'false'); }
@@ -766,4 +770,38 @@
       window.setTimeout(() => stage.classList.remove('stage--spin'), 900);
     });
   }
+})();
+
+
+/* ---------- телефон: в блоке «связь» кнопка-кружок поднимается на уровень заголовка и становится стрелкой «наверх» ---------- */
+(() => {
+  const btn = document.querySelector('.topbar__menu');
+  const ttl = document.querySelector('#contacts .section-title');
+  if (!btn || !ttl) return;
+  const mq = window.matchMedia('(max-width: 600px)');
+  let lift = 0, up = false, queued = false;
+  const reset = () => {
+    lift = 0; up = false;
+    btn.style.removeProperty('--lift');
+    btn.classList.remove('is-up');
+    btn.setAttribute('aria-label', 'меню');
+  };
+  const apply = () => {
+    queued = false;
+    if (!mq.matches) { if (lift || up) reset(); return; }
+    const r = ttl.getBoundingClientRect();
+    const cy = r.top + r.height * 0.55;
+    const rb = btn.getBoundingClientRect();
+    const baseCy = rb.top + rb.height / 2 + lift; // где кнопка стоит без подъёма
+    lift = Math.max(0, baseCy - cy);
+    btn.style.setProperty('--lift', lift.toFixed(1) + 'px');
+    if (!up && lift > 70) up = true;
+    else if (up && lift < 30) up = false;
+    btn.classList.toggle('is-up', up);
+    btn.setAttribute('aria-label', up ? 'наверх' : 'меню');
+  };
+  const queue = () => { if (!queued) { queued = true; requestAnimationFrame(apply); } };
+  window.addEventListener('scroll', queue, { passive: true });
+  window.addEventListener('resize', queue);
+  apply();
 })();
