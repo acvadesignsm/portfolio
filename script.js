@@ -108,6 +108,7 @@
       fitDecos();
       if (window.__placeGaps) window.__placeGaps();
     }
+    if (window.__pfDockSync) window.__pfDockSync();
   };
 
   /* декорации, которые не помещаются в высоту секции при текущем фильтре, скрываем */
@@ -231,32 +232,113 @@
     });
   }
 
-  /* «свернуть» на полупрозрачной плашке: плавает внизу, пока листаешь раскрытый список кейсов */
-  if (moreBtn && casesSection) {
-    const floatBtn = document.createElement('button');
-    floatBtn.type = 'button';
-    floatBtn.className = 'cases__float';
-    floatBtn.textContent = 'свернуть ↖';
-    floatBtn.hidden = true;
-    floatBtn.addEventListener('click', () => moreBtn.click());
-    document.body.appendChild(floatBtn);
+  /* плавающая плашка внизу: «фильтр: все · N» открывает шторку с тегами; рядом — «свернуть», пока раскрыт список */
+  if (casesSection && filters.length) {
+    const mqMobile = window.matchMedia('(max-width: 1023px)');
+    const countFor = (tag) => cards.filter((c) => !tag || (c.dataset.tags || '').split(/\s+/).includes(tag)).length;
+
+    // плашка
+    const dock = document.createElement('div');
+    dock.className = 'cases__dock';
+    const dockFilter = document.createElement('button');
+    dockFilter.type = 'button';
+    dockFilter.className = 'cases__fbtn';
+    dockFilter.setAttribute('aria-haspopup', 'dialog');
+    dockFilter.setAttribute('aria-expanded', 'false');
+    dockFilter.innerHTML = '<i class="cases__fdot"></i><span class="cases__flabel"></span>';
+    dock.appendChild(dockFilter);
+    let floatBtn = null;
+    if (moreBtn) {
+      floatBtn = document.createElement('button');
+      floatBtn.type = 'button';
+      floatBtn.className = 'cases__float';
+      floatBtn.textContent = 'свернуть ↖';
+      floatBtn.hidden = true;
+      floatBtn.addEventListener('click', () => moreBtn.click());
+      dock.appendChild(floatBtn);
+    }
+    document.body.appendChild(dock);
+
+    // шторка (на телефоне — снизу, на десктопе — над плашкой)
+    const dim = document.createElement('div');
+    dim.className = 'fsheet__dim';
+    const sheet = document.createElement('div');
+    sheet.className = 'fsheet';
+    sheet.setAttribute('role', 'dialog');
+    sheet.setAttribute('aria-label', 'Фильтр проектов');
+    sheet.innerHTML = '<h4 class="fsheet__h">показать проекты</h4><div class="fsheet__row"></div>';
+    const row = sheet.querySelector('.fsheet__row');
+    const items = filters.map((f) => {
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'pill fs-pill ' + [...f.classList].filter((c) => c.startsWith('pill--')).join(' ') + (f.dataset.filter === '' ? ' fs-pill--all' : '');
+      b.innerHTML = f.innerHTML + '<em>' + countFor(f.dataset.filter) + '</em>';
+      b.addEventListener('click', () => {
+        f.click();
+        setSheet(false);
+        if (casesSection.getBoundingClientRect().top < 0) {
+          casesSection.scrollIntoView({ block: 'start', behavior: reduceMotion ? 'auto' : 'smooth' });
+        }
+      });
+      row.appendChild(b);
+      return { f, b };
+    });
+    document.body.append(dim, sheet);
+
+    const root = document.documentElement;
+    let sheetOpen = false;
+    const setSheet = (open) => {
+      sheetOpen = open;
+      sheet.classList.toggle('is-open', open);
+      dim.classList.toggle('is-open', open);
+      dockFilter.setAttribute('aria-expanded', String(open));
+      root.classList.toggle('fsheet-open', open && mqMobile.matches);
+      if (open) { const cur = items.find((x) => x.f.classList.contains('is-active')); (cur ? cur.b : items[0].b).focus({ preventScroll: true }); }
+      else if (document.activeElement && sheet.contains(document.activeElement)) dockFilter.focus({ preventScroll: true });
+      syncDock();
+    };
+    dockFilter.addEventListener('click', () => setSheet(!sheetOpen));
+    dim.addEventListener('click', () => setSheet(false));
+    window.addEventListener('keydown', (e) => { if (e.key === 'Escape' && sheetOpen) setSheet(false); });
+
+    // подпись на плашке и состояние тегов в шторке — по текущему фильтру
+    const dot = dockFilter.querySelector('.cases__fdot');
+    const label = dockFilter.querySelector('.cases__flabel');
+    const dockRefresh = () => {
+      const act = filters.find((f) => f.classList.contains('is-active')) || allBtn;
+      const tag = act ? act.dataset.filter : '';
+      label.textContent = 'фильтр: ' + (tag || 'все') + ' · ' + countFor(tag);
+      const pillCls = [...act.classList].find((c) => c.startsWith('pill--'));
+      dot.className = 'cases__fdot' + (pillCls ? ' ' + pillCls : '');
+      items.forEach(({ f, b }) => { const on = f === act; b.classList.toggle('is-active', on); b.setAttribute('aria-pressed', String(on)); });
+    };
+    window.__pfDockSync = dockRefresh;
+    dockRefresh();
+
+    // когда показывать
     let raf = 0;
-    const syncFloat = () => {
+    const syncDock = () => {
       raf = 0;
       const vh = window.innerHeight;
       const r = casesSection.getBoundingClientRect();
-      const b = moreBtn.getBoundingClientRect();
-      const btnVisible = !moreBtn.hidden && b.bottom > 0 && b.top < vh;
-      const show = expanded && !moreBtn.hidden && r.top < vh * 0.35 && r.bottom > vh * 0.65 && !btnVisible;
-      floatBtn.classList.toggle('is-on', show);
-      if (show) floatBtn.hidden = false;
+      const inView = r.top < vh * 0.45 && r.bottom > vh * 0.7;
+      const fr = filters[0].parentElement.getBoundingClientRect();
+      const rowVisible = !mqMobile.matches && fr.bottom > 70 && fr.top < vh - 70;
+      const on = (inView && !rowVisible) || sheetOpen;
+      dock.classList.toggle('is-on', on);
+      dock.classList.toggle('is-covered', sheetOpen && mqMobile.matches);
+      if (floatBtn) {
+        const b = moreBtn.getBoundingClientRect();
+        const btnVisible = !moreBtn.hidden && b.bottom > 0 && b.top < vh;
+        const showCollapse = expanded && !moreBtn.hidden && r.top < vh * 0.35 && r.bottom > vh * 0.65 && !btnVisible;
+        floatBtn.hidden = !showCollapse;
+      }
     };
-    const queue = () => { if (!raf) raf = requestAnimationFrame(syncFloat); };
-    floatBtn.addEventListener('transitionend', () => { if (!floatBtn.classList.contains('is-on')) floatBtn.hidden = true; });
+    const queue = () => { if (!raf) raf = requestAnimationFrame(syncDock); };
     window.addEventListener('scroll', queue, { passive: true });
-    window.addEventListener('resize', queue);
-    moreBtn.addEventListener('click', () => setTimeout(syncFloat, 0));
-    syncFloat();
+    window.addEventListener('resize', () => { if (sheetOpen && !mqMobile.matches) root.classList.remove('fsheet-open'); queue(); });
+    if (moreBtn) moreBtn.addEventListener('click', () => setTimeout(syncDock, 0));
+    syncDock();
   }
 
   filters.forEach((btn) => {
