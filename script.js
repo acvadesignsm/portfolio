@@ -185,12 +185,14 @@
           const front = rng() < 0.5;
           let size, x, y, ok = false;
           if (front) {
-            size = Math.round(56 + rng() * 30);
+            size = Math.round(44 + rng() * 20);
+            // слева — только верхний угол (внизу слева теги), справа — любой; центр на краю карточки, чтобы закрывать лишь пустой скруглённый угол
             const first = rng() < 0.5;
             for (let t = 0; t < 2 && !ok; t += 1) {
-              const top = (t === 0) === first;
-              const cx = side === 'l' ? box.left + 4 : box.left + box.width - 4;
-              const cy = top ? box.top + 2 : box.top + box.height - 2;
+              const top = side === 'l' ? true : (t === 0) === first;
+              if (side === 'l' && t > 0) break;
+              const cx = side === 'l' ? box.left + 2 : box.left + box.width - 2;
+              const cy = top ? box.top - 2 : box.top + box.height + 2;
               x = cx - size / 2; y = cy - size / 2;
               ok = boxes[side].every((b) => y > b[1] + 6 || y + size < b[0] - 6);
             }

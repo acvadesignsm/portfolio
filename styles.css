@@ -1293,3 +1293,9 @@ a.tile__t:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; 
   .cases__dock { left: 16px; translate: 0 12px; flex-direction: column-reverse; align-items: flex-start; }
   .cases__dock.is-on { translate: 0 0; }
 }
+
+/* телефон: как на обычных сайтах, у которых Safari пускает страницу под верхнюю панель — без overflow на body и без «липкой» шапки (кнопка меню после главного экрана — fixed сама) */
+@media (max-width: 600px) {
+  body { overflow-x: visible; }
+  .topbar { position: relative; }
+}
