@@ -216,7 +216,7 @@
           d.style.setProperty('top', y + 'px', 'important');
           d.style.setProperty('width', size + 'px', 'important');
           d.style.setProperty('height', size + 'px', 'important');
-          d.style.setProperty('z-index', front ? '2' : '0', 'important');
+          d.style.setProperty('z-index', '0', 'important');
           d.firstElementChild.style.setProperty('--r', Math.round(rng() * 70 - 35) + 'deg');
         });
       });
@@ -692,5 +692,61 @@
     });
     window.addEventListener('keydown', (e) => { if (e.key === 'Escape' && menu.classList.contains('is-open')) setOpen(false); });
     window.addEventListener('resize', () => { if (window.innerWidth > 600 && menu.classList.contains('is-open')) setOpen(false); });
+  }
+})();
+
+/* ---------- «Обо мне»: анимации появления, «наклейки» с цветом по тапу, кувырок украшений по тапу на фото ---------- */
+(() => {
+  const about = document.querySelector('.about');
+  if (!about) return;
+  const squares = about.querySelector('.squares');
+  const stage = about.querySelector('.about__stage');
+  const photo = about.querySelector('.about__photo');
+
+  const watch = (el, cb, threshold) => {
+    if (!el) return;
+    if (!('IntersectionObserver' in window)) { cb(); return; }
+    const io = new IntersectionObserver((entries) => {
+      if (entries.some((e) => e.isIntersecting)) { cb(); io.disconnect(); }
+    }, { threshold });
+    io.observe(el);
+  };
+  watch(about.querySelector('.facts-tiles'), () => about.classList.add('pf-in'), 0.2);
+  watch(squares, () => squares.classList.add('is-slap'), 0.25);
+
+  // тап по наклейке: покачивание + следующий цвет палитры
+  const palette = [
+    ['var(--lime)', 'var(--ink)'], ['var(--orange)', 'var(--bg)'], ['var(--cyan)', 'var(--ink)'],
+    ['var(--lilac)', 'var(--ink)'], ['var(--blue)', 'var(--bg)'], ['var(--pink)', '#fff'],
+  ];
+  if (squares) {
+    const idx = new WeakMap();
+    squares.querySelectorAll('li').forEach((li, i) => idx.set(li, [0, 1, 2, 3, 4][i] ?? 0));
+    squares.addEventListener('click', (e) => {
+      const li = e.target.closest('li');
+      if (!li || window.innerWidth > 1023) return;
+      const next = ((idx.get(li) ?? 0) + 1) % palette.length;
+      idx.set(li, next);
+      li.style.setProperty('--cb', palette[next][0]);
+      li.style.setProperty('--cf', palette[next][1]);
+      li.classList.remove('is-jig');
+      void li.offsetWidth; // перезапуск анимации
+      li.classList.add('is-jig');
+    });
+    squares.addEventListener('animationend', (e) => {
+      if (e.animationName === 'sticker-jig') e.target.classList.remove('is-jig');
+      if (e.animationName === 'sticker-slap') e.target.classList.add('is-done');
+    });
+  }
+
+  // тап по фото: украшения кувыркаются
+  if (photo && stage) {
+    photo.addEventListener('click', () => {
+      if (window.innerWidth > 1023) return;
+      stage.classList.remove('stage--spin');
+      void stage.offsetWidth;
+      stage.classList.add('stage--spin');
+      window.setTimeout(() => stage.classList.remove('stage--spin'), 900);
+    });
   }
 })();
