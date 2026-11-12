@@ -1348,3 +1348,8 @@ strong { font-weight: 600; }
   .mlist__tags{margin:8px 0 0;display:flex;flex-wrap:wrap;gap:6px}
   .mlist__tags span{padding:4px 11px;border:1px solid rgba(0,0,0,.28);border-radius:999px;font-size:14px;line-height:19px;white-space:nowrap}
 }
+/* пара картинок в ряд: ширины пропорциональны соотношению сторон — высоты равны */
+@media (max-width: 640px) {
+  .shots:not(.shots--scroll):not(.shots--stack) .shots__row:not(.shots__row--single):has(> .shots__item:nth-child(2):last-child) { flex-wrap: nowrap; }
+  .shots:not(.shots--scroll):not(.shots--stack) .shots__row:not(.shots__row--single):has(> .shots__item:nth-child(2):last-child) .shots__item:not([data-wide]) { flex: var(--ar, 1) 1 0; }
+}
