@@ -611,7 +611,7 @@ b { font-weight: 600; }
   .about .frame { min-height: 0; padding: 0 20px 40px; }
   .facts-tiles { margin: 20px 0 0; flex-wrap: wrap; gap: 12px; }
   .tile, .tile--orange { width: calc(50% - 6px); }
-  .tile__h { font-size: 24px; }
+  .tile__h { font-size: 24px; margin-bottom: 3px; }
   .about__col { position: static; width: auto !important; margin-top: 32px; }
   .about__h { font-size: 28px; }
   .about__h--indent, .about__h--indent + .arrows { margin-left: 0; }
