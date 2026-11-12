@@ -1,0 +1,939 @@
+{
+ "nodes": [
+  {
+   "id": "assets_projects_section_projects_section_case_case_socials_img_msk_insight_3",
+   "label": "Moskva Insajd \"Bath tour\": Vorontsovskie bani slide (red headline, price paper tag, bathhouse photo)",
+   "file_type": "image",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/msk-insight-3.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_socials_img_msk_insight_4",
+   "label": "Moskva Insajd \"Bath tour\": Izmailovskie bani slide",
+   "file_type": "image",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/msk-insight-4.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_socials_img_msk_insight_5",
+   "label": "Moskva Insajd \"Bath tour\": Sanduny slide",
+   "file_type": "image",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/msk-insight-5.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_socials_img_msk_insight_6",
+   "label": "Moskva Insajd \"Bath tour\": Zhar-ptitsa slide",
+   "file_type": "image",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/msk-insight-6.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_socials_img_msk_life_0",
+   "label": "Moskva Lajf \"Alice route\" cover (pink keyhole, Alice silhouette, playing cards, Cheshire cat)",
+   "file_type": "image",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/msk-life-0.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_socials_img_msk_life_1",
+   "label": "Moskva Lajf \"Alice route\": Grande card",
+   "file_type": "image",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/msk-life-1.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_socials_img_msk_life_2",
+   "label": "Moskva Lajf \"Alice route\": Museum of Magic card",
+   "file_type": "image",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/msk-life-2.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_socials_img_msk_life_3",
+   "label": "Moskva Lajf \"Alice route\": \"Slyozy beryozy\" card",
+   "file_type": "image",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/msk-life-3.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_socials_img_msk_life_4",
+   "label": "Moskva Lajf \"Alice route\": \"Nauka MAI\" card",
+   "file_type": "image",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/msk-life-4.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_socials_img_msk_life_5",
+   "label": "Moskva Lajf \"Alice route\": \"Grot\" card",
+   "file_type": "image",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/msk-life-5.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_socials_img_now_ar_1",
+   "label": "\"By mood\" rubric slide 1: perfume bottle \"Salty scent of the sea\" (Piter Insajd), blue with doodle stars",
+   "file_type": "image",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/now-ar-1.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_socials_img_now_ar_2",
+   "label": "\"By mood\" rubric slide 2 (square, perfume-bottle metaphor)",
+   "file_type": "image",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/now-ar-2.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_socials_img_now_ar_3",
+   "label": "\"By mood\" rubric slide 3 (square, perfume-bottle metaphor)",
+   "file_type": "image",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/now-ar-3.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_socials_img_now_ar_4",
+   "label": "\"By mood\" rubric slide 4 (square, perfume-bottle metaphor)",
+   "file_type": "image",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/now-ar-4.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_socials_img_now_ar_5",
+   "label": "\"By mood\" rubric slide 5 (square, perfume-bottle metaphor)",
+   "file_type": "image",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/now-ar-5.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_socials_img_now_ar_6",
+   "label": "\"By mood\" rubric slide 6 (square, perfume-bottle metaphor)",
+   "file_type": "image",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/now-ar-6.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_socials_img_now_ar_7",
+   "label": "\"By mood\" rubric slide 7 (square, perfume-bottle metaphor)",
+   "file_type": "image",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/now-ar-7.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_socials_img_now_ar_8",
+   "label": "\"By mood\" rubric slide 8 (square, perfume-bottle metaphor)",
+   "file_type": "image",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/now-ar-8.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_socials_img_now_ar_9",
+   "label": "\"By mood\" rubric slide 9 (square, perfume-bottle metaphor)",
+   "file_type": "image",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/now-ar-9.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_socials_img_now_dp_1",
+   "label": "\"Leisure with intellect boost\" rubric cover (tall slide, photo collage, brain icon)",
+   "file_type": "image",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/now-dp-1.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_socials_img_now_dp_2",
+   "label": "\"Leisure with intellect boost\" rubric slide 2",
+   "file_type": "image",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/now-dp-2.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_socials_img_now_dp_3",
+   "label": "\"Leisure with intellect boost\" rubric slide 3",
+   "file_type": "image",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/now-dp-3.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_socials_img_now_dp_4",
+   "label": "\"Leisure with intellect boost\" rubric slide 4",
+   "file_type": "image",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/now-dp-4.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_socials_img_now_fl_1",
+   "label": "\"Let's watch films\" rubric cover (orange, halftone hand and retro TV)",
+   "file_type": "image",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/now-fl-1.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_socials_img_now_fl_2",
+   "label": "\"Let's watch films\" rubric slide 2",
+   "file_type": "image",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/now-fl-2.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_socials_img_msk_insight_banny_tur_rubric",
+   "label": "Moskva Insajd \"Bath tour\" (Bannyj tur) rubric",
+   "file_type": "concept",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/msk-insight-3.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_socials_img_msk_life_marshrut_alisy_rubric",
+   "label": "Moskva Lajf \"Alice route\" (Marshrut Alisy) rubric",
+   "file_type": "concept",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/msk-life-0.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_socials_img_now_ar_pod_nastroenie_rubric",
+   "label": "\"Pod nastroenie\" (By mood) rubric",
+   "file_type": "concept",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/now-ar-1.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_socials_img_now_dp_dosug_s_prokachkoj_rubric",
+   "label": "\"Dosug s prokachkoj\" (Leisure with intellect boost) rubric",
+   "file_type": "concept",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/now-dp-1.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_socials_img_now_fl_filmy_rubric",
+   "label": "\"Filmy\" (Films) rubric",
+   "file_type": "concept",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/now-fl-1.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_socials_img_social_rubric_template_system",
+   "label": "Social media channel rubric template system (case-socials)",
+   "file_type": "concept",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/msk-insight-3.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  }
+ ],
+ "edges": [
+  {
+   "source": "assets_projects_section_projects_section_case_case_socials_img_msk_insight_3",
+   "target": "assets_projects_section_projects_section_case_case_socials_img_msk_insight_banny_tur_rubric",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/msk-insight-3.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_socials_img_msk_insight_3",
+   "target": "case_socials",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/msk-insight-3.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_socials_img_msk_insight_4",
+   "target": "assets_projects_section_projects_section_case_case_socials_img_msk_insight_banny_tur_rubric",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/msk-insight-4.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_socials_img_msk_insight_4",
+   "target": "case_socials",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/msk-insight-4.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_socials_img_msk_insight_5",
+   "target": "assets_projects_section_projects_section_case_case_socials_img_msk_insight_banny_tur_rubric",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/msk-insight-5.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_socials_img_msk_insight_5",
+   "target": "case_socials",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/msk-insight-5.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_socials_img_msk_insight_6",
+   "target": "assets_projects_section_projects_section_case_case_socials_img_msk_insight_banny_tur_rubric",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/msk-insight-6.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_socials_img_msk_insight_6",
+   "target": "case_socials",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/msk-insight-6.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_socials_img_msk_life_0",
+   "target": "assets_projects_section_projects_section_case_case_socials_img_msk_life_marshrut_alisy_rubric",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/msk-life-0.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_socials_img_msk_life_0",
+   "target": "case_socials",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/msk-life-0.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_socials_img_msk_life_1",
+   "target": "assets_projects_section_projects_section_case_case_socials_img_msk_life_marshrut_alisy_rubric",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/msk-life-1.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_socials_img_msk_life_1",
+   "target": "case_socials",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/msk-life-1.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_socials_img_msk_life_2",
+   "target": "assets_projects_section_projects_section_case_case_socials_img_msk_life_marshrut_alisy_rubric",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/msk-life-2.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_socials_img_msk_life_2",
+   "target": "case_socials",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/msk-life-2.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_socials_img_msk_life_3",
+   "target": "assets_projects_section_projects_section_case_case_socials_img_msk_life_marshrut_alisy_rubric",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/msk-life-3.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_socials_img_msk_life_3",
+   "target": "case_socials",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/msk-life-3.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_socials_img_msk_life_4",
+   "target": "assets_projects_section_projects_section_case_case_socials_img_msk_life_marshrut_alisy_rubric",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/msk-life-4.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_socials_img_msk_life_4",
+   "target": "case_socials",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/msk-life-4.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_socials_img_msk_life_5",
+   "target": "assets_projects_section_projects_section_case_case_socials_img_msk_life_marshrut_alisy_rubric",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/msk-life-5.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_socials_img_msk_life_5",
+   "target": "case_socials",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/msk-life-5.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_socials_img_now_ar_1",
+   "target": "assets_projects_section_projects_section_case_case_socials_img_now_ar_pod_nastroenie_rubric",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/now-ar-1.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_socials_img_now_ar_1",
+   "target": "case_socials",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/now-ar-1.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_socials_img_now_ar_2",
+   "target": "assets_projects_section_projects_section_case_case_socials_img_now_ar_pod_nastroenie_rubric",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/now-ar-2.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_socials_img_now_ar_2",
+   "target": "case_socials",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/now-ar-2.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_socials_img_now_ar_3",
+   "target": "assets_projects_section_projects_section_case_case_socials_img_now_ar_pod_nastroenie_rubric",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/now-ar-3.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_socials_img_now_ar_3",
+   "target": "case_socials",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/now-ar-3.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_socials_img_now_ar_4",
+   "target": "assets_projects_section_projects_section_case_case_socials_img_now_ar_pod_nastroenie_rubric",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/now-ar-4.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_socials_img_now_ar_4",
+   "target": "case_socials",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/now-ar-4.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_socials_img_now_ar_5",
+   "target": "assets_projects_section_projects_section_case_case_socials_img_now_ar_pod_nastroenie_rubric",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/now-ar-5.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_socials_img_now_ar_5",
+   "target": "case_socials",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/now-ar-5.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_socials_img_now_ar_6",
+   "target": "assets_projects_section_projects_section_case_case_socials_img_now_ar_pod_nastroenie_rubric",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/now-ar-6.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_socials_img_now_ar_6",
+   "target": "case_socials",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/now-ar-6.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_socials_img_now_ar_7",
+   "target": "assets_projects_section_projects_section_case_case_socials_img_now_ar_pod_nastroenie_rubric",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/now-ar-7.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_socials_img_now_ar_7",
+   "target": "case_socials",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/now-ar-7.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_socials_img_now_ar_8",
+   "target": "assets_projects_section_projects_section_case_case_socials_img_now_ar_pod_nastroenie_rubric",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/now-ar-8.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_socials_img_now_ar_8",
+   "target": "case_socials",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/now-ar-8.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_socials_img_now_ar_9",
+   "target": "assets_projects_section_projects_section_case_case_socials_img_now_ar_pod_nastroenie_rubric",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/now-ar-9.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_socials_img_now_ar_9",
+   "target": "case_socials",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/now-ar-9.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_socials_img_now_dp_1",
+   "target": "assets_projects_section_projects_section_case_case_socials_img_now_dp_dosug_s_prokachkoj_rubric",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/now-dp-1.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_socials_img_now_dp_1",
+   "target": "case_socials",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/now-dp-1.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_socials_img_now_dp_2",
+   "target": "assets_projects_section_projects_section_case_case_socials_img_now_dp_dosug_s_prokachkoj_rubric",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/now-dp-2.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_socials_img_now_dp_2",
+   "target": "case_socials",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/now-dp-2.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_socials_img_now_dp_3",
+   "target": "assets_projects_section_projects_section_case_case_socials_img_now_dp_dosug_s_prokachkoj_rubric",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/now-dp-3.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_socials_img_now_dp_3",
+   "target": "case_socials",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/now-dp-3.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_socials_img_now_dp_4",
+   "target": "assets_projects_section_projects_section_case_case_socials_img_now_dp_dosug_s_prokachkoj_rubric",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/now-dp-4.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_socials_img_now_dp_4",
+   "target": "case_socials",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/now-dp-4.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_socials_img_now_fl_1",
+   "target": "assets_projects_section_projects_section_case_case_socials_img_now_fl_filmy_rubric",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/now-fl-1.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_socials_img_now_fl_1",
+   "target": "case_socials",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/now-fl-1.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_socials_img_now_fl_2",
+   "target": "assets_projects_section_projects_section_case_case_socials_img_now_fl_filmy_rubric",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/now-fl-2.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_socials_img_now_fl_2",
+   "target": "case_socials",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/now-fl-2.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_socials_img_msk_insight_banny_tur_rubric",
+   "target": "assets_projects_section_projects_section_case_case_socials_img_social_rubric_template_system",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.85,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/msk-insight-3.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_socials_img_msk_life_marshrut_alisy_rubric",
+   "target": "assets_projects_section_projects_section_case_case_socials_img_social_rubric_template_system",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.85,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/msk-life-0.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_socials_img_now_ar_pod_nastroenie_rubric",
+   "target": "assets_projects_section_projects_section_case_case_socials_img_social_rubric_template_system",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.85,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/now-ar-1.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_socials_img_now_dp_dosug_s_prokachkoj_rubric",
+   "target": "assets_projects_section_projects_section_case_case_socials_img_social_rubric_template_system",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.85,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/now-dp-1.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_socials_img_now_fl_filmy_rubric",
+   "target": "assets_projects_section_projects_section_case_case_socials_img_social_rubric_template_system",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.85,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/now-fl-1.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_socials_img_msk_insight_banny_tur_rubric",
+   "target": "assets_projects_section_projects_section_case_case_socials_img_msk_life_marshrut_alisy_rubric",
+   "relation": "semantically_similar_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.75,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/msk-insight-3.webp",
+   "source_location": null,
+   "weight": 1.0
+  }
+ ],
+ "hyperedges": [
+  {
+   "id": "moskva_channels_character_driven_rubrics",
+   "label": "Moscow channels (Insajd calm/informative vs Lajf playful pink) rubric series",
+   "nodes": [
+    "assets_projects_section_projects_section_case_case_socials_img_msk_insight_banny_tur_rubric",
+    "assets_projects_section_projects_section_case_case_socials_img_msk_life_marshrut_alisy_rubric",
+    "assets_projects_section_projects_section_case_case_socials_img_social_rubric_template_system"
+   ],
+   "relation": "form",
+   "confidence": "INFERRED",
+   "confidence_score": 0.85,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/msk-insight-3.webp"
+  },
+  {
+   "id": "now_city_channel_rubric_templates",
+   "label": "City-channel rubric templates (By mood, Leisure, Films)",
+   "nodes": [
+    "assets_projects_section_projects_section_case_case_socials_img_now_ar_pod_nastroenie_rubric",
+    "assets_projects_section_projects_section_case_case_socials_img_now_dp_dosug_s_prokachkoj_rubric",
+    "assets_projects_section_projects_section_case_case_socials_img_now_fl_filmy_rubric",
+    "assets_projects_section_projects_section_case_case_socials_img_social_rubric_template_system"
+   ],
+   "relation": "participate_in",
+   "confidence": "INFERRED",
+   "confidence_score": 0.85,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/msk-insight-3.webp"
+  }
+ ],
+ "input_tokens": 0,
+ "output_tokens": 0,
+ "coverage": {}
+}

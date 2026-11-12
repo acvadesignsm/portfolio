@@ -1,0 +1,13 @@
+/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/vn-1165-6.webp
+/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/vn-1165-7.webp
+/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/vn-1175-1.webp
+/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/vn-1175-2.webp
+/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/vn-1175-3.webp
+/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/img/vn-1175-4.webp
+/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/logo-gorodskie-media.svg
+/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/logo-stolitsa.svg
+/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/logo-vniiimt.svg
+/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/video/vid-1-poster.webp
+/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/video/vid-2-poster.webp
+/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/video/vid-6-poster.webp
+/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-socials/video/vid-8-poster.webp

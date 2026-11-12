@@ -1,0 +1,629 @@
+{
+  "nodes": [
+    {
+      "id": "case",
+      "label": "case.js",
+      "file_type": "code",
+      "source_file": "case.js",
+      "source_location": "L1",
+      "metadata": {
+        "unresolved_calls": [
+          {
+            "callee": "unobserve",
+            "receiver_type": "IntersectionObserver",
+            "lang": "typescript",
+            "line": "L18",
+            "file": "case.js"
+          },
+          {
+            "callee": "observe",
+            "receiver_type": "IntersectionObserver",
+            "lang": "typescript",
+            "line": "L25",
+            "file": "case.js"
+          }
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "case_pack",
+      "label": "pack()",
+      "file_type": "code",
+      "source_file": "case.js",
+      "source_location": "L369",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "case_eligible",
+      "label": "eligible()",
+      "file_type": "code",
+      "source_file": "case.js",
+      "source_location": "L424",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "case_clear",
+      "label": "clear()",
+      "file_type": "code",
+      "source_file": "case.js",
+      "source_location": "L429",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "case_measure",
+      "label": "measure()",
+      "file_type": "code",
+      "source_file": "case.js",
+      "source_location": "L436",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "case_breaksfor",
+      "label": "breaksFor()",
+      "file_type": "code",
+      "source_file": "case.js",
+      "source_location": "L451",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "case_breaksfor_width",
+      "label": "width()",
+      "file_type": "code",
+      "source_file": "case.js",
+      "source_location": "L453",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "case_breaksfor_cost",
+      "label": "cost()",
+      "file_type": "code",
+      "source_file": "case.js",
+      "source_location": "L459",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "case_breaksfor_can",
+      "label": "can()",
+      "file_type": "code",
+      "source_file": "case.js",
+      "source_location": "L467",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "case_apply",
+      "label": "apply()",
+      "file_type": "code",
+      "source_file": "case.js",
+      "source_location": "L486",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "case_run",
+      "label": "run()",
+      "file_type": "code",
+      "source_file": "case.js",
+      "source_location": "L494",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "case_run_flush",
+      "label": "flush()",
+      "file_type": "code",
+      "source_file": "case.js",
+      "source_location": "L505",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "case_queue",
+      "label": "queue()",
+      "file_type": "code",
+      "source_file": "case.js",
+      "source_location": "L517",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "case_start",
+      "label": "start()",
+      "file_type": "code",
+      "source_file": "case.js",
+      "source_location": "L518",
+      "_callable": true,
+      "metadata": {
+        "unresolved_calls": [
+          {
+            "callee": "observe",
+            "receiver_type": "ResizeObserver",
+            "lang": "typescript",
+            "line": "L528",
+            "file": "case.js"
+          }
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "case_ar",
+      "label": "ar()",
+      "file_type": "code",
+      "source_file": "case.js",
+      "source_location": "L540",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "game",
+      "label": "game.js",
+      "file_type": "code",
+      "source_file": "game.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "game_start",
+      "label": "start()",
+      "file_type": "code",
+      "source_file": "game.js",
+      "source_location": "L159",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "game_stop",
+      "label": "stop()",
+      "file_type": "code",
+      "source_file": "game.js",
+      "source_location": "L172",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "game_loop",
+      "label": "loop()",
+      "file_type": "code",
+      "source_file": "game.js",
+      "source_location": "L236",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "script",
+      "label": "script.js",
+      "file_type": "code",
+      "source_file": "script.js",
+      "source_location": "L1",
+      "metadata": {
+        "unresolved_calls": [
+          {
+            "callee": "unobserve",
+            "receiver_type": "IntersectionObserver",
+            "lang": "typescript",
+            "line": "L552",
+            "file": "script.js"
+          },
+          {
+            "callee": "observe",
+            "receiver_type": "IntersectionObserver",
+            "lang": "typescript",
+            "line": "L558",
+            "file": "script.js"
+          },
+          {
+            "callee": "disconnect",
+            "receiver_type": "IntersectionObserver",
+            "lang": "typescript",
+            "line": "L731",
+            "file": "script.js"
+          }
+        ]
+      },
+      "_origin": "ast"
+    }
+  ],
+  "edges": [
+    {
+      "source": "case",
+      "target": "case_pack",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "case.js",
+      "source_location": "L369",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "case",
+      "target": "case_eligible",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "case.js",
+      "source_location": "L424",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "case",
+      "target": "case_clear",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "case.js",
+      "source_location": "L429",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "case",
+      "target": "case_measure",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "case.js",
+      "source_location": "L436",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "case",
+      "target": "case_breaksfor",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "case.js",
+      "source_location": "L451",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "case_breaksfor",
+      "target": "case_breaksfor_width",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "case.js",
+      "source_location": "L453",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "case_breaksfor",
+      "target": "case_breaksfor_cost",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "case.js",
+      "source_location": "L459",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "case_breaksfor",
+      "target": "case_breaksfor_can",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "case.js",
+      "source_location": "L467",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "case",
+      "target": "case_apply",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "case.js",
+      "source_location": "L486",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "case",
+      "target": "case_run",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "case.js",
+      "source_location": "L494",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "case_run",
+      "target": "case_run_flush",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "case.js",
+      "source_location": "L505",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "case",
+      "target": "case_queue",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "case.js",
+      "source_location": "L517",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "case",
+      "target": "case_start",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "case.js",
+      "source_location": "L518",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "case",
+      "target": "case_ar",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "case.js",
+      "source_location": "L540",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "case",
+      "target": "case_pack",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "case.js",
+      "source_location": "L389",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "case",
+      "target": "case_start",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "case.js",
+      "source_location": "L533",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "case_breaksfor",
+      "target": "case_breaksfor_width",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "case.js",
+      "source_location": "L455",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "case_breaksfor",
+      "target": "case_breaksfor_can",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "case.js",
+      "source_location": "L473",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "case_breaksfor",
+      "target": "case_breaksfor_cost",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "case.js",
+      "source_location": "L474",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "case_breaksfor_cost",
+      "target": "case_breaksfor_width",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "case.js",
+      "source_location": "L460",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "case_run",
+      "target": "case_clear",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "case.js",
+      "source_location": "L497",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "case_run",
+      "target": "case_eligible",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "case.js",
+      "source_location": "L499",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "case_run",
+      "target": "case_measure",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "case.js",
+      "source_location": "L501",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "case_run",
+      "target": "case_run_flush",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "case.js",
+      "source_location": "L507",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "case_run",
+      "target": "case_breaksfor",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "case.js",
+      "source_location": "L512",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "case_run",
+      "target": "case_apply",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "case.js",
+      "source_location": "L513",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "case_queue",
+      "target": "case_run",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "case.js",
+      "source_location": "L517",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "case_start",
+      "target": "case_queue",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "case.js",
+      "source_location": "L525",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "case_start",
+      "target": "case_run",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "case.js",
+      "source_location": "L529",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "case",
+      "target": "case_ar",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "case.js",
+      "source_location": "L545",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "game",
+      "target": "game_start",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "game.js",
+      "source_location": "L159",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "game",
+      "target": "game_stop",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "game.js",
+      "source_location": "L172",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "game",
+      "target": "game_loop",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "game.js",
+      "source_location": "L236",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "game",
+      "target": "game_stop",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "game.js",
+      "source_location": "L75",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "game",
+      "target": "game_start",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "game.js",
+      "source_location": "L77",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "game_start",
+      "target": "game_loop",
+      "relation": "indirect_call",
+      "context": "argument",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "game.js",
+      "source_location": "L169",
+      "weight": 1.0,
+      "_origin": "ast"
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "failed_sources": [],
+  "skipped_sources": [
+    "/Users/sofamihajlova/Desktop/portfolio/.claude/settings.json"
+  ],
+  "extracted_sources": [
+    "/Users/sofamihajlova/Desktop/portfolio/.claude/settings.json",
+    "/Users/sofamihajlova/Desktop/portfolio/case.js",
+    "/Users/sofamihajlova/Desktop/portfolio/game.js",
+    "/Users/sofamihajlova/Desktop/portfolio/script.js"
+  ]
+}

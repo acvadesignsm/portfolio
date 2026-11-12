@@ -1,0 +1,3 @@
+/Users/sofamihajlova/Desktop/portfolio/case-landing.html
+/Users/sofamihajlova/Desktop/portfolio/case-magazine.html
+/Users/sofamihajlova/Desktop/portfolio/case-socials.html

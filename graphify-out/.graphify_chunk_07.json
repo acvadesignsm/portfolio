@@ -1,0 +1,993 @@
+{
+ "nodes": [
+  {
+   "id": "assets_projects_section_projects_section_case_case_landing_img_bt_a",
+   "label": "Cabinet buttons: send/cancel application, refuse participation, disabled state",
+   "file_type": "image",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/bt-a.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "case_landing_buttons",
+   "label": "Cabinet button & status UI kit (normal/disabled states)",
+   "file_type": "concept",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/bt-a.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_landing_img_bt_b",
+   "label": "Application status chips: not submitted, under review, submitted, approved, reserve",
+   "file_type": "image",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/bt-b.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_landing_img_bt_d",
+   "label": "Save button (two states) and Close button",
+   "file_type": "image",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/bt-d.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_landing_img_bt_e",
+   "label": "\"Write to us\" button, normal and disabled",
+   "file_type": "image",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/bt-e.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_landing_img_bt_f",
+   "label": "\"Personal cabinet\" button in two states",
+   "file_type": "image",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/bt-f.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_landing_img_bt_g",
+   "label": "\"Log in\" button in two states",
+   "file_type": "image",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/bt-g.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_landing_img_bt_h",
+   "label": "\"Cancel\" button in two states",
+   "file_type": "image",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/bt-h.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_landing_img_bt_i",
+   "label": "\"Confirm\" button in two states",
+   "file_type": "image",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/bt-i.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_landing_img_bt_j",
+   "label": "\"More\" / \"hide\" text links",
+   "file_type": "image",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/bt-j.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_landing_img_cb_1",
+   "label": "Participant cabinet, state \"Start\" (full page)",
+   "file_type": "image",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/cb-1.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "case_landing_cabinet",
+   "label": "Participant personal cabinet state flow",
+   "file_type": "concept",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/cb-1.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_landing_img_cb_2",
+   "label": "Participant cabinet, state \"Shift selection\" — enrollment open",
+   "file_type": "image",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/cb-2.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_landing_img_cb_2b",
+   "label": "Participant cabinet, state \"Shift selection\" — enrollment closed",
+   "file_type": "image",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/cb-2b.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_landing_img_cb_3",
+   "label": "Participant cabinet, state \"Shift selected\"",
+   "file_type": "image",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/cb-3.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_landing_img_cb_4",
+   "label": "Participant cabinet, state \"Application submitted\"",
+   "file_type": "image",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/cb-4.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_landing_img_cb_5r",
+   "label": "Participant cabinet, state \"Under review\"",
+   "file_type": "image",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/cb-5r.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_landing_img_cb_6a",
+   "label": "Participant cabinet, state \"Application answer\" — approved",
+   "file_type": "image",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/cb-6a.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_landing_img_cb_6b",
+   "label": "Participant cabinet, state \"Application answer\" — reserve",
+   "file_type": "image",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/cb-6b.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_landing_img_ch_1",
+   "label": "Illustrator character sketch: Roma and Masha",
+   "file_type": "image",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/ch-1.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "case_landing_chars",
+   "label": "Roma & Masha mascot characters (adventure landing concept)",
+   "file_type": "concept",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/ch-1.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_landing_img_ch_2",
+   "label": "Illustrator character sketch: Roma in three outfits",
+   "file_type": "image",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/ch-2.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_landing_img_cover",
+   "label": "Case cover: three landing iterations (Roma & Masha, modular, \"Leto v Moskve\" final)",
+   "file_type": "image",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/cover.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "case_landing_landing",
+   "label": "Landing page iterations (adventure → modular → Лето в Москве)",
+   "file_type": "concept",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/cover.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_landing_img_fin_full2",
+   "label": "Final \"Leto v Moskve\" landing, full-page scroll",
+   "file_type": "image",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/fin-full2.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_landing_img_fld_1",
+   "label": "Form field states: empty, active, filled, required, error",
+   "file_type": "image",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/fld-1.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "case_landing_fields",
+   "label": "Form field state system",
+   "file_type": "concept",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/fld-1.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_landing_img_fld_2",
+   "label": "Password field states: format errors, show/hide",
+   "file_type": "image",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/fld-2.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_landing_img_fm_1",
+   "label": "Registration form, full screen",
+   "file_type": "image",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/fm-1.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "case_landing_forms",
+   "label": "Registration and questionnaire forms",
+   "file_type": "concept",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/fm-1.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_landing_img_fm_2",
+   "label": "General questionnaire (\"My profile\") form, full screen",
+   "file_type": "image",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/fm-2.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  }
+ ],
+ "edges": [
+  {
+   "source": "assets_projects_section_projects_section_case_case_landing_img_bt_a",
+   "target": "case_landing_buttons",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/bt-a.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "case_landing",
+   "target": "assets_projects_section_projects_section_case_case_landing_img_bt_a",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/bt-a.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_landing_img_bt_b",
+   "target": "case_landing_buttons",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/bt-b.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "case_landing",
+   "target": "assets_projects_section_projects_section_case_case_landing_img_bt_b",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/bt-b.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_landing_img_bt_d",
+   "target": "case_landing_buttons",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/bt-d.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "case_landing",
+   "target": "assets_projects_section_projects_section_case_case_landing_img_bt_d",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/bt-d.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_landing_img_bt_e",
+   "target": "case_landing_buttons",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/bt-e.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "case_landing",
+   "target": "assets_projects_section_projects_section_case_case_landing_img_bt_e",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/bt-e.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_landing_img_bt_f",
+   "target": "case_landing_buttons",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/bt-f.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "case_landing",
+   "target": "assets_projects_section_projects_section_case_case_landing_img_bt_f",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/bt-f.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_landing_img_bt_g",
+   "target": "case_landing_buttons",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/bt-g.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "case_landing",
+   "target": "assets_projects_section_projects_section_case_case_landing_img_bt_g",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/bt-g.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_landing_img_bt_h",
+   "target": "case_landing_buttons",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/bt-h.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "case_landing",
+   "target": "assets_projects_section_projects_section_case_case_landing_img_bt_h",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/bt-h.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_landing_img_bt_i",
+   "target": "case_landing_buttons",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/bt-i.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "case_landing",
+   "target": "assets_projects_section_projects_section_case_case_landing_img_bt_i",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/bt-i.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_landing_img_bt_j",
+   "target": "case_landing_buttons",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/bt-j.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "case_landing",
+   "target": "assets_projects_section_projects_section_case_case_landing_img_bt_j",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/bt-j.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_landing_img_cb_1",
+   "target": "case_landing_cabinet",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/cb-1.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "case_landing",
+   "target": "assets_projects_section_projects_section_case_case_landing_img_cb_1",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/cb-1.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_landing_img_cb_2",
+   "target": "case_landing_cabinet",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/cb-2.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "case_landing",
+   "target": "assets_projects_section_projects_section_case_case_landing_img_cb_2",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/cb-2.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_landing_img_cb_2b",
+   "target": "case_landing_cabinet",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/cb-2b.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "case_landing",
+   "target": "assets_projects_section_projects_section_case_case_landing_img_cb_2b",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/cb-2b.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_landing_img_cb_3",
+   "target": "case_landing_cabinet",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/cb-3.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "case_landing",
+   "target": "assets_projects_section_projects_section_case_case_landing_img_cb_3",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/cb-3.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_landing_img_cb_4",
+   "target": "case_landing_cabinet",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/cb-4.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "case_landing",
+   "target": "assets_projects_section_projects_section_case_case_landing_img_cb_4",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/cb-4.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_landing_img_cb_5r",
+   "target": "case_landing_cabinet",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/cb-5r.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "case_landing",
+   "target": "assets_projects_section_projects_section_case_case_landing_img_cb_5r",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/cb-5r.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_landing_img_cb_6a",
+   "target": "case_landing_cabinet",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/cb-6a.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "case_landing",
+   "target": "assets_projects_section_projects_section_case_case_landing_img_cb_6a",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/cb-6a.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_landing_img_cb_6b",
+   "target": "case_landing_cabinet",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/cb-6b.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "case_landing",
+   "target": "assets_projects_section_projects_section_case_case_landing_img_cb_6b",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/cb-6b.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_landing_img_ch_1",
+   "target": "case_landing_chars",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/ch-1.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "case_landing",
+   "target": "assets_projects_section_projects_section_case_case_landing_img_ch_1",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/ch-1.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_landing_img_ch_2",
+   "target": "case_landing_chars",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/ch-2.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "case_landing",
+   "target": "assets_projects_section_projects_section_case_case_landing_img_ch_2",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/ch-2.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_landing_img_cover",
+   "target": "case_landing_landing",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/cover.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_landing_img_cover",
+   "target": "case_landing",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.85,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/cover.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_landing_img_fin_full2",
+   "target": "case_landing_landing",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/fin-full2.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "case_landing",
+   "target": "assets_projects_section_projects_section_case_case_landing_img_fin_full2",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/fin-full2.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_landing_img_fld_1",
+   "target": "case_landing_fields",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/fld-1.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "case_landing",
+   "target": "assets_projects_section_projects_section_case_case_landing_img_fld_1",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/fld-1.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_landing_img_fld_2",
+   "target": "case_landing_fields",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/fld-2.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "case_landing",
+   "target": "assets_projects_section_projects_section_case_case_landing_img_fld_2",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/fld-2.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_landing_img_fm_1",
+   "target": "case_landing_forms",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/fm-1.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "case_landing",
+   "target": "assets_projects_section_projects_section_case_case_landing_img_fm_1",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/fm-1.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_landing_img_fm_2",
+   "target": "case_landing_forms",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/fm-2.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "case_landing",
+   "target": "assets_projects_section_projects_section_case_case_landing_img_fm_2",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/fm-2.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "case_landing_buttons",
+   "target": "case_landing",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.85,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/bt-a.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "case_landing_cabinet",
+   "target": "case_landing",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.85,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/cb-1.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "case_landing_chars",
+   "target": "case_landing",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.85,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/ch-1.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "case_landing_fields",
+   "target": "case_landing",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.85,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/fld-1.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "case_landing_forms",
+   "target": "case_landing",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.85,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/fm-1.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "case_landing_landing",
+   "target": "case_landing",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.85,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/cover.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "case_landing_buttons",
+   "target": "case_landing_cabinet",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.85,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/bt-a.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_landing_img_bt_b",
+   "target": "case_landing_cabinet",
+   "relation": "shares_data_with",
+   "confidence": "INFERRED",
+   "confidence_score": 0.85,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/bt-b.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "case_landing_fields",
+   "target": "case_landing_forms",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.85,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/fld-1.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "case_landing_chars",
+   "target": "case_landing_landing",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.85,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/ch-1.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_landing_img_cover",
+   "target": "assets_projects_section_projects_section_case_case_landing_img_fin_full2",
+   "relation": "references",
+   "confidence": "INFERRED",
+   "confidence_score": 0.85,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/cover.webp",
+   "source_location": null,
+   "weight": 1.0
+  }
+ ],
+ "hyperedges": [
+  {
+   "id": "case_landing_cabinet_application_lifecycle",
+   "label": "Participant cabinet application lifecycle screens",
+   "nodes": [
+    "assets_projects_section_projects_section_case_case_landing_img_cb_1",
+    "assets_projects_section_projects_section_case_case_landing_img_cb_2",
+    "assets_projects_section_projects_section_case_case_landing_img_cb_2b",
+    "assets_projects_section_projects_section_case_case_landing_img_cb_3",
+    "assets_projects_section_projects_section_case_case_landing_img_cb_4",
+    "assets_projects_section_projects_section_case_case_landing_img_cb_5r",
+    "assets_projects_section_projects_section_case_case_landing_img_cb_6a",
+    "assets_projects_section_projects_section_case_case_landing_img_cb_6b"
+   ],
+   "relation": "form",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/cb-1.webp"
+  },
+  {
+   "id": "case_landing_ui_state_system",
+   "label": "UI component state system (buttons, fields, forms)",
+   "nodes": [
+    "case_landing_buttons",
+    "case_landing_fields",
+    "case_landing_forms"
+   ],
+   "relation": "form",
+   "confidence": "INFERRED",
+   "confidence_score": 0.85,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-landing/img/fld-1.webp"
+  }
+ ],
+ "input_tokens": 0,
+ "output_tokens": 0,
+ "coverage": {}
+}

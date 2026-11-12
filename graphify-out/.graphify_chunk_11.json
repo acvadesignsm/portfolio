@@ -1,0 +1,1063 @@
+{
+ "nodes": [
+  {
+   "id": "assets_projects_section_projects_section_case_case_leto_img_bus1_fire_sign",
+   "label": "Bus sign #1 (fire element, orange with flames)",
+   "file_type": "image",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/bus1.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_leto_img_bus2_sign",
+   "label": "Bus number sign 4 (element color)",
+   "file_type": "image",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/bus2.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_leto_img_bus3_sign",
+   "label": "Bus number sign 7 (element color)",
+   "file_type": "image",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/bus3.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_leto_img_bus4_sign",
+   "label": "Bus number sign 10 (element color)",
+   "file_type": "image",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/bus4.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_leto_img_camp_entry",
+   "label": "Team camp entrance photo",
+   "file_type": "image",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/camp-entry.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_leto_img_cover",
+   "label": "STOлица.Лето cover: aerial view of tent camp",
+   "file_type": "image",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/cover.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_leto_img_daisy",
+   "label": "Hand-drawn daisy decoration",
+   "file_type": "image",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/daisy.svg",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_leto_img_elements_people",
+   "label": "Participants dressed in their element colors",
+   "file_type": "image",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/elements-people.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_leto_img_happiness",
+   "label": "Hand-lettered 'счастья' inscription",
+   "file_type": "image",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/happiness.svg",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_leto_img_journey_p",
+   "label": "Participant journey timeline (cropped variant)",
+   "file_type": "image",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/journey-p.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_leto_img_journey",
+   "label": "Participant journey across the shift: 7 touchpoints",
+   "file_type": "image",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/journey.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_leto_img_ln_blue",
+   "label": "Blue squiggle line decoration",
+   "file_type": "image",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/ln-blue.svg",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_leto_img_ln_green",
+   "label": "Light-green squiggle line decoration",
+   "file_type": "image",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/ln-green.svg",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_leto_img_ln_orange",
+   "label": "Orange squiggle line decoration",
+   "file_type": "image",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/ln-orange.svg",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_leto_img_ln_purple",
+   "label": "Purple squiggle line decoration",
+   "file_type": "image",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/ln-purple.svg",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_leto_img_logo_2024",
+   "label": "STOлица.Лето 2024 logo",
+   "file_type": "image",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/logo-2024.svg",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_leto_img_lza_m",
+   "label": "Personal standings screen: 78 people got 1/3 charms",
+   "file_type": "image",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/lzA-m.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_leto_img_lza_s",
+   "label": "Personal standings screen A (small)",
+   "file_type": "image",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/lzA-s.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_leto_img_lzb_s",
+   "label": "Personal standings screen B (small)",
+   "file_type": "image",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/lzB-s.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_leto_img_lzc_s",
+   "label": "Personal standings screen C (small)",
+   "file_type": "image",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/lzC-s.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_leto_img_map_only",
+   "label": "Camp map with five marked design touchpoints",
+   "file_type": "image",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/map-only.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_leto_img_map_p",
+   "label": "Camp map with legend (variant)",
+   "file_type": "image",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/map-p.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_leto_img_map",
+   "label": "Where the design worked: camp map with legend of 5 zones",
+   "file_type": "image",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/map.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_leto_img_nakl",
+   "label": "Round tent sticker with STOлица.Лето logo and doodles",
+   "file_type": "image",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/nakl.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_leto_img_nav_signs",
+   "label": "Distance wayfinding signs to the rally",
+   "file_type": "image",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/nav-signs.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_leto_img_stolitsa_leto_case",
+   "label": "STOлица.Лето 2024 youth rally case study",
+   "file_type": "concept",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/cover.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_leto_img_element_color_coding",
+   "label": "Element color as address (fire/water/earth/air team colors)",
+   "file_type": "concept",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/journey.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null,
+   "rationale": "Teams recognize their materials on bus, paper and screen by element color without reading text"
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_leto_img_participant_journey",
+   "label": "Participant journey through the shift",
+   "file_type": "concept",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/journey.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_leto_img_visual_identity",
+   "label": "STOлица.Лето visual style (doodles, squiggle lines, daisy)",
+   "file_type": "concept",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/logo-2024.svg",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_leto_img_stage_screens",
+   "label": "Stage LED screens (team splash, standings)",
+   "file_type": "concept",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/lzA-m.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_leto_img_camp_wayfinding",
+   "label": "Camp navigation and signage",
+   "file_type": "concept",
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/map.webp",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  }
+ ],
+ "edges": [
+  {
+   "source": "assets_projects_section_projects_section_case_case_leto_img_bus1_fire_sign",
+   "target": "assets_projects_section_projects_section_case_case_leto_img_stolitsa_leto_case",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/bus1.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_leto_img_bus2_sign",
+   "target": "assets_projects_section_projects_section_case_case_leto_img_stolitsa_leto_case",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/bus2.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_leto_img_bus3_sign",
+   "target": "assets_projects_section_projects_section_case_case_leto_img_stolitsa_leto_case",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/bus3.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_leto_img_bus4_sign",
+   "target": "assets_projects_section_projects_section_case_case_leto_img_stolitsa_leto_case",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/bus4.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_leto_img_camp_entry",
+   "target": "assets_projects_section_projects_section_case_case_leto_img_stolitsa_leto_case",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/camp-entry.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_leto_img_cover",
+   "target": "assets_projects_section_projects_section_case_case_leto_img_stolitsa_leto_case",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/cover.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_leto_img_daisy",
+   "target": "assets_projects_section_projects_section_case_case_leto_img_stolitsa_leto_case",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/daisy.svg",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_leto_img_elements_people",
+   "target": "assets_projects_section_projects_section_case_case_leto_img_stolitsa_leto_case",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/elements-people.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_leto_img_happiness",
+   "target": "assets_projects_section_projects_section_case_case_leto_img_stolitsa_leto_case",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/happiness.svg",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_leto_img_journey_p",
+   "target": "assets_projects_section_projects_section_case_case_leto_img_stolitsa_leto_case",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/journey-p.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_leto_img_journey",
+   "target": "assets_projects_section_projects_section_case_case_leto_img_stolitsa_leto_case",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/journey.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_leto_img_ln_blue",
+   "target": "assets_projects_section_projects_section_case_case_leto_img_stolitsa_leto_case",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/ln-blue.svg",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_leto_img_ln_green",
+   "target": "assets_projects_section_projects_section_case_case_leto_img_stolitsa_leto_case",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/ln-green.svg",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_leto_img_ln_orange",
+   "target": "assets_projects_section_projects_section_case_case_leto_img_stolitsa_leto_case",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/ln-orange.svg",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_leto_img_ln_purple",
+   "target": "assets_projects_section_projects_section_case_case_leto_img_stolitsa_leto_case",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/ln-purple.svg",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_leto_img_logo_2024",
+   "target": "assets_projects_section_projects_section_case_case_leto_img_stolitsa_leto_case",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/logo-2024.svg",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_leto_img_lza_m",
+   "target": "assets_projects_section_projects_section_case_case_leto_img_stolitsa_leto_case",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/lzA-m.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_leto_img_lza_s",
+   "target": "assets_projects_section_projects_section_case_case_leto_img_stolitsa_leto_case",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/lzA-s.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_leto_img_lzb_s",
+   "target": "assets_projects_section_projects_section_case_case_leto_img_stolitsa_leto_case",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/lzB-s.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_leto_img_lzc_s",
+   "target": "assets_projects_section_projects_section_case_case_leto_img_stolitsa_leto_case",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/lzC-s.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_leto_img_map_only",
+   "target": "assets_projects_section_projects_section_case_case_leto_img_stolitsa_leto_case",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/map-only.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_leto_img_map_p",
+   "target": "assets_projects_section_projects_section_case_case_leto_img_stolitsa_leto_case",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/map-p.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_leto_img_map",
+   "target": "assets_projects_section_projects_section_case_case_leto_img_stolitsa_leto_case",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/map.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_leto_img_nakl",
+   "target": "assets_projects_section_projects_section_case_case_leto_img_stolitsa_leto_case",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/nakl.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_leto_img_nav_signs",
+   "target": "assets_projects_section_projects_section_case_case_leto_img_stolitsa_leto_case",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/nav-signs.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_leto_img_bus1_fire_sign",
+   "target": "assets_projects_section_projects_section_case_case_leto_img_element_color_coding",
+   "relation": "implements",
+   "confidence": "INFERRED",
+   "confidence_score": 0.85,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/bus1.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_leto_img_bus2_sign",
+   "target": "assets_projects_section_projects_section_case_case_leto_img_element_color_coding",
+   "relation": "implements",
+   "confidence": "INFERRED",
+   "confidence_score": 0.85,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/bus2.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_leto_img_bus3_sign",
+   "target": "assets_projects_section_projects_section_case_case_leto_img_element_color_coding",
+   "relation": "implements",
+   "confidence": "INFERRED",
+   "confidence_score": 0.85,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/bus3.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_leto_img_bus4_sign",
+   "target": "assets_projects_section_projects_section_case_case_leto_img_element_color_coding",
+   "relation": "implements",
+   "confidence": "INFERRED",
+   "confidence_score": 0.85,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/bus4.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_leto_img_elements_people",
+   "target": "assets_projects_section_projects_section_case_case_leto_img_element_color_coding",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.85,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/elements-people.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_leto_img_camp_entry",
+   "target": "assets_projects_section_projects_section_case_case_leto_img_element_color_coding",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.85,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/camp-entry.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_leto_img_daisy",
+   "target": "assets_projects_section_projects_section_case_case_leto_img_visual_identity",
+   "relation": "implements",
+   "confidence": "INFERRED",
+   "confidence_score": 0.85,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/daisy.svg",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_leto_img_happiness",
+   "target": "assets_projects_section_projects_section_case_case_leto_img_visual_identity",
+   "relation": "implements",
+   "confidence": "INFERRED",
+   "confidence_score": 0.85,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/happiness.svg",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_leto_img_ln_blue",
+   "target": "assets_projects_section_projects_section_case_case_leto_img_visual_identity",
+   "relation": "implements",
+   "confidence": "INFERRED",
+   "confidence_score": 0.85,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/ln-blue.svg",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_leto_img_ln_green",
+   "target": "assets_projects_section_projects_section_case_case_leto_img_visual_identity",
+   "relation": "implements",
+   "confidence": "INFERRED",
+   "confidence_score": 0.85,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/ln-green.svg",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_leto_img_ln_orange",
+   "target": "assets_projects_section_projects_section_case_case_leto_img_visual_identity",
+   "relation": "implements",
+   "confidence": "INFERRED",
+   "confidence_score": 0.85,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/ln-orange.svg",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_leto_img_ln_purple",
+   "target": "assets_projects_section_projects_section_case_case_leto_img_visual_identity",
+   "relation": "implements",
+   "confidence": "INFERRED",
+   "confidence_score": 0.85,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/ln-purple.svg",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_leto_img_logo_2024",
+   "target": "assets_projects_section_projects_section_case_case_leto_img_visual_identity",
+   "relation": "implements",
+   "confidence": "INFERRED",
+   "confidence_score": 0.85,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/logo-2024.svg",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_leto_img_nakl",
+   "target": "assets_projects_section_projects_section_case_case_leto_img_visual_identity",
+   "relation": "implements",
+   "confidence": "INFERRED",
+   "confidence_score": 0.85,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/nakl.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_leto_img_lza_m",
+   "target": "assets_projects_section_projects_section_case_case_leto_img_stage_screens",
+   "relation": "implements",
+   "confidence": "INFERRED",
+   "confidence_score": 0.85,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/lzA-m.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_leto_img_lza_s",
+   "target": "assets_projects_section_projects_section_case_case_leto_img_stage_screens",
+   "relation": "implements",
+   "confidence": "INFERRED",
+   "confidence_score": 0.85,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/lzA-s.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_leto_img_lzb_s",
+   "target": "assets_projects_section_projects_section_case_case_leto_img_stage_screens",
+   "relation": "implements",
+   "confidence": "INFERRED",
+   "confidence_score": 0.85,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/lzB-s.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_leto_img_lzc_s",
+   "target": "assets_projects_section_projects_section_case_case_leto_img_stage_screens",
+   "relation": "implements",
+   "confidence": "INFERRED",
+   "confidence_score": 0.85,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/lzC-s.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_leto_img_nav_signs",
+   "target": "assets_projects_section_projects_section_case_case_leto_img_camp_wayfinding",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.85,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/nav-signs.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_leto_img_map",
+   "target": "assets_projects_section_projects_section_case_case_leto_img_camp_wayfinding",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.85,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/map.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_leto_img_map_only",
+   "target": "assets_projects_section_projects_section_case_case_leto_img_camp_wayfinding",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.85,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/map-only.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_leto_img_map_p",
+   "target": "assets_projects_section_projects_section_case_case_leto_img_camp_wayfinding",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.85,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/map-p.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_leto_img_bus1_fire_sign",
+   "target": "assets_projects_section_projects_section_case_case_leto_img_camp_wayfinding",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.85,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/bus1.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_leto_img_journey",
+   "target": "assets_projects_section_projects_section_case_case_leto_img_bus1_fire_sign",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/journey.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_leto_img_journey",
+   "target": "assets_projects_section_projects_section_case_case_leto_img_nav_signs",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/journey.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_leto_img_journey",
+   "target": "assets_projects_section_projects_section_case_case_leto_img_lza_m",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/journey.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_leto_img_journey",
+   "target": "assets_projects_section_projects_section_case_case_leto_img_participant_journey",
+   "relation": "implements",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/journey.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_leto_img_journey",
+   "target": "assets_projects_section_projects_section_case_case_leto_img_element_color_coding",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/journey.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_leto_img_journey_p",
+   "target": "assets_projects_section_projects_section_case_case_leto_img_journey",
+   "relation": "semantically_similar_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/journey-p.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_leto_img_map_p",
+   "target": "assets_projects_section_projects_section_case_case_leto_img_map",
+   "relation": "semantically_similar_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/map-p.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_leto_img_map_only",
+   "target": "assets_projects_section_projects_section_case_case_leto_img_map",
+   "relation": "semantically_similar_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.85,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/map-only.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_leto_img_map",
+   "target": "assets_projects_section_projects_section_case_case_leto_img_bus1_fire_sign",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/map.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_leto_img_lza_m",
+   "target": "assets_projects_section_projects_section_case_case_leto_img_lza_s",
+   "relation": "semantically_similar_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/lzA-m.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_leto_img_nakl",
+   "target": "assets_projects_section_projects_section_case_case_leto_img_logo_2024",
+   "relation": "references",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/nakl.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_leto_img_nakl",
+   "target": "assets_projects_section_projects_section_case_case_leto_img_happiness",
+   "relation": "references",
+   "confidence": "INFERRED",
+   "confidence_score": 0.85,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/nakl.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_leto_img_nakl",
+   "target": "assets_projects_section_projects_section_case_case_leto_img_daisy",
+   "relation": "semantically_similar_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.75,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/nakl.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_leto_img_element_color_coding",
+   "target": "assets_projects_section_projects_section_case_case_leto_img_stolitsa_leto_case",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/cover.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_leto_img_participant_journey",
+   "target": "assets_projects_section_projects_section_case_case_leto_img_stolitsa_leto_case",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/cover.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_leto_img_visual_identity",
+   "target": "assets_projects_section_projects_section_case_case_leto_img_stolitsa_leto_case",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/cover.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_leto_img_stage_screens",
+   "target": "assets_projects_section_projects_section_case_case_leto_img_stolitsa_leto_case",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/cover.webp",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "assets_projects_section_projects_section_case_case_leto_img_camp_wayfinding",
+   "target": "assets_projects_section_projects_section_case_case_leto_img_stolitsa_leto_case",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/cover.webp",
+   "source_location": null,
+   "weight": 1.0
+  }
+ ],
+ "hyperedges": [
+  {
+   "id": "assets_projects_section_projects_section_case_case_leto_img_bus_sign_set",
+   "label": "Element-colored bus number signs",
+   "nodes": [
+    "assets_projects_section_projects_section_case_case_leto_img_bus1_fire_sign",
+    "assets_projects_section_projects_section_case_case_leto_img_bus2_sign",
+    "assets_projects_section_projects_section_case_case_leto_img_bus3_sign",
+    "assets_projects_section_projects_section_case_case_leto_img_bus4_sign"
+   ],
+   "relation": "form",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/bus1.webp"
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_leto_img_squiggle_line_set",
+   "label": "Brand squiggle lines in four colors",
+   "nodes": [
+    "assets_projects_section_projects_section_case_case_leto_img_ln_blue",
+    "assets_projects_section_projects_section_case_case_leto_img_ln_green",
+    "assets_projects_section_projects_section_case_case_leto_img_ln_orange",
+    "assets_projects_section_projects_section_case_case_leto_img_ln_purple"
+   ],
+   "relation": "form",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/ln-blue.svg"
+  },
+  {
+   "id": "assets_projects_section_projects_section_case_case_leto_img_personal_standings_screens",
+   "label": "Personal standings (charm) screens",
+   "nodes": [
+    "assets_projects_section_projects_section_case_case_leto_img_lza_m",
+    "assets_projects_section_projects_section_case_case_leto_img_lza_s",
+    "assets_projects_section_projects_section_case_case_leto_img_lzb_s",
+    "assets_projects_section_projects_section_case_case_leto_img_lzc_s"
+   ],
+   "relation": "form",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/lzA-s.webp"
+  }
+ ],
+ "input_tokens": 0,
+ "output_tokens": 0,
+ "coverage": {
+  "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/daisy.svg": 4,
+  "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/happiness.svg": 9,
+  "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/ln-blue.svg": 3,
+  "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/ln-green.svg": 3,
+  "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/ln-orange.svg": 3,
+  "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/ln-purple.svg": 3,
+  "/Users/sofamihajlova/Desktop/portfolio/assets/projects-section/projects-section-case/case-leto/img/logo-2024.svg": 21
+ }
+}
