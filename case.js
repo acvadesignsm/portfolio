@@ -513,21 +513,64 @@
       for (var q = ops.length - 1; q >= 0; q--) apply(ops[q][0], ops[q][1]);
     });
   }
-  var pend = new Set(), raf = 0;
-  function queue(el) { pend.add(el); if (!raf) raf = requestAnimationFrame(function () { raf = 0; var l = Array.from(pend); pend.clear(); run(l); }); }
+  /* порционная обработка: ничего не делаем большим куском, чтобы не подвешивать страницу */
+  var pend = new Set(), planned = false, seen = (window.WeakSet ? new WeakSet() : null);
+  var idle = window.requestIdleCallback || function (f) { return requestAnimationFrame(function () { f({ timeRemaining: function () { return 8; } }); }); };
+  var BATCH = 14;
+  function tick(dl) {
+    planned = false;
+    if (!pend.size) return;
+    var all = []; pend.forEach(function (e) { all.push(e); }); var vh = window.innerHeight || 800;
+    all.sort(function (x, y) {
+      var a = x.getBoundingClientRect().top, b = y.getBoundingClientRect().top;
+      return (a < 0 ? -a + vh : a) - (b < 0 ? -b + vh : b);
+    });
+    var batch = all.slice(0, BATCH);
+    batch.forEach(function (el) { pend.delete(el); if (seen) seen.add(el); });
+    run(batch);
+    if (pend.size) plan();
+  }
+  function plan() { if (planned) return; planned = true; idle(tick, { timeout: 500 }); }
+  function queue(el) { pend.add(el); plan(); }
+
   function start() {
     var els = Array.prototype.slice.call(document.querySelectorAll(SEL));
+    function clearAll() { els.forEach(function (el) { clear(el); }); }
+
+    if (window.IntersectionObserver) {
+      /* считаем только то, что рядом с экраном, остальное — по мере прокрутки */
+      var io = new IntersectionObserver(function (es) {
+        es.forEach(function (e) { if (e.isIntersecting) queue(e.target); });
+      }, { rootMargin: '150% 0px' });
+      els.forEach(function (el) { io.observe(el); });
+    } else {
+      els.forEach(queue);
+    }
+
     if (window.ResizeObserver) {
+      /* пересчёт только при смене ШИРИНЫ и только для уже обработанных */
       var ro = new ResizeObserver(function (es) {
         es.forEach(function (e) {
           var w = Math.round(e.contentRect.width);
           if (e.target.__jw === w) return;
-          e.target.__jw = w; queue(e.target);
+          var first = e.target.__jw === undefined;
+          e.target.__jw = w;
+          if (!first && (!seen || seen.has(e.target))) queue(e.target);
         });
       });
       els.forEach(function (el) { ro.observe(el); });
-    } else { run(els); window.addEventListener('resize', function () { run(els); }); }
-    var onmq = function () { run(els); };
+    }
+
+    var onmq = function () {
+      pend.clear();
+      clearAll();
+      if (!mq.matches) return;
+      var vh = window.innerHeight || 800;
+      els.forEach(function (el) {
+        var t = el.getBoundingClientRect().top;
+        if (t > -vh * 2 && t < vh * 3) queue(el);
+      });
+    };
     if (mq.addEventListener) mq.addEventListener('change', onmq);
   }
   var go = function () { start(); };
