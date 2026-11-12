@@ -1,9 +1,0 @@
-/Users/sofamihajlova/Desktop/portfolio/CLAUDE.md
-/Users/sofamihajlova/Desktop/portfolio/README.md
-/Users/sofamihajlova/Desktop/portfolio/index.html
-/Users/sofamihajlova/Desktop/portfolio/resume.html
-/Users/sofamihajlova/Desktop/portfolio/graphify-out/transcripts/vid-1.txt
-/Users/sofamihajlova/Desktop/portfolio/graphify-out/transcripts/vid-2.txt
-/Users/sofamihajlova/Desktop/portfolio/graphify-out/transcripts/vid-6.txt
-/Users/sofamihajlova/Desktop/portfolio/graphify-out/transcripts/vid-8.txt
-/Users/sofamihajlova/Desktop/portfolio/graphify-out/transcripts/blogger-review.txt
