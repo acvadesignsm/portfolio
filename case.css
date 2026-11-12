@@ -1334,3 +1334,22 @@ strong { font-weight: 600; }
 .fig--duo .duo img { border-radius: 8px; }
 @media (max-width: 820px) { .fig--duo .duo { padding: 12px; border-radius: 16px; gap: 6px; } }
 @media (max-width:640px){.data-table--moments td:first-child{font-size:16px}.data-table--moments td:last-child{hyphens:manual}}
+/* «Моменты»: список вместо таблицы на телефоне */
+.mlist{display:none;list-style:none;margin:20px 0 0;padding:0;counter-reset:none}
+@media (max-width:640px){
+  .mlist{display:block}
+  .data-table--moments,.data-table--moments{display:none}
+  .table-wrap:has(.data-table--moments){display:none}
+  .mlist>li{position:relative;padding:18px 0 18px 44px;border-top:1px solid rgba(0,0,0,.14)}
+  .mlist>li:last-child{border-bottom:1px solid rgba(0,0,0,.14)}
+  .mlist__n{position:absolute;left:0;top:19px;width:32px;height:22px;border-radius:999px;background:var(--lime);font-size:12px;line-height:22px;text-align:center;letter-spacing:.03em}
+  .mlist h3{margin:0 0 6px;font-size:19px;line-height:24px;font-weight:500}
+  .mlist p{margin:0;font-size:15px;line-height:21px;color:var(--gray)}
+  .mlist__tags{margin:8px 0 0;display:flex;flex-wrap:wrap;gap:6px}
+  .mlist__tags span{padding:4px 11px;border:1px solid rgba(0,0,0,.28);border-radius:999px;font-size:14px;line-height:19px;white-space:nowrap}
+}
+/* пара картинок в ряд: ширины пропорциональны соотношению сторон — высоты равны */
+@media (max-width: 640px) {
+  .shots:not(.shots--scroll):not(.shots--stack) .shots__row:not(.shots__row--single):has(> .shots__item:nth-child(2):last-child) { flex-wrap: nowrap; }
+  .shots:not(.shots--scroll):not(.shots--stack) .shots__row:not(.shots__row--single):has(> .shots__item:nth-child(2):last-child) .shots__item:not([data-wide]) { flex: var(--ar, 1) 1 0; }
+}
